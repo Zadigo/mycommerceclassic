@@ -23,26 +23,6 @@ export interface CartItem {
   total: number
 }
 
-// export const CartItemSchema = z.object({
-//   quantity: z.number().int().min(1),
-//   size: z.object({
-//     active: z.boolean(),
-//     availability: z.boolean(),
-//     metric: z.string(),
-//     name: z.string(),
-//     variantPrice: z.number()
-//   }),
-//   product: z.object({
-//     id: z.string(),
-//     name: z.string(),
-//     price: z.number(),
-//     salePrice: z.number().nullable(),
-//     unitPrice: z.number().nullable(),
-//     mainImage: z.string().nullable()
-//   }),
-//   total: z.number()
-// })
-
 export type CartSessionData = {
   sessionId: string
   items: Arrayable<CartItem>

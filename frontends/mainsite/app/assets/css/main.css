@@ -5,17 +5,17 @@
   --font-title: 'Zain', sans-serif;
   --font-sans: 'Nunito', sans-serif;
 
-  --color-green-50: #EFFDF5;
-  --color-green-100: #D9FBE8;
-  --color-green-200: #B3F5D1;
-  --color-green-300: #75EDAE;
-  --color-green-400: #00DC82;
-  --color-green-500: #00C16A;
-  --color-green-600: #00A155;
-  --color-green-700: #007F45;
-  --color-green-800: #016538;
-  --color-green-900: #0A5331;
-  --color-green-950: #052E16;
+  --color-blue-50: #e9eef3;
+  --color-blue-100: #bccddc;
+  --color-blue-200: #90abc5;
+  --color-blue-300: #7a9ab9;
+  --color-blue-400: #4d79a1;
+  --color-blue-500: #21578a;
+  --color-blue-600: #1e4e7c;
+  --color-blue-700: #173d61;
+  --color-blue-800: #112c45;
+  --color-blue-900: #0a1a29;
+  --color-blue-950: #03090e;
 }
 
 h1, h2, h3, h4, h5, h6 {

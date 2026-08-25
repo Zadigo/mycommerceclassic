@@ -24,7 +24,20 @@ export const useCartComposable = createGlobalState(() => {
     })
   }
 
+  const selectedSize = ref<BaseSizeSet | null>(null)
+
+  function selectSize(size: BaseSizeSet) {
+    selectedSize.value = size
+  }
+
+  function sizeIsSelected(size: BaseSizeSet): boolean {
+    return selectedSize.value?.name === size.name
+  }
+
   return {
-    addToCart
+    selectedSize,
+    addToCart,
+    selectSize,
+    sizeIsSelected
   }
 })

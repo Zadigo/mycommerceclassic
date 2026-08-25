@@ -13,16 +13,7 @@ export const useLikeComposable = createGlobalState(() => {
     return collectionRef.data.value.find((item) => item.sessionId === sessionId.value)
   })
   
-  // const products = ref<BaseProduct[]>([])
-
   async function add(product: BaseProduct | undefined) {
-    // if (!product) return
-    // const index = products.value.findIndex((p) => p.id === product.id)
-    // if (index === -1) {
-    //   products.value.push(product)
-    // } else {
-    //   products.value = products.value.filter((p) => p.id !== product.id)
-    // }
     await $fetch('/api/likes/toggle', { method: 'PATCH', body: { productId: product?.id } })
   }
 

@@ -1,5 +1,5 @@
-import type { GraphQlData, RelayEdge } from "./graphql"
-import type { BaseProduct } from "./product"
+import type { GraphQlData, RelayEdge } from './graphql'
+import type { BaseProduct } from './product'
 
 export type BaseCollection = {
   id: string

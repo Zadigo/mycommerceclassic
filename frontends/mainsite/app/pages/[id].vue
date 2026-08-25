@@ -46,19 +46,19 @@
               </u-button>
             </div>
 
-            <u-button variant="link" icon="i-lucide-ruler" class="mt-5">
+            <u-button variant="link" icon="i-lucide-ruler" class="mt-2">
               Guide des tailles
             </u-button>
           </div>
 
           <!-- Actions -->
           <div id="cart-actions">
-            <div id="actions" class="flex gap-2">
-              <u-button :id="createElementId('cta', 'content', 'add-to-cart')" variant="solid" color="primary" class="w-full mt-5" @click="addToCart({ active: true, availability: true, metric: 'clothe', name: 'S', variantPrice: 10 }, data)">
+            <div id="actions" class="flex items-center-safe justify-start gap-2 mt-5">
+              <u-button :id="createElementId('cta', 'content', 'add-to-cart')" variant="solid" color="primary" size="xl" @click="addToCart({ active: true, availability: true, metric: 'clothe', name: 'S', variantPrice: 10 }, data)">
                 Ajouter au panier
               </u-button>
   
-              <u-button :id="createElementId('cta', 'content', 'like')" @click="add(product)">
+              <u-button :id="createElementId('cta', 'content', 'like')" size="xl" class="h-full" @click="add(product)">
                 <icon :name="getIcon(product)" />
               </u-button>
             </div>
