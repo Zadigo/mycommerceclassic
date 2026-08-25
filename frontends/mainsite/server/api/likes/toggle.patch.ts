@@ -20,16 +20,22 @@ export default defineEventHandler(async (event) => {
           items: [body.productId],
         })
       } else {
-        const docRef = (await result.get()).docs[0]?.ref
-        if (docRef) {
-          await docRef.update({
-            items: FieldValue.arrayUnion(body.productId),
-          })
-        } else {
-          throw createError({
-            statusCode: 404,
-            statusMessage: 'Document not found',
-          })
+        const result = collectionRef.where('sessionId', '==', sessionId)
+        if (!(await result.get()).empty) {
+          const docRef = (await result.get()).docs[0]?.ref
+          const items = (await docRef?.get())?.data()?.items || []
+          if (!items.includes(body.productId)) {
+            await docRef?.update({
+              items: FieldValue.arrayUnion(body.productId),
+            })
+          } else {
+            await docRef?.update({
+              items: FieldValue.arrayRemove(body.productId),
+            })
+          }
+        }
+        return {
+          state: 'Product like status toggled successfully',
         }
       }
     } else {
