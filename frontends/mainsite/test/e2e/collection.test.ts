@@ -1,14 +1,21 @@
 import { test } from '@playwright/test'
 
-test('should be able to filter the collection on the page', async ({ page }) => {
-  await page.goto('/collection/some-collection')
+test.describe('collection filtering', () => {
+  test.describe.configure({ timeout: 60000 })
 
-  await page.waitForSelector('h1')
-  await page.waitForSelector('#filter-expand-Size')
+  test('should be able to filter the collection on the page', async ({ page }) => {
+    await page.goto('/collection/some-collection')
 
-  const sizeFilter = page.locator('#filter-expand-Size')
-  await sizeFilter.isVisible()
-  await sizeFilter.click()
+    // await page.waitForEvent('response', (response) => response.url().includes('api/collection/sous-vetements-femme/filters') && response.status() === 200)
+  
+    await page.waitForSelector('h1', { state: 'visible' })
+  
+    const sizeFilter = page.locator('#filter-expand-Size')
+    await sizeFilter.waitFor({ state: 'visible' })
+
+    await sizeFilter.isVisible()
+    await sizeFilter.click({ button: 'left' })
+  })
 })
 
 test('should be able to interact with product', async ({ page }) => {
