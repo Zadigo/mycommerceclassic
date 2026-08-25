@@ -1,7 +1,7 @@
 import { useFirebaseAdmin } from '#shared/server_firebase'
 import type { CartItem } from '#shared/types/cart'
 import { FieldValue } from 'firebase-admin/firestore'
-import { COOKIE_NAME, CART_COLLECTION_NAME } from '#shared/cart'
+import { CART_COOKIE_NAME, CART_COLLECTION_NAME } from '#shared/cart'
 import { createErrorTemplate } from '#shared/utils'
 import { calculateTotal, calculateNumberOfItems } from '#server/utils/cart'
 
@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
   const { db } = useFirebaseAdmin()
   const body = await readBody<CartItem>(event)
 
-  const cartId = getCookie(event, COOKIE_NAME)
+  const cartId = getCookie(event, CART_COOKIE_NAME)
   console.log('Cart ID from cookie:', cartId) // Log the cart ID for debugging
 
   try {
@@ -58,7 +58,7 @@ export default defineEventHandler(async (event) => {
         numberOfItems: calculateNumberOfItems([body]),
       })
 
-      setCookie(event, COOKIE_NAME, result.sessionId, {
+      setCookie(event, CART_COOKIE_NAME, result.sessionId, {
         httpOnly: true,
         sameSite: 'strict',
         secure: true,

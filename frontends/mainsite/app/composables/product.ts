@@ -1,23 +1,41 @@
-export const useLikeComposable = createGlobalState(() => {
-  const products = ref<BaseProduct[]>([])
+import { collection } from 'firebase/firestore'
+import { LIKE_COLLECTION_NAME } from '#shared/cart'
+import type { LikeSessionData } from '#shared/types/likes'
+import { useFirestore, useCollection } from 'vuefire'
 
-  function add(product: BaseProduct | undefined) {
-    if (!product) return
-    const index = products.value.findIndex((p) => p.id === product.id)
-    if (index === -1) {
-      products.value.push(product)
-    } else {
-      products.value = products.value.filter((p) => p.id !== product.id)
-    }
+export const useLikeComposable = createGlobalState(() => {
+  const { sessionId } = useSessionComposable()
+  
+  const firestore = useFirestore()
+  const collectionRef = useCollection<LikeSessionData>(collection(firestore, LIKE_COLLECTION_NAME))
+  const docData = computed(() => {
+    if (!isDefined(sessionId)) return undefined
+    return collectionRef.data.value.find((item) => item.sessionId === sessionId.value)
+  })
+  
+  // const products = ref<BaseProduct[]>([])
+
+  async function add(product: BaseProduct | undefined) {
+    // if (!product) return
+    // const index = products.value.findIndex((p) => p.id === product.id)
+    // if (index === -1) {
+    //   products.value.push(product)
+    // } else {
+    //   products.value = products.value.filter((p) => p.id !== product.id)
+    // }
+    await $fetch('/api/likes/toggle', { method: 'PATCH', body: { productId: product?.id } })
   }
+
+  const products = computed(() => docData.value?.items || [])
 
   function getIcon(product: BaseProduct | undefined) {
     if (!product) return 'i-lucide-heart'
-    const index = products.value.findIndex((p) => p.id === product.id)
+    const index = products.value.findIndex((strId) => strId === product.id)
     return index === -1 ? 'i-lucide-heart' : 'i-lucide-heart-plus'
   }
 
   return {
+    docData,
     products,
     add,
     getIcon

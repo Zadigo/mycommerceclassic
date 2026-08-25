@@ -1,6 +1,9 @@
 import { initializeApp, cert, getApps } from 'firebase-admin/app'
 import { getFirestore } from 'firebase-admin/firestore'
 
+/**
+ * Initializes and returns the Firebase Admin Firestore instance.
+ */
 export const useFirebaseAdmin = () => {
   const apps = getApps()
 

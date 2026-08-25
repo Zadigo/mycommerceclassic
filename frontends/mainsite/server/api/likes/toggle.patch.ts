@@ -2,11 +2,16 @@ import { useFirebaseAdmin } from '#shared/server_firebase'
 import { createErrorTemplate } from '#shared/utils'
 import { SESSION_COOKIE_NAME, LIKE_COLLECTION_NAME } from '#shared/cart'
 import { FieldValue } from 'firebase-admin/firestore'
-
+  
 export default defineEventHandler(async (event) => {
   try {
     const sessionId = getCookie(event, SESSION_COOKIE_NAME)
-    const body = await readBody<{ productId: number}>(event)
+    const body = await readBody<{ productId: number | undefined }>(event)
+
+    if (typeof body.productId === 'undefined') {
+      const template = createErrorTemplate(new Error('Product ID is undefined'))
+      throw createError(template)
+    }
 
     const { db } = useFirebaseAdmin()
     const collectionRef = db.collection(LIKE_COLLECTION_NAME)

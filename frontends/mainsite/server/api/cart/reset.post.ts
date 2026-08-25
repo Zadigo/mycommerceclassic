@@ -1,9 +1,9 @@
 import { useFirebaseAdmin } from '#shared/server_firebase'
-import { COOKIE_NAME, CART_COLLECTION_NAME } from '#shared/cart'
+import { CART_COOKIE_NAME, CART_COLLECTION_NAME } from '#shared/cart'
 import { createErrorTemplate } from '~~/shared/utils'
 
 export default defineEventHandler(async (event) => {
-  const cookie = getCookie(event, COOKIE_NAME)
+  const cookie = getCookie(event, CART_COOKIE_NAME)
   if (!cookie) {
     return
   }

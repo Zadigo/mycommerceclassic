@@ -29,7 +29,7 @@ export default defineEventHandler(async (event) => {
       })
 
       setCookie(event, SESSION_COOKIE_NAME, docRef.id, {
-        httpOnly: true,
+        httpOnly: false,
         sameSite: 'strict',
         secure: process.env.NODE_ENV === 'production',
         domain: process.env.NODE_ENV === 'production' ? '.yourdomain.com' : undefined,

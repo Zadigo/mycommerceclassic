@@ -1,10 +1,10 @@
 import { useFirebaseAdmin } from '#shared/server_firebase'
 import { CartSessionData } from '#shared/types/cart'
-import { COOKIE_NAME, CART_COLLECTION_NAME } from '#shared/cart'
+import { CART_COOKIE_NAME, CART_COLLECTION_NAME } from '#shared/cart'
 import { createErrorTemplate } from '~~/shared/utils'
 
 export default defineEventHandler(async (event) => {
-  const cookie = getCookie(event, COOKIE_NAME)
+  const cookie = getCookie(event, CART_COOKIE_NAME)
   console.log('Cookie value:', cookie) // Log the cookie value for debugging
   if (typeof cookie === 'string' && typeof cookie !== 'undefined') {
     return {
@@ -31,7 +31,7 @@ export default defineEventHandler(async (event) => {
       createdAt: new Date().toISOString()
     })
   
-    setCookie(event, COOKIE_NAME, docRef.id, {
+    setCookie(event, CART_COOKIE_NAME, docRef.id, {
       httpOnly: true,
       sameSite: 'strict',
       secure: true,
