@@ -42,7 +42,7 @@
         <icon name="i-lucide-chevron-left" />
       </u-button>
 
-      <u-button variant="subtle" color="neutral">
+      <u-button variant="subtle" color="neutral" @click="nextPage">
         <icon name="i-lucide-chevron-right" />
       </u-button>
     </section>
@@ -51,6 +51,7 @@
 
 <script setup lang="ts">
 import type { BreadcrumbItem } from '@nuxt/ui'
+import { VueUseMotions } from  '~/constants/motion'
 
 const items: BreadcrumbItem[] = [
   {
@@ -64,5 +65,7 @@ const items: BreadcrumbItem[] = [
 ]
 
 const { data } = await useAsyncData('collection', () => $fetch('/api/collection/TEST-COLLECTION-ID'))
-const products = computed(() => toValue(data)?.data.collection?.products ?? [])
+const { paginatedData, nextPage } = usePaginationComposable(data)
+// const products = computed(() => toValue(data)?.data.collection?.products ?? [])
+const products = computed(() => toValue(paginatedData)?.data.collection?.products ?? [])
 </script>

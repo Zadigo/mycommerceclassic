@@ -1,6 +1,10 @@
 <template>
   <section id="site">
-    <main>
+    <header class="fixed top-0 left-0 w-full z-50">
+      <base-navbar />
+    </header>
+
+    <main class="pt-[calc(65px)]">
       <slot />
     </main>
   </section>

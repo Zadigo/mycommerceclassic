@@ -48,3 +48,47 @@ export function useProductFiltersStore() {
   }
   return store
 }
+  
+/**
+ * A composable that handles pagination for a collection of products. 
+ * It takes an initial collection of products and manages the limit and offset for pagination. 
+ * It also provides a method to fetch the next page of products.
+ * 
+ * @param initial - A MaybeRefOrGetter of the initial collection of products.
+ */
+export function usePaginationComposable(initial: MaybeRefOrGetter<CollectionProducts | undefined>) {
+  const params = useUrlSearchParams() as { limit?: string, offset?: string }
+  const limit = computed(() => parseInt(params.limit || '21', 21))
+  const offset = computed(() => parseInt(params.offset || '0', 0))
+
+  const hasOffset = computed(() => offset.value > 0)
+
+  const paginatedData = ref<CollectionProducts | undefined>(toValue(initial))
+  const { id } = useRoute().params as { id: string }
+  watchEffect(async () => {
+    if (!hasOffset.value) {
+      paginatedData.value = toValue(initial)
+    } else {
+      paginatedData.value = await $fetch<CollectionProducts>(`/api/collection/${id}`, {
+        method: 'GET',
+        query: {
+          limit: limit.value,
+          offset: offset.value
+        }
+      })
+    }
+  })
+
+  async function nextPage() {
+    params.offset = (offset.value + limit.value).toString()
+    // await execute()
+  }
+
+  return {
+    limit,
+    offset,
+    hasOffset,
+    paginatedData,
+    nextPage
+  }
+}
