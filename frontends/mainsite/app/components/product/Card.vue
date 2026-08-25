@@ -6,9 +6,15 @@
       </nuxt-link>
       
       <!-- Badge -->
-      <u-badge variant="solid" color="info" class="absolute top-2 left-2">
-        New
-      </u-badge>
+      <div class="absolute top-2 left-2 flex gap-2">
+        <u-badge v-if="product.displayNew" variant="solid" color="neutral">
+          New
+        </u-badge>
+
+        <u-badge v-if="product.onSale" variant="solid" color="error">
+          {{ product.saleValue }}%
+        </u-badge>
+      </div>
 
       <!-- Like Button -->
       <u-button :id="createElementId('product', 'header', 'card', 'like', product.name)" :icon="getIcon(product)" variant="subtle" color="neutral" class="absolute top-2 right-2" @click="add(product)" />

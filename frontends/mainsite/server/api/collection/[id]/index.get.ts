@@ -23,9 +23,9 @@ export default defineEventHandler(async (_event) => {
           modelSize: faker.number.int({ min: 30, max: 50 }),
           modifiedOn: faker.date.recent().toISOString(),
           onSale: faker.datatype.boolean(),
-          price: parseFloat(faker.commerce.price()),
-          salePrice: parseFloat(faker.commerce.price()),
-          saleValue: parseFloat(faker.commerce.price()),
+          price: faker.number.float({ min: 10, max: 30 }),
+          salePrice: faker.number.float({ min: 10, max: 100 }),
+          saleValue: faker.number.int({ min: 10, max: 100 }),
           sku: faker.string.alphanumeric(10),
           slug: faker.helpers.slugify(faker.commerce.productName()),
           subCategory: faker.commerce.department(),
@@ -51,7 +51,29 @@ export default defineEventHandler(async (_event) => {
             thumbnail: '/img2.webp',
             variant: faker.helpers.arrayElement([ 'default', 'red', 'blue', 'green' ]),
           })),
-          sizeSet: null,
+          sizeSet: [
+            {
+              name: 'S',
+              active: faker.datatype.boolean(),
+              availability: faker.datatype.boolean(),
+              metric: 'cm',
+              variantPrice: faker.number.float({ min: 10, max: 30 }),
+            },
+            {
+              name: 'XL',
+              active: faker.datatype.boolean(),
+              availability: faker.datatype.boolean(),
+              metric: 'cm',
+              variantPrice: faker.number.float({ min: 10, max: 30 }),
+            },
+            {
+              name: 'M',
+              active: faker.datatype.boolean(),
+              availability: false,
+              metric: 'cm',
+              variantPrice: faker.number.float({ min: 10, max: 30 }),
+            }
+          ],
         }))
       }
     }

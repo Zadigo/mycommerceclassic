@@ -1,30 +1,35 @@
 export const useCartComposable = createGlobalState(() => {
-  async function addToCart(size: BaseSizeSet, product: Product | undefined) {
-    if (!isDefined(product)) {
+  const selectedSize = ref<BaseSizeSet | null>(null)
+  const showSizeWarning = refAutoReset(false, 3000)
+
+  async function addToCart(product: MaybeRefOrGetter<Product | undefined>, size?: MaybeRefOrGetter<BaseSizeSet | null>) {
+    const _product = toValue(product)
+    const _size = toValue(size) || toValue(selectedSize)
+
+    if (!_product) {
       console.error('Product is undefined')
       return
     }
 
-    const cartItem: CartItem = {
-      product: product.data.product,
-      size: {
-        name: 'S',
-        active: true,
-        availability: true,
-        metric: 'cm',
-        variantPrice: product.data.product.price
-      },
-      quantity: 1,
-      total: product.data.product.price
+    if (!_size) {
+      showSizeWarning.value = true
+      return
     }
+
+    const cartItem: CartItem = {
+      product: _product.data.product,
+      size: _size,
+      quantity: 1,
+      total: 0
+    }
+
+    selectedSize.value = null
 
     await $fetch('/api/cart/add', {
       method: 'PATCH',
       body: cartItem
     })
   }
-
-  const selectedSize = ref<BaseSizeSet | null>(null)
 
   function selectSize(size: BaseSizeSet) {
     selectedSize.value = size
@@ -35,6 +40,7 @@ export const useCartComposable = createGlobalState(() => {
   }
 
   return {
+    showSizeWarning,
     selectedSize,
     addToCart,
     selectSize,

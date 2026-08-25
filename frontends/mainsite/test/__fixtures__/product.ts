@@ -1,4 +1,4 @@
-import type { ProductNode } from '~~shared/types/product'
+import type { ProductNode } from '~~/shared/types/product'
 import { faker } from '@faker-js/faker'
 
 export const PRODUCT_FIXTURE: ProductNode = {
@@ -45,6 +45,28 @@ export const PRODUCT_FIXTURE: ProductNode = {
       thumbnail: '/img2.webp',
       variant: faker.helpers.arrayElement([ 'default', 'red', 'blue', 'green' ]),
     })),
-    sizeSet: null,
+    sizeSet: [
+      {
+        name: 'S',
+        active: faker.datatype.boolean(),
+        availability: faker.datatype.boolean(),
+        metric: 'cm',
+        variantPrice: faker.number.float({ min: 10, max: 100 }),
+      },
+      {
+        name: 'XL',
+        active: faker.datatype.boolean(),
+        availability: faker.datatype.boolean(),
+        metric: 'cm',
+        variantPrice: faker.number.float({ min: 10, max: 100 }),
+      },
+      {
+        name: 'M',
+        active: faker.datatype.boolean(),
+        availability: false,
+        metric: 'cm',
+        variantPrice: faker.number.float({ min: 10, max: 100 }),
+      }
+    ],
   }
 }

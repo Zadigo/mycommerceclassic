@@ -16,6 +16,18 @@
   --color-blue-800: #112c45;
   --color-blue-900: #0a1a29;
   --color-blue-950: #03090e;
+
+  --color-red-50: #f3ecee;
+  --color-red-100: #dac5cc;
+  --color-red-200: #b68b98;
+  --color-red-300: #aa7787;
+  --color-red-400: #915065;
+  --color-red-500: #853d54;
+  --color-red-600: #78374c;
+  --color-red-700: #6a3143;
+  --color-red-800: #431f2a;
+  --color-red-900: #281219;
+  --color-red-950: #0d0608;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -41,8 +41,8 @@
           <!-- Size -->
           <div :id="createElementId('cta', 'content', 'sizes')">
             <div id="cta-sizes" class="flex gap-2">
-              <u-button v-for="i in 4" :key="i" size="xl">
-                XS
+              <u-button v-for="size in product.sizeSet" :key="size.name" :variant="sizeIsSelected(size) ? 'solid' : 'outline'" size="md" class="min-w-10 flex justify-center" @click="selectSize(size)">
+                {{ size.name }}
               </u-button>
             </div>
 
@@ -53,8 +53,14 @@
 
           <!-- Actions -->
           <div id="cart-actions">
+            <motion :preset="VueUseMotions.Fade">
+              <div v-if="showSizeWarning" class="p-5 bg-red-50 rounded-xl">
+                Veuillez sélectionner une taille pour ajouter le produit au panier.
+              </div>
+            </motion>
+
             <div id="actions" class="flex items-center-safe justify-start gap-2 mt-5">
-              <u-button :id="createElementId('cta', 'content', 'add-to-cart')" variant="solid" color="primary" size="xl" @click="addToCart({ active: true, availability: true, metric: 'clothe', name: 'S', variantPrice: 10 }, data)">
+              <u-button :id="createElementId('cta', 'content', 'add-to-cart')" variant="solid" color="primary" size="xl" @click="addToCart(data)">
                 Ajouter au panier
               </u-button>
   
@@ -98,10 +104,11 @@ const items: BreadcrumbItem[] = [
   }
 ]
 
-const { data } = useAsyncData('product', async () => await $fetch('/api/product/1', { method: 'GET' }))
+const { id } = useRoute().params as { id: string }
+const { data } = useAsyncData('product', async () => await $fetch(`/api/product/${id}`, { method: 'GET' }))
 const product = computed(() => toValue(data)?.data.product)
 
 const { selectedImage, select, deselect, isOpen } = useImageSuperZoom()
 const { add, getIcon } = useLikeComposable()
-const { addToCart } = useCartComposable()
+const { selectedSize, showSizeWarning, addToCart, selectSize, sizeIsSelected } = useCartComposable()
 </script>
