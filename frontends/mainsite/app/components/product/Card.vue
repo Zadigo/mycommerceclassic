@@ -1,5 +1,5 @@
 <template>
-  <article :id="`product-${product.id}`">
+  <article :id="createElementId('product', 'card', product.id)">
     <div class="relative overflow-hidden group">
       <nuxt-link :to="`/${product.id}`" class="block">
         <nuxt-img :alt="product.name" src="/img1.webp" class="w-full group-hover:scale-120 transition-all ease-in-out duration-300" />
@@ -17,7 +17,7 @@
       </div>
 
       <!-- Like Button -->
-      <u-button :id="createElementId('product', 'header', 'card', 'like', product.name)" :icon="getIcon(product)" variant="subtle" color="neutral" class="absolute top-2 right-2" @click="add(product)" />
+      <u-button :id="createElementId('product', 'card', 'like', product.id)" :icon="getIcon(product)" variant="subtle" color="neutral" class="absolute top-2 right-2" @click="add(product)" />
     </div>
 
     <div class="flex justify-between p-3">

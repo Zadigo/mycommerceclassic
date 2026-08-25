@@ -19,7 +19,7 @@ export const PRODUCT_FIXTURE: ProductNode = {
     onSale: faker.datatype.boolean(),
     price: parseFloat(faker.commerce.price()),
     salePrice: parseFloat(faker.commerce.price()),
-    saleValue: parseFloat(faker.commerce.price()),
+    saleValue: 10,
     sku: faker.string.alphanumeric(10),
     slug: faker.helpers.slugify(faker.commerce.productName()),
     subCategory: faker.commerce.department(),
