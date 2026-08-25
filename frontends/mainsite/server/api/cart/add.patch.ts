@@ -49,7 +49,6 @@ export default defineEventHandler(async (event) => {
         })
       }
     } else {
-      console.log('Cart ID is not available. Creating a new cart.')
       const result = await $fetch('/api/cart/create', { method: 'POST' })
       const newCartRef = db.collection(CART_COLLECTION_NAME).doc(result.sessionId)
 
@@ -58,19 +57,16 @@ export default defineEventHandler(async (event) => {
         total: calculateTotal([body]),
         numberOfItems: calculateNumberOfItems([body]),
       })
+
+      setCookie(event, COOKIE_NAME, result.sessionId, {
+        httpOnly: true,
+        sameSite: 'strict',
+        secure: true,
+        domain: process.env.NODE_ENV === 'production' ? '.mycommerceclassic.com' : undefined,
+        priority: 'high',
+      })
       
       await newCartRef.update({ items: FieldValue.arrayUnion(body) })
-
-      // Handle the case where cartId is not available (e.g., create a new cart)
-      // const newCartRef = db.collection(CART_COLLECTION_NAME).doc() 
-      // await newCartRef.set({
-      //   items: [body],
-      // })
-      // setCookie(event, COOKIE_NAME, newCartRef.id, {
-      //   httpOnly: true,
-      //   sameSite: 'strict',
-      // })
-      // await docRef.update({ items: FieldValue.arrayUnion(body) })
     }
   } catch (error) {
     const template = createErrorTemplate(error)

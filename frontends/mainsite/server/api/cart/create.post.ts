@@ -35,9 +35,10 @@ export default defineEventHandler(async (event) => {
       httpOnly: true,
       sameSite: 'strict',
       secure: true,
-      domain: process.env.NODE_ENV === 'production' ? '.mycommerceclassic.com' : undefined,
+      // domain: process.env.NODE_ENV === 'production' ? '.mycommerceclassic.com' : undefined,
       priority: 'high',   
     })
+    
     return {
       sessionId: docRef.id
     }

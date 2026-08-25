@@ -11,23 +11,24 @@ export default defineEventHandler(async (event) => {
 
   try {
     const { db } = useFirebaseAdmin()
-    const docRef = db.collection(CART_COLLECTION_NAME).doc()
+    const docRef = db.collection(CART_COLLECTION_NAME).doc(cookie)
 
     const docSnapshot = await docRef.get()
 
     if (docSnapshot.exists) {
       const existingItems: CartItem[] = docSnapshot.data()?.items || []
       const newItems = existingItems.filter((item: CartItem) => item.product.id !== body.id)
+
       await docRef.update({
-        items: newItems
+        items: newItems,
+        total: calculateTotal(newItems),
+        numberOfItems: calculateNumberOfItems(newItems),
       })
     }
 
-    await docRef.create({
-      items: []
-    })
-
-    return docRef.id
+    return {
+      sessionId: docRef.id
+    }
   } catch (error) {
     const template = createErrorTemplate(error)
     throw createError(template)

@@ -21,10 +21,14 @@ export default defineEventHandler(async (event) => {
     }
 
     await docRef.update({
-      items: []
+      items: [],
+      total: 0,
+      numberOfItems: 0
     })
 
-    return docRef.id
+    return {
+      sessionId: docRef.id
+    }
   } catch (error) {
     const template = createErrorTemplate(error)
     throw createError(template)

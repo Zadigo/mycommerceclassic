@@ -4,7 +4,7 @@ export const useCartComposable = createGlobalState(() => {
       console.error('Product is undefined')
       return
     }
-    
+
     const cartItem: CartItem = {
       product: product.data.product,
       size: {
@@ -19,7 +19,7 @@ export const useCartComposable = createGlobalState(() => {
     }
 
     await $fetch('/api/cart/add', {
-      method: 'POST',
+      method: 'PATCH',
       body: cartItem
     })
   }
