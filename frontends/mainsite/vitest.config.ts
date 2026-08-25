@@ -18,6 +18,9 @@ export default defineConfig({
     env: {
       NODE_ENV: 'test'
     },
+    setupFiles: [
+      './test/setup.ts'
+    ],
     projects: [
       await defineVitestProject({
         test: {

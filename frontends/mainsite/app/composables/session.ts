@@ -8,6 +8,7 @@ export const useSessionComposable = createGlobalState(() => {
 
   if (isDefined(sessionId)) {
     const firestore = useFirestore()
+    console.log(useFirestore)
     const _docRef = useDocument(doc(firestore, SESSION_COLLECTION_NAME, sessionId.value))
     const docRef = computed(() => _docRef.value)
     const isLoading = computed(() => _docRef.pending.value)
