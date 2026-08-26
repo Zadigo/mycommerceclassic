@@ -11,7 +11,7 @@ export default defineEventHandler(async (event) => {
 
   try {
     const { db } = useFirebaseAdmin()
-    const docRef = db.collection(CART_COLLECTION_NAME).doc()
+    const docRef = db.collection(CART_COLLECTION_NAME).doc(cookie)
 
     const docSnapshot = await docRef.get()
 

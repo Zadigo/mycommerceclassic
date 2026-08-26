@@ -14,11 +14,11 @@
     </ul>
 
     <div>
-      <u-button variant="ghost" color="neutral" size="md" to="/">
+      <u-button to="/cart" variant="ghost" color="neutral" size="md">
         <icon name="i-lucide:shopping-cart" />
       </u-button>
 
-      <u-button variant="ghost" color="neutral" size="md" to="/">
+      <u-button to="/" variant="ghost" color="neutral" size="md">
         <icon name="i-lucide:user" />
       </u-button>
     </div>

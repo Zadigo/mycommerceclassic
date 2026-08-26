@@ -1,3 +1,5 @@
+import { toValue, type MaybeRefOrGetter } from "vue"
+
 /**
  * Name of the collection in Firestore that stores the session data.
  * This collection is used to store the session information associated with a specific user session.
@@ -84,5 +86,25 @@ export function findCartItem(items: CartItem[], productId: string, sizeName: str
 export function filterCartItemsFunc(itemToFind: CartItem) {
   return (item: CartItem) => {
     return item.product.id === itemToFind.product.id && item.size.name === itemToFind.size.name
+  }
+}
+
+/**
+ * A helper function to extract the product ID from a product object, which can be a Product, ProductNode, or BaseProduct.
+ * This function handles different structures of product objects and returns the appropriate product ID.
+ * @param product - The product object from which to extract the ID. It can be a Product, ProductNode, or BaseProduct.
+ * @returns The product ID as a string, or undefined if the ID cannot be determined.
+ */
+export function getProductId(product: MaybeRefOrGetter<Product | ProductNode | BaseProduct | undefined>): string | undefined {
+  const _product = toValue(product)
+
+  if (!_product) return undefined
+
+  if (_product && 'data' in _product && _product.data) {
+    return _product.data.product.id
+  } else if (_product && 'node' in _product && _product.node) {
+    return _product.node.id
+  } else {
+    return (_product as BaseProduct).id
   }
 }

@@ -2,8 +2,13 @@ import { useFirebaseAdmin } from '#shared/server_firebase'
 import { CART_COOKIE_NAME, CART_COLLECTION_NAME } from '#shared/cart'
 import { createErrorTemplate } from '~~/shared/utils'
 
+type RemoveCartItemRequestBody = {
+  id: string
+  size: string
+}
+
 export default defineEventHandler(async (event) => {
-  const body = await readBody<{ id: string }>(event)
+  const body = await readBody<RemoveCartItemRequestBody>(event)
   const cookie = getCookie(event, CART_COOKIE_NAME)
   
   if (!cookie) {

@@ -30,7 +30,7 @@ export function useSessionCreateComposable() {
  */
 export const useSessionComposable = createGlobalState(() => {
   const sessionId = useCookie(SESSION_COOKIE_NAME)
-  const hasSession = computed(() => isDefined(sessionId.value))
+  const hasSession = computed(() => isDefined(sessionId))
 
   if (isDefined(sessionId)) {
     const firestore = useFirestore()

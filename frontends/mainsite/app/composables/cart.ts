@@ -1,3 +1,5 @@
+import { getProductId } from "#shared/cart"
+
 /**
  * A composable that provides a set of functions and reactive state for managing a shopping cart.
  * It allows adding products to the cart, changing quantities, removing items, and selecting sizes.
@@ -7,13 +9,15 @@
  * @template T - A reactive reference or getter for the product type P.
  * @template S - A reactive reference or getter for the size type BaseSizeSet or null.
  */
-export const useCartComposable = createGlobalState(<P extends BaseProduct | undefined, T extends MaybeRefOrGetter<P>, S extends MaybeRefOrGetter<BaseSizeSet | null>>() => {
+export const useCartComposable = createGlobalState(<P extends Product | undefined, T extends MaybeRefOrGetter<P>, S extends MaybeRefOrGetter<BaseSizeSet | null>>() => {
   const selectedSize = ref<BaseSizeSet | null>(null)
   const showSizeWarning = refAutoReset(false, 3000)
 
-  const lastProduct = ref<BaseProduct | undefined>(undefined)
+  const lastProduct = ref<Product | undefined>(undefined)
 
   async function addToCart(product: T, size?: S) {
+    console.log('product', product)
+
     const _product = toValue(product)
     const _size = toValue(size) || toValue(selectedSize)
 
@@ -24,17 +28,17 @@ export const useCartComposable = createGlobalState(<P extends BaseProduct | unde
 
     if (!_size) {
       showSizeWarning.value = true
-      return
-    }
+          return
+        }
 
     const cartItem: CartItem = {
       product: {
-        id: _product.id,
-        name: _product.name,
-        price: _product.price,
-        salePrice: _product.salePrice,
-        unitPrice: _product.unitPrice,
-        mainImage: _product.mainImage
+        id: _product.data.product.id,
+        name: _product.data.product.name,
+        price: _product.data.product.price,
+        salePrice: _product.data.product.salePrice,
+        unitPrice: _product.data.product.unitPrice,
+        mainImage: _product.data.product.mainImage
       },
       size: _size,
       quantity: 1,
@@ -51,15 +55,15 @@ export const useCartComposable = createGlobalState(<P extends BaseProduct | unde
   }
 
   async function changeQuantity(product: T, size: S | undefined, direction: 'increase' | 'decrease') {
-    const _product = toValue(product)
+    const productId = getProductId(product)
 
-    if (_product) {
+    if (productId) {
       return await $fetch('/api/cart/quantity', {
         method: 'PATCH',
         body: {
           direction: direction,
           size: toValue(size),
-          productId: _product.id
+          productId: productId
         }
       })
     } else {
@@ -75,12 +79,14 @@ export const useCartComposable = createGlobalState(<P extends BaseProduct | unde
     return await changeQuantity(product, undefined, 'increase')
   }
 
-  async function remove(_product: T, _size: S | undefined) {
+  async function remove(product: T, size: S | undefined) {
+    const productId = getProductId(product)
+
     await $fetch('/api/cart/remove', {
       method: 'DELETE',
       body: {
-        productId: toValue(_product)?.id,
-        size: toValue(_size)
+        id: productId,
+        size: toValue(size)
       }
     })
   }
@@ -93,7 +99,12 @@ export const useCartComposable = createGlobalState(<P extends BaseProduct | unde
     return selectedSize.value?.name === size.name
   }
 
+  const items = computedAsync(async () => await $fetch('/api/cart', {
+    method: 'GET'
+  }))
+
   return {
+    items,
     /**
      * The last product that was added to the cart. This can be used to 
      * show a confirmation message or perform other actions after 
