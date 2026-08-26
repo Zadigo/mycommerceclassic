@@ -1,6 +1,8 @@
-export const useCartComposable = createGlobalState(<T extends MaybeRefOrGetter<BaseProduct | undefined>, S extends MaybeRefOrGetter<BaseSizeSet | null>>() => {
+export const useCartComposable = createGlobalState(<P extends BaseProduct | undefined, T extends MaybeRefOrGetter<P>, S extends MaybeRefOrGetter<BaseSizeSet | null>>() => {
   const selectedSize = ref<BaseSizeSet | null>(null)
   const showSizeWarning = refAutoReset(false, 3000)
+
+  const lastProduct = ref<BaseProduct | undefined>(undefined)
 
   async function addToCart(product: T, size?: S) {
     const _product = toValue(product)
@@ -17,18 +19,26 @@ export const useCartComposable = createGlobalState(<T extends MaybeRefOrGetter<B
     }
 
     const cartItem: CartItem = {
-      product: _product.data.product,
+      product: {
+        id: _product.id,
+        name: _product.name,
+        price: _product.price,
+        salePrice: _product.salePrice,
+        unitPrice: _product.unitPrice,
+        mainImage: _product.mainImage
+      },
       size: _size,
       quantity: 1,
       total: 0
     }
 
-    selectedSize.value = null
-
     await $fetch('/api/cart/add', {
       method: 'PATCH',
       body: cartItem
     })
+
+    lastProduct.value = _product
+    selectedSize.value = null
   }
 
   async function changeQuantity(product: T, size: S | undefined, direction: 'increase' | 'decrease') {
@@ -75,6 +85,13 @@ export const useCartComposable = createGlobalState(<T extends MaybeRefOrGetter<B
   }
 
   return {
+    /**
+     * The last product that was added to the cart. This can be used to 
+     * show a confirmation message or perform other actions after 
+     * adding a product.
+     * @default null
+     */
+    lastProduct,
     showSizeWarning,
     selectedSize,
     addToCart,

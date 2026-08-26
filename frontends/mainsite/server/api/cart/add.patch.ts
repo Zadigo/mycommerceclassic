@@ -1,7 +1,7 @@
 import { useFirebaseAdmin } from '#shared/server_firebase'
 import type { CartItem } from '#shared/types/cart'
 import { FieldValue } from 'firebase-admin/firestore'
-import { CART_COOKIE_NAME, CART_COLLECTION_NAME } from '#shared/cart'
+import { CART_COOKIE_NAME, CART_COLLECTION_NAME, filterCartItemsFunc } from '#shared/cart'
 import { createErrorTemplate } from '#shared/utils'
 import { calculateTotal, calculateNumberOfItems } from '#server/utils/cart'
 
@@ -9,23 +9,23 @@ export default defineEventHandler(async (event) => {
   const { db } = useFirebaseAdmin()
   const body = await readBody<CartItem>(event)
 
-  const cartId = getCookie(event, CART_COOKIE_NAME)
-  console.log('Cart ID from cookie:', cartId) // Log the cart ID for debugging
+  const cartSessionId = getCookie(event, CART_COOKIE_NAME)
+  // console.log('Cart ID from cookie:', cartSessionId) // Log the cart ID for debugging
 
   try {
-    if (typeof cartId === 'string' && typeof cartId !== 'undefined') {
-      const docRef = db.collection(CART_COLLECTION_NAME).doc(cartId)
-      // 1. Check if the items array already contains an item with the same product ID and size
+    if (typeof cartSessionId === 'string' && typeof cartSessionId !== 'undefined') {
+      const docRef = db.collection(CART_COLLECTION_NAME).doc(cartSessionId)
       const docSnapshot = await docRef.get()
 
       if (docSnapshot.exists) {
         const existingItems: CartItem[] = docSnapshot.data()?.items || []
 
-        const filterFunc = (item: CartItem) => item.product.id === body.product.id && item.size.name === body.size.name
-        const itemExists = existingItems.some(filterFunc)
+        // const filterFunc = (item: CartItem) => item.product.id === body.product.id && item.size.name === body.size.name
+        const itemExists = existingItems.some(filterCartItemsFunc(body))
 
         if (itemExists) {
-          const newProducts = existingItems.filter(filterFunc)
+          const newProducts = existingItems.filter(filterCartItemsFunc(body))
+
           newProducts.forEach(async (item) => {
             item.quantity += body.quantity
             item.total = item.quantity * item.product.price

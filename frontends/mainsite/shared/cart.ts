@@ -53,3 +53,36 @@ export const CART_COLLECTION_NAME = 'test_cart'
  * In a production environment, it is advisable to use a more appropriate name that reflects the purpose of the collection.
  */
 export const LIKE_COLLECTION_NAME = 'test_likes'
+
+/**
+ * A utility function to filter cart items based on product ID and size name.
+ * This function is useful for retrieving specific items from a user's cart.
+ * @param items The array of cart items to filter. 
+ * @param productId The ID of the product to filter by.
+ * @param sizeName The name of the size to filter by.
+ */
+export function filterCartItems(items: CartItem[], productId: string, sizeName: string): CartItem[] {
+  return items.filter(item => item.product.id === productId && item.size.name === sizeName)
+}
+
+/**
+ * Finds a specific cart item based on product ID and optional size name.
+ * This function returns the first matching item or undefined if no match is found.
+ * @param items The array of cart items to search through.
+ * @param productId The ID of the product to find.
+ * @param sizeName The name of the size to find.
+ */
+export function findCartItem(items: CartItem[], productId: string, sizeName: string): CartItem | undefined {
+  return items.find(item => item.product.id === productId && item.size.name === sizeName)
+}
+
+/**
+ * A utility function that returns a filter function for cart items based on a specific item.
+ * This can be used in `map` or `filter` operations to find items that match the product ID and size name of the provided item.
+ * @param itemToFind The cart item to use as a reference for filtering.
+ */
+export function filterCartItemsFunc(itemToFind: CartItem) {
+  return (item: CartItem) => {
+    return item.product.id === itemToFind.product.id && item.size.name === itemToFind.size.name
+  }
+}
