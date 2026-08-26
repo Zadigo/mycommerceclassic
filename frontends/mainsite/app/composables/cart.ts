@@ -1,8 +1,8 @@
-export const useCartComposable = createGlobalState(() => {
+export const useCartComposable = createGlobalState(<T extends MaybeRefOrGetter<BaseProduct | undefined>, S extends MaybeRefOrGetter<BaseSizeSet | null>>() => {
   const selectedSize = ref<BaseSizeSet | null>(null)
   const showSizeWarning = refAutoReset(false, 3000)
 
-  async function addToCart(product: MaybeRefOrGetter<Product | undefined>, size?: MaybeRefOrGetter<BaseSizeSet | null>) {
+  async function addToCart(product: T, size?: S) {
     const _product = toValue(product)
     const _size = toValue(size) || toValue(selectedSize)
 
@@ -31,6 +31,41 @@ export const useCartComposable = createGlobalState(() => {
     })
   }
 
+  async function changeQuantity(product: T, size: S | undefined, direction: 'increase' | 'decrease') {
+    const _product = toValue(product)
+
+    if (_product) {
+      return await $fetch('/api/cart/quantity', {
+        method: 'PATCH',
+        body: {
+          direction: direction,
+          size: toValue(size),
+          productId: _product.id
+        }
+      })
+    } else {
+      return Promise.reject(new Error('Product is undefined'))
+    }
+  }
+    
+  async function reduceQuantity(product: T, size: S | undefined) {
+    return await changeQuantity(product, size, 'decrease')
+  }
+
+  async function increaseQuantity(product: T) {
+    return await changeQuantity(product, undefined, 'increase')
+  }
+
+  async function remove(_product: T, _size: S | undefined) {
+    await $fetch('/api/cart/remove', {
+      method: 'DELETE',
+      body: {
+        productId: toValue(_product)?.id,
+        size: toValue(_size)
+      }
+    })
+  }
+
   function selectSize(size: BaseSizeSet) {
     selectedSize.value = size
   }
@@ -43,7 +78,10 @@ export const useCartComposable = createGlobalState(() => {
     showSizeWarning,
     selectedSize,
     addToCart,
+    remove,
     selectSize,
-    sizeIsSelected
+    sizeIsSelected,
+    reduceQuantity,
+    increaseQuantity
   }
 })
