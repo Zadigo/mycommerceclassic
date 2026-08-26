@@ -3,6 +3,10 @@ import { useFirebaseAdmin } from '#shared/server_firebase'
 import { createErrorTemplate } from '#shared/utils'
 import { SessionData } from '~~/shared/types/session'
 
+type SessionResponse = {
+  sessionId: string
+}
+
 export default defineEventHandler(async (event) => {
   try {
     const { db } = useFirebaseAdmin()
@@ -35,9 +39,7 @@ export default defineEventHandler(async (event) => {
         domain: process.env.NODE_ENV === 'production' ? '.yourdomain.com' : undefined,
       })
 
-      return {
-        sessionId: docRef.id,
-      }
+      return { sessionId: docRef.id } as SessionResponse
     } else {
       const template = createErrorTemplate(new Error('Session already exists'))
       throw createError(template)

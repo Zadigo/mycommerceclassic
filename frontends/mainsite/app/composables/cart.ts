@@ -1,3 +1,12 @@
+/**
+ * A composable that provides a set of functions and reactive state for managing a shopping cart.
+ * It allows adding products to the cart, changing quantities, removing items, and selecting sizes.
+ * The composable maintains the state of the last product added to the cart and whether a size warning should be shown.
+ * 
+ * @template P - The type of the product, which extends BaseProduct or can be undefined.
+ * @template T - A reactive reference or getter for the product type P.
+ * @template S - A reactive reference or getter for the size type BaseSizeSet or null.
+ */
 export const useCartComposable = createGlobalState(<P extends BaseProduct | undefined, T extends MaybeRefOrGetter<P>, S extends MaybeRefOrGetter<BaseSizeSet | null>>() => {
   const selectedSize = ref<BaseSizeSet | null>(null)
   const showSizeWarning = refAutoReset(false, 3000)
@@ -102,3 +111,24 @@ export const useCartComposable = createGlobalState(<P extends BaseProduct | unde
     increaseQuantity
   }
 })
+
+/**
+ * A composable that provides a notification mechanism for when a product is added to the cart.
+ * @param product - A reactive reference to the product that was added to the cart.
+ * @param timeout - The duration (in milliseconds) for which the notification should be displayed. Default is 3000ms.
+ */
+export function useLastProductComposable(product: Ref<BaseProduct | undefined>, timeout: number = 3000) {
+  const notifyUser = refAutoReset(false, timeout)
+  const toggleNotification = useToggle(notifyUser)
+
+  watch(product, (newProduct) => {
+    if (newProduct) {
+      toggleNotification(true)
+    }
+  })
+
+  return {
+    notifyUser,
+    toggleNotification
+  }
+}
