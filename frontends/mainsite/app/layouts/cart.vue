@@ -11,7 +11,7 @@
     <div class="col-span-8">
       <slot />
     </div>
-    
+
     <div class="col-span-4">
       <div class="p-5 space-y-5">
         <u-card>
@@ -87,5 +87,7 @@ const buttonTitle = computed(() => {
  * Cart
  */
 
-const { items } = useCartComposable()
+ const { items } = useCartItemsComposable()
+
+const {  } = useCartComposable()
 </script>

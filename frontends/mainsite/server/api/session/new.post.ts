@@ -33,16 +33,17 @@ export default defineEventHandler(async (event) => {
       })
 
       setCookie(event, SESSION_COOKIE_NAME, docRef.id, {
+        maxAge: 60 * 60 * 24 * 30, // 30 days
+        path: '/', // Ensures the cookie belongs to the whole app scope
         httpOnly: false,
-        sameSite: 'strict',
+        sameSite: 'lax',
         secure: process.env.NODE_ENV === 'production',
-        domain: process.env.NODE_ENV === 'production' ? '.yourdomain.com' : undefined,
+        ...(process.env.NODE_ENV === 'production' ? { domain: '.mycommerceclassic.com' } : {})
       })
 
       return { sessionId: docRef.id } as SessionResponse
     } else {
-      const template = createErrorTemplate(new Error('Session already exists'))
-      throw createError(template)
+      return { sessionId } as SessionResponse
     }
   } catch (error) {
     console.error('Error creating session:', error)

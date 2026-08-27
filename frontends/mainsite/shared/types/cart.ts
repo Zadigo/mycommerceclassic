@@ -1,6 +1,5 @@
 import type { Arrayable, Nullable } from './utils'
 import type { BaseProduct } from './product'
-import { z } from 'zod'
 
 export type ClotheSizes = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL' | 'Unique'
 
@@ -31,4 +30,5 @@ export type CartSessionData = {
   paymentIntent: Nullable<string>
   authenticated: boolean
   viewCount: number
+  status: 'active' | 'completed' | 'abandoned'
 }

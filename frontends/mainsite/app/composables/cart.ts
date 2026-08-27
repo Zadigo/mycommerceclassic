@@ -1,4 +1,43 @@
-import { getProductId } from "#shared/cart"
+import { doc } from "firebase/firestore"
+import { useDocument, useFirestore } from "vuefire"
+import { CART_COLLECTION_NAME, CART_COOKIE_NAME, getProductId } from '#shared/cart'
+
+export function useCartItemsComposable() {
+  // Keep track of the active cart ID reactively
+  const activeCartId = ref<string | undefined | null>(undefined)
+  
+  // Sync the cookie value ONLY when running in the browser
+  if (import.meta.client) {
+    const cookie = useCookie(CART_COOKIE_NAME)
+    activeCartId.value = cookie.value
+
+    // Watch if the cookie changes (e.g., if a server route creates a new cart)
+    watch(cookie, (newValue) => {
+      activeCartId.value = newValue
+    })
+  }
+
+  const store = useFirestore()
+
+  // Bind VueFire dynamically to the cart document
+  const docRef = computed(() => {
+    if (!activeCartId.value) return null
+    return doc(store, CART_COLLECTION_NAME, activeCartId.value)
+  })
+
+  // VueFire automatically listens to this document and updates reactively
+  const firebaseCartDoc = useDocument(docRef)
+
+  // Safely extract the items array from your Firestore document payload
+  const items = computed(() => {
+    return firebaseCartDoc.value?.items || []
+  })
+
+  return {
+    items,
+    activeCartId
+  }
+}
 
 /**
  * A composable that provides a set of functions and reactive state for managing a shopping cart.
@@ -10,6 +49,8 @@ import { getProductId } from "#shared/cart"
  * @template S - A reactive reference or getter for the size type BaseSizeSet or null.
  */
 export const useCartComposable = createGlobalState(<P extends Product | undefined, T extends MaybeRefOrGetter<P>, S extends MaybeRefOrGetter<BaseSizeSet | null>>() => {
+  const toast = useToast()
+
   const selectedSize = ref<BaseSizeSet | null>(null)
   const showSizeWarning = refAutoReset(false, 3000)
 
@@ -47,7 +88,16 @@ export const useCartComposable = createGlobalState(<P extends Product | undefine
 
     await $fetch('/api/cart/add', {
       method: 'PATCH',
-      body: cartItem
+      body: cartItem,
+      credentials: 'include', // Ensure cookies are sent with the request
+      onRequestError({ error }) {
+        toast.add({
+          title: 'Error adding to cart',
+          description: error.message || 'An error occurred while adding the product to the cart.',
+          duration: 5000,
+          color: 'error',
+        })
+      }
     })
 
     lastProduct.value = _product
@@ -99,12 +149,7 @@ export const useCartComposable = createGlobalState(<P extends Product | undefine
     return selectedSize.value?.name === size.name
   }
 
-  const items = computedAsync(async () => await $fetch('/api/cart', {
-    method: 'GET'
-  }))
-
   return {
-    items,
     /**
      * The last product that was added to the cart. This can be used to 
      * show a confirmation message or perform other actions after 
