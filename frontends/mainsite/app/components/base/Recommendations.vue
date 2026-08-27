@@ -1,16 +1,18 @@
 <template>
   <section id="product-recommendations">
-    <div :class="['grid grid-cols-5 gap-2', sizeClass]">
-      <div class="col-span-5">
-        <h2 v-if="showTitle" class="font-bold text-3xl text-center mb-5">
-          Vous pourriez aussi aimer
-        </h2>
-      </div>
-
-      <motion-group :preset="VueUseMotions.Fade">
-        <product-card v-for="product in products" :key="product.id" :product="product" :show-like-button="false" :show-product-info="false" />
-      </motion-group>
-    </div>
+    <base-grids-dynamic :grid="5">
+      <template #default="{ theme }">
+        <div :class="theme.themeMaxColSpan">
+          <h2 v-if="showTitle" class="font-bold text-3xl text-center mb-5">
+            Vous pourriez aussi aimer
+          </h2>
+        </div>
+  
+        <motion-group :preset="VueUseMotions.Fade">
+          <product-card v-for="product in products" :key="product.id" :product="product" />
+        </motion-group>
+      </template>
+    </base-grids-dynamic>
   </section>
 </template>
 

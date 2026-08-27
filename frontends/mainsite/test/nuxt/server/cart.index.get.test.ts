@@ -45,7 +45,5 @@ describe.todo('route: /api/cart/index', () => {
 
     const mockEvent = {} as H3Event
     const result = await handler.default(mockEvent)
-
-    console.log(result)
   })
 })

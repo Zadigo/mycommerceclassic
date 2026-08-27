@@ -1,13 +1,14 @@
 <template>
   <div :class="[theme, 'w-full gap-4']">
-    <slot />
+    <slot :theme="{ themeMaxColSpan }" />
   </div>
 </template>
 
 <script setup lang="ts">
-const { grid = 4, scrollable = false } = defineProps<{
+const { grid = 4, scrollable = false, containerHeight = 'h-190' } = defineProps<{
   grid?: number,
   scrollable?: boolean
+  containerHeight?: string
 }>()
 
 const theme = computed(() => {
@@ -15,8 +16,13 @@ const theme = computed(() => {
     'grid',
     {
       [`grid-cols-${grid}`]: grid >= 3,
-      'overflow-y-scroll h-190': scrollable,
+      'overflow-y-scroll': scrollable,
+      [containerHeight]: scrollable,
     }
   ]
+})
+
+const themeMaxColSpan = computed(() => {
+  return `col-span-${grid}`
 })
 </script>

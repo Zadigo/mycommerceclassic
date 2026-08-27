@@ -2,7 +2,7 @@
   <section id="success">
     <u-container class="my-20">
       <div class="max-w-5xl mx-auto">
-        <u-card>
+        <u-card id="page-success">
           <div class="flex flex-col items-center justify-center">
             <p class="font-bold text-3xl">
               Merci pour votre commande!
@@ -13,7 +13,7 @@
             </p>
       
             <div class="flex justify-start gap-2 mt-10">
-              <u-button to="/" variant="solid" color="primary" size="xl">
+              <u-button :id="createElementId('link', 'content', 'success', 'back')" to="/" variant="solid" color="primary" size="xl">
                 Retour à l'accueil
               </u-button>
             </div>
@@ -33,5 +33,5 @@ definePageMeta({
   layout: 'blank'
 })
 
-const AsyncRecommendations = defineAsyncComponent(() => import('~/components/base/Recommendations.vue'))
+const AsyncRecommendations = defineAsyncComponent(async () => await import('~/components/base/Recommendations.vue'))
 </script>

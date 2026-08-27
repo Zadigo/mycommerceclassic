@@ -6,7 +6,7 @@
       </motion-group>
     </template>
 
-    <u-card v-else>
+    <u-card v-else id="cart-empty">
       <p class="text-xl font-bold text-center">
         Votre panier est vide
       </p>
