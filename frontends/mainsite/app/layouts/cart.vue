@@ -20,12 +20,12 @@
           <div class="space-y-3">
             <div class="flex justify-between">
               <p>Sous-Total</p>
-              <p class="font-bold">Prix 1</p>
+              <p class="font-bold">{{ docRef?.cart.total || 0 }}€</p>
             </div>
     
             <div class="flex justify-between">
               <p>Livraison standard</p>
-              <p class="font-bold">Prix 1</p>
+              <p class="font-bold">5€</p>
             </div>
           </div>
         </u-card>
@@ -39,7 +39,7 @@
   
           <div class="flex justify-between py-5">
             <p>Total (TVA comprise)</p>
-            <p class="font-bold">Prix 1</p>
+            <p class="font-bold">{{ docRef?.cart.total || 0 }}€</p>
           </div>
           
           <div v-if="route.meta.title !== 'Payment'" class="flex justify-start gap-2 mt-10">
@@ -85,7 +85,6 @@ const buttonTitle = computed(() => {
  * Cart
  */
 
- const { items } = useCartItemsComposable()
-
-const {  } = useCartComposable()
+const { docRef } = useSessionComposable()
+const { items } = useCartItemsComposable()
 </script>

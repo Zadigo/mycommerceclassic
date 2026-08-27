@@ -1,24 +1,23 @@
 <template>
   <section id="shipment" class="space-y-5 max-w-5xl">
     <u-card>
-      <div class="space-y-3">
-        <div class="ring-1 dark:ring-slate-700 p-5 rounded-lg">
+      <div class="rounded-lg overflow-hidden">
+        <a v-for="option in shipmentOptions" :key="option.name" href="#" :class="[isSelected(option), 'block border border-slate-100 hover:bg-slate-100 p-5 cursor-pointer']" @click.prevent="selectShipmentOption(option)">
           <p class="font-light flex flex-col">
-            <span class="font-bold">Livraison - 5€</span>
-            <span>standard: 3-5 jours ouvrés</span>
+            <span class="font-bold">Livraison - {{ option.price }}€</span>
+            <span>{{ option.description }}</span>
           </p>
-        </div>
-  
-        <div class="ring-1 dark:ring-slate-700 p-5 rounded-lg">
-          <p class="font-light flex flex-col">
-            <span class="font-bold">Express - 10€</span>
-            <span>livraison: 1-2 jours ouvrés</span>
-          </p>
-        </div>
+        </a>
       </div>
     </u-card>
-
+    
     <u-card>
+      <template #header>
+        <h2 class="font-bold text-lg">
+          Addresse de livraison
+        </h2>
+      </template>
+
       <form>
         <div class="flex justify-between gap-2">
           <u-input class="w-full" placeholder="Firstname" />
@@ -34,8 +33,22 @@
 </template>
 
 <script setup lang="ts">
+import type { ShipmentResponse } from '#shared/types/shipment'
+  
 definePageMeta({
   title: 'Shipment',
   layout: 'cart'
+})
+
+const shipmentOptions = computedAsync(async() => $fetch('/api/cart/shipment'))
+const selectedShipmentOption = ref(shipmentOptions.value?.find(option => option.name === 'Standard') || null)
+
+const selectShipmentOption = (option: ShipmentResponse) => {
+  selectedShipmentOption.value = option
+}
+
+const isSelected = (option: ShipmentResponse) => ({
+  'bg-white': selectedShipmentOption.value?.name !== option.name,
+  'bg-slate-100': selectedShipmentOption.value?.name === option.name
 })
 </script>

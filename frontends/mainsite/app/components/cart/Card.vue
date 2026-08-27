@@ -1,7 +1,7 @@
 <template>
   <u-card class="mb-5">
     <div class="flex justify-start gap-5">
-      <nuxt-link to="/1234">
+      <nuxt-link :to="`/${item.product.id}`">
         <nuxt-img src="/img2.webp" class="rounded-lg" alt="Product Image" width="150" />
       </nuxt-link>
 
