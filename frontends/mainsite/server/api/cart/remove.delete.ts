@@ -1,42 +1,24 @@
-import { useFirebaseAdmin } from '#shared/server_firebase'
-import { CART_COOKIE_NAME, CART_COLLECTION_NAME } from '#shared/cart'
-import { createErrorTemplate } from '~~/shared/utils'
+import { calculateTotal, calculateNumberOfItems } from '#server/utils/cart'
+import { getOrCreateSession } from '#server/utils/session'
+import { createErrorTemplate } from '#shared/utils'
 
-type RemoveCartItemRequestBody = {
-  id: string
-  size: string
-}
+type RemoveCartItemRequestBody = { id: string, size: string }
 
 export default defineEventHandler(async (event) => {
   const body = await readBody<RemoveCartItemRequestBody>(event)
-  const cookie = getCookie(event, CART_COOKIE_NAME)
-  
-  if (!cookie) {
-    return
-  }
 
   try {
-    const { db } = useFirebaseAdmin()
-    const docRef = db.collection(CART_COLLECTION_NAME).doc(cookie)
+    const { docRef, data } = await getOrCreateSession(event)
+    const newItems = data.cart.items.filter(item => !(item.product.id === body.id && item.size.name === body.size))
 
-    const docSnapshot = await docRef.get()
+    await docRef.update({
+      'cart.items': newItems,
+      'cart.total': calculateTotal(newItems),
+      'cart.numberOfItems': calculateNumberOfItems(newItems)
+    })
 
-    if (docSnapshot.exists) {
-      const existingItems: CartItem[] = docSnapshot.data()?.items || []
-      const newItems = existingItems.filter((item: CartItem) => item.product.id !== body.id)
-
-      await docRef.update({
-        items: newItems,
-        total: calculateTotal(newItems),
-        numberOfItems: calculateNumberOfItems(newItems),
-      })
-    }
-
-    return {
-      sessionId: docRef.id
-    }
+    return { success: true }
   } catch (error) {
-    const template = createErrorTemplate(error)
-    throw createError(template)
+    throw createError(createErrorTemplate(error))
   }
 })

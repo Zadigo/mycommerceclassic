@@ -23,12 +23,12 @@ export interface CartItem {
 }
 
 export type CartSessionData = {
-  sessionId: string
+  // sessionId: string
   items: Arrayable<CartItem>
   total: number
   numberOfItems: number
   paymentIntent: Nullable<string>
-  authenticated: boolean
+  // authenticated: boolean
   viewCount: number
   status: 'active' | 'completed' | 'abandoned'
 }

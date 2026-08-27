@@ -1,6 +1,6 @@
 import { doc } from "firebase/firestore"
 import { useDocument, useFirestore } from "vuefire"
-import { CART_COLLECTION_NAME, CART_COOKIE_NAME, getProductId } from '#shared/cart'
+import { SESSION_COOKIE_NAME, getProductId } from '#shared/cart'
 
 export function useCartItemsComposable() {
   // Keep track of the active cart ID reactively
@@ -8,7 +8,7 @@ export function useCartItemsComposable() {
   
   // Sync the cookie value ONLY when running in the browser
   if (import.meta.client) {
-    const cookie = useCookie(CART_COOKIE_NAME)
+    const cookie = useCookie(SESSION_COOKIE_NAME)
     activeCartId.value = cookie.value
 
     // Watch if the cookie changes (e.g., if a server route creates a new cart)
@@ -22,16 +22,14 @@ export function useCartItemsComposable() {
   // Bind VueFire dynamically to the cart document
   const docRef = computed(() => {
     if (!activeCartId.value) return null
-    return doc(store, CART_COLLECTION_NAME, activeCartId.value)
+    return doc(store, SESSION_COOKIE_NAME, activeCartId.value)
   })
 
   // VueFire automatically listens to this document and updates reactively
-  const firebaseCartDoc = useDocument(docRef)
-
+  const firebaseCartDoc = useDocument<SessionData>(docRef)
+  
   // Safely extract the items array from your Firestore document payload
-  const items = computed(() => {
-    return firebaseCartDoc.value?.items || []
-  })
+  const items = computed(() => firebaseCartDoc.value?.cart.items || [])
 
   return {
     items,
@@ -57,7 +55,6 @@ export const useCartComposable = createGlobalState(<P extends Product | undefine
   const lastProduct = ref<Product | undefined>(undefined)
 
   async function addToCart(product: T, size?: S) {
-    console.log('product', product)
 
     const _product = toValue(product)
     const _size = toValue(size) || toValue(selectedSize)
@@ -69,22 +66,10 @@ export const useCartComposable = createGlobalState(<P extends Product | undefine
 
     if (!_size) {
       showSizeWarning.value = true
-          return
-        }
-
-    const cartItem: CartItem = {
-      product: {
-        id: _product.data.product.id,
-        name: _product.data.product.name,
-        price: _product.data.product.price,
-        salePrice: _product.data.product.salePrice,
-        unitPrice: _product.data.product.unitPrice,
-        mainImage: _product.data.product.mainImage
-      },
-      size: _size,
-      quantity: 1,
-      total: 0
+      return
     }
+
+    const cartItem = createCartItem(_product, _size)
 
     await $fetch('/api/cart/add', {
       method: 'PATCH',

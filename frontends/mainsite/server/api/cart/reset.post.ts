@@ -1,38 +1,18 @@
-import { useFirebaseAdmin } from '#shared/server_firebase'
-import { CART_COOKIE_NAME, CART_COLLECTION_NAME } from '#shared/cart'
-import { createErrorTemplate } from '~~/shared/utils'
+import { getOrCreateSession } from '#server/utils/session'
+import { createErrorTemplate } from '#shared/utils'
 
 export default defineEventHandler(async (event) => {
-  const cookie = getCookie(event, CART_COOKIE_NAME)
-
-  if (!cookie) {
-    const template = createErrorTemplate(new Error('Cart cookie not found'))
-    throw createError(template)
-  }
-
   try {
-    const { db } = useFirebaseAdmin()
-    const docRef = db.collection(CART_COLLECTION_NAME).doc(cookie)
-
-    const docSnapshot = await docRef.get()
-
-    if (docSnapshot.exists) {
-      await docRef.update({
-        items: []
-      })
-    }
+    const { docRef, sessionId } = await getOrCreateSession(event)
 
     await docRef.update({
-      items: [],
-      total: 0,
-      numberOfItems: 0
+      'cart.items': [],
+      'cart.total': 0,
+      'cart.numberOfItems': 0
     })
 
-    return {
-      sessionId: docRef.id
-    }
+    return { sessionId }
   } catch (error) {
-    const template = createErrorTemplate(error)
-    throw createError(template)
+    throw createError(createErrorTemplate(error))
   }
 })

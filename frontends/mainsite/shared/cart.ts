@@ -29,6 +29,7 @@ export const SESSION_COOKIE_NAME = 'sessionId'
  * It is recommended to use a unique and descriptive name for the cookie to avoid conflicts with other cookies.
  * In this case, the cookie name is set to 'cart_session_id' for testing purposes.
  * In a production environment, it is advisable to use a more appropriate name that reflects the purpose of the cookie.
+ * @deprecated
  */
 export const CART_COOKIE_NAME = 'cart_session_id'
 
@@ -41,6 +42,7 @@ export const CART_COOKIE_NAME = 'cart_session_id'
  * It is recommended to use a unique and descriptive name for the collection to avoid conflicts with other collections.
  * In this case, the collection name is set to 'test_cart' for testing purposes.
  * In a production environment, it is advisable to use a more appropriate name that reflects the purpose of the collection.
+ * @deprecated
  */
 export const CART_COLLECTION_NAME = 'test_cart'
 

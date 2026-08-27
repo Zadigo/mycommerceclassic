@@ -27,6 +27,10 @@ export interface SessionData {
    */
   searchHistory: string[]
   /**
+   * Used to store the cart data for the user
+   */
+  cart: CartSessionData
+  /**
    * Used to store the liked products for the user
    */
   // likedProducts: number[]
