@@ -69,7 +69,7 @@ const url = computed(() => {
   if (route.meta.title === 'Cart') {
     return '/cart/shipment'
   } else if (route.meta.title === 'Shipment') {
-    return '/cart/payment'
+    return '/cart/payment?order_id=123456&ids=1,2,3'
   }
 })
 

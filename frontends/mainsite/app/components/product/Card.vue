@@ -17,10 +17,10 @@
       </div>
 
       <!-- Like Button -->
-      <u-button :id="createElementId('product', 'card', 'like', product.id)" :icon="getIcon(product)" variant="subtle" color="neutral" class="absolute top-2 right-2" @click="add(product)" />
+      <u-button v-if="showLikeButton" :id="createElementId('product', 'card', 'like', product.id)" :icon="getIcon(product)" variant="subtle" color="neutral" class="absolute top-2 right-2" @click="add(product)" />
     </div>
 
-    <div class="flex justify-between p-3">
+    <div v-if="showProductInfo" class="flex justify-between p-3">
       <p class="font-light">
         {{  product.name }}
       </p>
@@ -35,8 +35,10 @@
 <script setup lang="ts">
 import type { BaseProduct } from '#shared/types/product'
 
-defineProps<{
-  product: BaseProduct
+const { product, showProductInfo = true, showLikeButton = true } = defineProps<{
+  product: BaseProduct,
+  showProductInfo?: boolean,
+  showLikeButton?: boolean
 }>()
 
 const { add, getIcon } = useLikeComposable()

@@ -16,3 +16,5 @@ export type AllCollections = GraphQlData<'allCollections', BaseCollection[]>
 export type CollectionProducts = GraphQlData<'collection', BaseCollectionProducts>
 
 export type SearchCollection = GraphQlData<'searchCollection', RelayEdge<BaseCollection>>
+
+export type CollectionRecommendations = GraphQlData<'collectionRecommendations', BaseCollection & { products: BaseProduct[] }>

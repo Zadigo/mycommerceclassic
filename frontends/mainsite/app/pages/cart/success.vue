@@ -21,6 +21,9 @@
         </u-card>
       </div>
     </u-container>
+
+    <!-- Recommendations -->
+    <async-recommendations />
   </section>
 </template>
 
@@ -29,4 +32,6 @@ definePageMeta({
   title: 'Success',
   layout: 'blank'
 })
+
+const AsyncRecommendations = defineAsyncComponent(() => import('~/components/base/Recommendations.vue'))
 </script>
