@@ -1,39 +1,29 @@
 import { doc } from "firebase/firestore"
 import { useDocument, useFirestore } from "vuefire"
-import { SESSION_COOKIE_NAME, getProductId } from '#shared/cart'
+import { SESSION_COOKIE_NAME, SESSION_COLLECTION_NAME, getProductId } from '#shared/cart'
 
 export function useCartItemsComposable() {
-  // Keep track of the active cart ID reactively
-  const activeCartId = ref<string | undefined | null>(undefined)
-  
-  // Sync the cookie value ONLY when running in the browser
+  const store = useFirestore()
+  const cookieId = useCookie(SESSION_COOKIE_NAME)
+
+  const activeDocumentId = ref<string | null | undefined>(undefined)
+
   if (import.meta.client) {
     const cookie = useCookie(SESSION_COOKIE_NAME)
-    activeCartId.value = cookie.value
-
-    // Watch if the cookie changes (e.g., if a server route creates a new cart)
-    watch(cookie, (newValue) => {
-      activeCartId.value = newValue
-    })
+    syncRef(activeDocumentId, cookie, { direction: 'rtl' })
   }
 
-  const store = useFirestore()
-
-  // Bind VueFire dynamically to the cart document
   const docRef = computed(() => {
-    if (!activeCartId.value) return null
-    return doc(store, SESSION_COOKIE_NAME, activeCartId.value)
+    if (!isDefined(cookieId)) return undefined
+    return doc(store, SESSION_COLLECTION_NAME, toValue(cookieId))
   })
 
-  // VueFire automatically listens to this document and updates reactively
   const firebaseCartDoc = useDocument<SessionData>(docRef)
-  
-  // Safely extract the items array from your Firestore document payload
   const items = computed(() => firebaseCartDoc.value?.cart.items || [])
 
   return {
-    items,
-    activeCartId
+    docRef,
+    items
   }
 }
 
@@ -98,7 +88,7 @@ export const useCartComposable = createGlobalState(<P extends Product | undefine
         body: {
           direction: direction,
           size: toValue(size),
-          productId: productId
+          cartItem: createCartItem(product, size)
         }
       })
     } else {
@@ -110,8 +100,8 @@ export const useCartComposable = createGlobalState(<P extends Product | undefine
     return await changeQuantity(product, size, 'decrease')
   }
 
-  async function increaseQuantity(product: T) {
-    return await changeQuantity(product, undefined, 'increase')
+  async function increaseQuantity(product: T, size: S | undefined) {
+    return await changeQuantity(product, size, 'increase')
   }
 
   async function remove(product: T, size: S | undefined) {

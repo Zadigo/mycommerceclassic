@@ -13,12 +13,17 @@
       <li><a class="hover:text-gray-500/80 transition" href="#">Pricing</a></li>
     </ul>
 
-    <div>
-      <u-button to="/cart" variant="ghost" color="neutral" size="md">
+    <div class="flex gap-2">
+      <u-button variant="soft" color="neutral" size="xl">
+        <icon name="i-lucide:search" />
+        Search
+      </u-button>
+
+      <u-button to="/cart" variant="ghost" color="neutral" size="xl">
         <icon name="i-lucide:shopping-cart" />
       </u-button>
 
-      <u-button to="/" variant="ghost" color="neutral" size="md">
+      <u-button to="/" variant="ghost" color="neutral" size="xl">
         <icon name="i-lucide:user" />
       </u-button>
     </div>

@@ -1,13 +1,18 @@
 /**
  * Creates a standardized cart item object based on the provided product and size.
  * @param product - A reactive reference or getter for the product, which can be of type BaseProduct, ProductNode, Product, or undefined.
- * @param size - The size of the product, which is of type BaseSizeSet.
+ * @param size - A reactive reference or getter for the size of the product, which is of type BaseSizeSet or null or undefined.
  */
-export function createCartItem<T extends CartItem>(product: MaybeRefOrGetter<BaseProduct | ProductNode | Product | undefined>, size: BaseSizeSet): T {
+export function createCartItem<T extends CartItem>(product: MaybeRefOrGetter<BaseProduct | ProductNode | Product | undefined>, size: MaybeRefOrGetter<BaseSizeSet | null | undefined>): T {
   const _product = toValue(product)
+  const _size = toValue(size)
+
+  if (!_size) {
+    throw new Error('Size must be provided to create a cart item.')
+  }
 
   const template: CartItem = {
-    size: size,
+    size: _size,
     quantity: 1,
     total: 0,
     product: {
