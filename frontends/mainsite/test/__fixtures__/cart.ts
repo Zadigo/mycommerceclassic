@@ -13,7 +13,7 @@ export const CART_ITEMS: CartItem[] = [
       variantPrice: parseFloat(faker.commerce.price({ min: 10, max: 100, dec: 2 })),
     },
     product: {
-      id: faker.string.uuid(),
+      id: '1',
       name: faker.commerce.productName(),
       price: parseFloat(faker.commerce.price({ min: 10, max: 100, dec: 2 })),
       salePrice: parseFloat(faker.commerce.price({ min: 10, max: 100, dec: 2 })),

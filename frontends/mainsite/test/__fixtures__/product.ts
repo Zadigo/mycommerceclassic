@@ -1,72 +1,76 @@
 import type { ProductNode } from '~~/shared/types/product'
 import { faker } from '@faker-js/faker'
 
-export const PRODUCT_FIXTURE: ProductNode = {
-  node: {
-    id: '1',
-    name: faker.commerce.productName(),
+export const PRODUCT_DATA_FIXTURE: BaseProduct = {
+  id: '1',
+  name: faker.commerce.productName(),
+  active: faker.datatype.boolean(),
+  ageGroupCategory: faker.helpers.arrayElement([ 'Adult', 'Kids', 'Teens' ]),
+  category: faker.commerce.department(),
+  color: faker.color.human(),
+  createdOn: faker.date.past().toISOString(),
+  displayNew: faker.datatype.boolean(),
+  genderCategory: faker.helpers.arrayElement([ 'Male', 'Female', 'Unisex' ]),
+  hasSizes: faker.datatype.boolean(),
+  modelHeight: faker.number.int({ min: 150, max: 200 }),
+  modelSize: faker.number.int({ min: 30, max: 50 }),
+  modifiedOn: faker.date.recent().toISOString(),
+  onSale: faker.datatype.boolean(),
+  price: parseFloat(faker.commerce.price()),
+  salePrice: parseFloat(faker.commerce.price()),
+  saleValue: 10,
+  sku: faker.string.alphanumeric(10),
+  slug: faker.helpers.slugify(faker.commerce.productName()),
+  subCategory: faker.commerce.department(),
+  unitPrice: parseFloat(faker.commerce.price()),
+  video: null,
+  mainImage: {
+    id: faker.string.uuid(),
     active: faker.datatype.boolean(),
-    ageGroupCategory: faker.helpers.arrayElement([ 'Adult', 'Kids', 'Teens' ]),
-    category: faker.commerce.department(),
-    color: faker.color.human(),
     createdOn: faker.date.past().toISOString(),
-    displayNew: faker.datatype.boolean(),
-    genderCategory: faker.helpers.arrayElement([ 'Male', 'Female', 'Unisex' ]),
-    hasSizes: faker.datatype.boolean(),
-    modelHeight: faker.number.int({ min: 150, max: 200 }),
-    modelSize: faker.number.int({ min: 30, max: 50 }),
-    modifiedOn: faker.date.recent().toISOString(),
-    onSale: faker.datatype.boolean(),
-    price: parseFloat(faker.commerce.price()),
-    salePrice: parseFloat(faker.commerce.price()),
-    saleValue: 10,
-    sku: faker.string.alphanumeric(10),
-    slug: faker.helpers.slugify(faker.commerce.productName()),
-    subCategory: faker.commerce.department(),
-    unitPrice: parseFloat(faker.commerce.price()),
-    video: null,
-    mainImage: {
-      id: faker.string.uuid(),
+    isMainImage: true,
+    name: faker.system.fileName(),
+    original: '/img2.webp',
+    thumbnail: '/img2.webp',
+    variant: faker.helpers.arrayElement([ 'default', 'red', 'blue', 'green' ]),
+  },
+  productImages: Array.from({ length: 3 }, () => ({
+    id: faker.string.uuid(),
+    active: faker.datatype.boolean(),
+    createdOn: faker.date.past().toISOString(),
+    isMainImage: false,
+    name: faker.system.fileName(),
+    original: '/img2.webp',
+    thumbnail: '/img2.webp',
+    variant: faker.helpers.arrayElement([ 'default', 'red', 'blue', 'green' ]),
+  })),
+  sizeSet: [
+    {
+      name: 'S',
       active: faker.datatype.boolean(),
-      createdOn: faker.date.past().toISOString(),
-      isMainImage: true,
-      name: faker.system.fileName(),
-      original: '/img2.webp',
-      thumbnail: '/img2.webp',
-      variant: faker.helpers.arrayElement([ 'default', 'red', 'blue', 'green' ]),
+      availability: faker.datatype.boolean(),
+      metric: 'cm',
+      variantPrice: faker.number.float({ min: 10, max: 100 }),
     },
-    productImages: Array.from({ length: 3 }, () => ({
-      id: faker.string.uuid(),
+    {
+      name: 'XL',
       active: faker.datatype.boolean(),
-      createdOn: faker.date.past().toISOString(),
-      isMainImage: false,
-      name: faker.system.fileName(),
-      original: '/img2.webp',
-      thumbnail: '/img2.webp',
-      variant: faker.helpers.arrayElement([ 'default', 'red', 'blue', 'green' ]),
-    })),
-    sizeSet: [
-      {
-        name: 'S',
-        active: faker.datatype.boolean(),
-        availability: faker.datatype.boolean(),
-        metric: 'cm',
-        variantPrice: faker.number.float({ min: 10, max: 100 }),
-      },
-      {
-        name: 'XL',
-        active: faker.datatype.boolean(),
-        availability: faker.datatype.boolean(),
-        metric: 'cm',
-        variantPrice: faker.number.float({ min: 10, max: 100 }),
-      },
-      {
-        name: 'M',
-        active: faker.datatype.boolean(),
-        availability: false,
-        metric: 'cm',
-        variantPrice: faker.number.float({ min: 10, max: 100 }),
-      }
-    ],
+      availability: faker.datatype.boolean(),
+      metric: 'cm',
+      variantPrice: faker.number.float({ min: 10, max: 100 }),
+    },
+    {
+      name: 'M',
+      active: faker.datatype.boolean(),
+      availability: false,
+      metric: 'cm',
+      variantPrice: faker.number.float({ min: 10, max: 100 }),
+    }
+  ]
+}
+
+export const PRODUCT_NODE_FIXTURE: ProductNode = {
+  node: {
+    ...PRODUCT_DATA_FIXTURE
   }
 }

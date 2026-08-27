@@ -1,7 +1,7 @@
 import { mockNuxtImport, mountSuspended } from '@nuxt/test-utils/runtime'
 import { describe, it, expect, vi } from 'vitest'
 import ID from '~/pages/[id].vue'
-import { PRODUCT_FIXTURE } from '~~/test/__fixtures__/product'
+import { PRODUCT_NODE_FIXTURE } from '~~/test/__fixtures__/product'
 import { USkeleton } from '#components'
 
 vi.mock('~/components/product/images/Grid.vue', () => {
@@ -27,7 +27,7 @@ const { mockedFetch, mockedUseCartComposable } = vi.hoisted(() => {
     return {
       data: {
         data: {
-          product: PRODUCT_FIXTURE.node
+          product: PRODUCT_NODE_FIXTURE.node
         }
       }
     }
@@ -144,6 +144,6 @@ describe('ID Page: With Products', () => {
     await nextTick()
     
     expect(mockedCartButton).toHaveBeenCalled()
-    // expect(mockedCartButton).toHaveBeenCalledWith(PRODUCT_FIXTURE.node, null)
+    // expect(mockedCartButton).toHaveBeenCalledWith(PRODUCT_NODE_FIXTURE.node, null)
   })
 })

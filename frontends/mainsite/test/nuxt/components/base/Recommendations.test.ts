@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import Recommendations from '~/components/base/Recommendations.vue'
 import { mockNuxtImport } from '@nuxt/test-utils/runtime'
-import { PRODUCT_FIXTURE } from '~~/test/__fixtures__/product'
+import { PRODUCT_NODE_FIXTURE } from '~~/test/__fixtures__/product'
 
 const mockStore = vi.hoisted(() => {
   const mockFetch = vi.fn(async () => {
@@ -78,7 +78,7 @@ describe('Recomendations.vue', () => {
   it.each(
     [
       [{testCase: 'products is undefined', products: []}],
-      [{testCase: 'products has values', products: [PRODUCT_FIXTURE.node]}]
+      [{testCase: 'products has values', products: [PRODUCT_NODE_FIXTURE.node]}]
     ]
   )('should render products from fetch when products $testCase', async ({ products }) => {
     mockStore.mockFetch.mockResolvedValue({

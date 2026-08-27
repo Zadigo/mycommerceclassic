@@ -1,13 +1,13 @@
 import { mountSuspended, renderSuspended } from '@nuxt/test-utils/runtime'
 import { describe, it, expect } from 'vitest'
 import Card from '~/components/product/Card.vue'
-import { PRODUCT_FIXTURE } from '~~/test/__fixtures__/product'
+import { PRODUCT_NODE_FIXTURE } from '~~/test/__fixtures__/product'
 
 describe('Card Component', () => {
   it('should render the Card component', async () => {
     const component = await mountSuspended(Card, {
       props: {
-        product: PRODUCT_FIXTURE.node
+        product: PRODUCT_NODE_FIXTURE.node
       }
     })
 
@@ -38,17 +38,17 @@ describe('Card Component', () => {
   testCases.forEach(({ type, text }) => {
     it(`should render the Card component with badges for ${type}`, async () => {
       if (type === 'displayNew') {
-        PRODUCT_FIXTURE.node.displayNew = true
+        PRODUCT_NODE_FIXTURE.node.displayNew = true
       }
 
       if (type === 'onSale') {
-        PRODUCT_FIXTURE.node.onSale = true
-        PRODUCT_FIXTURE.node.saleValue = 10
+        PRODUCT_NODE_FIXTURE.node.onSale = true
+        PRODUCT_NODE_FIXTURE.node.saleValue = 10
       }
       
       const component = await renderSuspended(Card, {
         props: {
-          product: PRODUCT_FIXTURE.node
+          product: PRODUCT_NODE_FIXTURE.node
         }
       })
 

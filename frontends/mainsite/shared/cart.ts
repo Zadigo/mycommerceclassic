@@ -63,11 +63,11 @@ export const LIKE_COOKIE_NAME = 'likeSessionId'
 /**
  * A utility function to filter cart items based on product ID and size name.
  * This function is useful for retrieving specific items from a user's cart.
- * @param items The array of cart items to filter. 
+ * @param items The array of cart items to filter.
  * @param productId The ID of the product to filter by.
- * @param sizeName The name of the size to filter by.
+ * @param sizeName The size object to filter by.
  */
-export function filterCartItems(items: CartItem[], productId: string, sizeName: string): CartItem[] {
+export function filterCartItems(items: CartItem[], productId: string, sizeName: BaseSizeSet['name']): CartItem[] {
   return items.filter(item => item.product.id === productId && item.size.name === sizeName)
 }
 
@@ -76,9 +76,9 @@ export function filterCartItems(items: CartItem[], productId: string, sizeName: 
  * This function returns the first matching item or undefined if no match is found.
  * @param items The array of cart items to search through.
  * @param productId The ID of the product to find.
- * @param sizeName The name of the size to find.
+ * @param sizeName The name of the size to find. It should be one of the values from BaseSizeSet['name'].
  */
-export function findCartItem(items: CartItem[], productId: string, sizeName: string): CartItem | undefined {
+export function findCartItem(items: CartItem[], productId: string, sizeName: BaseSizeSet['name']): CartItem | undefined {
   return items.find(item => item.product.id === productId && item.size.name === sizeName)
 }
 

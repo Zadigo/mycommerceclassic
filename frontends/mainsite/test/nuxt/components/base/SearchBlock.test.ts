@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import SearchBlock from '~/components/base/SearchBlock.vue'
-import { PRODUCT_FIXTURE } from '~~/test/__fixtures__/product'
+import { PRODUCT_NODE_FIXTURE } from '~~/test/__fixtures__/product'
 import type { BaseProduct } from '#shared/types/product'
 
 const mockStore = vi.hoisted(() => {
@@ -58,9 +58,7 @@ describe('SearchBlock.vue', () => {
   it('should render component properly', async () => {
     const component = await mountSuspended(SearchBlock)
     expect(component.exists()).toBe(true)
-
-    console.log(component.html())
-
+    
     const inputEl = component.find('input[type="search"]')
     expect(inputEl.exists()).toBe(true)
 
@@ -71,7 +69,7 @@ describe('SearchBlock.vue', () => {
   it.each(
     [
       { searchQuery: '""', strHistory: ['test1', 'test2'], searched: { data: { searchProducts: { edges: [] } } } },
-      { searchQuery: 'test', strHistory: ['test1', 'test2'], searched: { data: { searchProducts: { edges: [PRODUCT_FIXTURE] } } } }
+      { searchQuery: 'test', strHistory: ['test1', 'test2'], searched: { data: { searchProducts: { edges: [PRODUCT_NODE_FIXTURE] } } } }
     ]
   )('should render component properly when searchQuery is $searchQuery', async ({ searchQuery, strHistory, searched }) => {
     const searchQueryRef = ref(searchQuery)

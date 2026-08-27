@@ -3,17 +3,21 @@ import { defineVitestProject } from '@nuxt/test-utils/config'
 
 export default defineConfig({
   test: {
+    dir: './test',
+    fileParallelism: false,
     exclude: [
       'node_modules',
       '.nuxt', 
       'dist', 
-      'test/e2e', 
-      'test/__fixtures__'
+      'test/e2e'
     ],
     coverage: {
       enabled: true,
       provider: 'v8',
-      reporter: [ 'text', 'json', 'html' ]
+      reporter: [ 'text', 'json', 'html' ],
+      exclude: [
+        'test/__fixtures__'
+      ]
     },
     env: {
       NODE_ENV: 'test'
