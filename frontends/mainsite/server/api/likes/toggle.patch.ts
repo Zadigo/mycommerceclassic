@@ -2,10 +2,12 @@ import { useFirebaseAdmin } from '#shared/server_firebase'
 import { createErrorTemplate } from '#shared/utils'
 import { SESSION_COOKIE_NAME, LIKE_COLLECTION_NAME } from '#shared/cart'
 import { FieldValue } from 'firebase-admin/firestore'
+import { getOrCreateLikeDocument } from '~~/server/utils/session'
   
 export default defineEventHandler(async (event) => {
   try {
-    const sessionId = getCookie(event, SESSION_COOKIE_NAME)
+    const { likeCookieId } = await getOrCreateLikeDocument(event)
+
     const body = await readBody<{ productId: number | undefined }>(event)
 
     if (typeof body.productId === 'undefined') {
@@ -15,38 +17,37 @@ export default defineEventHandler(async (event) => {
 
     const { db } = useFirebaseAdmin()
     const collectionRef = db.collection(LIKE_COLLECTION_NAME)
-    
-    if (typeof sessionId !== 'undefined') {
+
+    const sessionId = getCookie(event, SESSION_COOKIE_NAME)
+
+    if (sessionId) {
       const result = collectionRef.where('sessionId', '==', sessionId)
-      
-      if ((await result.get()).empty) {
+      const documentData = await result.get()
+
+      if (documentData.empty) {
         await collectionRef.add({
           sessionId: sessionId,
           items: [body.productId],
         })
       } else {
-        const result = collectionRef.where('sessionId', '==', sessionId)
-        if (!(await result.get()).empty) {
-          const docRef = (await result.get()).docs[0]?.ref
-          const items = (await docRef?.get())?.data()?.items || []
-          if (!items.includes(body.productId)) {
-            await docRef?.update({
-              items: FieldValue.arrayUnion(body.productId),
-            })
-          } else {
-            await docRef?.update({
-              items: FieldValue.arrayRemove(body.productId),
-            })
-          }
-        }
-        return {
-          state: 'Product like status toggled successfully',
+        const docRef = documentData.docs[0]?.ref
+        const items = (await docRef?.get())?.data()?.items || []
+
+        if (items.includes(body.productId)) {
+          await docRef?.update({
+            items: FieldValue.arrayRemove(body.productId),
+            updatedAt: new Date(),
+          })
+        } else {
+          await docRef?.update({
+            items: FieldValue.arrayUnion(body.productId),
+            updatedAt: new Date(),
+          })
         }
       }
-    } else {
-      const template = createErrorTemplate(new Error('Session ID is undefined'))
-      throw createError(template)
     }
+
+    return { likeCookieId }
   } catch (error) {
     const template = createErrorTemplate(error)
     throw createError(template)

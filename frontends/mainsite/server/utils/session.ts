@@ -1,6 +1,6 @@
 import type { H3Event } from 'h3'
 import { useFirebaseAdmin } from '#shared/server_firebase'
-import { SESSION_COLLECTION_NAME, SESSION_COOKIE_NAME } from '#shared/cart'
+import { LIKE_COLLECTION_NAME, LIKE_COOKIE_NAME, SESSION_COLLECTION_NAME, SESSION_COOKIE_NAME } from '#shared/cart'
 import type { SessionData } from '#shared/types/session'
 
 const DEFAULT_SESSION_DATA: SessionData = {
@@ -49,4 +49,35 @@ export async function getOrCreateSession(event: H3Event) {
   })
 
   return { sessionId: docRef.id, docRef, data: DEFAULT_SESSION_DATA }
+}
+
+export async function getOrCreateLikeDocument(event: H3Event) {
+  const sessionId = getCookie(event, SESSION_COOKIE_NAME)
+  const likeCookieId = getCookie(event, LIKE_COOKIE_NAME)
+
+  const { db } = useFirebaseAdmin()
+  const collectionRef = db.collection(LIKE_COLLECTION_NAME)
+
+  if (likeCookieId) {
+    const docRef = collectionRef.doc(likeCookieId)
+  
+    await docRef.set({
+      sessionId: sessionId,
+      items: [],
+      updatedAt: new Date(),
+      createdAt: new Date()
+    })
+
+    setCookie(event, LIKE_COOKIE_NAME, docRef.id, {
+      httpOnly: false, // must stay readable client-side, useCookie() relies on it
+      sameSite: 'strict',
+      secure: process.env.NODE_ENV === 'production',
+      domain: process.env.NODE_ENV === 'production' ? '.yourdomain.com' : undefined
+    })
+
+    return { likeCookieId: docRef.id, docRef }
+  }
+
+  const docRef = collectionRef.doc()
+  return { likeCookieId: docRef.id, docRef }
 }

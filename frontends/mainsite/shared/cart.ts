@@ -58,6 +58,8 @@ export const CART_COLLECTION_NAME = 'test_cart'
  */
 export const LIKE_COLLECTION_NAME = 'test_likes'
 
+export const LIKE_COOKIE_NAME = 'likeSessionId'
+
 /**
  * A utility function to filter cart items based on product ID and size name.
  * This function is useful for retrieving specific items from a user's cart.
