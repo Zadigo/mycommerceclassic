@@ -8,11 +8,11 @@
     <main class="pt-[calc(65px)]">
       <slot />
     </main>
+
+    <!-- Footer -->
+    <lazy-base-footer hydrate-on-visible />
   </section>
 </template>
 
 <script setup lang="ts">
-// callOnce('initiateCookie', async () => {
-//   await $fetch('/api/cart/create', { method: 'POST' })
-// }, { mode: 'render'})
 </script>

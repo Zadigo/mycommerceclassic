@@ -79,11 +79,15 @@
         <!-- Reassurance -->
         <lazy-product-reassurance hydrate-on-visible />
       </aside>
+
       <div v-else>
         <u-skeleton class="h-6 w-1/2 mb-3" />
         <u-skeleton class="h-6 w-1/4 mb-3" />
       </div>
     </div>
+
+    <!-- Recommendations -->
+    <base-recommendations class="mt-10" />
 
     <!-- Modals -->
     <lazy-product-images-super-zoom v-if="isOpen" hydrate-on-idle @close="deselect" />

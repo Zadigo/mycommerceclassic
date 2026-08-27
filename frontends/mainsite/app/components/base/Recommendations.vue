@@ -22,6 +22,6 @@ const { showTitle = true, sizeClass = 'max-w-5xl mx-auto' } = defineProps<{
   sizeClass?: HTMLAttributes['class'] | ClassValue
 }>()
 
-const { data } = useAsyncData(async () => await $fetch('/api/collection/recommendations', { method: 'GET' }))
+const { data } = await useAsyncData(async () => await $fetch('/api/collection/recommendations', { method: 'GET' }))
 const products = computed(() => data.value?.data?.collectionRecommendations?.products || [])
 </script>
