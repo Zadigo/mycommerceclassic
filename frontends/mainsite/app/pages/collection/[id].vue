@@ -24,10 +24,12 @@
     <!-- Products -->
     <section id="feed" class="grid grid-cols-12 w-full gap-1 my-5">
       <div class="col-span-12 md:col-span-4 xl:col-span-2">
-        <lazy-products-filters-base hydrate-on-idle />
+        <lazy-products-filters-base hydrate-on-idle @selected-filters="updateFilters" />
       </div>
       
       <div class="col-span-12 md:col-span-8 xl:col-span-10">
+        <lazy-products-filters-selected :selection="filterSelection" hydrate-on-idle />
+        
         <motion :preset="VueUseMotions.SlideTop">
           <div class="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-1">
             <product-card v-for="product in products" :key="product.id" :product="product" />
@@ -51,7 +53,10 @@
 
 <script setup lang="ts">
 import type { BreadcrumbItem } from '@nuxt/ui'
-import { VueUseMotions } from  '~/constants/motion'
+
+/**
+ * Breadcrumb
+ */
 
 const items: BreadcrumbItem[] = [
   {
@@ -64,8 +69,26 @@ const items: BreadcrumbItem[] = [
   }
 ]
 
+/**
+ * Products
+ */
+
 const { data } = await useAsyncData('collection', () => $fetch('/api/collection/TEST-COLLECTION-ID'))
+
+/**
+ * Pagination
+ */
+
 const { paginatedData, nextPage } = usePaginationComposable(data)
-// const products = computed(() => toValue(data)?.data.collection?.products ?? [])
 const products = computed(() => toValue(paginatedData)?.data.collection?.products ?? [])
+
+/**
+ * Filters
+ */
+
+const filterSelection = ref<ProductFiltersList>([])
+
+const updateFilters = (selection: ProductFiltersList) => {
+  filterSelection.value = selection
+}
 </script>

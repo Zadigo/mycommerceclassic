@@ -4,6 +4,7 @@
     <p v-if="size" class="uppercase">
       {{ size.name }}
     </p>
+    
     <p v-else-if="material" class="uppercase">
       {{ material.name }}
     </p>
@@ -18,14 +19,29 @@ const { size, material } = defineProps<{
   material?: Material
 }>()
 
-const { selectedFilters, addFilter } = useProductFiltersStore()
+const emit = defineEmits<{
+  'selected-filter': [Size | Material | undefined]
+}>()
+
+/**
+ * Store
+ */
+
+const { addFilter } = useProductFiltersStore()
+
+/**
+ * Selection
+ */
 
 const isSelected = ref(false)
+
 watch(isSelected, () => {
   if (size) {
     addFilter('sizes', size.name)
   } else if (material) {
     addFilter('materials', material.name)
   }
+  
+  emit('selected-filter', size || material)
 })
 </script>

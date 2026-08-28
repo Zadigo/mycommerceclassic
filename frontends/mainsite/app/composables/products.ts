@@ -13,17 +13,6 @@ const [useProductFiltersProvider, _useProductFiltersStore] = createInjectionStat
     searchParams.sizes = sizes || undefined
   }, { deep: true })
 
-  // const query = computed(() => {
-  //   const params = new URLSearchParams()
-  //   if (selectedFilters.value.sizes.length > 0) {
-  //     params.set('sizes', selectedFilters.value.sizes.join(','))
-  //   }
-  //   if (selectedFilters.value.materials.length > 0) {
-  //     params.set('materials', selectedFilters.value.materials.join(','))
-  //   }
-  //   return params.toString()
-  // })
-
   function addFilter(name: ProductFilterskeys, value: string) {
     const sizes = selectedFilters.value[name]
     if (sizes.includes(value)) {
@@ -33,8 +22,11 @@ const [useProductFiltersProvider, _useProductFiltersStore] = createInjectionStat
     }
   }
 
+  const strSelectedFilters = computed(() => Object.values(selectedFilters.value).flat())
+
   return {
     selectedFilters,
+    strSelectedFilters,
     addFilter
   }
 })
