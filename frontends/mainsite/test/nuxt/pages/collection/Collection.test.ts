@@ -16,7 +16,7 @@ vi.mock('~/components/products/filters/Base.vue', () => ({
   })
 }))
 
-describe('Collection Page', () => {
+describe('pages/collection/[id].vue', { tags: ['frontend'] }, () => {
   it('should render the collection page component', async () => {
     const component = await mountSuspended(ID)
     expect(component).toBeTruthy()

@@ -9,7 +9,7 @@ vi.stubGlobal('import', () => {
   })
 })
 
-describe('cart/success.vue', () => {
+describe('pages/cart/success.vue', { tags: ['frontend'] }, () => {
   it('should render component properly', async () => {
     const component = await mountSuspended(Success)
     expect(component.exists()).toBe(true)

@@ -20,7 +20,7 @@ vi.mock('~/components/products/filters/FilterCheckbox.vue', () => {
   }
 })
 
-describe('Base.vue', () => {
+describe('components/products/filters/Base.vue', { tags: ['frontend'] }, () => {
   it('should be render the component', async () => {
     const component = await mountSuspended(Base)
     expect(component.exists()).toBe(true)

@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import Footer from '~/components/base/Footer.vue'
 
-describe('Footer.vue', () => {
+describe('components/base/Footer.vue', { tags: ['frontend'] }, () => {
   it('should render the footer correctly', async () => {
     const component = await mountSuspended(Footer)
     expect(component.exists()).toBe(true)

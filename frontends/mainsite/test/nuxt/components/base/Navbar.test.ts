@@ -12,7 +12,7 @@ vi.mock('~/components/base/SearchBlock.vue', async () => {
 })
 
 
-describe('Navbar.vue', () => {
+describe('components/base/Navbar.vue', { tags: ['frontend'] }, () => {
   it('should render the navbar correctly', async () => {
     const component = await mountSuspended(Navbar)
     expect(component.exists()).toBe(true)

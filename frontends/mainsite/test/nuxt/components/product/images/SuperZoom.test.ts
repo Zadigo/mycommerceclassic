@@ -2,7 +2,7 @@ import { mountSuspended } from '@nuxt/test-utils/runtime'
 import { describe, it, expect } from 'vitest'
 import SuperZoom from '~/components/product/images/SuperZoom.vue'
 
-describe('SuperZoom Component', () => {
+describe('components/product/images/SuperZoom.vue', { tags: ['frontend'] }, () => {
   it('should render the SuperZoom component', async () => {
     const component = await mountSuspended(SuperZoom, {
       props: {

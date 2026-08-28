@@ -26,7 +26,7 @@ vi.mock('~/composables/cart', async (original) => {
   }
 })
 
-describe('cart/payment.vue', () => {
+describe('pages/cart/payment.vue', { tags: ['frontend'] }, () => {
   it('should render component properly', async () => {
     const component = await mountSuspended(Payment)
     expect(component.exists()).toBe(true)

@@ -78,7 +78,7 @@ describe('ID Page: No Products', () => {
 
 mockNuxtImport('$fetch', () => vi.fn())
 
-describe('ID Page: With Products', () => {
+describe('pages/[id].vue', { tags: ['frontend'] }, () => {
   it('should render the ID page component', async () => {
     const component = await mountSuspended(ID)
     expect(component.exists()).toBe(true)

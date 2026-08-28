@@ -42,7 +42,7 @@ vi.mock('@vueuse/motion', async (original) => {
   } 
 })
 
-describe('Recomendations.vue', () => {
+describe('components/base/Recommendations.vue', { tags: ['frontend'] }, () => {
   it('should render recommendations properly', async () => {
     const component = await mountSuspended(Recommendations)
     expect(component.exists()).toBe(true)

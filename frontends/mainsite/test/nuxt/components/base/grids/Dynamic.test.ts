@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import Dynamic from '~/components/base/grids/Dynamic.vue'
 
-describe('Dynamic.vue', () => {
+describe('components/base/grids/Dynamic.vue', { tags: ['frontend'] }, () => {
   it.each([
     [{ grid: 4, scrollable: true, containerHeight: 'h-200' }],
     [{ grid: 3, scrollable: false, containerHeight: 'h-100' }],

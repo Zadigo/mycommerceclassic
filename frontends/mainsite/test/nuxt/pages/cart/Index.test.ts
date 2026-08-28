@@ -37,7 +37,7 @@ vi.mock('~/components/cart/Card.vue', async () => {
   }
 })
 
-describe('cart/index.vue', () => {
+describe('pages/cart/index.vue', { tags: ['frontend'] }, () => {
   it.each([
     [{ testCase: 'without items', items: [] }],
     [{ testCase: 'with items', items: CART_ITEMS }]

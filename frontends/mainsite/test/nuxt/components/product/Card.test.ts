@@ -3,7 +3,7 @@ import { describe, it, expect } from 'vitest'
 import Card from '~/components/product/Card.vue'
 import { PRODUCT_NODE_FIXTURE } from '~~/test/__fixtures__/product'
 
-describe('Card Component', () => {
+describe('components/product/Card.vue', { tags: ['frontend'] }, () => {
   it('should render the Card component', async () => {
     const component = await mountSuspended(Card, {
       props: {

@@ -28,7 +28,7 @@ vi.mock('~/composables/products', async (original) => {
   }
 })
 
-describe('FilterCheckbox.vue', () => {
+describe('components/products/filters/FilterCheckbox.vue', { tags: ['frontend'] }, () => {
   const sizes: Size[] = [
     {
       'name': 'S',

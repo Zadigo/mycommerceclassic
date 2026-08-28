@@ -54,7 +54,7 @@ vi.mock('~/components/product/Card.vue', async () => {
   }
 })
 
-describe('SearchBlock.vue', () => {
+describe('components/base/SearchBlock.vue', { tags: ['frontend'] }, () => {
   it('should render component properly', async () => {
     const component = await mountSuspended(SearchBlock)
     expect(component.exists()).toBe(true)

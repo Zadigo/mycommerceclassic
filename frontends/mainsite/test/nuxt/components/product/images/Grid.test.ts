@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import Grid from '~/components/product/images/Grid.vue'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 
-describe('Grid.vue', () => {
+describe('components/product/images/Grid.vue', { tags: ['frontend'] }, () => {
   it('renders the component', async () => {
     const component = await mountSuspended(Grid)
     expect(component.exists()).toBe(true)
