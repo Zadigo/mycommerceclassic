@@ -90,7 +90,11 @@
     <base-recommendations class="mt-10" />
 
     <!-- Modals -->
-    <lazy-product-images-super-zoom v-if="isOpen" hydrate-on-idle @close="deselect" />
+     <client-only>
+       <teleport to="body">
+         <lazy-product-images-super-zoom v-model:open="isOpen" hydrate-on-idle @close="deselect" />
+       </teleport>
+     </client-only>
   </section>
 </template>
 

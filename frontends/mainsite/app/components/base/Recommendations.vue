@@ -41,7 +41,7 @@ const {
   quantity?: number
 }>()
 
-const { data } = await useAsyncData(async () => await $fetch('/api/collection/recommendations', {
+const { data } = await useAsyncData('recommendations', async () => await $fetch('/api/collection/recommendations', {
   method: 'GET',
   query: {
     quantity

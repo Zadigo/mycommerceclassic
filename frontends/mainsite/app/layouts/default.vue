@@ -1,6 +1,6 @@
 <template>
-  <section id="site">
-    <header class="fixed top-0 left-0 w-full z-50">
+  <section id="site" class="relative">
+    <header class="fixed top-0 left-0 w-full z-40">
       <base-navbar />
       <!-- <lazy-base-ecommerce-menu /> -->
     </header>
