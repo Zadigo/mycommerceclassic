@@ -24,12 +24,12 @@
     <!-- Products -->
     <section id="feed" class="grid grid-cols-12 w-full gap-1 my-5">
       <div class="col-span-12 md:col-span-4 xl:col-span-2">
-        <lazy-products-filters-base hydrate-on-idle @selected-filters="updateFilters" />
+        <lazy-products-filters-base hydrate-on-idle />
       </div>
       
       <div class="col-span-12 md:col-span-8 xl:col-span-10">
-        <lazy-products-filters-selected :selection="filterSelection" hydrate-on-idle />
-        
+        <lazy-products-filters-selected :selection="strSelectedFilters" hydrate-on-idle @remove-filters="clearAll" @remove-filter="remove" />
+
         <motion :preset="VueUseMotions.SlideTop">
           <div class="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-1">
             <product-card v-for="product in products" :key="product.id" :product="product" />
@@ -86,9 +86,5 @@ const products = computed(() => toValue(paginatedData)?.data.collection?.product
  * Filters
  */
 
-const filterSelection = ref<ProductFiltersList>([])
-
-const updateFilters = (selection: ProductFiltersList) => {
-  filterSelection.value = selection
-}
+const { strSelectedFilters, remove, clearAll } = useProductFiltersProvider()
 </script>

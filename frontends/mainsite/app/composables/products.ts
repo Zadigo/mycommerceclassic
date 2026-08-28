@@ -1,10 +1,16 @@
-import type { ProductFilterskeys, ProductFiltersSelection } from '~~/shared/types/filters'
+import type { ProductFilterskeys, ProductFiltersList, ProductFiltersSelection } from '~~/shared/types/filters'
 
 const [useProductFiltersProvider, _useProductFiltersStore] = createInjectionState(() => {
   const selectedFilters = ref<ProductFiltersSelection>({
     sizes: [],
     materials: []
   })
+
+  function _isSelected<K extends ProductFilterskeys>(name: K, value: ProductFiltersSelection[K][number]) {
+    return selectedFilters.value[name].includes(value)
+  }
+
+  const isSelected = reactify(_isSelected)
 
   const searchParams = useUrlSearchParams() as { sizes?: string }
 
@@ -23,11 +29,33 @@ const [useProductFiltersProvider, _useProductFiltersStore] = createInjectionStat
   }
 
   const strSelectedFilters = computed(() => Object.values(selectedFilters.value).flat())
+  
+  // Notify the parent and/or children who listen
+  // to this signal that the filters have been cleared
+  const removeSignal = refAutoReset(false, 400)
+
+  // Notify the parent and/or children who listen
+  // to this signal that a filter has been removed
+  // this time using the value of the filter that was removed
+  const removeFilterSignal = refAutoReset<ProductFiltersList[number] | undefined>(undefined, 400)
+
+  function clearAll() {
+    removeSignal.value = true
+  }
+
+  function remove<K extends ProductFilterskeys>(value: ProductFiltersSelection[K][number]) {    
+    removeFilterSignal.value = value
+  }
 
   return {
     selectedFilters,
     strSelectedFilters,
-    addFilter
+    removeSignal,
+    removeFilterSignal,
+    isSelected,
+    addFilter,
+    clearAll,
+    remove,
   }
 })
 

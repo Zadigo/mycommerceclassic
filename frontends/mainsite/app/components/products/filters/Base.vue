@@ -33,7 +33,7 @@ const emit = defineEmits<{
 const { id } = useRoute().params as { id: string }
 const { data } = await useAsyncData('filters', () => $fetch<ProductFilters>(`/api/collection/${id}/filters`))
 
-const { selectedFilters, strSelectedFilters } = useProductFiltersProvider()
+const { selectedFilters, strSelectedFilters } = useProductFiltersStore()
 
 /**
  * Selection
