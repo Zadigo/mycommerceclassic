@@ -1,8 +1,8 @@
 <template>
   <section id="product-recommendations">
     <base-grids-dynamic :grid="grid">
-      <template #default="{ theme }">
-        <div :class="theme.themeMaxColSpan">
+      <template #default>
+        <div class="col-span-full">
           <h2 v-if="showTitle" :class="titleClass">
             {{  title }}
           </h2>

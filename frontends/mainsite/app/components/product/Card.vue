@@ -2,7 +2,7 @@
   <article :id="createElementId('product', 'card', product.id)">
     <div class="relative overflow-hidden group">
       <nuxt-link :to="`/${product.id}`" class="block">
-        <nuxt-img :alt="product.name" src="/img1.webp" class="w-full group-hover:scale-120 transition-all ease-in-out duration-300" />
+        <nuxt-img :alt="product.name" src="/img1.webp" class="w-full md:group-hover:scale-120 transition-all ease-in-out duration-300" />
       </nuxt-link>
       
       <!-- Badges -->
@@ -20,12 +20,12 @@
       <u-button v-if="showLikeButton" :id="createElementId('product', 'card', 'like', product.id)" :icon="getIcon(product)" variant="subtle" color="neutral" class="absolute top-2 right-2" @click="add(product)" />
     </div>
 
-    <div v-if="showProductInfo" class="flex justify-between p-3">
-      <p class="font-light">
+    <div v-if="showProductInfo" class="flex justify-between py-2 md:py-1 md:p-3">
+      <p class="font-semibold text-sm md:text-md">
         {{  product.name }}
       </p>
 
-      <p :id="createElementId('product', 'footer', 'price', product.id)" class="font-bold">
+      <p :id="createElementId('product', 'footer', 'price', product.id)" class="font-bold text-sm md:text-md">
         19,99 €
       </p>
     </div>

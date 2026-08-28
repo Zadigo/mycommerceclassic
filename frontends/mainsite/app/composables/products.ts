@@ -65,6 +65,7 @@ export function usePaginationComposable(initial: MaybeRefOrGetter<CollectionProd
 
   const paginatedData = ref<CollectionProducts | undefined>(toValue(initial))
   const { id } = useRoute().params as { id: string }
+
   watchEffect(async () => {
     if (!hasOffset.value) {
       paginatedData.value = toValue(initial)

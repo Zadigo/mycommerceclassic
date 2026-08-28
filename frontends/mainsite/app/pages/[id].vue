@@ -2,9 +2,9 @@
   <section id="product" class="px-5 relative">
     <div class="grid grid-cols-12 gap-8">
       <!-- Images -->
-      <lazy-product-images-grid hydrate-on-idle @zoom="select" />
+      <lazy-product-images-grid class="col-span-12 md:col-span-8" hydrate-on-idle @zoom="select" />
 
-      <aside v-if="product" class="col-span-4 py-15">
+      <aside v-if="product" class="col-span-12 md:col-span-4 md:py-15">
         <u-breadcrumb :items="items">
           <template #separator>
             <span class="mx-2 text-muted" />
@@ -25,12 +25,8 @@
           <p class="font-light">
             Couleur: Bleu
           </p>
-
-          <div class="group grid grid-cols-8 gap-2">
-            <nuxt-link v-for="i in 6" :key="i" to="/">
-              <nuxt-img src="/img1.webp" class="w-full group-hover:ring-2 group-hover:ring-primary transition-transform duration-200" />
-            </nuxt-link>
-          </div>
+          
+          <lazy-product-variants class="mt-2" hydrate-on-idle :product="product" :variants="product.colorVariants" />
         </div>
 
         <div id="size" class="py-5">
@@ -80,9 +76,13 @@
         <lazy-product-reassurance hydrate-on-visible />
       </aside>
 
-      <div v-else>
-        <u-skeleton class="h-6 w-1/2 mb-3" />
-        <u-skeleton class="h-6 w-1/4 mb-3" />
+      <div v-else class="md:mt-20">
+        <u-skeleton class="h-6 w-50 md:w-100 mb-3" />
+        <u-skeleton class="h-6 w-40 md:w-80 mb-3" />
+        <u-skeleton class="h-6 w-40 md:w-80 mb-3" />
+        <u-skeleton class="h-6 w-80 md:w-120 mb-3" />
+        <u-skeleton class="h-60 w-100 md:w-80 my-5" />
+        <u-skeleton class="h-40 w-100 md:w-80 my-10" />
       </div>
     </div>
 
@@ -96,6 +96,7 @@
 
 <script setup lang="ts">
 import type { BreadcrumbItem } from '@nuxt/ui'
+import { toBaseProduct } from '#shared/utils'
 
 const items: BreadcrumbItem[] = [
   {
@@ -109,10 +110,24 @@ const items: BreadcrumbItem[] = [
 ]
 
 const { id } = useRoute().params as { id: string }
-const { data } = useAsyncData('product', async () => await $fetch(`/api/product/${id}`, { method: 'GET' }))
-const product = computed(() => toValue(data)?.data.product)
+const { data } = useAsyncData('product', async () => await $fetch<Product>(`/api/product/${id}`, { method: 'GET' }))
+const product = computed(() => toBaseProduct(data))
+
+/**
+ * Zoom
+ */
 
 const { selectedImage, select, deselect, isOpen } = useImageSuperZoom()
+
+/**
+ * Likes
+ */
+
 const { add, getIcon } = useLikeComposable()
+
+/**
+ * Cart
+ */
+
 const { selectedSize, showSizeWarning, addToCart, selectSize, sizeIsSelected } = useCartComposable()
 </script>

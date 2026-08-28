@@ -1,28 +1,38 @@
 <template>
   <div :class="[theme, 'w-full gap-1']">
-    <slot :theme="{ themeMaxColSpan }" />
+    <slot />
   </div>
 </template>
 
 <script setup lang="ts">
-const { grid = 4, scrollable = false, containerHeight = 'h-190' } = defineProps<{
+import { breakpointsTailwind } from '@vueuse/core'
+
+const { 
+  grid = 4, 
+  scrollable = false, 
+  containerHeight = 'h-190'
+} = defineProps<{
   grid?: number,
-  scrollable?: boolean
+  scrollable?: boolean,
   containerHeight?: string
 }>()
+
+/**
+ * Breakpoints
+ */
+
+const breakpoint = useBreakpoints(breakpointsTailwind)
+const isMobile = computed(() => breakpoint.smaller('md'))
+
+const _scrollable = computed(() => isMobile.value && scrollable)
 
 const theme = computed(() => {
   return [
     'grid',
     {
-      [`grid-cols-${grid}`]: grid >= 3,
-      'overflow-y-scroll': scrollable,
-      [containerHeight]: scrollable,
+      [`grid-cols-1 md:grid-cols-${grid}`]: true,
+      [`overflow-y-scroll ${containerHeight}`]: _scrollable.value
     }
   ]
-})
-
-const themeMaxColSpan = computed(() => {
-  return `col-span-${grid}`
 })
 </script>

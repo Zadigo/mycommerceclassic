@@ -1,5 +1,5 @@
 <template>
-  <div id="product-images" class="col-span-8">
+  <div id="product-images">
     <div class="grid grid-cols-2 gap-2">
       <motion-group :preset="VueUseMotions.Fade">
         <div v-for="i in 4" :key="i" class="overflow-hidden">

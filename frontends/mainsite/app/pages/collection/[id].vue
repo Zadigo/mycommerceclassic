@@ -9,7 +9,7 @@
           </template>
         </u-breadcrumb>
 
-        <div class="flex justify-between">
+        <div class="flex justify-between items-center">
           <h1 class="font-bold text-2xl">
             Sous-Vêtements
           </h1>
@@ -23,13 +23,13 @@
 
     <!-- Products -->
     <section id="feed" class="grid grid-cols-12 w-full gap-1 my-5">
-      <div class="col-span-2">
+      <div class="col-span-12 md:col-span-4 xl:col-span-2">
         <lazy-products-filters-base hydrate-on-idle />
       </div>
       
-      <div class="col-span-10">
+      <div class="col-span-12 md:col-span-8 xl:col-span-10">
         <motion :preset="VueUseMotions.SlideTop">
-          <div class="grid grid-cols-3 gap-1">
+          <div class="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-1">
             <product-card v-for="product in products" :key="product.id" :product="product" />
           </div>
         </motion>

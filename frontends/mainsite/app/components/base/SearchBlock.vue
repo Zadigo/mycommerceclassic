@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[90vh] w-full p-20">
+  <div class="h-[90vh] w-full p-5 md:p-20">
     <div class="max-w-7xl mx-auto">
       <u-input v-model="searchQuery" type="search" size="xl" placeholder="Search for products..." class="w-full" />
       

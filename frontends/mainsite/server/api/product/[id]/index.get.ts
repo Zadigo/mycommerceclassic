@@ -2,6 +2,7 @@ import { faker } from '@faker-js/faker'
 import { Product } from '~~/shared/types/product'
 
 export default defineEventHandler(async (_event) => {
+  // return {}
   return {
     data: {
       product: {
@@ -27,14 +28,42 @@ export default defineEventHandler(async (_event) => {
         subCategory: faker.commerce.department(),
         unitPrice: parseFloat(faker.commerce.price()),
         video: null,
+        colorVariants: [
+          {
+            id: faker.string.uuid(),
+            name: faker.commerce.productName(),
+            mainImage: {
+              id: faker.string.uuid(),
+              active: faker.datatype.boolean(),
+              createdOn: faker.date.past().toISOString(),
+              isMainImage: false,
+              name: faker.system.fileName(),
+              original: '/img1.webp',
+              thumbnail: '/img1.webp'
+            }
+          },
+          {
+            id: faker.string.uuid(),
+            name: faker.commerce.productName(),
+            mainImage: {
+              id: faker.string.uuid(),
+              active: faker.datatype.boolean(),
+              createdOn: faker.date.past().toISOString(),
+              isMainImage: false,
+              name: faker.system.fileName(),
+              original: '/img1.webp',
+              thumbnail: '/img1.webp'
+            }
+          }
+        ],
         mainImage: {
           id: faker.string.uuid(),
           active: faker.datatype.boolean(),
           createdOn: faker.date.past().toISOString(),
           isMainImage: true,
           name: faker.system.fileName(),
-          original: '/img2.webp',
-          thumbnail: '/img2.webp',
+          original: '/img1.webp',
+          thumbnail: '/img1.webp',
           variant: faker.helpers.arrayElement(['default', 'red', 'blue', 'green']),
         },
         productImages: Array.from({ length: 3 }, () => ({
@@ -43,8 +72,8 @@ export default defineEventHandler(async (_event) => {
           createdOn: faker.date.past().toISOString(),
           isMainImage: false,
           name: faker.system.fileName(),
-          original: '/img2.webp',
-          thumbnail: '/img2.webp',
+          original: '/img1.webp',
+          thumbnail: '/img1.webp',
           variant: faker.helpers.arrayElement(['default', 'red', 'blue', 'green']),
         })),
         sizeSet: [

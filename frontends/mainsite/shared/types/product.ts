@@ -37,6 +37,7 @@ export type BaseProduct = {
   subCategory: string
   unitPrice: number
   video: unknown
+  colorVariants?: BaseProduct[]
 }
 
 export type ProductNode = RelayNode<BaseProduct>

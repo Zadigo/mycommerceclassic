@@ -6,11 +6,11 @@
       </nuxt-link>
     </header>
 
-    <div class="col-span-8 p-5 space-y-5 mt-[calc(70px+1rem)]">
+    <div class="col-span-12 order-2 md:order-1 md:col-span-8 p-5 space-y-5 md:mt-[calc(70px+1rem)]">
       <slot />
     </div>
 
-    <div class="col-span-4 p-5 relative border-l border-l-slate-100 bg-slate-100">
+    <div class="col-span-12 order-1 md:order-2 md:col-span-4 mt-15 md:mt-0 p-5 relative border-l border-l-slate-100 bg-slate-100">
       <div class="sticky right-0 top-[calc(70px+1rem)] space-y-5">
         <u-card>
           <p class="font-bold mb-10">

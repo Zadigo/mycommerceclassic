@@ -40,6 +40,6 @@ export type RelayEdge<E> = { edges: Array<RelayNode<E>> } & Partial<GraphQlPagin
  */
 export interface GraphQlData<K extends string, R> {
   data: {
-    [ key in K ]: R
+    [key in K]: R
   }
 }
