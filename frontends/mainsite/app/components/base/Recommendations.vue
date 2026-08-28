@@ -27,7 +27,8 @@ const {
   titleClass = 'font-bold text-3xl text-center mb-5',
   showLikeButton = true, 
   showProductInfo = true,
-  showBadges = true
+  showBadges = true,
+  quantity = 10
 } = defineProps<{
   title?: string
   showTitle?: boolean
@@ -37,8 +38,14 @@ const {
   showProductInfo?: boolean,
   showLikeButton?: boolean,
   showBadges?: boolean
+  quantity?: number
 }>()
 
-const { data } = await useAsyncData(async () => await $fetch('/api/collection/recommendations', { method: 'GET' }))
+const { data } = await useAsyncData(async () => await $fetch('/api/collection/recommendations', {
+  method: 'GET',
+  query: {
+    quantity
+  }
+}))
 const products = computed(() => data.value?.data?.collectionRecommendations?.products || [])
 </script>

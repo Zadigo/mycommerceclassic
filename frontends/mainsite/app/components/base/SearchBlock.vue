@@ -14,6 +14,8 @@
           <lazy-product-card v-for="product in searched.data.searchProducts.edges" :key="product.node.id" :product="product.node" hydrate-on-idle />
         </base-grids-dynamic>
       </div>
+
+      <!-- Recommendations -->
       <lazy-base-recommendations v-else hydrate-on-idle />
     </div>
   </div>

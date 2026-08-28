@@ -2,7 +2,7 @@
   <section id="shipment" class="space-y-5 max-w-5xl">
     <u-card>
       <div class="rounded-lg overflow-hidden">
-        <a v-for="option in shipmentOptions" :key="option.name" href="#" :class="[isSelected(option), 'block border border-slate-100 hover:bg-slate-100 p-5 cursor-pointer']" @click.prevent="selectShipmentOption(option)">
+        <a v-for="option in shipmentOptions" :key="option.name" href="#" :class="[isSelected(option), 'block border border-slate-100 hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-700 dark:bg-slate-800 p-5 cursor-pointer']" @click.prevent="selectShipmentOption(option)">
           <p class="font-light flex flex-col">
             <span class="font-bold">Livraison - {{ option.price }}€</span>
             <span>{{ option.description }}</span>

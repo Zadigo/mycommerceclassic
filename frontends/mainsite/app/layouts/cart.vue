@@ -1,17 +1,21 @@
 <template>
   <section id="cart" class="grid grid-cols-12 h-screen relative transition-all ease-in-out duration-300">
-    <header class="p-5 col-span-12 flex items-center justify-center border-b border-b-slate-100 fixed top-0 left-0 w-full bg-white z-10">
+    <header class="p-5 col-span-12 flex items-center justify-center border-b border-b-slate-100 dark:border-b-slate-500 fixed top-0 left-0 w-full bg-white dark:bg-slate-900 z-10">
       <nuxt-link to="/" class="font-bold uppercase">
         Calvin Klein
       </nuxt-link>
     </header>
 
-    <div class="col-span-12 order-2 md:order-1 md:col-span-8 p-5 space-y-5 md:mt-[calc(70px+1rem)]">
+    <div class="col-span-12 order-2 md:order-1 md:col-span-8 p-5 space-y-5 mt-22">
       <slot />
     </div>
 
-    <div class="col-span-12 order-1 md:order-2 md:col-span-4 mt-15 md:mt-0 p-5 relative border-l border-l-slate-100 bg-slate-100">
-      <div class="sticky right-0 top-[calc(70px+1rem)] space-y-5">
+    <div class="col-span-12 order-3">
+      <base-recommendations :grid="5" :quantity="5" class="m-10" />
+    </div>
+
+    <aside class="col-span-12 order-1 md:order-2 md:col-span-4 mt-0 md:mt-16.25 p-5 relative border-l border-l-slate-100 dark:border-l-slate-500 bg-slate-100 dark:bg-slate-800">
+      <div class="sticky right-0 top-16.5 space-y-5">
         <u-card>
           <p class="font-bold mb-10">
             Aperçu de votre panier
@@ -53,7 +57,7 @@
           </div>
         </u-card>
       </div>
-    </div>
+    </aside>
   </section>
 </template>
 

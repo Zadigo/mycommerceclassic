@@ -30,10 +30,10 @@
     </header>
 
     <!-- Products -->
-    <section id="feed" class="grid grid-cols-12 w-full gap-1 my-5">
-      <div class="col-span-12 md:col-span-4 xl:col-span-2">
-        <lazy-products-filters-base hydrate-on-idle />
-      </div>
+    <section id="feed" class="grid grid-cols-12 w-full gap-1 my-5 relative">
+      <aside class="col-span-12 md:col-span-4 xl:col-span-2">
+        <lazy-products-filters-base class="sticky top-25 left-0" hydrate-on-idle />
+      </aside>
       
       <div class="col-span-12 md:col-span-8 xl:col-span-10">
         <lazy-products-filters-selected :selection="strSelectedFilters" hydrate-on-idle @remove-filters="clearAll" @remove-filter="remove" />

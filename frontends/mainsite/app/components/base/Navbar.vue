@@ -29,6 +29,7 @@
     </ul>
 
     <div class="flex gap-2">
+      <!-- Search -->
       <lazy-u-drawer title="Rechercher des produits" :handle="false" should-scale-background set-background-color-on-scale hydrate-on-visible>
         <u-button variant="soft" color="neutral" size="xl">
           <icon name="i-lucide:search" />

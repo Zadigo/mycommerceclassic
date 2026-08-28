@@ -1,5 +1,5 @@
 <template>
-  <section id="payment" class="space-y-5 max-w-5xl">
+  <section id="payment" class="space-y-5 max-w-3xl mx-auto">
     <u-card>
       Payment block
 

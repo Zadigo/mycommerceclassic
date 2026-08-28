@@ -1,14 +1,20 @@
 import type { CollectionRecommendations } from '~~/shared/types/collection'
 import { faker } from '@faker-js/faker'
 
-export default defineEventHandler(async (_event) => {
+type RequestBody = {
+  quantity: number
+}
+
+export default defineEventHandler(async (event) => {
+  const query = getQuery<RequestBody>(event)
+
   return {
     data: {
       collectionRecommendations: {
         id: faker.string.uuid(),
         reference: faker.commerce.productName(),
         name: faker.commerce.department(),
-        products: Array.from({ length: 10 }, () => ({
+        products: Array.from({ length: query.quantity }, () => ({
           id: faker.string.uuid(),
           name: faker.commerce.productName(),
           active: faker.datatype.boolean(),
