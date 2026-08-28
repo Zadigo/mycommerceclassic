@@ -167,6 +167,6 @@ if (import.meta.client) {
 
 <style scoped>
 .ecommerce-enter-active, .ecommerce-leave-active {
-  transition: opacity 0.3s;
+  transition: opacity 1s ease-in-out;
 }
 </style>

@@ -3,20 +3,28 @@
     <!-- Header -->
     <header>
       <u-card class="ring-0">
-        <u-breadcrumb :items="items">
-          <template #separator>
-            <span class="mx-2 text-muted" />
-          </template>
-        </u-breadcrumb>
-
-        <div class="flex justify-between items-center">
-          <h1 class="font-bold text-2xl">
-            Sous-Vêtements
-          </h1>
+        <div class="space-y-3">
+          <u-breadcrumb :items="items">
+            <template #separator>
+              <span class="mx-2 text-muted" />
+            </template>
+          </u-breadcrumb>
   
-          <p class="font-light text-slate-300">
-            986 articles
-          </p>
+          <div class="flex justify-between items-center">
+            <h1 class="font-bold text-2xl">
+              Sous-Vêtements
+            </h1>
+    
+            <p class="font-light text-slate-300">
+              986 articles
+            </p>
+          </div>
+  
+          <div class="flex gap-5 mt-2">
+            <u-button v-for="i in 5" :key="i" to="/collection/some-collection" variant="link" color="neutral">
+              Jupe
+            </u-button>
+          </div>
         </div>
       </u-card>
     </header>
