@@ -36,12 +36,18 @@ export function multipleToBaseProducts(items: MaybeRefOrGetter<(BaseProduct | Pr
  * @param product The BaseProduct object from which to select keys.
  * @param keys An array of keys to select from the BaseProduct object.
  */
-export function selectKeysFromProduct<K extends keyof BaseProduct>(product: BaseProduct, keys: K[]): Pick<BaseProduct, K> {
+export function selectKeysFromProduct<K extends keyof BaseProduct>(product: MaybeRefOrGetter<BaseProduct | Product | ProductNode | undefined>, keys: K[]): Pick<BaseProduct, K> {
+  const _product = toBaseProduct(product)
+
+  if (!_product) {
+    return {} as Pick<BaseProduct, K>
+  }
+
   const selected: Partial<Pick<BaseProduct, K>> = {}
 
   for (const key of keys) {
-    if (key in product) {
-      const result = product[key] as BaseProduct[typeof key]
+    if (key in _product) {
+      const result = _product[key] as BaseProduct[typeof key]
       selected[key] = result
     }
   }

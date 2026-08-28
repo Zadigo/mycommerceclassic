@@ -1,63 +1,68 @@
 import { describe, it, expect, vi } from 'vitest'
-import { filterCartItems, findCartItem, filterCartItemsFunc, getProductId } from '#shared/cart'
-import { CART_ITEMS } from '~~/test/__fixtures__/cart'
-import { PRODUCT_DATA_FIXTURE, PRODUCT_NODE_FIXTURE } from '~~/test/__fixtures__/product'
+import { PRODUCT_NODE_FIXTURE } from '~~/test/__fixtures__/product'
 
-describe('shared/utils/filterCartItems', () => {
+describe('shared/utils/toBaseProduct', () => {
   it.each(
     [
-      [{ testCase: 'with empty values',  values: [], productId: '', expected: [], size: '' }],
-      [{ testCase: 'with cart items', values: CART_ITEMS, productId: '1', expected: CART_ITEMS, size: 'S' }],
-      [{ testCase: 'wrong size and product ID', values: CART_ITEMS, productId: '999', expected: [], size: '' }],
-      [{ testCase: 'wrong product ID correct size', values: CART_ITEMS, productId: '999', expected: [], size: 'M' }]
+      [{ testCase: 'node', product: PRODUCT_NODE_FIXTURE }],
+      [{ testCase: 'data', product: { data: { product: PRODUCT_NODE_FIXTURE.node } } }],
+      [{ testCase: 'base product', product: PRODUCT_NODE_FIXTURE.node }],
+      [{ testCase: 'undefined', product: undefined }],
+      [{ testCase: 'reactive product', product: ref(PRODUCT_NODE_FIXTURE) }]
     ]
-  )('should filter with values $testCase', ({ values, productId, expected, size}) => {
-    const result = filterCartItems(values, productId, size)
-    expect(result).toEqual(expected)
-  })
-})
-
-describe('shared/utils/findCartItem', () => {
-  it.each(
-    [
-      [{ testCase: 'with empty values',  values: [], productId: '', expected: undefined, size: '' }],
-      [{ testCase: 'with cart items', values: CART_ITEMS, productId: '1', expected: CART_ITEMS[0], size: 'S' }],
-      [{ testCase: 'wrong size and product ID', values: CART_ITEMS, productId: '999', expected: undefined, size: '' }],
-      [{ testCase: 'wrong product ID correct size', values: CART_ITEMS, productId: '999', expected: undefined, size: 'M' }]
-    ]
-  )('should find with values $testCase', ({ values, productId, expected, size}) => {
-    const result = findCartItem(values, productId, size as BaseSizeSet['name'])
-    expect(result).toEqual(expected)
-  })
-})
-
-describe('shared/utils/filterCartItemsFunc', () => {
-  it.each(
-    [
-      [{ testCase: 'no values',  values: [], productToFind: CART_ITEMS[0] as CartItem, expected: 0 }],
-      [{ testCase: 'with values',  values: CART_ITEMS, productToFind: CART_ITEMS[0] as CartItem, expected: 1 }]
-    ]
-  )('should filter with values $testCase', ({ values, productToFind, expected }) => {
-    const result = values.filter(filterCartItemsFunc(productToFind))
-    expect(result.length).toEqual(expected)
-  })
-})
-
-describe('shared/utils/getProductId', () => {
-  it.each(
-    [
-      [{ testCase: 'product undefined',  product: undefined }],
-      [{ testCase: 'product node', product: PRODUCT_NODE_FIXTURE }],
-      [{ testCase: 'product data',  product: { data: { product: PRODUCT_DATA_FIXTURE } } }],
-      [{ testCase: 'simple product',  product: PRODUCT_DATA_FIXTURE }]
-    ]
-  )('should filter with values $testCase', ({ product }) => {
-    const result = getProductId(product)
-
+  )('should return the plain base product object from product $testCase', async ({ product }) => {
+    const { toBaseProduct } = await vi.importActual<typeof import('#shared/utils')>('#shared/utils')
+    const result = toBaseProduct(product)
+    
     if (!product) {
       expect(result).toBeUndefined()
     } else {
       expect(result).toBeDefined()
+      expect(result).toEqual(PRODUCT_NODE_FIXTURE.node)
     }
   })
+
+  it('should throw an error for invalid product type', async () => {
+    const { toBaseProduct } = await vi.importActual<typeof import('#shared/utils')>('#shared/utils')
+    const invalidProduct = { invalid: 'product' } as unknown as BaseProduct
+
+    expect(() => toBaseProduct(invalidProduct)).toThrow('Invalid product type')
+  })
+
+  it('should return multiple base products from an array of products', async () => {
+    const { multipleToBaseProducts } = await vi.importActual<typeof import('#shared/utils')>('#shared/utils')
+
+    const products = [
+      PRODUCT_NODE_FIXTURE, 
+      { data: { product: PRODUCT_NODE_FIXTURE.node } }, 
+      PRODUCT_NODE_FIXTURE.node
+    ]
+    
+    const result = multipleToBaseProducts(products)
+
+    expect(result).toHaveLength(3)
+    expect(result[0]).toEqual(PRODUCT_NODE_FIXTURE.node)
+    expect(result[1]).toEqual(PRODUCT_NODE_FIXTURE.node)
+    expect(result[2]).toEqual(PRODUCT_NODE_FIXTURE.node)
+  })
 })
+
+describe('shared/utils/selectKeysFromProduct', () => {
+  it.each(
+    [
+      [{ testCase: 'with empty values', product: undefined }],
+      [{ testCase: 'node', product: PRODUCT_NODE_FIXTURE }],
+      [{ testCase: 'data', product: { data: { product: PRODUCT_NODE_FIXTURE.node } } }],
+      [{ testCase: 'base product', product: PRODUCT_NODE_FIXTURE.node }]
+    ]
+  )('should select keys from any product type like $testCase', async ({ product}) => {
+    const { selectKeysFromProduct } = await vi.importActual<typeof import('#shared/utils')>('#shared/utils')
+    const result = selectKeysFromProduct(product, ['id'])
+    if (!product) {
+      expect(result).toEqual({})
+    } else {
+      expect(result).toHaveProperty('id')
+    }
+  })  
+})
+
