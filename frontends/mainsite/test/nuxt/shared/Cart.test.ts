@@ -3,7 +3,7 @@ import { filterCartItems, findCartItem, filterCartItemsFunc, getProductId } from
 import { CART_ITEMS } from '~~/test/__fixtures__/cart'
 import { PRODUCT_DATA_FIXTURE, PRODUCT_NODE_FIXTURE } from '~~/test/__fixtures__/product'
 
-describe('shared/cart/filterCartItems', () => {
+describe('shared/cart/filterCartItems', { tags: ['server'] }, () => {
   it.each(
     [
       [{ testCase: 'with empty values',  values: [], productId: '', expected: [], size: '' }],
@@ -17,7 +17,7 @@ describe('shared/cart/filterCartItems', () => {
   })
 })
 
-describe('shared/cart/findCartItem', () => {
+describe('shared/cart/findCartItem', { tags: ['server'] }, () => {
   it.each(
     [
       [{ testCase: 'with empty values',  values: [], productId: '', expected: undefined, size: '' }],
@@ -31,7 +31,7 @@ describe('shared/cart/findCartItem', () => {
   })
 })
 
-describe('shared/cart/filterCartItemsFunc', () => {
+describe('shared/cart/filterCartItemsFunc', { tags: ['server'] }, () => {
   it.each(
     [
       [{ testCase: 'no values',  values: [], productToFind: CART_ITEMS[0] as CartItem, expected: 0 }],
@@ -43,7 +43,7 @@ describe('shared/cart/filterCartItemsFunc', () => {
   })
 })
 
-describe('shared/cart/getProductId', () => {
+describe('shared/cart/getProductId', { tags: ['server'] }, () => {
   it.each(
     [
       [{ testCase: 'product undefined',  product: undefined }],

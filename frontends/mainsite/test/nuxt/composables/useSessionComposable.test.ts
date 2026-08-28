@@ -14,7 +14,7 @@ const { mockedUseCookie } = vi.hoisted(() => {
 
 mockNuxtImport('useCookie', () => mockedUseCookie)
 
-describe.skip('useSessionComposable', () => {
+describe.skip('composables/useSessionComposable', { tags: ['composables'] }, () => {
   it('should return the correct properties when sessionId is defined', () => {
     const result = useSessionComposable()
 

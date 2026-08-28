@@ -1,8 +1,8 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest'
+import { describe, it, expect, beforeEach } from 'vitest'
 import { calculateNumberOfItems, calculateTotal } from '#server/utils/cart'
 import { CART_ITEMS } from '~~/test/__fixtures__/cart'
 
-describe('server/utils/cart/calculateTotal', () => {
+describe('server/utils/cart/calculateTotal', { tags: ['server'] }, () => {
   const simplifiedItem: CartItem = { ...CART_ITEMS[0] as CartItem }
 
   beforeEach(() => {
@@ -25,7 +25,7 @@ describe('server/utils/cart/calculateTotal', () => {
   })
 })
 
-describe('server/utils/cart/calculateNumberOfItems', () => {
+describe('server/utils/cart/calculateNumberOfItems', { tags: ['server'] }, () => {
   const simplifiedItem: CartItem = { ...CART_ITEMS[0] as CartItem }
 
   beforeEach(() => {

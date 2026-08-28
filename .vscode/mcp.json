@@ -1,10 +1,24 @@
 {
     "servers": {
-        "nuxt": {
+        "filesystem": {
             "command": "npx",
             "args": [
-                "mcp-remote",
-                "https://nuxt.com/mcp"
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "${workspaceFolder}"
+            ]
+        },
+        "playwright": {
+            "command": "npx",
+            "args": [
+                "@playwright/mcp@latest"
+            ]
+        },
+        "memory": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-memory"
             ]
         }
     }

@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { useImageSuperZoom } from '~/composables/product'
 
-describe('useImageSuperZoom', () => {
+describe('composables/useImageSuperZoom', { tags: ['composables'] }, () => {
   it('should initialize with no selected image and closed state', () => {
     const { isOpen, selectedImage } = useImageSuperZoom()
     expect(isOpen.value).toBe(false)

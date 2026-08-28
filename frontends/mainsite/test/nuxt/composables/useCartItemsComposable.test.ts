@@ -32,7 +32,7 @@ vi.mock('firebase/firestore', async (original) => {
 
 mockNuxtImport('useCookie', () => mockStore.useCookieMock)
 
-describe('useCartItemsComposable', () => {
+describe('composables/useCartItemsComposable', { tags: ['composables'] }, () => {
   it('should return the default properties', () => {
     const result = useCartItemsComposable()
     expect(result.docRef).toBeDefined()

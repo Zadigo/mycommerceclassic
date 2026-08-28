@@ -4,7 +4,7 @@ import { PRODUCT_NODE_FIXTURE } from '~~/test/__fixtures__/product'
 
 mockNuxtImport('$fetch', () => vi.fn())
 
-describe('useCartComposable', () => {
+describe('composables/useCartComposable', { tags: ['composables'] }, () => {
   it('should initialize with no selected size and no warning', () => {
     const { selectedSize, showSizeWarning } = useCartComposable()
     expect(selectedSize.value).toBeNull()

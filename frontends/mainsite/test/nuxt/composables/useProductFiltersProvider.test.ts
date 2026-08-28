@@ -3,7 +3,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { useProductFiltersProvider, useProductFiltersStore } from '~/composables/products'
 
 
-describe.todo('useProductFiltersProvider', () => {
+describe.todo('composables/useProductFiltersProvider', { tags: ['composables'] }, () => {
   let component: ReturnType<typeof defineComponent> | undefined = undefined
 
   beforeEach(() => {

@@ -23,7 +23,7 @@ export default defineConfig({
       NODE_ENV: 'test'
     },
     setupFiles: [
-      './test/setup.ts'
+      './test/vitest.setup.ts'
     ],
     projects: [
       await defineVitestProject({
@@ -35,6 +35,15 @@ export default defineConfig({
           tags: [
             {
               name: 'nuxt',
+            },
+            {
+              name: 'server',
+            },
+            {
+              name: 'composables'
+            },
+            {
+              name: 'frontend',
             }
           ]
         }
