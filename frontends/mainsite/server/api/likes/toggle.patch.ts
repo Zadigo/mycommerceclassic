@@ -1,5 +1,5 @@
 import { useFirebaseAdmin } from '#shared/server_firebase'
-import { createErrorTemplate } from '#shared/utils'
+import { createErrorTemplate } from '#shared/errors'
 import { SESSION_COOKIE_NAME, LIKE_COLLECTION_NAME } from '#shared/cart'
 import { FieldValue } from 'firebase-admin/firestore'
 import { getOrCreateLikeDocument } from '~~/server/utils/session'

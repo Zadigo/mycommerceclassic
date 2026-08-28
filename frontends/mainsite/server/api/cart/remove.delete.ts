@@ -1,6 +1,6 @@
 import { calculateTotal, calculateNumberOfItems } from '#server/utils/cart'
 import { getOrCreateSession } from '#server/utils/session'
-import { createErrorTemplate } from '#shared/utils'
+import { createErrorTemplate } from '#shared/errors'
 
 type RemoveCartItemRequestBody = { id: string, size: string }
 

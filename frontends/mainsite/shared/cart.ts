@@ -1,4 +1,5 @@
-import { toValue, type MaybeRefOrGetter } from "vue"
+import type { MaybeRefOrGetter } from "vue"
+import { toBaseProduct } from "./utils"
 
 /**
  * Name of the collection in Firestore that stores the session data.
@@ -100,15 +101,6 @@ export function filterCartItemsFunc(itemToFind: CartItem) {
  * @returns The product ID as a string, or undefined if the ID cannot be determined.
  */
 export function getProductId(product: MaybeRefOrGetter<Product | ProductNode | BaseProduct | undefined>): string | undefined {
-  const _product = toValue(product)
-
-  if (!_product) return undefined
-
-  if (_product && 'data' in _product && _product.data) {
-    return _product.data.product.id
-  } else if (_product && 'node' in _product && _product.node) {
-    return _product.node.id
-  } else {
-    return (_product as BaseProduct).id
-  }
+  const result = toBaseProduct(product)
+  return result?.id
 }

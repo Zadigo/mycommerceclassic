@@ -5,9 +5,12 @@
       <!-- <lazy-base-ecommerce-menu /> -->
     </header>
 
-    <main class="pt-[calc(65px)]">
+    <main :class="theme">
       <slot />
     </main>
+
+    <!-- Modals -->
+    <lazy-modals-last-product :hydrate-after="1000" />
 
     <!-- Footer -->
     <lazy-base-footer hydrate-on-visible />
@@ -15,4 +18,13 @@
 </template>
 
 <script setup lang="ts">
+const route = useRoute()
+
+const theme = computed(() => {
+  return [
+    {
+      'pt-[calc(65px)]': route.meta.title !== 'Home'
+    }
+  ]
+})
 </script>

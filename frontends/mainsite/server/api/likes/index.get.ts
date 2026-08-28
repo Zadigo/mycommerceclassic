@@ -1,4 +1,4 @@
-import { createErrorTemplate } from '#shared/utils'
+import { createErrorTemplate } from '#shared/errors'
 import { LIKE_COLLECTION_NAME, SESSION_COOKIE_NAME } from '#shared/cart'
 import { useFirebaseAdmin } from '#shared/server_firebase'
 

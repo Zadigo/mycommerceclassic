@@ -1,6 +1,6 @@
 <template>
   <div id="reassurance">
-    <div class="ring-1 ring-slate-200 rounded-lg p-5 mt-5">
+    <div class="ring-1 ring-slate-200 dark:ring-slate-700 rounded-lg p-5 mt-5">
       <div class="flex gap-2 items-center p-3">
         <icon name="i-lucide-truck" />
         <p class="font-light">

@@ -1,7 +1,7 @@
 <template>
   <section id="home">
     <!-- Hero -->
-    <section class="bg-[url('/img2.webp')] w-full bg-no-repeat bg-cover bg-center text-sm h-[80vh]">
+    <section class="bg-[url('/img2.webp')] w-full bg-no-repeat bg-cover bg-center text-sm h-[90vh]">
       <h5 class="text-4xl md:text-7xl font-medium max-w-212.5 text-center mx-auto mt-8 pt-0 md:pt-30 max-md:px-30">
         Build apps faster with ui components
       </h5>
@@ -24,5 +24,8 @@
 </template>
 
 <script setup lang="ts">
-
+definePageMeta({
+  title: 'Home',
+  layout: 'default'
+})
 </script>

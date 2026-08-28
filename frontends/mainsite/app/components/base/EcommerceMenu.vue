@@ -3,7 +3,7 @@
     <slot @mouseenter="() => { toggleOpenState(true) }" />
 
     <transition name="ecommerce" mode="out-in">
-      <div v-show="isOpen" id="ecommerce-menu" class="absolute top-0 left-0 w-full min-h-100 bg-white shadow-sm mt-[64px] p-15 z-40" @mouseleave="() => { toggleOpenState(false) }">
+      <div v-show="isOpen" id="ecommerce-menu" class="absolute top-0 left-0 w-full min-h-100 bg-white dark:bg-slate-800 dark:text-slate-50 shadow-sm mt-[64px] p-15 z-40" @mouseleave="() => { toggleOpenState(false) }">
         <div class="grid grid-cols-12">
           <ul class="col-span-3 border-r border-slate-400 h-full p-5">
             <li v-for="link in links" :key="link.title" class="group">

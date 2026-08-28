@@ -1,5 +1,5 @@
 <template>
-  <div :class="[theme, 'w-full gap-4']">
+  <div :class="[theme, 'w-full gap-1']">
     <slot :theme="{ themeMaxColSpan }" />
   </div>
 </template>

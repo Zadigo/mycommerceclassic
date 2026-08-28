@@ -2,7 +2,7 @@ import type { CartItem } from '#shared/types/cart'
 import { filterCartItemsFunc } from '#shared/cart'
 import { calculateTotal, calculateNumberOfItems } from '#server/utils/cart'
 import { getOrCreateSession } from '#server/utils/session'
-import { createErrorTemplate } from '#shared/utils'
+import { createErrorTemplate } from '#shared/errors'
 import { usePrecision } from '@vueuse/math'
 import { toValue } from 'vue'
 

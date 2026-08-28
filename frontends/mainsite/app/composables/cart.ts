@@ -44,7 +44,7 @@ export const useCartComposable = createGlobalState(<P extends Product | undefine
 
   const lastProduct = ref<Product | undefined>(undefined)
 
-  async function addToCart(product: T, size?: S) {
+  async function addToCart(product: T, size?: S, callback?: (product: Product) => void) {
 
     const _product = toValue(product)
     const _size = toValue(size) || toValue(selectedSize)
@@ -77,6 +77,8 @@ export const useCartComposable = createGlobalState(<P extends Product | undefine
 
     lastProduct.value = _product
     selectedSize.value = null
+
+    callback?.(_product)
   }
 
   async function changeQuantity(product: T, size: S | undefined, direction: 'increase' | 'decrease') {
@@ -148,9 +150,9 @@ export const useCartComposable = createGlobalState(<P extends Product | undefine
  * @param product - A reactive reference to the product that was added to the cart.
  * @param timeout - The duration (in milliseconds) for which the notification should be displayed. Default is 3000ms.
  */
-export function useLastProductComposable(product: Ref<BaseProduct | undefined>, timeout: number = 3000) {
-  const notifyUser = refAutoReset(false, timeout)
-  const toggleNotification = useToggle(notifyUser)
+export function useLastProductComposable(product: Ref<BaseProduct | Product | ProductNode | undefined>, timeout: number = 5000) {
+  const modalState = refAutoReset(false, timeout)
+  const toggleNotification = useToggle(modalState)
 
   watch(product, (newProduct) => {
     if (newProduct) {
@@ -159,7 +161,7 @@ export function useLastProductComposable(product: Ref<BaseProduct | undefined>, 
   })
 
   return {
-    notifyUser,
+    modalState,
     toggleNotification
   }
 }

@@ -5,8 +5,8 @@
         <nuxt-img :alt="product.name" src="/img1.webp" class="w-full group-hover:scale-120 transition-all ease-in-out duration-300" />
       </nuxt-link>
       
-      <!-- Badge -->
-      <div class="absolute top-2 left-2 flex gap-2">
+      <!-- Badges -->
+      <div v-if="showBadges" class="absolute top-2 left-2 flex gap-2">
         <u-badge v-if="product.displayNew" variant="solid" color="neutral">
           New
         </u-badge>
@@ -35,10 +35,16 @@
 <script setup lang="ts">
 import type { BaseProduct } from '#shared/types/product'
 
-const { product, showProductInfo = true, showLikeButton = true } = defineProps<{
+const { 
+  product, 
+  showProductInfo = true, 
+  showLikeButton = true, 
+  showBadges = true
+} = defineProps<{
   product: BaseProduct,
   showProductInfo?: boolean,
-  showLikeButton?: boolean
+  showLikeButton?: boolean,
+  showBadges?: boolean
 }>()
 
 const { add, getIcon } = useLikeComposable()

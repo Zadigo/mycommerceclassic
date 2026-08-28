@@ -1,7 +1,7 @@
 import type { CartItem } from '#shared/types/cart'
 import { FieldValue } from 'firebase-admin/firestore'
 import { filterCartItemsFunc } from '#shared/cart'
-import { createErrorTemplate } from '#shared/utils'
+import { createErrorTemplate } from '#shared/errors'
 import { calculateTotal, calculateNumberOfItems } from '#server/utils/cart'
 
 type QuantityRequestBody = {
