@@ -104,7 +104,6 @@ describe('pages/[id].vue', { tags: ['frontend'] }, () => {
   it('should render the [id] page component', async () => {
     const component = await mountSuspended(ID)
     expect(component.exists()).toBe(true)
-    console.log(component.html())
 
     const titleEl = component.find('h1')
     expect(titleEl.exists()).toBe(true)
@@ -172,6 +171,5 @@ describe('pages/[id].vue', { tags: ['frontend'] }, () => {
     await nextTick()
     
     expect(mockedCartButton).toHaveBeenCalled()
-    // expect(mockedCartButton).toHaveBeenCalledWith(PRODUCT_NODE_FIXTURE.node, null)
   })
 })
