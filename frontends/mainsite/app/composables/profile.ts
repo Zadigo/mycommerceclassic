@@ -74,27 +74,67 @@ export function useUserProfileStore() {
 export function useUserBillingComposable() {
 }
 
-export function useUserNewPasswordComposable() {
-  const passwords = ref({
-    currentPassword: '',
+export function useSensitiveDataComposable() {
+  const currentPassword = ref<string>('')
+
+  const newPasswords = ref<UpdatePasswordFormData>({
     newPassword: '',
     confirmNewPassword: '',
   })
 
-  return {
-    passwords,
-  }
-}
-
-export function useNewEmailComposable() {
-  const newEmail = ref({
-    currentPassword: '',
+  const newEmail = ref<UpdateEmailFormData>({
     newEmail: '',
     confirmNewEmail: '',
   })
+
+  function reset() {
+    currentPassword.value = ''
+    newPasswords.value.newPassword = ''
+    newPasswords.value.confirmNewPassword = ''
+    newEmail.value.newEmail = ''
+    newEmail.value.confirmNewEmail = ''
+  }
+
+  async function save(using: MaybeRefOrGetter<'password' | 'email' | null>) {
+    const _using = toValue(using)
+
+    if (_using === 'password') {
+      await $fetch(`/api/accounts/${1}/passwords`, {
+        method: 'PATCH',
+        body: {
+          currentPassword: toValue(currentPassword),
+          data: toValue(newPasswords)
+        }
+      })
+    } else if (_using === 'email') {
+      await $fetch(`/api/accounts/${1}/emails`, {
+        method: 'PATCH',
+        body: {
+          currentPassword: toValue(currentPassword),
+          data: toValue(newEmail)
+        }
+      })
+    } else {
+      throw new Error('Invalid save type')
+    }
+  }
   
+  async function saveEmails() {
+    await save('email')
+  }
+
+  async function savePasswords() {
+    await save('password')
+  }
+
   return {
+    currentPassword,
+    newPasswords,
     newEmail,
+    reset,
+    save,
+    saveEmails,
+    savePasswords,
   }
 }
 

@@ -46,13 +46,13 @@
           </u-button>
         </div>
 
-        <div v-if="showUpdateInputs" class="bg-slate-50 rounded-xl p-5 md:p-10">
+        <div v-if="showUpdateInputs" class="bg-slate-50 dark:bg-slate-800 rounded-xl p-5 md:p-10">
           <u-button class="ml-auto mb-5" variant="soft" @click="() => { toggleShowUpdateInputs(false) }">
             <icon name="i-lucide-x" />
           </u-button>
           
-          <div class="space-y-2">
-            <u-input v-model="passwords.currentPassword" type="password" icon="i-lucide-lock" autocomplete="current-password" placeholder="Mot de passe actuel" class="w-full"  />
+          <form class="space-y-2" @submit.prevent>
+            <u-input v-model="newPasswords.currentPassword" type="password" icon="i-lucide-lock" autocomplete="current-password" placeholder="Mot de passe actuel" class="w-full"  />
 
             <div v-if="inputsToShow === 'email'" class="space-y-2">
               <u-input v-model="newEmail.newEmail" type="email" autocomplete="email" placeholder="Nouvel email" class="w-full"  />
@@ -60,10 +60,14 @@
             </div>
 
             <div v-else-if="inputsToShow === 'password'" class="space-y-2">
-              <u-input v-model="passwords.newPassword" type="password" autocomplete="new-password" placeholder="Nouveau mot de passe" class="w-full" />
-              <u-input v-model="passwords.confirmNewPassword" type="password" autocomplete="new-password" placeholder="Confirmer le nouveau mot de passe" class="w-full" />
+              <u-input v-model="newPasswords.newPassword" type="password" autocomplete="new-password" placeholder="Nouveau mot de passe" class="w-full" />
+              <u-input v-model="newPasswords.confirmNewPassword" type="password" autocomplete="new-password" placeholder="Confirmer le nouveau mot de passe" class="w-full" />
             </div>
-          </div>
+
+            <u-button icon="i-lucide-save" type="submit" variant="soft" color="info" @click="save(inputsToShow)">
+              Enregistrer
+            </u-button>
+          </form>
         </div>
       </div>
     </u-card>
@@ -110,7 +114,5 @@ const { data } = useNuxtData('autocomplete')
 
 const { profile, billingAddress, isWoman, setGender, updateProfile } = useUserProfileProvider()
 
-const { passwords } = useUserNewPasswordComposable()
-
-const { newEmail } = useNewEmailComposable()
+const { newPasswords, newEmail, save} = useSensitiveDataComposable()
 </script>

@@ -51,3 +51,23 @@ export const GenderAddressSchema = BaseUserSchema.pick({
 }).extend(BaseAddressSchema.shape)
 
 export type GenderAddressFormData = z.infer<typeof GenderAddressSchema>
+
+export const UpdatePasswordSchema = z.object({
+  newPassword: z.string().min(8, 'Le nouveau mot de passe doit contenir au moins 8 caractères'),
+  confirmNewPassword: z.string().min(1, 'La confirmation du nouveau mot de passe est requise'),
+}).refine((data) => data.newPassword === data.confirmNewPassword, {
+  message: 'Les mots de passe ne correspondent pas',
+  path: ['confirmNewPassword'],
+})
+
+export type UpdatePasswordFormData = z.infer<typeof UpdatePasswordSchema>
+
+export const UpdateEmailSchema = z.object({
+  newEmail: z.email(),
+  confirmNewEmail: z.string().min(1, 'La confirmation du nouvel email est requise'),
+}).refine((data) => data.newEmail === data.confirmNewEmail, {
+  message: "Les emails ne correspondent pas",
+  path: ['confirmNewEmail'],
+})
+
+export type UpdateEmailFormData = z.infer<typeof UpdateEmailSchema>
