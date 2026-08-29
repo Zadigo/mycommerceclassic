@@ -11,7 +11,7 @@ export function useGenderComposable(currentGender: Ref<UpdateProfileFormData['ge
   }
 }
 
-const [ useUserProfileProvider, _useUserProfileStore] = createInjectionState(() => {
+const [useUserProfileProvider, _useUserProfileStore] = createInjectionState(() => {
   const profile  = ref<UpdateProfileFormData>({
     firstName: '',
     lastName: '',
@@ -22,6 +22,13 @@ const [ useUserProfileProvider, _useUserProfileStore] = createInjectionState(() 
       phone: '',
     }
   })
+
+  async function updateProfile() {
+    await $fetch(`/api/accounts/${1}`, {
+      method: 'PATCH',
+      body: toValue(profile)
+    })
+  }
 
   const billingAddress = ref<AddressFormData>({
     firstName: '',
@@ -49,6 +56,7 @@ const [ useUserProfileProvider, _useUserProfileStore] = createInjectionState(() 
     isWoman,
     profile,
     billingAddress,
+    updateProfile,
     setGender,
   }
 })

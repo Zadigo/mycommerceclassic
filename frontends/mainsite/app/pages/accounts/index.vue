@@ -22,4 +22,10 @@ definePageMeta({
   layout: 'accounts',
   title: 'Accounts',
 })
+
+/**
+ * Autocomplete
+ */
+
+await useLazyAsyncData('autocomplete', () => $fetch('/api/accounts/autocomplete', { method: 'POST', body: { using: 'city' } }))
 </script>

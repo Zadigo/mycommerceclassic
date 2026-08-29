@@ -1,6 +1,7 @@
 <template>
   <section id="profile" class="space-y-2">
-    <accounts-save-block title="Données personnelles">
+    {{ data }}
+    <accounts-save-block title="Données personnelles" @btn-clicked="updateProfile">
       <form class="space-y-2" @submit.prevent>
         <div class="flex gap-2">
           <u-input class="w-full" placeholder="Nom" v-model="profile.lastName" />
@@ -98,10 +99,16 @@ const openInputs = (name: 'password' | 'email') => {
 }
 
 /**
+ * Autocomplete
+ */
+
+const { data } = useNuxtData('autocomplete')
+
+/**
  * Composables
  */
 
-const { profile, billingAddress, isWoman, setGender } = useUserProfileProvider()
+const { profile, billingAddress, isWoman, setGender, updateProfile } = useUserProfileProvider()
 
 const { passwords } = useUserNewPasswordComposable()
 

@@ -1,8 +1,10 @@
 import { z } from 'zod'
+import type { GraphQlData } from './graphql'
 
-export const BaseProfileSchema = z.object({
+export const BaseUserSchema = z.object({
   firstName: z.string().min(1, 'Le prénom est requis'),
   lastName: z.string().min(1, 'Le nom est requis'),
+  username: z.string().optional(),
   email: z.email("L'email est invalide"),
   dateOfBirth: z.string().optional(),
   gender: z.enum(['Woman', 'Man']).default('Woman'),
@@ -12,11 +14,20 @@ export const BaseProfileSchema = z.object({
   })
 })
 
-export const UpdatePersonalDataSchema = BaseProfileSchema.omit({ email: true })
+export const UpdatePersonalDataSchema = BaseUserSchema.omit({ email: true })
+
+export const UserSchema = BaseUserSchema.pick({
+  firstName: true,
+  lastName: true,
+  email: true,
+  username: true
+})
+
+export type UserDetails = GraphQlData<'user', z.infer<typeof UserSchema>>
 
 export type UpdateProfileFormData = z.infer<typeof UpdatePersonalDataSchema>
 
-export const BaseAddressSchema = BaseProfileSchema.pick({
+export const BaseAddressSchema = BaseUserSchema.pick({
   lastName: true,
   firstName: true,
   email: true,
@@ -35,7 +46,7 @@ export const BaseAddressSchema = BaseProfileSchema.pick({
 
 export type AddressFormData = z.infer<typeof BaseAddressSchema>
 
-export const GenderAddressSchema = BaseProfileSchema.pick({
+export const GenderAddressSchema = BaseUserSchema.pick({
   gender: true,
 }).extend(BaseAddressSchema.shape)
 
