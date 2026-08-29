@@ -9,7 +9,8 @@
     <template #body>
       <div class="p-5 flex flex-col justify-center h-full">
         <p class="font-bold mb-10 text-center text-xl">
-          Connecte-toi ou crée un compte
+          <span v-if="showSignupBlock">Crée un compte</span>
+          <span v-else>Connecte-toi</span>
         </p>
 
         <div class="space-y-2 mb-10 transition-all ease-in-out duration-300">
