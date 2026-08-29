@@ -26,7 +26,7 @@
             Couleur: Bleu
           </p>
           
-          <lazy-product-variants class="mt-2" hydrate-on-idle :product="product" :variants="product.colorVariants" />
+          <lazy-product-variants v-if="product.colorVariants" class="mt-2" hydrate-on-idle :product="product" :variants="product.colorVariants" />
         </div>
 
         <div id="size" class="py-5">
@@ -37,7 +37,7 @@
           <!-- Size -->
           <div :id="createElementId('cta', 'content', 'sizes')">
             <div id="cta-sizes" class="flex gap-2">
-              <u-button v-for="size in product.sizeSet" :key="size.name" :variant="sizeIsSelected(size) ? 'solid' : 'outline'" size="md" class="min-w-10 flex justify-center" @click="selectSize(size)">
+              <u-button v-for="size in product.sizeSet" :id="createElementId('cta', 'content','size-selection', size.name)" :key="size.name" :variant="sizeIsSelected(size) ? 'solid' : 'outline'" size="md" class="min-w-10 flex justify-center" @click="selectSize(size)">
                 {{ size.name }}
               </u-button>
             </div>

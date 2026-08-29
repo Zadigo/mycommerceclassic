@@ -44,7 +44,7 @@ vi.mock('~/components/products/filters/FilterCheckbox.vue', () => {
   }
 })
 
-describe.only('components/products/filters/Base.vue', { tags: ['frontend'] }, () => {
+describe('components/products/filters/Base.vue', { tags: ['frontend'] }, () => {
   beforeEach(() => {
     vi.resetAllMocks()
   })

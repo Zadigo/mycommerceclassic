@@ -34,6 +34,6 @@ describe('integrations: components/products/filters/Base.vue', { tags: ['integra
     })
 
     const component = await mountSuspended(Parent)
-    console.log(component.html())
+    // console.log(component.html())
   })  
 })

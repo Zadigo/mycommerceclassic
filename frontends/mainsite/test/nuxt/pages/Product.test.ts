@@ -1,14 +1,14 @@
 import { mockNuxtImport, mountSuspended } from '@nuxt/test-utils/runtime'
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
 import ID from '~/pages/[id].vue'
 import { PRODUCT_NODE_FIXTURE } from '~~/test/__fixtures__/product'
-import { USkeleton } from '#components'
+import ProductVariants from '~/components/product/Variants.vue'
 
 vi.mock('~/components/product/images/Grid.vue', () => {
   return {
     default: defineComponent({
       name: 'MockedGrid',
-      template: '<div data-test-id="mocked-grid">Mocked Grid Component</div>'
+      template: '<div data-test-id="mocked-images-grid">Images Grid</div>'
     })
   }
 })
@@ -18,6 +18,15 @@ vi.mock('~/components/product/images/SuperZoom.vue', () => {
     default: defineComponent({
       name: 'MockedSuperZoom',
       template: '<div data-test-id="mocked-super-zoom">Mocked Super Zoom Component</div>'
+    })
+  }
+})
+
+vi.mock('~/components/base/Recommendations.vue', () => {
+  return {
+    default: defineComponent({
+      name: 'MockedRecommendations',
+      template: '<div data-test-id="mocked-recommendations">Recommendations</div>'
     })
   }
 })
@@ -50,6 +59,7 @@ const { mockedFetch, mockedUseCartComposable } = vi.hoisted(() => {
 })
 
 mockNuxtImport('useAsyncData', () => mockedFetch)
+mockNuxtImport('$fetch', () => vi.fn())
 
 vi.mock('~/composables/cart', async (original) => {
   const actual = await original<typeof import('~/composables/cart')>()
@@ -59,62 +69,80 @@ vi.mock('~/composables/cart', async (original) => {
   }
 })
 
-describe('ID Page: No Products', () => {
+describe('pages/[id].vue: No Products', { tags: ['frontend'] }, () => {
+  let component: Awaited<ReturnType<typeof mountSuspended>>
+
+  beforeEach(async () => {
+    component = await mountSuspended(ID)
+  })
+
+  afterEach(() => {
+    vi.resetAllMocks()
+  })
+  
   it('should render the ID page component', async () => {
     mockedFetch.mockReturnValueOnce({
       data: {
         data: {
+          // @ts-ignore Edge case: product is undefined
           product: undefined
         }
       }
     })
+    // const component = await mountSuspended(ID)
 
-    const component = await mountSuspended(ID)
-
-    const skeletonEl = component.findComponent(USkeleton)
-    expect(skeletonEl.exists()).toBe(true)
+    const variantsEl = component.findComponent(ProductVariants)
+    expect(variantsEl.exists()).toBeFalsy()
   })
 })
 
-mockNuxtImport('$fetch', () => vi.fn())
-
 describe('pages/[id].vue', { tags: ['frontend'] }, () => {
-  it('should render the ID page component', async () => {
+  afterEach(() => {
+    vi.resetAllMocks()
+  })
+
+  it('should render the [id] page component', async () => {
     const component = await mountSuspended(ID)
     expect(component.exists()).toBe(true)
-  })
-
-  const actionButtons = [
-    '#cta-content-add-to-cart',
-    '#cta-content-like'
-  ]
-
-  actionButtons.forEach((buttonId) => {
-    it(`should have button ${buttonId}`, async () => {
-      const component = await mountSuspended(ID)
-      const button = component.find(`button${buttonId}`)
-
-      expect(button.exists()).toBe(true)
-      expect(button.isVisible()).toBe(true)
-      expect(button.attributes('disabled')).toBeUndefined()
-    })
-  })
-
-  it('should have product infos and reassurance', async () => {
-    const component = await mountSuspended(ID)
-    const reassurance = component.find('#reassurance')
-    
-    expect(reassurance.exists()).toBe(true)
-    expect(reassurance.isVisible()).toBe(true)
+    console.log(component.html())
 
     const titleEl = component.find('h1')
-
     expect(titleEl.exists()).toBe(true)
     expect(titleEl.isVisible()).toBe(true)
 
     const priceEl = component.find('#product-price')
     expect(priceEl.exists()).toBe(true)
     expect(priceEl.isVisible()).toBe(true)
+  })
+  
+  it.each(
+    [
+      [{ id: '[id="cta-content-add-to-cart"]' }],
+      [{ id: '[id="cta-content-like"]' }],
+      [{ id: '[id^="cta-content-size-selection"]'}]
+    ]
+  )('should have button with id: $id', async ({ id }) => {
+    const component = await mountSuspended(ID)
+    const button = component.find(`button${id}`)
+
+    expect(button.exists()).toBe(true)
+    expect(button.isVisible()).toBe(true)
+    expect(button.attributes('disabled')).toBeUndefined()
+  })
+
+  it('should have product infos and reassurance', async () => {
+    const component = await mountSuspended(ID)
+
+    const reassurance = component.find('#reassurance')
+    expect(reassurance.exists()).toBe(true)
+    expect(reassurance.isVisible()).toBe(true)
+
+    const titleEl = component.find('h1')
+    expect(titleEl.exists()).toBe(true)
+    expect(titleEl.isVisible()).toBe(true)
+
+    const priceEl = component.find('p#product-price')
+    expect(priceEl.exists()).toBeTruthy()
   })
 
   it('should be able to click on the action buttons: cart, like, sizes', async () => {
