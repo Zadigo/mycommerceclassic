@@ -1,7 +1,7 @@
 <template>
   <section id="orders">
     <u-card>
-      <accounts-empy-content :show-button="true" @btn-clicked="toggleFindOrderModal">
+      <accounts-empty-content :show-button="true" @btn-clicked="toggleFindOrderModal">
         <template #title>
           Tu n'as encore aucun achat en ligne
         </template>
@@ -13,7 +13,7 @@
         <template #button-text>
           Trouver une commande
         </template>
-      </accounts-empy-content>
+      </accounts-empty-content>
     </u-card>
 
     <!-- Modals -->
@@ -31,4 +31,10 @@ definePageMeta({
 
 const openFindOrderModal = ref(false)
 const toggleFindOrderModal = useToggle(openFindOrderModal)
+
+/**
+ * Composables
+ */
+
+useUserOrdersComposable()
 </script>

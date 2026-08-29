@@ -42,6 +42,10 @@ const links = [
     to: '/accounts/refunds',
   },
   {
+    name: 'Mes addresses',
+    to: '/accounts/delivery-addresses',
+  },
+  {
     name: 'Mes données',
     to: '/accounts/profile',
   }

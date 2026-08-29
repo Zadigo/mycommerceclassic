@@ -1,19 +1,12 @@
 <template>
   <section id="profile" class="space-y-2">
-    <u-card>
-      <template #title>
-        <h3 class="font-bold">
-          Données personnelles
-        </h3>
-      </template>
-      
-      <!-- Data -->
+    <accounts-save-block title="Données personnelles">
       <form class="space-y-2" @submit.prevent>
         <div class="flex gap-2">
           <u-input class="w-full" placeholder="Nom" v-model="newProfileData.lastName" />
           <u-input class="w-full" placeholder="Prénom" v-model="newProfileData.firstName" />
         </div>
-        
+
         <base-telephone-input v-model="newProfileData.telephone" />
 
         <u-form-field class="mt-5" label="Date de naissance">
@@ -30,13 +23,7 @@
           </u-button>
         </div>
       </form>
-
-      <template #footer>
-        <u-button variant="soft" color="info" class="ml-auto">
-          Enregistrer les modifications
-        </u-button>
-      </template>
-    </u-card>
+    </accounts-save-block>
 
     <u-card>
       <template #title>
@@ -82,13 +69,7 @@
       </div>
     </u-card>
 
-    <u-card>
-      <template #title>
-        <h3 class="font-bold">
-          Facturation et livraison
-        </h3>
-      </template>
-
+    <accounts-save-block title="Facturation">
       <form class="space-y-2">
         <div class="flex gap-2">
           <u-input class="w-full" autocomplete="family-name" placeholder="Nom" />
@@ -103,9 +84,23 @@
           <u-input-menu class="w-full" autocomplete="address-level1" placeholder="Province" />
           <u-input-menu class="w-full" autocomplete="address-level2" placeholder="Ville" />
         </div>
-        
+
         <u-input-menu class="w-full" autocomplete="country-name" placeholder="Pays" />
+
+        <u-checkbox v-model="showBusinessFields" label="Entreprise" />
+        <div v-if="showBusinessFields" class="p-10 space-y-2 bg-slate-50 rounded-xl">
+          <u-input class="w-full" autocomplete="organization" placeholder="Nom de l'entreprise" />
+          <u-input class="w-full" autocomplete="vat" placeholder="Numéro de TVA" />
+          <u-input class="w-full" autocomplete="siret" placeholder="SIRET" />
+        </div>
       </form>
+    </accounts-save-block>
+
+    <u-card>
+      <u-button variant="soft" color="error">
+        <icon name="i-lucide-trash-2" />
+        Supprimer le compte
+      </u-button>
     </u-card>
   </section>
 </template>
@@ -128,6 +123,7 @@ const newProfileData = ref({
 })
 
 const [showUpdateInputs, toggleShowUpdateInputs] = useToggle(false)
+const [showBusinessFields, toggleShowBusinessFields] = useToggle(false)
 
 const inputsToShow = ref<'password' | 'email' | null>(null)
 
@@ -135,4 +131,14 @@ const openInputs = (name: 'password' | 'email') => {
   toggleShowUpdateInputs(true)
   inputsToShow.value = name
 }
+
+/**
+ * Composables
+ */
+
+useUserProfileProvider()
+
+useUserNewPasswordComposable()
+
+useNewEmailComposable()
 </script>

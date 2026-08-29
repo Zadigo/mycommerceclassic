@@ -2,7 +2,7 @@
   <u-card>
     <template #title>
       <h3 class="font-bold">
-        <slot name="title" />
+        {{ title }}
       </h3>
     </template>
 
@@ -17,6 +17,10 @@
 </template>
 
 <script setup lang="ts">
+defineProps<{
+  title: string
+}>()
+
 const emit = defineEmits<{
   'btn-clicked': []
 }>()
