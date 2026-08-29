@@ -1,4 +1,44 @@
-const [ useUserProfileProvider, _useUserProfileStore] = createInjectionState(() => {})
+const [ useUserProfileProvider, _useUserProfileStore] = createInjectionState(() => {
+  const profile  = ref<UpdateProfileFormData>({
+    firstName: '',
+    lastName: '',
+    dateOfBirth: '',
+    gender: 'Woman',
+    telephone: {
+      countryCode: '',
+      phone: '',
+    }
+  })
+
+  const billingAddress = ref<AddressFormData>({
+    firstName: '',
+    lastName: '',
+    email: '',
+    telephone: {
+      countryCode: '',
+      phone: '',
+    },
+    address: '',
+    city: '',
+    postalCode: '',
+    province: '',
+    country: '',
+    isBusiness: false,
+  })
+
+  const isWoman = computed(() => profile.value.gender === 'Woman')
+
+  function setGender(gender: UpdateProfileFormData['gender']) {
+    profile.value.gender = gender
+  }
+
+  return {
+    isWoman,
+    profile,
+    billingAddress,
+    setGender,
+  }
+})
 
 export { useUserProfileProvider }
 
@@ -13,9 +53,29 @@ export function useUserProfileStore() {
 export function useUserBillingComposable() {
 }
 
-export function useUserNewPasswordComposable() {}
+export function useUserNewPasswordComposable() {
+  const passwords = ref({
+    currentPassword: '',
+    newPassword: '',
+    confirmNewPassword: '',
+  })
 
-export function useNewEmailComposable() {}
+  return {
+    passwords,
+  }
+}
+
+export function useNewEmailComposable() {
+  const newEmail = ref({
+    currentPassword: '',
+    newEmail: '',
+    confirmNewEmail: '',
+  })
+  
+  return {
+    newEmail,
+  }
+}
 
 export function useUserOrdersComposable() {}
 

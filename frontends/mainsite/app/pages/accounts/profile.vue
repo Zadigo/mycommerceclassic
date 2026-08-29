@@ -3,22 +3,22 @@
     <accounts-save-block title="Données personnelles">
       <form class="space-y-2" @submit.prevent>
         <div class="flex gap-2">
-          <u-input class="w-full" placeholder="Nom" v-model="newProfileData.lastName" />
-          <u-input class="w-full" placeholder="Prénom" v-model="newProfileData.firstName" />
+          <u-input class="w-full" placeholder="Nom" v-model="profile.lastName" />
+          <u-input class="w-full" placeholder="Prénom" v-model="profile.firstName" />
         </div>
 
-        <base-telephone-input v-model="newProfileData.telephone" />
+        <base-telephone-input v-model="profile.telephone" />
 
         <u-form-field class="mt-5" label="Date de naissance">
-          <u-input-date class="w-full" v-model="newProfileData.birthDate" />
+          <u-input-date class="w-full" v-model="profile.dateOfBirth" />
         </u-form-field>
 
         <div class="flex gap-2 mt-5">
-          <u-button variant="soft" color="info">
+          <u-button :variant="isWoman ? 'soft' : 'outline'" color="info" @click="setGender('Woman')">
             Femme
           </u-button>
 
-          <u-button variant="soft" color="info">
+          <u-button :variant="!isWoman ? 'soft' : 'outline'" color="info" @click="setGender('Man')">
             Homme
           </u-button>
         </div>
@@ -45,54 +45,31 @@
           </u-button>
         </div>
 
-        <motion :preset="VueUseMotions.Fade">
-          <div v-if="showUpdateInputs" class="bg-slate-50 rounded-xl p-10">
-            <u-button class="ml-auto mb-5" variant="soft" @click="() => { toggleShowUpdateInputs(false) }">
-              <icon name="i-lucide-x" />
-            </u-button>
-            
-            <div class="space-y-2">
-              <u-input type="password" icon="i-lucide-lock" autocomplete="current-password" placeholder="Mot de passe actuel" class="w-full"  />
-  
-              <div v-if="inputsToShow === 'email'" class="space-y-2">
-                <u-input type="email" autocomplete="email" placeholder="Nouvel email" class="w-full"  />
-                <u-input type="email" autocomplete="email" placeholder="Confirmer le nouvel email" class="w-full"  />
-              </div>
-  
-              <div v-else-if="inputsToShow === 'password'" class="space-y-2">
-                <u-input type="password" autocomplete="new-password" placeholder="Nouveau mot de passe" class="w-full" />
-                <u-input type="password" autocomplete="new-password" placeholder="Confirmer le nouveau mot de passe" class="w-full" />
-              </div>
+        <div v-if="showUpdateInputs" class="bg-slate-50 rounded-xl p-10">
+          <u-button class="ml-auto mb-5" variant="soft" @click="() => { toggleShowUpdateInputs(false) }">
+            <icon name="i-lucide-x" />
+          </u-button>
+          
+          <div class="space-y-2">
+            <u-input v-model="passwords.currentPassword" type="password" icon="i-lucide-lock" autocomplete="current-password" placeholder="Mot de passe actuel" class="w-full"  />
+
+            <div v-if="inputsToShow === 'email'" class="space-y-2">
+              <u-input v-model="newEmail.newEmail" type="email" autocomplete="email" placeholder="Nouvel email" class="w-full"  />
+              <u-input v-model="newEmail.confirmNewEmail" type="email" autocomplete="email" placeholder="Confirmer le nouvel email" class="w-full"  />
+            </div>
+
+            <div v-else-if="inputsToShow === 'password'" class="space-y-2">
+              <u-input v-model="passwords.newPassword" type="password" autocomplete="new-password" placeholder="Nouveau mot de passe" class="w-full" />
+              <u-input v-model="passwords.confirmNewPassword" type="password" autocomplete="new-password" placeholder="Confirmer le nouveau mot de passe" class="w-full" />
             </div>
           </div>
-        </motion>
+        </div>
       </div>
     </u-card>
 
     <accounts-save-block title="Facturation">
       <form class="space-y-2">
-        <div class="flex gap-2">
-          <u-input class="w-full" autocomplete="family-name" placeholder="Nom" />
-          <u-input class="w-full" autocomplete="given-name" placeholder="Prénom" />
-        </div>
-
-        <u-input class="w-full" autocomplete="street-address" placeholder="Adresse" />
-        <base-telephone-input v-model="newProfileData.telephone" class="w-8/12" />
-
-        <div class="flex gap-2">
-          <u-input class="w-full" autocomplete="postal-code" placeholder="Code postal" />
-          <u-input-menu class="w-full" autocomplete="address-level1" placeholder="Province" />
-          <u-input-menu class="w-full" autocomplete="address-level2" placeholder="Ville" />
-        </div>
-
-        <u-input-menu class="w-full" autocomplete="country-name" placeholder="Pays" />
-
-        <u-checkbox v-model="showBusinessFields" label="Entreprise" />
-        <div v-if="showBusinessFields" class="p-10 space-y-2 bg-slate-50 rounded-xl">
-          <u-input class="w-full" autocomplete="organization" placeholder="Nom de l'entreprise" />
-          <u-input class="w-full" autocomplete="vat" placeholder="Numéro de TVA" />
-          <u-input class="w-full" autocomplete="siret" placeholder="SIRET" />
-        </div>
+        <lazy-accounts-address-input-form v-model="billingAddress" :hydrate-after="800" />
       </form>
     </accounts-save-block>
 
@@ -111,17 +88,6 @@ definePageMeta({
   title: 'Data',
 })
 
-const newProfileData = ref({
-  firstName: '',
-  lastName: '',
-  telephone: {
-    telephone: '',
-    countryCode: '+33',
-  },
-  birthDate: '',
-  gender: '',
-})
-
 const [showUpdateInputs, toggleShowUpdateInputs] = useToggle(false)
 const [showBusinessFields, toggleShowBusinessFields] = useToggle(false)
 
@@ -136,9 +102,9 @@ const openInputs = (name: 'password' | 'email') => {
  * Composables
  */
 
-useUserProfileProvider()
+const { profile, billingAddress, isWoman, setGender } = useUserProfileProvider()
 
-useUserNewPasswordComposable()
+const { passwords } = useUserNewPasswordComposable()
 
-useNewEmailComposable()
+const { newEmail } = useNewEmailComposable()
 </script>
