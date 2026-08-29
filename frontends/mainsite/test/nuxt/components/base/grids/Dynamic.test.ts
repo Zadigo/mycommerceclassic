@@ -20,14 +20,9 @@ describe('components/base/grids/Dynamic.vue', { tags: ['frontend'] }, () => {
         expect(component.classes()).toContain(containerHeight)
       }
   
-      if (grid >= 3) {
+      if (grid >= 1 && grid <= 5) {
         expect(component.classes()).toContain(`grid-cols-${grid}`)
       }
-  
-      if (grid < 3) {
-        expect(component.classes()).not.toContain(`grid-cols-${grid}`)
-      }
     }
-
   })  
 })

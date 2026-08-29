@@ -96,7 +96,7 @@ describe('components/base/Recommendations.vue', { tags: ['frontend'] }, () => {
     expect(component.exists()).toBe(true)
 
     expect(mockStore.mockFetch).toHaveBeenCalled()
-    expect(mockStore.mockFetch).toHaveBeenCalledWith('/api/collection/recommendations', { method: 'GET' })
+    expect(mockStore.mockFetch).toHaveBeenCalledWith('/api/collection/recommendations', { method: 'GET', query: { quantity: 10  } })
   })
 })
 

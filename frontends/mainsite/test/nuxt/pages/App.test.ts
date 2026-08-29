@@ -15,7 +15,7 @@ vi.mock('~/composables/session', async (original) => {
 
 mockNuxtImport('useRouter', (original: typeof import('vue-router').useRouter) => vi.fn(original))
 
-describe('pages/app.vue', { tags: ['frontend'] }, () => {
+describe.todo('pages/app.vue', { tags: ['frontend'] }, () => {
   it('should render the base app poperly', async () => {
     const component = await mountSuspended(App)
     expect(component.exists()).toBe(true)

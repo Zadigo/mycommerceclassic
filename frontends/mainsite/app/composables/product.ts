@@ -12,7 +12,6 @@ export const useLikeComposable = createGlobalState(() => {
     if (!isDefined(sessionId)) return undefined
     return collectionRef.data.value.find((item) => item.sessionId === sessionId.value)
   })
-  console.log('docData', docData.value)
   
   async function add(product: BaseProduct | undefined) {
     await $fetch('/api/likes/toggle', { method: 'PATCH', body: { productId: product?.id } })

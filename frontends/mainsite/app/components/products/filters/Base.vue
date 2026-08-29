@@ -1,6 +1,7 @@
 <template>
-  <div id="filters" class="p-5 rounded-xl transition-all duration-300 ease-in-out">
-    <div :id="createElementId('filter', item.name)" v-for="item in data?.data.productFilters" class="rounded-xl not-last:mb-3">
+  <div id="product-filters" class="p-5 rounded-xl transition-all duration-300 ease-in-out">
+    <p v-if="filterElements.length === 0" class="p-5">No filters available</p>
+    <div :id="createElementId('filter', item.name)" v-for="item in filterElements" class="rounded-xl not-last:mb-3">
       <div class="flex justify-between items-center py-3">
         <p class="font-bold">
           {{ item.name }}
@@ -32,6 +33,10 @@ const emit = defineEmits<{
 
 const { id } = useRoute().params as { id: string }
 const { data } = await useAsyncData('filters', () => $fetch<ProductFilters>(`/api/collection/${id}/filters`))
+
+const filterElements = computed(() => {
+  return toValue(data)?.data.productFilters || []
+})
 
 const { selectedFilters, strSelectedFilters } = useProductFiltersStore()
 

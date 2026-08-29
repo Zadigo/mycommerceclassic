@@ -14,7 +14,7 @@ export default defineConfig({
     coverage: {
       enabled: true,
       provider: 'v8',
-      reporter: [ 'text', 'json', 'html' ],
+      reporter: ['text', 'json', 'html'],
       exclude: [
         'test/__fixtures__'
       ]
@@ -34,7 +34,7 @@ export default defineConfig({
           testTimeout: 20000,
           tags: [
             {
-              name: 'nuxt',
+              name: 'unit',
             },
             {
               name: 'server',
@@ -52,11 +52,20 @@ export default defineConfig({
         test: {
           name: 'integration',
           include: ['test/integration/**/*.{test,spec}.ts'],
-          environment: 'node',
+          environment: 'nuxt',
           testTimeout: 20000,
           tags: [
             {
               name: 'integration',
+            },
+            {
+              name: 'frontend'
+            },
+            {
+              name: 'components'
+            },
+            {
+              name: 'pages'
             }
           ]
         }
