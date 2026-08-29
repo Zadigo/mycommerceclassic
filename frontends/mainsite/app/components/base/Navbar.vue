@@ -45,8 +45,16 @@
         <icon name="i-lucide:shopping-cart" />
       </u-button>
 
-      <u-button to="/" variant="ghost" color="neutral" size="xl">
+      <u-button to="/accounts" variant="ghost" color="neutral" size="xl">
         <icon name="i-lucide:user" />
+      </u-button>
+
+      <u-button variant="ghost" color="neutral" size="xl" @click="() => { toggleLoginModal() }">
+        <icon name="i-lucide:log-in" />
+      </u-button>
+
+      <u-button variant="ghost" color="neutral" size="xl">
+        <icon name="i-lucide:log-out" />
       </u-button>
     </div>
 
@@ -72,5 +80,6 @@
 </template>
 
 <script lang="ts" setup>
+const { toggleLoginModal } = useGlobalModalsComposable()
 </script>
   
