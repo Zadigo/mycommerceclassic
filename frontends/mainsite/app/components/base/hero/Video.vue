@@ -6,11 +6,11 @@
     </video>
 
     <div id="lead" class="absolute top-0 w-full h-full flex flex-col items-center justify-center text-center text-white">
-      <h1 class="text-8xl font-bold dark:text-primary-50">
+      <h1 class="text-4xl md:text-8xl font-bold dark:text-primary-50">
         La mode à petit prix
       </h1>
 
-      <div class="flex justify-around items-center text-2xl gap-4 mt-4">
+      <div class="flex flex-col md:flex-row justify-around items-center text-2xl gap-4 mt-4">
         <nuxt-link to="/collection/some-collection" class="px-10 py-3 rounded-lg bg-amber-100/50 inset-shadow-2xs cursor-pointer hover:bg-amber-100/70 transition-all duration-300">
           Nos collections
         </nuxt-link>

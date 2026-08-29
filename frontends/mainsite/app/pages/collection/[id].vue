@@ -1,5 +1,5 @@
 <template>
-  <section id="collection-page" class="px-5 relative">
+  <section id="collection-page" class="px-1 md:px-5 relative">
     <!-- Header -->
     <header>
       <u-card class="ring-0">

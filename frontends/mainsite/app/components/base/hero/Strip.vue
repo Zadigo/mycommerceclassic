@@ -7,6 +7,8 @@
 </template>
 
 <script setup lang="ts">
+import { breakpointsTailwind } from '@vueuse/core'
+
 const data = await $fetch('/api/collection/recommendations', {
   method: 'GET',
   query: {
@@ -14,4 +16,7 @@ const data = await $fetch('/api/collection/recommendations', {
   }
 })
 const products = computed(() => data.data.collectionRecommendations.products)
+
+
+// const breakpoint = useBreakpoints(breakpointsTailwind).smaller('md')
 </script>

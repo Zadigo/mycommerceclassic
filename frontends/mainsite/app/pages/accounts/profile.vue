@@ -33,7 +33,7 @@
       </template>
 
       <div class="space-y-2">
-        <div class="flex gap-2">
+        <div class="flex flex-col gap-y-2 md:flex-row md:gap-2">
           <u-button variant="soft" color="info" @click="openInputs('email')">
             pendenquejohn@gmail.com
             <icon name="i-lucide-pen" />
@@ -45,7 +45,7 @@
           </u-button>
         </div>
 
-        <div v-if="showUpdateInputs" class="bg-slate-50 rounded-xl p-10">
+        <div v-if="showUpdateInputs" class="bg-slate-50 rounded-xl p-5 md:p-10">
           <u-button class="ml-auto mb-5" variant="soft" @click="() => { toggleShowUpdateInputs(false) }">
             <icon name="i-lucide-x" />
           </u-button>
@@ -89,7 +89,6 @@ definePageMeta({
 })
 
 const [showUpdateInputs, toggleShowUpdateInputs] = useToggle(false)
-const [showBusinessFields, toggleShowBusinessFields] = useToggle(false)
 
 const inputsToShow = ref<'password' | 'email' | null>(null)
 

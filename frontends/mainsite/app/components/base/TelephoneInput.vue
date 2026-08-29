@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-start gap-2">
-    <u-input-menu v-model="model.countryCode" :items="['+33']" class="w-30" />
+    <u-input-menu v-model="model.countryCode" :items="['+33']" class="w-20 md:w-30" />
     <u-input v-model="model.phone" type="tel" autocomplete="tel" class="w-full" placeholder="Numéro de téléphone" />
   </div>
 </template>

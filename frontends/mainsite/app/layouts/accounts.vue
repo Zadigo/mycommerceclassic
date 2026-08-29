@@ -2,23 +2,19 @@
   <section id="accounts">
     <lazy-base-navbar hydrate-on-idle />
 
-    <div class="grid grid-cols-12 gap-10 h-screen max-w-5xl mx-auto my-20">
-      <aside class="col-span-3">
-        <h3 class="font-bold text-xl uppercase mb-8">
-          Bonjour, Julie
-        </h3>
-
+    <div class="grid grid-cols-1 grid-rows-2 md:grid-cols-12 md:grid-rows-1 md:gap-10 md:h-screen md:max-w-5xl md:mx-auto md:my-10">
+      <aside class="md:col-span-3 px-5 md:px-0">
         <ul class="space-y-2">
-          <li v-for="link in links" :key="link.name" class="p-3 bg-slate-50 hover:bg-slate-100 transition-all ease-in-out duration-300 rounded-lg">
-            <nuxt-link :to="link.to" class="flex justify-start items-center gap-4">
-              <icon name="i-lucide:user" />
+          <li v-for="link in ACCOUNT_LINKS" :key="link.name" class="bg-slate-50 has-[.router-link-exact-active]:bg-slate-200 hover:bg-slate-100 transition-all ease-in-out duration-300 rounded-lg">
+            <nuxt-link :to="link.to" class="flex justify-start items-center gap-4 p-3">
+              <icon v-if="link.icon" :name="link.icon" />
               {{ link.name }}
             </nuxt-link>
           </li>
         </ul>
       </aside>
 
-      <main class="col-span-9">
+      <main class="md:col-span-9 px-5 md:px-0">
         <slot />
       </main>
     </div>
@@ -28,28 +24,7 @@
 </template>
 
 <script setup lang="ts">
-const links = [
-  {
-    name: 'Mon profil',
-    to: '/accounts',
-  },
-  {
-    name: 'Mes achats',
-    to: '/accounts/orders',
-  },
-  {
-    name: 'Mes retours',
-    to: '/accounts/refunds',
-  },
-  {
-    name: 'Mes addresses',
-    to: '/accounts/delivery-addresses',
-  },
-  {
-    name: 'Mes données',
-    to: '/accounts/profile',
-  }
-]
+
 </script>
 
 <style scoped>

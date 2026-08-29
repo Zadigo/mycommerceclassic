@@ -41,19 +41,19 @@
         </template>
       </lazy-u-drawer>
 
-      <u-button to="/cart" variant="ghost" color="neutral" size="xl">
+      <u-button to="/cart" class="hidden md:inline-block" variant="ghost" color="neutral" size="xl">
         <icon name="i-lucide:shopping-cart" />
       </u-button>
 
-      <u-button to="/accounts" variant="ghost" color="neutral" size="xl">
+      <u-button to="/accounts" class="hidden md:inline-block" variant="ghost" color="neutral" size="xl">
         <icon name="i-lucide:user" />
       </u-button>
 
-      <u-button variant="ghost" color="neutral" size="xl" @click="() => { toggleLoginModal() }">
+      <u-button class="hidden md:inline-block" variant="ghost" color="neutral" size="xl" @click="() => { toggleLoginModal() }">
         <icon name="i-lucide:log-in" />
       </u-button>
 
-      <u-button variant="ghost" color="neutral" size="xl">
+      <u-button class="hidden md:inline-block" variant="ghost" color="neutral" size="xl">
         <icon name="i-lucide:log-out" />
       </u-button>
     </div>

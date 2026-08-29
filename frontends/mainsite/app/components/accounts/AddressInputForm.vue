@@ -6,7 +6,7 @@
     </div>
 
     <u-input v-model="model.address"  class="w-full" autocomplete="street-address" placeholder="Adresse" />
-    <base-telephone-input v-model="model.telephone" class="w-8/12" />
+    <base-telephone-input v-model="model.telephone" class="w-full md:w-8/12" />
 
     <div class="flex gap-2">
       <u-input v-model="model.postalCode" class="w-full" autocomplete="postal-code" placeholder="Code postal" />
