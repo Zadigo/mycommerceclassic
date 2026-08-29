@@ -1,3 +1,16 @@
+export function useGenderComposable(currentGender: Ref<UpdateProfileFormData['gender']>) {
+  const isWoman = computed(() => currentGender.value === 'Woman')
+
+  function setGender(gender: UpdateProfileFormData['gender']) {
+    currentGender.value = gender
+  }
+
+  return {
+    isWoman,
+    setGender,
+  }
+}
+
 const [ useUserProfileProvider, _useUserProfileStore] = createInjectionState(() => {
   const profile  = ref<UpdateProfileFormData>({
     firstName: '',
@@ -79,4 +92,37 @@ export function useNewEmailComposable() {
 
 export function useUserOrdersComposable() {}
 
-export function useUserAddressesComposable() {}
+export function useUserAddressesComposable() {
+  const currentAddresses = ref<GenderAddressFormData[]>([])
+  const hasAddresses = computed(() => currentAddresses.value.length > 0)
+
+  function create() {
+    currentAddresses.value.push({
+      firstName: '',
+      lastName: '',
+      email: '',
+      gender: 'Woman',
+      telephone: {
+        countryCode: '',
+        phone: '',
+      },
+      address: '',
+      city: '',
+      postalCode: '',
+      province: '',
+      country: '',
+      isBusiness: false,
+    })
+  }
+  
+  function remove(index: number) {
+    currentAddresses.value.splice(index, 1)
+  }
+
+  return {
+    currentAddresses,
+    hasAddresses,
+    create,
+    remove,
+  }
+}

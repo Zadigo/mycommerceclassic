@@ -34,3 +34,9 @@ export const BaseAddressSchema = BaseProfileSchema.pick({
 })
 
 export type AddressFormData = z.infer<typeof BaseAddressSchema>
+
+export const GenderAddressSchema = BaseProfileSchema.pick({
+  gender: true,
+}).extend(BaseAddressSchema.shape)
+
+export type GenderAddressFormData = z.infer<typeof GenderAddressSchema>
