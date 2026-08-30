@@ -101,3 +101,13 @@ class RequestBody(pydantic.BaseModel):
     as_data: bool = False
     paginated: bool = False
     search: SearchBody | None = None
+
+
+class DownloadRequestBody(pydantic.BaseModel):
+    category: str
+    dirname: str | None = 'default'
+    urls: list[str]
+
+
+class DownloadResponseModel(pydantic.BaseModel):
+    path: str

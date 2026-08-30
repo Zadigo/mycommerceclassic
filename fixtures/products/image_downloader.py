@@ -14,6 +14,8 @@ from utils import get_redis
 logger = logging.getLogger(__name__)
 
 
+event = asyncio.Event()
+
 async def user_agents_rotator(return_all: bool = False) -> str | list[str]:
     user_agents_count: int = get_redis().llen('user_agents')
 
@@ -77,13 +79,16 @@ async def requester(tg: asyncio.TaskGroup,  url: str, category: str, dirname: st
                 )
 
 
-async def main(images: list[str]):
+async def main(images: list[str], category: str, dirname: str):
     # Limit concurrent downloads to 5
     async with asyncio.Semaphore(5), asyncio.TaskGroup() as tg:
         for url in images:
             tg.create_task(
-                requester(tg, url, category=args.category,
-                          dirname=args.dirname)
+                requester(
+                    tg, url,
+                    category=category,
+                    dirname=dirname
+                )
             )
 
 
@@ -117,4 +122,4 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    asyncio.run(main(args.urls))
+    asyncio.run(main(args.urls, category=args.category, dirname=args.dirname))

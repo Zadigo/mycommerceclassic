@@ -5,7 +5,13 @@ import orjson
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from models import ProductData, ProductEdges, ProductNode, RequestBody
+from models import (
+    DownloadRequestBody,
+    ProductData,
+    ProductEdges,
+    ProductNode,
+    RequestBody,
+)
 from utils import get_redis
 
 BASE_PATH = pathlib.Path(__file__).parent.resolve()
@@ -51,3 +57,18 @@ def read_graphql(body: RequestBody) -> ProductData | ProductEdges:
         ])
 
     return ProductData(data=orjson.loads(products))
+
+
+@app.get('/health')
+def health_check() -> dict[str, str]:
+    """A simple health check endpoint to verify that the application is running."""
+    return {"status": "ok"}
+
+
+@app.post('/images')
+async def download_images(body: DownloadRequestBody) -> dict[str, str]:
+    """Endpoint to initiate the image downloading process based on the provided request body."""
+    from image_downloader import main  # Import here to avoid circular imports
+
+    await main(body.urls, category=body.category, dirname=body.dirname)
+    return {'status': 'Image download initiated.'}
