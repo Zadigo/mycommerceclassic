@@ -1,4 +1,10 @@
 import pathlib
+from collections import defaultdict
+from dataclasses import dataclass, field
+
+import orjson
+
+BASE_PATH = pathlib.Path(__file__).parent.absolute()
 
 CATEGORIES = {
     'skirts': [
@@ -64,14 +70,45 @@ SIZES = [
 ]
 
 
-def get_product_images(category: str) -> dict | None:
-    path = pathlib.Path(__file__).parent.joinpath(category)
+@dataclass
+class ImageInstance:
+    path: str
+
+
+@dataclass
+class ImageInstances:
+    dirname: str
+    images: list[ImageInstance] = field(default_factory=list)
+
+
+def get_product_images(category: str, write_file: bool = False) -> dict | None:
+    path = pathlib.Path(__file__).parent.joinpath('media', category)
+
+    image_instances_list: defaultdict[
+        str,
+        dict[str, list[ImageInstances]]
+    ] = defaultdict(dict)
+
     if path.exists() and path.is_dir():
         dirs = [d for d in path.iterdir() if d.is_dir()]
-        if dirs:
-            return {
-                d.name: [
-                    f.stem for f in d.iterdir() if f.is_file()
-                ] for d in dirs
-            }
-    return None
+        for item in dirs:
+            list_of_images = image_instances_list[category]
+
+            dir_images = ImageInstances(dirname=item.name)
+            list_of_images[item.name] = dir_images
+
+            for sub_item in item.iterdir():
+                if sub_item.is_file():
+                    str_path = str(sub_item.relative_to(path))
+                    image_object = ImageInstance(path=str_path)
+
+                    dir_images.images.append(image_object)
+
+    data = orjson.dumps(image_instances_list)
+
+    if write_file:
+        output_file = BASE_PATH.joinpath('imagesmap.json')
+        with output_file.open('wb') as f:
+            f.write(data)
+
+    return orjson.loads(data) if image_instances_list else None
