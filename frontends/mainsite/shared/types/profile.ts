@@ -30,7 +30,7 @@ export type UpdateProfileFormData = z.infer<typeof UpdatePersonalDataSchema>
 export const BaseAddressSchema = BaseUserSchema.pick({
   lastName: true,
   firstName: true,
-  email: true,
+  // email: true,
   telephone: true,
 }).extend({
   address: z.string().min(1, "L'adresse est requise"),

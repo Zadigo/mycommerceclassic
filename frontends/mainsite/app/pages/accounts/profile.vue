@@ -52,7 +52,7 @@
           </u-button>
           
           <form class="space-y-2" @submit.prevent>
-            <u-input v-model="newPasswords.currentPassword" type="password" icon="i-lucide-lock" autocomplete="current-password" placeholder="Mot de passe actuel" class="w-full"  />
+            <u-input v-model="currentPassword" type="password" icon="i-lucide-lock" autocomplete="current-password" placeholder="Mot de passe actuel" class="w-full"  />
 
             <div v-if="inputsToShow === 'email'" class="space-y-2">
               <u-input v-model="newEmail.newEmail" type="email" autocomplete="email" placeholder="Nouvel email" class="w-full"  />
@@ -72,14 +72,14 @@
       </div>
     </u-card>
 
-    <accounts-save-block title="Facturation">
-      <form class="space-y-2">
+    <accounts-save-block title="Facturation" @btn-clicked="updateBillingAddress">
+      <form class="space-y-2" @submit.prevent>
         <lazy-accounts-address-input-form v-model="billingAddress" :hydrate-after="800" />
       </form>
     </accounts-save-block>
 
     <u-card>
-      <u-button variant="soft" color="error">
+      <u-button variant="soft" color="error" @click="deleteAccount">
         <icon name="i-lucide-trash-2" />
         Supprimer le compte
       </u-button>
@@ -112,7 +112,7 @@ const { data } = useNuxtData('autocomplete')
  * Composables
  */
 
-const { profile, billingAddress, isWoman, setGender, updateProfile } = useUserProfileProvider()
+const { profile, billingAddress, isWoman, setGender, updateProfile, deleteAccount, updateBillingAddress } = useUserProfileProvider()
 
-const { newPasswords, newEmail, save} = useSensitiveDataComposable()
+const { currentPassword, newPasswords, newEmail, save } = useSensitiveDataComposable()
 </script>

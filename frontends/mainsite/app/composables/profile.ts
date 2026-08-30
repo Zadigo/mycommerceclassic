@@ -1,3 +1,5 @@
+import type { SimpleResponseBody } from '#shared/types/responses'
+
 export function useGenderComposable(currentGender: Ref<UpdateProfileFormData['gender']>) {
   const isWoman = computed(() => currentGender.value === 'Woman')
 
@@ -33,7 +35,7 @@ const [useUserProfileProvider, _useUserProfileStore] = createInjectionState(() =
   const billingAddress = ref<AddressFormData>({
     firstName: '',
     lastName: '',
-    email: '',
+    // email: '',
     telephone: {
       countryCode: '',
       phone: '',
@@ -52,17 +54,43 @@ const [useUserProfileProvider, _useUserProfileStore] = createInjectionState(() =
     profile.value.gender = gender
   }
 
+  async function updateBillingAddress() {
+    await $fetch(`/api/accounts/${1}/billing`, {
+      method: 'PATCH',
+      body: toValue(billingAddress)
+    })
+  }
+
+  async function deleteAccount() {
+    const data = await $fetch<SimpleResponseBody>(`/api/accounts/${1}/delete-account`, {
+      method: 'DELETE',
+    })
+
+    if (data.status) {
+      // Log the user and redirect to the homepage or login page
+      const router = useRouter()
+      useTimeout(1000, {
+        callback: () => router.push('/')
+      })
+    }
+  }
+
   return {
     isWoman,
     profile,
     billingAddress,
+    deleteAccount,
     updateProfile,
     setGender,
+    updateBillingAddress
   }
 })
 
 export { useUserProfileProvider }
 
+/**
+ * Composable for managing user profile state.
+ */
 export function useUserProfileStore() {
   const store = _useUserProfileStore()
   if (!store) {
@@ -74,6 +102,10 @@ export function useUserProfileStore() {
 export function useUserBillingComposable() {
 }
 
+/**
+ * Composable for handling sensitive data like passwords and emails.
+ * Provides reactive state and methods for updating passwords and emails.
+ */
 export function useSensitiveDataComposable() {
   const currentPassword = ref<string>('')
 
@@ -140,15 +172,19 @@ export function useSensitiveDataComposable() {
 
 export function useUserOrdersComposable() {}
 
-export function useUserAddressesComposable() {
-  const currentAddresses = ref<GenderAddressFormData[]>([])
-  const hasAddresses = computed(() => currentAddresses.value.length > 0)
+/**
+ * Composable for managing user addresses.
+ */
+export function useUserAddressesComposable(currentAddresses: Ref<GenderAddressFormData[] | undefined>) {
+  const _currentAddresses = computed(() => toValue(currentAddresses) || [])
+  const hasAddresses = computed(() => toValue(_currentAddresses).length > 0)
 
   function create() {
+    if (!currentAddresses.value) return
     currentAddresses.value.push({
       firstName: '',
       lastName: '',
-      email: '',
+      // email: '',
       gender: 'Woman',
       telephone: {
         countryCode: '',
@@ -164,11 +200,11 @@ export function useUserAddressesComposable() {
   }
   
   function remove(index: number) {
+    if (!currentAddresses.value) return
     currentAddresses.value.splice(index, 1)
   }
 
   return {
-    currentAddresses,
     hasAddresses,
     create,
     remove,

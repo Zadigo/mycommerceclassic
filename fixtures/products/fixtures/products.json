@@ -1,0 +1,120 @@
+[
+  {
+    "id": 0,
+    "name": "Jupe midi avec ceinture obi",
+    "active": false,
+    "ageGroupCategory": "Child",
+    "category": "Skirts",
+    "color": "CornflowerBlue",
+    "createdOn": "2024-06-03T00:00:00",
+    "modifiedOn": "2025-11-03T00:00:00",
+    "displayNew": false,
+    "genderCategory": "Man",
+    "hasSizes": true,
+    "modelHeight": 157.0,
+    "modelSize": "XL",
+    "sku": "jupe-midi-avec-ceinture-obi-0",
+    "slug": "jupe-midi-avec-ceinture-obi-0",
+    "subCategory": "Maxi",
+    "price": 160.0,
+    "salePrice": 0.0,
+    "saleValue": 0.0,
+    "unitPrice": 160.0,
+    "mainImage": {
+      "id": 250,
+      "active": true,
+      "createdOn": "2025-07-03",
+      "isMainImage": true,
+      "name": "main_image",
+      "original": "https://example.com/images/main_image.jpg",
+      "thumbnail": "https://example.com/images/main_image_thumb.jpg"
+    },
+    "colorVariants": [
+      {
+        "id": 279,
+        "name": "SandyBrown",
+        "mainImage": {
+          "id": 697,
+          "active": true,
+          "createdOn": "2020-10-06",
+          "isMainImage": true,
+          "name": "image_0",
+          "original": "https://example.com/images/image_0.jpg",
+          "thumbnail": "https://example.com/images/image_0_thumb.jpg"
+        }
+      },
+      {
+        "id": 173,
+        "name": "Maroon",
+        "mainImage": {
+          "id": 3,
+          "active": true,
+          "createdOn": "2021-04-18",
+          "isMainImage": true,
+          "name": "image_1",
+          "original": "https://example.com/images/image_1.jpg",
+          "thumbnail": "https://example.com/images/image_1_thumb.jpg"
+        }
+      },
+      {
+        "id": 931,
+        "name": "LightSteelBlue",
+        "mainImage": {
+          "id": 188,
+          "active": false,
+          "createdOn": "2026-06-09",
+          "isMainImage": true,
+          "name": "image_2",
+          "original": "https://example.com/images/image_2.jpg",
+          "thumbnail": "https://example.com/images/image_2_thumb.jpg"
+        }
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Minijupe évasée",
+    "active": true,
+    "ageGroupCategory": "Teen",
+    "category": "Skirts",
+    "color": "MediumTurquoise",
+    "createdOn": "2021-03-10T00:00:00",
+    "modifiedOn": "2022-12-29T00:00:00",
+    "displayNew": false,
+    "genderCategory": "Man",
+    "hasSizes": true,
+    "modelHeight": 200.0,
+    "modelSize": "L",
+    "sku": "minijupe-evasee-1",
+    "slug": "minijupe-evasee-1",
+    "subCategory": "Midi",
+    "price": 44.0,
+    "salePrice": 0.0,
+    "saleValue": 0.0,
+    "unitPrice": 44.0,
+    "mainImage": {
+      "id": 212,
+      "active": true,
+      "createdOn": "2024-08-16",
+      "isMainImage": true,
+      "name": "main_image",
+      "original": "https://example.com/images/main_image.jpg",
+      "thumbnail": "https://example.com/images/main_image_thumb.jpg"
+    },
+    "colorVariants": [
+      {
+        "id": 518,
+        "name": "GreenYellow",
+        "mainImage": {
+          "id": 31,
+          "active": true,
+          "createdOn": "2025-06-29",
+          "isMainImage": true,
+          "name": "image_0",
+          "original": "https://example.com/images/image_0.jpg",
+          "thumbnail": "https://example.com/images/image_0_thumb.jpg"
+        }
+      }
+    ]
+  }
+]

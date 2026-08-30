@@ -21,7 +21,7 @@
         Ajouter une adresse
       </u-button>
 
-      <u-card v-for="(address, idx) in currentAddresses" :key="idx" class="not-first:mt-5">
+      <u-card v-for="(address, idx) in data" :key="idx" class="not-first:mt-5">
         <template #title>
           <u-button icon="i-lucide-trash-2" class="ml-auto" variant="soft" color="error" @click="remove(idx)" />
         </template>
@@ -66,6 +66,11 @@ definePageMeta({
  * Composables
  */
 
-const { currentAddresses, hasAddresses, create, remove } = useUserAddressesComposable()
+const { data } = await useLazyAsyncData<GenderAddressFormData[]>(
+  'currentAddresses',
+  () => $fetch(`/api/accounts/${1}/addresses`, { method: 'GET' })
+)
+
+const { hasAddresses, create, remove } = useUserAddressesComposable(data)
 </script>
 
