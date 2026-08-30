@@ -1,17 +1,29 @@
 <template>
-  <u-skeleton v-if="isLoading" :class="skeletonClass" />
-  <nuxt-img v-else ref="imageEl" :src="_image" alt="Some alt" class="w-full cursor-grab" />
+  <div class="overflow-hidden relative">
+    <slot v-if="isLoading" name="loading">
+      <u-skeleton :class="skeletonClass" />
+    </slot>
+
+    <slot v-else>
+      <!-- <nuxt-img :src="_image" alt="Some alt" :class="imageClass" /> -->
+      <img :src="_image" alt="Some alt" :class="imageClass" />
+    </slot>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { useImage } from '@vueuse/core'
-
-const { image, key = 'original', skeletonClass = 'h-full w-full' } = defineProps<{
-  image: MainImage | undefined
-  key?:'original' | 'thumbnail'
+const { 
+  image, 
+  imageType = 'original', 
+  skeletonClass = 'w-full h-200',
+  imageClass = 'w-full hover:scale-120 transition-all ease-in-out duration-300 cursor-zoom-in'
+} = defineProps<{
+  image: MainImage | undefined | null
+  imageType?:'original' | 'thumbnail'
   skeletonClass?: string
+  imageClass?: string
 }>()
 
-const _image = computed(() => image?.[key || 'original'] || '')
-const { isLoading } = useImage({ src: toValue(_image) })
+const _image = computed(() => image?.[imageType || 'original'] || '')
+const isLoading = computed(() => !isDefined(_image) || toValue(_image) === '')
 </script>

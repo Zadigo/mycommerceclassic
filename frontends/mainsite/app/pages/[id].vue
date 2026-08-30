@@ -2,7 +2,7 @@
   <section id="product" class="px-5 relative">
     <div class="grid grid-cols-12 gap-8">
       <!-- Images -->
-      <lazy-product-images-grid :images="product?.productImages" class="col-span-12 md:col-span-8" hydrate-on-idle @zoom="select" />
+      <lazy-product-images-grid :images="productImages" class="col-span-12 md:col-span-8" hydrate-on-idle @zoom="select" />
 
       <aside v-if="product" class="col-span-12 md:col-span-4 md:py-15">
         <u-breadcrumb :items="items">
@@ -115,7 +115,9 @@ const items: BreadcrumbItem[] = [
 
 const { id } = useRoute().params as { id: string }
 const { data } = useAsyncData('product', async () => await $fetch<Product>(`/api/product/${id}`, { method: 'GET' }))
+
 const product = computed(() => toBaseProduct(data))
+const productImages = computed(() => product.value?.productImages || [])
 
 /**
  * Zoom

@@ -2,8 +2,7 @@
   <article :id="createElementId('product', 'card', product.id)">
     <div class="relative overflow-hidden group">
       <nuxt-link :to="`/${product.id}`" class="block">
-        <u-skeleton v-if="isLoading" class="w-full aspect-square" />
-        <nuxt-img v-else :alt="product.name" :src="product.mainImage?.original" class="w-full md:group-hover:scale-120 transition-all ease-in-out duration-300" />
+        <base-loading-nuxt-img :image="product.mainImage" image-class="w-full md:group-hover:scale-120 transition-all ease-in-out duration-300" />
       </nuxt-link>
       
       <!-- Badges -->
@@ -35,7 +34,6 @@
 
 <script setup lang="ts">
 import type { BaseProduct } from '#shared/types/product'
-import { useImage } from '@vueuse/core'
 
 const { 
   product, 
@@ -50,6 +48,4 @@ const {
 }>()
 
 const { add, getIcon } = useLikeComposable()
-
-const { isLoading } = useImage({ src: product.mainImage?.original || '' })
 </script>

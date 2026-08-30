@@ -81,4 +81,9 @@ export default defineNuxtConfig({
       projectId: process.env.NUXT_FIREBASE_PROJECT_ID
     }
   },
+
+  image: {
+    domains: [],
+    provider: 'ipx'
+  }
 })

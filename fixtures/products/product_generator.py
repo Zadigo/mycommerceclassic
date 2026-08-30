@@ -56,7 +56,7 @@ class AbstractFactory(ABC):
         """Return the images path for the selected category."""
         pick = random.choice(self.category_dirs)
         images = self.category_data.get(pick, {}).get('images', [])
-        return [f"{self.category}/{x['path']}" for x in images]
+        return [f"/{self.category}/{x['path']}" for x in images]
 
 
 class AbstractSkirts(AbstractFactory):

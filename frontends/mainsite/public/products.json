@@ -4,7 +4,7 @@
     "name": "Minijupe à volants et fil métallisé",
     "active": false,
     "ageGroupCategory": "Child",
-    "category": "Skirts",
+    "category": "/Skirts",
     "color": "LightCoral",
     "createdOn": "2022-01-21T00:00:00",
     "modifiedOn": "2021-01-16T00:00:00",
@@ -26,8 +26,8 @@
       "createdOn": "2021-01-17",
       "isMainImage": true,
       "name": "Image even",
-      "original": "skirts/3/9zrhB-Lo3Yk.jpg",
-      "thumbnail": "skirts/3/9zrhB-Lo3Yk.jpg",
+      "original": "/skirts/3/9zrhB-Lo3Yk.jpg",
+      "thumbnail": "/skirts/3/9zrhB-Lo3Yk.jpg",
       "variant": "SlateBlue"
     },
     "productImages": [
@@ -37,8 +37,8 @@
         "createdOn": "2021-01-17",
         "isMainImage": true,
         "name": "Image even",
-        "original": "skirts/3/9zrhB-Lo3Yk.jpg",
-        "thumbnail": "skirts/3/9zrhB-Lo3Yk.jpg",
+        "original": "/skirts/3/9zrhB-Lo3Yk.jpg",
+        "thumbnail": "/skirts/3/9zrhB-Lo3Yk.jpg",
         "variant": "SlateBlue"
       },
       {
@@ -47,8 +47,8 @@
         "createdOn": "2021-01-17",
         "isMainImage": false,
         "name": "Image even",
-        "original": "skirts/3/cRfGtz8eVmY.jpg",
-        "thumbnail": "skirts/3/cRfGtz8eVmY.jpg",
+        "original": "/skirts/3/cRfGtz8eVmY.jpg",
+        "thumbnail": "/skirts/3/cRfGtz8eVmY.jpg",
         "variant": "SlateBlue"
       },
       {
@@ -57,8 +57,8 @@
         "createdOn": "2021-01-17",
         "isMainImage": false,
         "name": "Image even",
-        "original": "skirts/3/R83FmWr0c4w.jpg",
-        "thumbnail": "skirts/3/R83FmWr0c4w.jpg",
+        "original": "/skirts/3/R83FmWr0c4w.jpg",
+        "thumbnail": "/skirts/3/R83FmWr0c4w.jpg",
         "variant": "SlateBlue"
       },
       {
@@ -67,8 +67,8 @@
         "createdOn": "2021-01-17",
         "isMainImage": false,
         "name": "Image even",
-        "original": "skirts/3/XlcpvUVCuOQ.jpg",
-        "thumbnail": "skirts/3/XlcpvUVCuOQ.jpg",
+        "original": "/skirts/3/XlcpvUVCuOQ.jpg",
+        "thumbnail": "/skirts/3/XlcpvUVCuOQ.jpg",
         "variant": "SlateBlue"
       },
       {
@@ -77,8 +77,8 @@
         "createdOn": "2021-01-17",
         "isMainImage": false,
         "name": "Image even",
-        "original": "skirts/3/oev2HrzKNBI.jpg",
-        "thumbnail": "skirts/3/oev2HrzKNBI.jpg",
+        "original": "/skirts/3/oev2HrzKNBI.jpg",
+        "thumbnail": "/skirts/3/oev2HrzKNBI.jpg",
         "variant": "SlateBlue"
       },
       {
@@ -87,8 +87,8 @@
         "createdOn": "2021-01-17",
         "isMainImage": false,
         "name": "Image even",
-        "original": "skirts/3/c6njBHJ0MAo.jpg",
-        "thumbnail": "skirts/3/c6njBHJ0MAo.jpg",
+        "original": "/skirts/3/c6njBHJ0MAo.jpg",
+        "thumbnail": "/skirts/3/c6njBHJ0MAo.jpg",
         "variant": "SlateBlue"
       }
     ],
@@ -181,7 +181,7 @@
     "name": "Minijupe évasée",
     "active": false,
     "ageGroupCategory": "Child",
-    "category": "Skirts",
+    "category": "/Skirts",
     "color": "Bisque",
     "createdOn": "2022-05-04T00:00:00",
     "modifiedOn": "2024-12-16T00:00:00",
@@ -203,8 +203,8 @@
       "createdOn": "2023-07-17",
       "isMainImage": true,
       "name": "Image head",
-      "original": "skirts/5/KeqDsuMFNkE.jpg",
-      "thumbnail": "skirts/5/KeqDsuMFNkE.jpg",
+      "original": "/skirts/5/KeqDsuMFNkE.jpg",
+      "thumbnail": "/skirts/5/KeqDsuMFNkE.jpg",
       "variant": "GoldenRod"
     },
     "productImages": [
@@ -214,8 +214,8 @@
         "createdOn": "2023-07-17",
         "isMainImage": true,
         "name": "Image head",
-        "original": "skirts/5/KeqDsuMFNkE.jpg",
-        "thumbnail": "skirts/5/KeqDsuMFNkE.jpg",
+        "original": "/skirts/5/KeqDsuMFNkE.jpg",
+        "thumbnail": "/skirts/5/KeqDsuMFNkE.jpg",
         "variant": "GoldenRod"
       },
       {
@@ -224,8 +224,8 @@
         "createdOn": "2023-07-17",
         "isMainImage": false,
         "name": "Image head",
-        "original": "skirts/5/K_y-jJ-Tnos.jpg",
-        "thumbnail": "skirts/5/K_y-jJ-Tnos.jpg",
+        "original": "/skirts/5/K_y-jJ-Tnos.jpg",
+        "thumbnail": "/skirts/5/K_y-jJ-Tnos.jpg",
         "variant": "GoldenRod"
       },
       {
@@ -234,8 +234,8 @@
         "createdOn": "2023-07-17",
         "isMainImage": false,
         "name": "Image head",
-        "original": "skirts/5/CkJzu-Uy0jo.jpg",
-        "thumbnail": "skirts/5/CkJzu-Uy0jo.jpg",
+        "original": "/skirts/5/CkJzu-Uy0jo.jpg",
+        "thumbnail": "/skirts/5/CkJzu-Uy0jo.jpg",
         "variant": "GoldenRod"
       },
       {
@@ -244,8 +244,8 @@
         "createdOn": "2023-07-17",
         "isMainImage": false,
         "name": "Image head",
-        "original": "skirts/5/nZRr-xCSpTQ.jpg",
-        "thumbnail": "skirts/5/nZRr-xCSpTQ.jpg",
+        "original": "/skirts/5/nZRr-xCSpTQ.jpg",
+        "thumbnail": "/skirts/5/nZRr-xCSpTQ.jpg",
         "variant": "GoldenRod"
       },
       {
@@ -254,8 +254,8 @@
         "createdOn": "2023-07-17",
         "isMainImage": false,
         "name": "Image head",
-        "original": "skirts/5/UB1BZmwFPwk.jpg",
-        "thumbnail": "skirts/5/UB1BZmwFPwk.jpg",
+        "original": "/skirts/5/UB1BZmwFPwk.jpg",
+        "thumbnail": "/skirts/5/UB1BZmwFPwk.jpg",
         "variant": "GoldenRod"
       },
       {
@@ -264,8 +264,8 @@
         "createdOn": "2023-07-17",
         "isMainImage": false,
         "name": "Image head",
-        "original": "skirts/5/28TEkBzNnRs.jpg",
-        "thumbnail": "skirts/5/28TEkBzNnRs.jpg",
+        "original": "/skirts/5/28TEkBzNnRs.jpg",
+        "thumbnail": "/skirts/5/28TEkBzNnRs.jpg",
         "variant": "GoldenRod"
       }
     ],
@@ -302,7 +302,7 @@
     "name": "Minijupe jacquard à franges",
     "active": false,
     "ageGroupCategory": "Child",
-    "category": "Skirts",
+    "category": "/Skirts",
     "color": "Cyan",
     "createdOn": "2024-08-27T00:00:00",
     "modifiedOn": "2021-05-24T00:00:00",
@@ -324,8 +324,8 @@
       "createdOn": "2026-04-29",
       "isMainImage": true,
       "name": "Image land",
-      "original": "skirts/2/uoCFNNVdscw.jpg",
-      "thumbnail": "skirts/2/uoCFNNVdscw.jpg",
+      "original": "/skirts/2/uoCFNNVdscw.jpg",
+      "thumbnail": "/skirts/2/uoCFNNVdscw.jpg",
       "variant": "MistyRose"
     },
     "productImages": [
@@ -335,8 +335,8 @@
         "createdOn": "2026-04-29",
         "isMainImage": true,
         "name": "Image land",
-        "original": "skirts/2/uoCFNNVdscw.jpg",
-        "thumbnail": "skirts/2/uoCFNNVdscw.jpg",
+        "original": "/skirts/2/uoCFNNVdscw.jpg",
+        "thumbnail": "/skirts/2/uoCFNNVdscw.jpg",
         "variant": "MistyRose"
       },
       {
@@ -345,8 +345,8 @@
         "createdOn": "2026-04-29",
         "isMainImage": false,
         "name": "Image land",
-        "original": "skirts/2/nMguxSiGMgc.jpg",
-        "thumbnail": "skirts/2/nMguxSiGMgc.jpg",
+        "original": "/skirts/2/nMguxSiGMgc.jpg",
+        "thumbnail": "/skirts/2/nMguxSiGMgc.jpg",
         "variant": "MistyRose"
       },
       {
@@ -355,8 +355,8 @@
         "createdOn": "2026-04-29",
         "isMainImage": false,
         "name": "Image land",
-        "original": "skirts/2/9S8vu0LUHkw.jpg",
-        "thumbnail": "skirts/2/9S8vu0LUHkw.jpg",
+        "original": "/skirts/2/9S8vu0LUHkw.jpg",
+        "thumbnail": "/skirts/2/9S8vu0LUHkw.jpg",
         "variant": "MistyRose"
       },
       {
@@ -365,8 +365,8 @@
         "createdOn": "2026-04-29",
         "isMainImage": false,
         "name": "Image land",
-        "original": "skirts/2/fCtu3zZLl5c.jpg",
-        "thumbnail": "skirts/2/fCtu3zZLl5c.jpg",
+        "original": "/skirts/2/fCtu3zZLl5c.jpg",
+        "thumbnail": "/skirts/2/fCtu3zZLl5c.jpg",
         "variant": "MistyRose"
       }
     ],
@@ -445,7 +445,7 @@
     "name": "Jupe brodée à pointes",
     "active": true,
     "ageGroupCategory": "Adult",
-    "category": "Skirts",
+    "category": "/Skirts",
     "color": "Violet",
     "createdOn": "2025-05-11T00:00:00",
     "modifiedOn": "2023-06-20T00:00:00",
@@ -467,8 +467,8 @@
       "createdOn": "2026-03-27",
       "isMainImage": true,
       "name": "Image across",
-      "original": "skirts/5/KeqDsuMFNkE.jpg",
-      "thumbnail": "skirts/5/KeqDsuMFNkE.jpg",
+      "original": "/skirts/5/KeqDsuMFNkE.jpg",
+      "thumbnail": "/skirts/5/KeqDsuMFNkE.jpg",
       "variant": "Turquoise"
     },
     "productImages": [
@@ -478,8 +478,8 @@
         "createdOn": "2026-03-27",
         "isMainImage": true,
         "name": "Image across",
-        "original": "skirts/5/KeqDsuMFNkE.jpg",
-        "thumbnail": "skirts/5/KeqDsuMFNkE.jpg",
+        "original": "/skirts/5/KeqDsuMFNkE.jpg",
+        "thumbnail": "/skirts/5/KeqDsuMFNkE.jpg",
         "variant": "Turquoise"
       },
       {
@@ -488,8 +488,8 @@
         "createdOn": "2026-03-27",
         "isMainImage": false,
         "name": "Image across",
-        "original": "skirts/5/K_y-jJ-Tnos.jpg",
-        "thumbnail": "skirts/5/K_y-jJ-Tnos.jpg",
+        "original": "/skirts/5/K_y-jJ-Tnos.jpg",
+        "thumbnail": "/skirts/5/K_y-jJ-Tnos.jpg",
         "variant": "Turquoise"
       },
       {
@@ -498,8 +498,8 @@
         "createdOn": "2026-03-27",
         "isMainImage": false,
         "name": "Image across",
-        "original": "skirts/5/CkJzu-Uy0jo.jpg",
-        "thumbnail": "skirts/5/CkJzu-Uy0jo.jpg",
+        "original": "/skirts/5/CkJzu-Uy0jo.jpg",
+        "thumbnail": "/skirts/5/CkJzu-Uy0jo.jpg",
         "variant": "Turquoise"
       },
       {
@@ -508,8 +508,8 @@
         "createdOn": "2026-03-27",
         "isMainImage": false,
         "name": "Image across",
-        "original": "skirts/5/nZRr-xCSpTQ.jpg",
-        "thumbnail": "skirts/5/nZRr-xCSpTQ.jpg",
+        "original": "/skirts/5/nZRr-xCSpTQ.jpg",
+        "thumbnail": "/skirts/5/nZRr-xCSpTQ.jpg",
         "variant": "Turquoise"
       },
       {
@@ -518,8 +518,8 @@
         "createdOn": "2026-03-27",
         "isMainImage": false,
         "name": "Image across",
-        "original": "skirts/5/UB1BZmwFPwk.jpg",
-        "thumbnail": "skirts/5/UB1BZmwFPwk.jpg",
+        "original": "/skirts/5/UB1BZmwFPwk.jpg",
+        "thumbnail": "/skirts/5/UB1BZmwFPwk.jpg",
         "variant": "Turquoise"
       },
       {
@@ -528,8 +528,8 @@
         "createdOn": "2026-03-27",
         "isMainImage": false,
         "name": "Image across",
-        "original": "skirts/5/28TEkBzNnRs.jpg",
-        "thumbnail": "skirts/5/28TEkBzNnRs.jpg",
+        "original": "/skirts/5/28TEkBzNnRs.jpg",
+        "thumbnail": "/skirts/5/28TEkBzNnRs.jpg",
         "variant": "Turquoise"
       }
     ],
@@ -566,7 +566,7 @@
     "name": "Sur-jupe brodée",
     "active": false,
     "ageGroupCategory": "Teen",
-    "category": "Skirts",
+    "category": "/Skirts",
     "color": "LightSalmon",
     "createdOn": "2022-02-11T00:00:00",
     "modifiedOn": "2024-07-12T00:00:00",
@@ -588,8 +588,8 @@
       "createdOn": "2025-02-09",
       "isMainImage": true,
       "name": "Image security",
-      "original": "skirts/4/v4pazVhxRoE.jpg",
-      "thumbnail": "skirts/4/v4pazVhxRoE.jpg",
+      "original": "/skirts/4/v4pazVhxRoE.jpg",
+      "thumbnail": "/skirts/4/v4pazVhxRoE.jpg",
       "variant": "MediumVioletRed"
     },
     "productImages": [
@@ -599,8 +599,8 @@
         "createdOn": "2025-02-09",
         "isMainImage": true,
         "name": "Image security",
-        "original": "skirts/4/v4pazVhxRoE.jpg",
-        "thumbnail": "skirts/4/v4pazVhxRoE.jpg",
+        "original": "/skirts/4/v4pazVhxRoE.jpg",
+        "thumbnail": "/skirts/4/v4pazVhxRoE.jpg",
         "variant": "MediumVioletRed"
       },
       {
@@ -609,8 +609,8 @@
         "createdOn": "2025-02-09",
         "isMainImage": false,
         "name": "Image security",
-        "original": "skirts/4/O1sPrenuuuw.jpg",
-        "thumbnail": "skirts/4/O1sPrenuuuw.jpg",
+        "original": "/skirts/4/O1sPrenuuuw.jpg",
+        "thumbnail": "/skirts/4/O1sPrenuuuw.jpg",
         "variant": "MediumVioletRed"
       },
       {
@@ -619,8 +619,8 @@
         "createdOn": "2025-02-09",
         "isMainImage": false,
         "name": "Image security",
-        "original": "skirts/4/k3PfA07m86I.jpg",
-        "thumbnail": "skirts/4/k3PfA07m86I.jpg",
+        "original": "/skirts/4/k3PfA07m86I.jpg",
+        "thumbnail": "/skirts/4/k3PfA07m86I.jpg",
         "variant": "MediumVioletRed"
       },
       {
@@ -629,8 +629,8 @@
         "createdOn": "2025-02-09",
         "isMainImage": false,
         "name": "Image security",
-        "original": "skirts/4/TACLSwKsJRA.jpg",
-        "thumbnail": "skirts/4/TACLSwKsJRA.jpg",
+        "original": "/skirts/4/TACLSwKsJRA.jpg",
+        "thumbnail": "/skirts/4/TACLSwKsJRA.jpg",
         "variant": "MediumVioletRed"
       },
       {
@@ -639,8 +639,8 @@
         "createdOn": "2025-02-09",
         "isMainImage": false,
         "name": "Image security",
-        "original": "skirts/4/GkeJ_7wBoEk.jpg",
-        "thumbnail": "skirts/4/GkeJ_7wBoEk.jpg",
+        "original": "/skirts/4/GkeJ_7wBoEk.jpg",
+        "thumbnail": "/skirts/4/GkeJ_7wBoEk.jpg",
         "variant": "MediumVioletRed"
       }
     ],
@@ -705,7 +705,7 @@
     "name": "Minijupe à volants",
     "active": false,
     "ageGroupCategory": "Adult",
-    "category": "Skirts",
+    "category": "/Skirts",
     "color": "Fuchsia",
     "createdOn": "2021-06-07T00:00:00",
     "modifiedOn": "2023-03-27T00:00:00",
@@ -727,8 +727,8 @@
       "createdOn": "2022-03-18",
       "isMainImage": true,
       "name": "Image point",
-      "original": "skirts/4/v4pazVhxRoE.jpg",
-      "thumbnail": "skirts/4/v4pazVhxRoE.jpg",
+      "original": "/skirts/4/v4pazVhxRoE.jpg",
+      "thumbnail": "/skirts/4/v4pazVhxRoE.jpg",
       "variant": "Crimson"
     },
     "productImages": [
@@ -738,8 +738,8 @@
         "createdOn": "2022-03-18",
         "isMainImage": true,
         "name": "Image point",
-        "original": "skirts/4/v4pazVhxRoE.jpg",
-        "thumbnail": "skirts/4/v4pazVhxRoE.jpg",
+        "original": "/skirts/4/v4pazVhxRoE.jpg",
+        "thumbnail": "/skirts/4/v4pazVhxRoE.jpg",
         "variant": "Crimson"
       },
       {
@@ -748,8 +748,8 @@
         "createdOn": "2022-03-18",
         "isMainImage": false,
         "name": "Image point",
-        "original": "skirts/4/O1sPrenuuuw.jpg",
-        "thumbnail": "skirts/4/O1sPrenuuuw.jpg",
+        "original": "/skirts/4/O1sPrenuuuw.jpg",
+        "thumbnail": "/skirts/4/O1sPrenuuuw.jpg",
         "variant": "Crimson"
       },
       {
@@ -758,8 +758,8 @@
         "createdOn": "2022-03-18",
         "isMainImage": false,
         "name": "Image point",
-        "original": "skirts/4/k3PfA07m86I.jpg",
-        "thumbnail": "skirts/4/k3PfA07m86I.jpg",
+        "original": "/skirts/4/k3PfA07m86I.jpg",
+        "thumbnail": "/skirts/4/k3PfA07m86I.jpg",
         "variant": "Crimson"
       },
       {
@@ -768,8 +768,8 @@
         "createdOn": "2022-03-18",
         "isMainImage": false,
         "name": "Image point",
-        "original": "skirts/4/TACLSwKsJRA.jpg",
-        "thumbnail": "skirts/4/TACLSwKsJRA.jpg",
+        "original": "/skirts/4/TACLSwKsJRA.jpg",
+        "thumbnail": "/skirts/4/TACLSwKsJRA.jpg",
         "variant": "Crimson"
       },
       {
@@ -778,8 +778,8 @@
         "createdOn": "2022-03-18",
         "isMainImage": false,
         "name": "Image point",
-        "original": "skirts/4/GkeJ_7wBoEk.jpg",
-        "thumbnail": "skirts/4/GkeJ_7wBoEk.jpg",
+        "original": "/skirts/4/GkeJ_7wBoEk.jpg",
+        "thumbnail": "/skirts/4/GkeJ_7wBoEk.jpg",
         "variant": "Crimson"
       }
     ],
@@ -858,7 +858,7 @@
     "name": "Short mini boule",
     "active": false,
     "ageGroupCategory": "Adult",
-    "category": "Skirts",
+    "category": "/Skirts",
     "color": "LavenderBlush",
     "createdOn": "2023-07-06T00:00:00",
     "modifiedOn": "2022-11-19T00:00:00",
@@ -880,8 +880,8 @@
       "createdOn": "2022-12-15",
       "isMainImage": true,
       "name": "Image head",
-      "original": "skirts/3/9zrhB-Lo3Yk.jpg",
-      "thumbnail": "skirts/3/9zrhB-Lo3Yk.jpg",
+      "original": "/skirts/3/9zrhB-Lo3Yk.jpg",
+      "thumbnail": "/skirts/3/9zrhB-Lo3Yk.jpg",
       "variant": "Bisque"
     },
     "productImages": [
@@ -891,8 +891,8 @@
         "createdOn": "2022-12-15",
         "isMainImage": true,
         "name": "Image head",
-        "original": "skirts/3/9zrhB-Lo3Yk.jpg",
-        "thumbnail": "skirts/3/9zrhB-Lo3Yk.jpg",
+        "original": "/skirts/3/9zrhB-Lo3Yk.jpg",
+        "thumbnail": "/skirts/3/9zrhB-Lo3Yk.jpg",
         "variant": "Bisque"
       },
       {
@@ -901,8 +901,8 @@
         "createdOn": "2022-12-15",
         "isMainImage": false,
         "name": "Image head",
-        "original": "skirts/3/cRfGtz8eVmY.jpg",
-        "thumbnail": "skirts/3/cRfGtz8eVmY.jpg",
+        "original": "/skirts/3/cRfGtz8eVmY.jpg",
+        "thumbnail": "/skirts/3/cRfGtz8eVmY.jpg",
         "variant": "Bisque"
       },
       {
@@ -911,8 +911,8 @@
         "createdOn": "2022-12-15",
         "isMainImage": false,
         "name": "Image head",
-        "original": "skirts/3/R83FmWr0c4w.jpg",
-        "thumbnail": "skirts/3/R83FmWr0c4w.jpg",
+        "original": "/skirts/3/R83FmWr0c4w.jpg",
+        "thumbnail": "/skirts/3/R83FmWr0c4w.jpg",
         "variant": "Bisque"
       },
       {
@@ -921,8 +921,8 @@
         "createdOn": "2022-12-15",
         "isMainImage": false,
         "name": "Image head",
-        "original": "skirts/3/XlcpvUVCuOQ.jpg",
-        "thumbnail": "skirts/3/XlcpvUVCuOQ.jpg",
+        "original": "/skirts/3/XlcpvUVCuOQ.jpg",
+        "thumbnail": "/skirts/3/XlcpvUVCuOQ.jpg",
         "variant": "Bisque"
       },
       {
@@ -931,8 +931,8 @@
         "createdOn": "2022-12-15",
         "isMainImage": false,
         "name": "Image head",
-        "original": "skirts/3/oev2HrzKNBI.jpg",
-        "thumbnail": "skirts/3/oev2HrzKNBI.jpg",
+        "original": "/skirts/3/oev2HrzKNBI.jpg",
+        "thumbnail": "/skirts/3/oev2HrzKNBI.jpg",
         "variant": "Bisque"
       },
       {
@@ -941,8 +941,8 @@
         "createdOn": "2022-12-15",
         "isMainImage": false,
         "name": "Image head",
-        "original": "skirts/3/c6njBHJ0MAo.jpg",
-        "thumbnail": "skirts/3/c6njBHJ0MAo.jpg",
+        "original": "/skirts/3/c6njBHJ0MAo.jpg",
+        "thumbnail": "/skirts/3/c6njBHJ0MAo.jpg",
         "variant": "Bisque"
       }
     ],
@@ -1049,7 +1049,7 @@
     "name": "Minijupe maxi à paillettes",
     "active": false,
     "ageGroupCategory": "Adult",
-    "category": "Skirts",
+    "category": "/Skirts",
     "color": "Turquoise",
     "createdOn": "2023-05-15T00:00:00",
     "modifiedOn": "2024-03-26T00:00:00",
@@ -1071,8 +1071,8 @@
       "createdOn": "2023-12-17",
       "isMainImage": true,
       "name": "Image few",
-      "original": "skirts/2/uoCFNNVdscw.jpg",
-      "thumbnail": "skirts/2/uoCFNNVdscw.jpg",
+      "original": "/skirts/2/uoCFNNVdscw.jpg",
+      "thumbnail": "/skirts/2/uoCFNNVdscw.jpg",
       "variant": "Maroon"
     },
     "productImages": [
@@ -1082,8 +1082,8 @@
         "createdOn": "2023-12-17",
         "isMainImage": true,
         "name": "Image few",
-        "original": "skirts/2/uoCFNNVdscw.jpg",
-        "thumbnail": "skirts/2/uoCFNNVdscw.jpg",
+        "original": "/skirts/2/uoCFNNVdscw.jpg",
+        "thumbnail": "/skirts/2/uoCFNNVdscw.jpg",
         "variant": "Maroon"
       },
       {
@@ -1092,8 +1092,8 @@
         "createdOn": "2023-12-17",
         "isMainImage": false,
         "name": "Image few",
-        "original": "skirts/2/nMguxSiGMgc.jpg",
-        "thumbnail": "skirts/2/nMguxSiGMgc.jpg",
+        "original": "/skirts/2/nMguxSiGMgc.jpg",
+        "thumbnail": "/skirts/2/nMguxSiGMgc.jpg",
         "variant": "Maroon"
       },
       {
@@ -1102,8 +1102,8 @@
         "createdOn": "2023-12-17",
         "isMainImage": false,
         "name": "Image few",
-        "original": "skirts/2/9S8vu0LUHkw.jpg",
-        "thumbnail": "skirts/2/9S8vu0LUHkw.jpg",
+        "original": "/skirts/2/9S8vu0LUHkw.jpg",
+        "thumbnail": "/skirts/2/9S8vu0LUHkw.jpg",
         "variant": "Maroon"
       },
       {
@@ -1112,8 +1112,8 @@
         "createdOn": "2023-12-17",
         "isMainImage": false,
         "name": "Image few",
-        "original": "skirts/2/fCtu3zZLl5c.jpg",
-        "thumbnail": "skirts/2/fCtu3zZLl5c.jpg",
+        "original": "/skirts/2/fCtu3zZLl5c.jpg",
+        "thumbnail": "/skirts/2/fCtu3zZLl5c.jpg",
         "variant": "Maroon"
       }
     ],
@@ -1150,7 +1150,7 @@
     "name": "Minijupe à broderie et volants",
     "active": true,
     "ageGroupCategory": "Teen",
-    "category": "Skirts",
+    "category": "/Skirts",
     "color": "LimeGreen",
     "createdOn": "2025-10-11T00:00:00",
     "modifiedOn": "2020-05-12T00:00:00",
@@ -1172,8 +1172,8 @@
       "createdOn": "2023-10-10",
       "isMainImage": true,
       "name": "Image real",
-      "original": "skirts/2/uoCFNNVdscw.jpg",
-      "thumbnail": "skirts/2/uoCFNNVdscw.jpg",
+      "original": "/skirts/2/uoCFNNVdscw.jpg",
+      "thumbnail": "/skirts/2/uoCFNNVdscw.jpg",
       "variant": "MediumSeaGreen"
     },
     "productImages": [
@@ -1183,8 +1183,8 @@
         "createdOn": "2023-10-10",
         "isMainImage": true,
         "name": "Image real",
-        "original": "skirts/2/uoCFNNVdscw.jpg",
-        "thumbnail": "skirts/2/uoCFNNVdscw.jpg",
+        "original": "/skirts/2/uoCFNNVdscw.jpg",
+        "thumbnail": "/skirts/2/uoCFNNVdscw.jpg",
         "variant": "MediumSeaGreen"
       },
       {
@@ -1193,8 +1193,8 @@
         "createdOn": "2023-10-10",
         "isMainImage": false,
         "name": "Image real",
-        "original": "skirts/2/nMguxSiGMgc.jpg",
-        "thumbnail": "skirts/2/nMguxSiGMgc.jpg",
+        "original": "/skirts/2/nMguxSiGMgc.jpg",
+        "thumbnail": "/skirts/2/nMguxSiGMgc.jpg",
         "variant": "MediumSeaGreen"
       },
       {
@@ -1203,8 +1203,8 @@
         "createdOn": "2023-10-10",
         "isMainImage": false,
         "name": "Image real",
-        "original": "skirts/2/9S8vu0LUHkw.jpg",
-        "thumbnail": "skirts/2/9S8vu0LUHkw.jpg",
+        "original": "/skirts/2/9S8vu0LUHkw.jpg",
+        "thumbnail": "/skirts/2/9S8vu0LUHkw.jpg",
         "variant": "MediumSeaGreen"
       },
       {
@@ -1213,8 +1213,8 @@
         "createdOn": "2023-10-10",
         "isMainImage": false,
         "name": "Image real",
-        "original": "skirts/2/fCtu3zZLl5c.jpg",
-        "thumbnail": "skirts/2/fCtu3zZLl5c.jpg",
+        "original": "/skirts/2/fCtu3zZLl5c.jpg",
+        "thumbnail": "/skirts/2/fCtu3zZLl5c.jpg",
         "variant": "MediumSeaGreen"
       }
     ],
@@ -1286,7 +1286,7 @@
     "name": "Jupe midi en couches de tulle",
     "active": false,
     "ageGroupCategory": "Child",
-    "category": "Skirts",
+    "category": "/Skirts",
     "color": "Cornsilk",
     "createdOn": "2026-06-13T00:00:00",
     "modifiedOn": "2023-07-06T00:00:00",
@@ -1308,8 +1308,8 @@
       "createdOn": "2026-02-20",
       "isMainImage": true,
       "name": "Image central",
-      "original": "skirts/4/v4pazVhxRoE.jpg",
-      "thumbnail": "skirts/4/v4pazVhxRoE.jpg",
+      "original": "/skirts/4/v4pazVhxRoE.jpg",
+      "thumbnail": "/skirts/4/v4pazVhxRoE.jpg",
       "variant": "MediumTurquoise"
     },
     "productImages": [
@@ -1319,8 +1319,8 @@
         "createdOn": "2026-02-20",
         "isMainImage": true,
         "name": "Image central",
-        "original": "skirts/4/v4pazVhxRoE.jpg",
-        "thumbnail": "skirts/4/v4pazVhxRoE.jpg",
+        "original": "/skirts/4/v4pazVhxRoE.jpg",
+        "thumbnail": "/skirts/4/v4pazVhxRoE.jpg",
         "variant": "MediumTurquoise"
       },
       {
@@ -1329,8 +1329,8 @@
         "createdOn": "2026-02-20",
         "isMainImage": false,
         "name": "Image central",
-        "original": "skirts/4/O1sPrenuuuw.jpg",
-        "thumbnail": "skirts/4/O1sPrenuuuw.jpg",
+        "original": "/skirts/4/O1sPrenuuuw.jpg",
+        "thumbnail": "/skirts/4/O1sPrenuuuw.jpg",
         "variant": "MediumTurquoise"
       },
       {
@@ -1339,8 +1339,8 @@
         "createdOn": "2026-02-20",
         "isMainImage": false,
         "name": "Image central",
-        "original": "skirts/4/k3PfA07m86I.jpg",
-        "thumbnail": "skirts/4/k3PfA07m86I.jpg",
+        "original": "/skirts/4/k3PfA07m86I.jpg",
+        "thumbnail": "/skirts/4/k3PfA07m86I.jpg",
         "variant": "MediumTurquoise"
       },
       {
@@ -1349,8 +1349,8 @@
         "createdOn": "2026-02-20",
         "isMainImage": false,
         "name": "Image central",
-        "original": "skirts/4/TACLSwKsJRA.jpg",
-        "thumbnail": "skirts/4/TACLSwKsJRA.jpg",
+        "original": "/skirts/4/TACLSwKsJRA.jpg",
+        "thumbnail": "/skirts/4/TACLSwKsJRA.jpg",
         "variant": "MediumTurquoise"
       },
       {
@@ -1359,8 +1359,8 @@
         "createdOn": "2026-02-20",
         "isMainImage": false,
         "name": "Image central",
-        "original": "skirts/4/GkeJ_7wBoEk.jpg",
-        "thumbnail": "skirts/4/GkeJ_7wBoEk.jpg",
+        "original": "/skirts/4/GkeJ_7wBoEk.jpg",
+        "thumbnail": "/skirts/4/GkeJ_7wBoEk.jpg",
         "variant": "MediumTurquoise"
       }
     ],

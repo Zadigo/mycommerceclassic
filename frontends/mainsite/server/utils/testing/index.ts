@@ -12,9 +12,19 @@ export function useLoadFixtures() {
     return fixtures.value.find((product) => product.id.toString() === id)
   }
 
+  function raw() {
+    return toValue(fixtures)
+  }
+
+  function singleProduct() {
+    return raw().at(0) as BaseProduct
+  }
+
   return {
     fixtures,
-    getProduct
+    getProduct,
+    raw,
+    singleProduct
   }
 }
 
