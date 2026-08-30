@@ -1,7 +1,7 @@
 import type { GraphQlData, RelayEdge, RelayNode } from "./graphql"
 
 export interface MainImage {
-  id: string
+  id: string | number
   active: boolean
   createdOn: string
   isMainImage: boolean
@@ -12,7 +12,7 @@ export interface MainImage {
 }
 
 export type BaseProduct = {
-  id: string
+  id: string | number
   name: string
   mainImage: Nullable<MainImage>
   productImages: MainImage[]
@@ -26,7 +26,7 @@ export type BaseProduct = {
   genderCategory: string
   hasSizes: boolean
   modelHeight: Nullable<number>
-  modelSize: Nullable<number>
+  modelSize: Nullable<string>
   modifiedOn: string
   onSale: boolean
   price: number
@@ -37,7 +37,7 @@ export type BaseProduct = {
   subCategory: string
   unitPrice: number
   video: unknown
-  colorVariants?: BaseProduct[]
+  colorVariants: Partial<BaseProduct>[]
 }
 
 export type ProductNode = RelayNode<BaseProduct>

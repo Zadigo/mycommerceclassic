@@ -96,6 +96,7 @@ class AbstractProduct(ABC):
         unit_price = fake.random_int(min=10, max=200)
 
         price_data = {
+            'onSale': on_sale,
             'price': unit_price,
             'salePrice': 0,
             'saleValue': 0,
@@ -110,14 +111,15 @@ class AbstractProduct(ABC):
             )
         return price_data
 
-    def _create_color_variants(self, using_image: str | None = None) -> list[ColorVariantModel]:
+    def _create_color_variants(self, using_variant: str | None = None, using_image: str | None = None) -> list[ColorVariantModel]:
         variants: list[ColorVariantModel] = []
+        color_name: str = using_variant or fake.color_name()
 
         for i in range(fake.random_int(min=1, max=5)):
             variants.append(
                 ColorVariantModel(
                     id=fake.random_int(min=1, max=1000),
-                    name=fake.color_name(),
+                    name=color_name,
                     mainImage=MainImageModel(
                         id=fake.random_int(min=1, max=1000),
                         active=fake.boolean(chance_of_getting_true=80),
@@ -125,7 +127,8 @@ class AbstractProduct(ABC):
                         isMainImage=True,
                         name=f"Image {fake.word()}",
                         original=using_image or self.placeholder_image,
-                        thumbnail=using_image or self.placeholder_image
+                        thumbnail=using_image or self.placeholder_image,
+                        variant=color_name
                     )
                 )
             )
@@ -139,6 +142,7 @@ class AbstractProduct(ABC):
             'active': fake.boolean(chance_of_getting_true=80),
             'createdOn': str(fake.date_this_decade()),
             'isMainImage': False,
+            'variant': fake.color_name()
         }
 
         if self.parent_factory is not None:
@@ -214,6 +218,7 @@ class Skirt(AbstractProduct):
             mainImage=main_image,
             productImages=images,
             sizeSet=self._create_sizes(),
+            video=None,
             **self._create_prices()
         )
 

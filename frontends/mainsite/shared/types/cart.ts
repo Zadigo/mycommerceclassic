@@ -1,17 +1,17 @@
 import type { Arrayable, Nullable } from './utils'
 import type { BaseProduct } from './product'
 
-export type ClotheSizes = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL' | 'Unique'
+export type ClotheSizes = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL' | 'Unique' | (string | {})
 
-export type ShoeSizes = '36' | '37' | '38' | '39' | '40' | '41' | '42' | '43' | '44' | '45' | '46'
+export type ShoeSizes = '36' | '37' | '38' | '39' | '40' | '41' | '42' | '43' | '44' | '45' | '46'| (string | {})
 
-export type BraSizes = '70A' | '70B' | '70C' | '70D' | '75A' | '75B' | '75C' | '75D' | '80A' | '80B' | '80C' | '80D' | '85A' | '85B' | '85C' | '85D'
+export type BraSizes = '70A' | '70B' | '70C' | '70D' | '75A' | '75B' | '75C' | '75D' | '80A' | '80B' | '80C' | '80D' | '85A' | '85B' | '85C' | '85D' | (string | {})
 
 export interface BaseSizeSet {
   active: boolean
   availability: boolean
   metric: string
-  name: (ClotheSizes | ShoeSizes | BraSizes | 'Unique') & (string | {})
+  name: (ClotheSizes | ShoeSizes | BraSizes) & (string | {})
   variantPrice: number
 }
 

@@ -1,9 +1,15 @@
 import type { GraphQlData, RelayEdge } from './graphql'
 import type { BaseProduct } from './product'
 
-export type BaseCollection = {
-  id: string
-  reference: string
+type _PartialBaseCollection = {
+  category: string
+  subCategory: string
+  description: string
+  slug: string
+  illustration: Nullable<string>
+}
+
+export type BaseCollection = Partial<_PartialBaseCollection> & {
   name: string
 }
 

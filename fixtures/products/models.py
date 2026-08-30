@@ -28,12 +28,18 @@ class MainImageModel(pydantic.BaseModel):
     name: str
     original: str
     thumbnail: str
+    variant: str | None = None
 
 
 class ColorVariantModel(pydantic.BaseModel):
     id: int
     name: str
     mainImage: MainImageModel
+
+
+class VideoModel(pydantic.BaseModel):
+    name: str
+    content: str
 
 
 class ProductModel(pydantic.BaseModel):
@@ -61,6 +67,9 @@ class ProductModel(pydantic.BaseModel):
     productImages: list[MainImageModel] = []
     sizeSet: list[SizeSetModel] = []
     colorVariants: list[ColorVariantModel]
+    onSale: bool = False
+    video: VideoModel | None = None
+
 
 class PageInfo(pydantic.BaseModel):
     hasNextPage: bool
