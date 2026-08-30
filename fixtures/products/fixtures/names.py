@@ -1,3 +1,5 @@
+import pathlib
+
 CATEGORIES = {
     'skirts': [
         "Jupe midi parachute",
@@ -52,6 +54,7 @@ CATEGORIES = {
     ]
 }
 
+
 SIZES = [
     'XS',
     'S',
@@ -59,3 +62,16 @@ SIZES = [
     'L',
     'XL'
 ]
+
+
+def get_product_images(category: str) -> dict | None:
+    path = pathlib.Path(__file__).parent.joinpath(category)
+    if path.exists() and path.is_dir():
+        dirs = [d for d in path.iterdir() if d.is_dir()]
+        if dirs:
+            return {
+                d.name: [
+                    f.stem for f in d.iterdir() if f.is_file()
+                ] for d in dirs
+            }
+    return None

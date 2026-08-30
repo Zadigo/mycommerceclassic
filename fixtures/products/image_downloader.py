@@ -1,14 +1,17 @@
 import argparse
 import asyncio
 import io
+import logging
 import pathlib
 import random
 import secrets
 
 import httpx2
-from PIL import Image
+from PIL import Image, UnidentifiedImageError
 
 from utils import get_redis
+
+logger = logging.getLogger(__name__)
 
 
 async def user_agents_rotator(return_all: bool = False) -> str | list[str]:
@@ -19,6 +22,8 @@ async def user_agents_rotator(return_all: bool = False) -> str | list[str]:
         async with httpx2.AsyncClient() as client:
             response = await client.get(url)
             if response.status_code == 200:
+                logger.info(
+                    '+ User agents list is empty. Downloading from gist...')
                 user_agents = response.text.splitlines()
                 get_redis().rpush('user_agents', *user_agents)
 
@@ -46,16 +51,30 @@ async def get_image_directory(dirname: str, category: str) -> pathlib.Path:
 async def requester(tg: asyncio.TaskGroup,  url: str, category: str, dirname: str = 'default') -> None:
     headers = {'User-Agent': await user_agents_rotator(return_all=False)}
     async with httpx2.AsyncClient() as client:
-        response = await client.get(url, headers=headers, timeout=20.0)
+        await asyncio.sleep(2)
 
+        response = await client.get(url, headers=headers, timeout=20.0)
         path = await tg.create_task(get_image_directory(dirname, category))
 
         if response.status_code == 200:
+            logger.info(
+                f"Downloaded image from {url} with status code {response.status_code}")
             filename = secrets.token_urlsafe(8) + '.jpg'
             fullpath = path.joinpath(filename)
 
-            instance = Image.open(io.BytesIO(response.content))
-            instance.save(fullpath, format='JPEG', quality=85, optimize=True)
+            try:
+                instance = Image.open(io.BytesIO(
+                    response.content), formats=['JPEG', 'WEBP'])
+            except UnidentifiedImageError:
+                logger.error(
+                    f"Failed to identify image from {url}. Skipping save.")
+            else:
+                logger.info(f"Saving image to {fullpath}")
+                instance.save(
+                    fullpath,
+                    format='JPEG',
+                    quality=85, optimize=True
+                )
 
 
 async def main(images: list[str]):
