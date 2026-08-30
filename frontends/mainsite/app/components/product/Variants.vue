@@ -17,7 +17,7 @@ const { product, variants } = defineProps<{
 }>()
 
 const emit = defineEmits<{
-  'colorName': [string]
+  'colorName': [string | undefined]
 }>()
 
 const _variants = computed(() => variants ?? [])
@@ -28,7 +28,8 @@ const _variants = computed(() => variants ?? [])
 
 const route = useRoute()
 
-const isSelected = (variant: { id: string }) => {
-  return route.params.id === variant.id ? 'opacity-50' : 'opacity-100'
+const isSelected = (variant: BaseProduct | Partial<BaseProduct> | undefined) => {
+  if (!variant) return 'opacity-100'
+  return route.params.id?.toString() === variant.id?.toString() ? 'opacity-50' : 'opacity-100'
 }
 </script>

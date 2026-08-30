@@ -85,7 +85,7 @@ class AbstractSkirts(AbstractFactory):
 class AbstractProduct(ABC):
     def __init__(self, parent_factory: AbstractFactory | None = None):
         self.parent_factory = parent_factory
-        self.placeholder_image = "https://placehold.co/1090x850"
+        self.placeholder_image = "https://placehold.co/850x1090"
 
     @abstractmethod
     def get_product_info(self) -> ProductModel:

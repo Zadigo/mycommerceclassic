@@ -1,19 +1,32 @@
 import { faker } from '@faker-js/faker'
 import jsonFixtures from '../../../public/products.json'
 import { computed, ref, toValue } from 'vue'
-import type { Ref } from 'vue'
+import type { H3Event } from 'h3'
+ 
+export function useLoadFixtures() {
+  const fixtures = computed(() => jsonFixtures)
 
-export function useLoadFixtures(): Ref<BaseProduct[]> {
-  return computed(() => jsonFixtures)
+  function getProduct(event: H3Event) {
+    const id = getRouterParam(event, 'id')
+    if (!id) return undefined
+    return fixtures.value.find((product) => product.id.toString() === id)
+  }
+
+  return {
+    fixtures,
+    getProduct
+  }
 }
 
 export function useLoadCollectionFixture() {
-  return ref<CollectionProducts>({
+  const result = ref<CollectionProducts>({
     data: {
       collection: {
         name: faker.word.words({ count: { min: 2, max: 5 } }),
-        products: toValue(useLoadFixtures())
+        products: toValue(useLoadFixtures().fixtures)
       }
     }
   })
+
+  return result
 }

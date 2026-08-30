@@ -2,7 +2,7 @@
   <section id="product" class="px-5 relative">
     <div class="grid grid-cols-12 gap-8">
       <!-- Images -->
-      <lazy-product-images-grid class="col-span-12 md:col-span-8" hydrate-on-idle @zoom="select" />
+      <lazy-product-images-grid :images="product?.productImages" class="col-span-12 md:col-span-8" hydrate-on-idle @zoom="select" />
 
       <aside v-if="product" class="col-span-12 md:col-span-4 md:py-15">
         <u-breadcrumb :items="items">
@@ -92,7 +92,7 @@
     <!-- Modals -->
      <client-only>
        <teleport to="body">
-         <lazy-product-images-super-zoom v-model:open="isOpen" hydrate-on-idle @close="deselect" />
+         <lazy-product-images-super-zoom :current-image="selectedImage" v-model:open="isOpen" hydrate-on-idle @close="deselect" />
        </teleport>
      </client-only>
   </section>

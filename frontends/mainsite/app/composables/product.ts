@@ -34,10 +34,10 @@ export const useLikeComposable = createGlobalState(() => {
 })
 
 export function useImageSuperZoom() {
-  const selectedImage = ref<string | undefined>(undefined)
+  const selectedImage = ref<BaseProduct['productImages'][number] | undefined>(undefined)
   const isOpen = computed(() => isDefined(selectedImage))
   
-  function select(image: string) {
+  function select(image: BaseProduct['productImages'][number] | undefined) {
     selectedImage.value = image
   }
 
