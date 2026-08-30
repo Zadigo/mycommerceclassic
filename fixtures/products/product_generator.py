@@ -10,7 +10,7 @@ from faker.decode import unidecode
 from faker.providers import DynamicProvider
 
 from fixtures.names import CATEGORIES, SIZES
-from models import ColorVariantModel, MainImageModel, ProductModel
+from models import ColorVariantModel, MainImageModel, ProductModel, SizeSetModel
 
 BASE_PATH = pathlib.Path(__file__).parent.resolve()
 
@@ -123,7 +123,7 @@ class AbstractProduct(ABC):
                         active=fake.boolean(chance_of_getting_true=80),
                         createdOn=str(fake.date_this_decade()),
                         isMainImage=True,
-                        name=f"image_{i}",
+                        name=f"Image {fake.word()}",
                         original=using_image or self.placeholder_image,
                         thumbnail=using_image or self.placeholder_image
                     )
@@ -135,7 +135,7 @@ class AbstractProduct(ABC):
     def _create_images(self) -> Generator[MainImageModel]:
         template = {
             'id': fake.random_int(min=1, max=1000),
-            'name': f"image_{fake.random_letters(length=5)}",
+            'name': f"Image {fake.word()}",
             'active': fake.boolean(chance_of_getting_true=80),
             'createdOn': str(fake.date_this_decade()),
             'isMainImage': False,
@@ -155,6 +155,22 @@ class AbstractProduct(ABC):
                 original=self.placeholder_image,
                 thumbnail=self.placeholder_image
             )
+
+    def _create_sizes(self) -> list[SizeSetModel]:
+        sizes_list: list[SizeSetModel] = []
+        choices = [fake.size() for _ in range(fake.random_int(min=1, max=3))]
+        for item in choices:
+            sizes_list.append(
+                SizeSetModel(
+                    name=item,
+                    size=item,
+                    availability=fake.boolean(chance_of_getting_true=80),
+                    active=fake.boolean(chance_of_getting_true=80),
+                    metric='clothe',
+                    variantPrice=1
+                )
+            )
+        return sizes_list
 
 
 class Skirt(AbstractProduct):
@@ -197,7 +213,7 @@ class Skirt(AbstractProduct):
             colorVariants=self._create_color_variants(),
             mainImage=main_image,
             productImages=images,
-            sizeSet=[],
+            sizeSet=self._create_sizes(),
             **self._create_prices()
         )
 

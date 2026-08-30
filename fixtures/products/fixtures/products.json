@@ -1,122 +1,142 @@
 [
   {
     "id": 0,
-    "name": "Jupe midi asymétrique en jean",
+    "name": "Short mini ballon à carreaux",
     "active": false,
     "ageGroupCategory": "Child",
     "category": "Skirts",
-    "color": "IndianRed",
-    "createdOn": "2023-08-21T00:00:00",
-    "modifiedOn": "2026-07-10T00:00:00",
+    "color": "DimGray",
+    "createdOn": "2026-04-01T00:00:00",
+    "modifiedOn": "2025-05-06T00:00:00",
     "displayNew": true,
     "genderCategory": "Unisex",
     "hasSizes": true,
-    "modelHeight": 151.0,
-    "modelSize": "M",
-    "sku": "jupe-midi-asymetrique-en-jean-0",
-    "slug": "jupe-midi-asymetrique-en-jean-0",
+    "modelHeight": 157.0,
+    "modelSize": "XL",
+    "sku": "short-mini-ballon-a-carreaux-0",
+    "slug": "short-mini-ballon-a-carreaux-0",
     "subCategory": "Mini",
-    "price": 178.0,
-    "salePrice": 145.96,
-    "saleValue": 18.0,
-    "unitPrice": 178.0,
+    "price": 97.0,
+    "salePrice": 0.0,
+    "saleValue": 0.0,
+    "unitPrice": 97.0,
     "mainImage": {
-      "id": 132,
+      "id": 519,
       "active": true,
-      "createdOn": "2022-09-27",
-      "isMainImage": false,
-      "name": "image_['W', 'a', 'P', 'i', 'n']",
-      "original": "fixtures/media/2/uoCFNNVdscw.jpg",
-      "thumbnail": "fixtures/media/2/uoCFNNVdscw.jpg"
+      "createdOn": "2022-07-20",
+      "isMainImage": true,
+      "name": "Image heart",
+      "original": "skirts/5/KeqDsuMFNkE.jpg",
+      "thumbnail": "skirts/5/KeqDsuMFNkE.jpg"
     },
     "productImages": [
       {
-        "id": 132,
+        "id": 519,
         "active": true,
-        "createdOn": "2022-09-27",
-        "isMainImage": false,
-        "name": "image_['W', 'a', 'P', 'i', 'n']",
-        "original": "fixtures/media/2/uoCFNNVdscw.jpg",
-        "thumbnail": "fixtures/media/2/uoCFNNVdscw.jpg"
+        "createdOn": "2022-07-20",
+        "isMainImage": true,
+        "name": "Image heart",
+        "original": "skirts/5/KeqDsuMFNkE.jpg",
+        "thumbnail": "skirts/5/KeqDsuMFNkE.jpg"
       },
       {
-        "id": 132,
+        "id": 519,
         "active": true,
-        "createdOn": "2022-09-27",
+        "createdOn": "2022-07-20",
         "isMainImage": false,
-        "name": "image_['W', 'a', 'P', 'i', 'n']",
-        "original": "fixtures/media/2/nMguxSiGMgc.jpg",
-        "thumbnail": "fixtures/media/2/nMguxSiGMgc.jpg"
+        "name": "Image heart",
+        "original": "skirts/5/K_y-jJ-Tnos.jpg",
+        "thumbnail": "skirts/5/K_y-jJ-Tnos.jpg"
       },
       {
-        "id": 132,
+        "id": 519,
         "active": true,
-        "createdOn": "2022-09-27",
+        "createdOn": "2022-07-20",
         "isMainImage": false,
-        "name": "image_['W', 'a', 'P', 'i', 'n']",
-        "original": "fixtures/media/2/9S8vu0LUHkw.jpg",
-        "thumbnail": "fixtures/media/2/9S8vu0LUHkw.jpg"
+        "name": "Image heart",
+        "original": "skirts/5/CkJzu-Uy0jo.jpg",
+        "thumbnail": "skirts/5/CkJzu-Uy0jo.jpg"
       },
       {
-        "id": 132,
+        "id": 519,
         "active": true,
-        "createdOn": "2022-09-27",
+        "createdOn": "2022-07-20",
         "isMainImage": false,
-        "name": "image_['W', 'a', 'P', 'i', 'n']",
-        "original": "fixtures/media/2/fCtu3zZLl5c.jpg",
-        "thumbnail": "fixtures/media/2/fCtu3zZLl5c.jpg"
+        "name": "Image heart",
+        "original": "skirts/5/nZRr-xCSpTQ.jpg",
+        "thumbnail": "skirts/5/nZRr-xCSpTQ.jpg"
+      },
+      {
+        "id": 519,
+        "active": true,
+        "createdOn": "2022-07-20",
+        "isMainImage": false,
+        "name": "Image heart",
+        "original": "skirts/5/UB1BZmwFPwk.jpg",
+        "thumbnail": "skirts/5/UB1BZmwFPwk.jpg"
+      },
+      {
+        "id": 519,
+        "active": true,
+        "createdOn": "2022-07-20",
+        "isMainImage": false,
+        "name": "Image heart",
+        "original": "skirts/5/28TEkBzNnRs.jpg",
+        "thumbnail": "skirts/5/28TEkBzNnRs.jpg"
       }
     ],
-    "sizeSet": [],
+    "sizeSet": [
+      {
+        "availability": true,
+        "active": false,
+        "name": "L",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      },
+      {
+        "availability": true,
+        "active": false,
+        "name": "M",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      }
+    ],
     "colorVariants": [
       {
-        "id": 360,
-        "name": "Green",
+        "id": 760,
+        "name": "PaleGreen",
         "mainImage": {
-          "id": 632,
+          "id": 3,
           "active": true,
-          "createdOn": "2022-05-30",
+          "createdOn": "2023-08-06",
           "isMainImage": true,
-          "name": "image_0",
+          "name": "Image factor",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
       },
       {
-        "id": 848,
-        "name": "RoyalBlue",
+        "id": 504,
+        "name": "Fuchsia",
         "mainImage": {
-          "id": 15,
-          "active": false,
-          "createdOn": "2022-12-27",
+          "id": 982,
+          "active": true,
+          "createdOn": "2022-10-11",
           "isMainImage": true,
-          "name": "image_1",
+          "name": "Image yourself",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
       },
       {
-        "id": 550,
-        "name": "CornflowerBlue",
+        "id": 342,
+        "name": "GhostWhite",
         "mainImage": {
-          "id": 381,
+          "id": 10,
           "active": true,
-          "createdOn": "2025-03-17",
+          "createdOn": "2021-04-01",
           "isMainImage": true,
-          "name": "image_2",
-          "original": "https://placehold.co/1090x850",
-          "thumbnail": "https://placehold.co/1090x850"
-        }
-      },
-      {
-        "id": 743,
-        "name": "OliveDrab",
-        "mainImage": {
-          "id": 757,
-          "active": true,
-          "createdOn": "2021-10-15",
-          "isMainImage": true,
-          "name": "image_3",
+          "name": "Image respond",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
@@ -125,153 +145,113 @@
   },
   {
     "id": 1,
-    "name": "Jupe midi avec ceinture obi",
-    "active": true,
+    "name": "Jupe - short mini technique taille élastique",
+    "active": false,
     "ageGroupCategory": "Adult",
     "category": "Skirts",
-    "color": "Indigo",
-    "createdOn": "2022-04-15T00:00:00",
-    "modifiedOn": "2024-01-18T00:00:00",
-    "displayNew": false,
-    "genderCategory": "Unisex",
+    "color": "DarkRed",
+    "createdOn": "2020-06-06T00:00:00",
+    "modifiedOn": "2022-09-29T00:00:00",
+    "displayNew": true,
+    "genderCategory": "Woman",
     "hasSizes": true,
-    "modelHeight": 190.0,
-    "modelSize": "L",
-    "sku": "jupe-midi-avec-ceinture-obi-1",
-    "slug": "jupe-midi-avec-ceinture-obi-1",
+    "modelHeight": 155.0,
+    "modelSize": "M",
+    "sku": "jupe---short-mini-technique-taille-elastique-1",
+    "slug": "jupe---short-mini-technique-taille-elastique-1",
     "subCategory": "Maxi",
-    "price": 192.0,
-    "salePrice": 122.88,
-    "saleValue": 36.0,
-    "unitPrice": 192.0,
+    "price": 63.0,
+    "salePrice": 0.0,
+    "saleValue": 0.0,
+    "unitPrice": 63.0,
     "mainImage": {
-      "id": 94,
-      "active": true,
-      "createdOn": "2024-12-21",
-      "isMainImage": false,
-      "name": "image_['d', 'i', 'H', 't', 'W']",
-      "original": "fixtures/media/3/9zrhB-Lo3Yk.jpg",
-      "thumbnail": "fixtures/media/3/9zrhB-Lo3Yk.jpg"
+      "id": 672,
+      "active": false,
+      "createdOn": "2024-06-29",
+      "isMainImage": true,
+      "name": "Image pretty",
+      "original": "skirts/4/v4pazVhxRoE.jpg",
+      "thumbnail": "skirts/4/v4pazVhxRoE.jpg"
     },
     "productImages": [
       {
-        "id": 94,
-        "active": true,
-        "createdOn": "2024-12-21",
-        "isMainImage": false,
-        "name": "image_['d', 'i', 'H', 't', 'W']",
-        "original": "fixtures/media/3/9zrhB-Lo3Yk.jpg",
-        "thumbnail": "fixtures/media/3/9zrhB-Lo3Yk.jpg"
+        "id": 672,
+        "active": false,
+        "createdOn": "2024-06-29",
+        "isMainImage": true,
+        "name": "Image pretty",
+        "original": "skirts/4/v4pazVhxRoE.jpg",
+        "thumbnail": "skirts/4/v4pazVhxRoE.jpg"
       },
       {
-        "id": 94,
-        "active": true,
-        "createdOn": "2024-12-21",
+        "id": 672,
+        "active": false,
+        "createdOn": "2024-06-29",
         "isMainImage": false,
-        "name": "image_['d', 'i', 'H', 't', 'W']",
-        "original": "fixtures/media/3/cRfGtz8eVmY.jpg",
-        "thumbnail": "fixtures/media/3/cRfGtz8eVmY.jpg"
+        "name": "Image pretty",
+        "original": "skirts/4/O1sPrenuuuw.jpg",
+        "thumbnail": "skirts/4/O1sPrenuuuw.jpg"
       },
       {
-        "id": 94,
-        "active": true,
-        "createdOn": "2024-12-21",
+        "id": 672,
+        "active": false,
+        "createdOn": "2024-06-29",
         "isMainImage": false,
-        "name": "image_['d', 'i', 'H', 't', 'W']",
-        "original": "fixtures/media/3/R83FmWr0c4w.jpg",
-        "thumbnail": "fixtures/media/3/R83FmWr0c4w.jpg"
+        "name": "Image pretty",
+        "original": "skirts/4/k3PfA07m86I.jpg",
+        "thumbnail": "skirts/4/k3PfA07m86I.jpg"
       },
       {
-        "id": 94,
-        "active": true,
-        "createdOn": "2024-12-21",
+        "id": 672,
+        "active": false,
+        "createdOn": "2024-06-29",
         "isMainImage": false,
-        "name": "image_['d', 'i', 'H', 't', 'W']",
-        "original": "fixtures/media/3/XlcpvUVCuOQ.jpg",
-        "thumbnail": "fixtures/media/3/XlcpvUVCuOQ.jpg"
+        "name": "Image pretty",
+        "original": "skirts/4/TACLSwKsJRA.jpg",
+        "thumbnail": "skirts/4/TACLSwKsJRA.jpg"
       },
       {
-        "id": 94,
-        "active": true,
-        "createdOn": "2024-12-21",
+        "id": 672,
+        "active": false,
+        "createdOn": "2024-06-29",
         "isMainImage": false,
-        "name": "image_['d', 'i', 'H', 't', 'W']",
-        "original": "fixtures/media/3/oev2HrzKNBI.jpg",
-        "thumbnail": "fixtures/media/3/oev2HrzKNBI.jpg"
-      },
-      {
-        "id": 94,
-        "active": true,
-        "createdOn": "2024-12-21",
-        "isMainImage": false,
-        "name": "image_['d', 'i', 'H', 't', 'W']",
-        "original": "fixtures/media/3/c6njBHJ0MAo.jpg",
-        "thumbnail": "fixtures/media/3/c6njBHJ0MAo.jpg"
+        "name": "Image pretty",
+        "original": "skirts/4/GkeJ_7wBoEk.jpg",
+        "thumbnail": "skirts/4/GkeJ_7wBoEk.jpg"
       }
     ],
-    "sizeSet": [],
+    "sizeSet": [
+      {
+        "availability": true,
+        "active": true,
+        "name": "M",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      }
+    ],
     "colorVariants": [
       {
-        "id": 932,
-        "name": "Black",
+        "id": 220,
+        "name": "IndianRed",
         "mainImage": {
-          "id": 609,
-          "active": true,
-          "createdOn": "2025-06-03",
+          "id": 210,
+          "active": false,
+          "createdOn": "2026-05-27",
           "isMainImage": true,
-          "name": "image_0",
+          "name": "Image thing",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
       },
       {
-        "id": 337,
-        "name": "PaleTurquoise",
+        "id": 432,
+        "name": "LavenderBlush",
         "mainImage": {
-          "id": 88,
+          "id": 63,
           "active": true,
-          "createdOn": "2023-02-24",
+          "createdOn": "2023-08-09",
           "isMainImage": true,
-          "name": "image_1",
-          "original": "https://placehold.co/1090x850",
-          "thumbnail": "https://placehold.co/1090x850"
-        }
-      },
-      {
-        "id": 551,
-        "name": "MidnightBlue",
-        "mainImage": {
-          "id": 522,
-          "active": true,
-          "createdOn": "2020-05-30",
-          "isMainImage": true,
-          "name": "image_2",
-          "original": "https://placehold.co/1090x850",
-          "thumbnail": "https://placehold.co/1090x850"
-        }
-      },
-      {
-        "id": 724,
-        "name": "LightPink",
-        "mainImage": {
-          "id": 27,
-          "active": true,
-          "createdOn": "2020-02-21",
-          "isMainImage": true,
-          "name": "image_3",
-          "original": "https://placehold.co/1090x850",
-          "thumbnail": "https://placehold.co/1090x850"
-        }
-      },
-      {
-        "id": 866,
-        "name": "LemonChiffon",
-        "mainImage": {
-          "id": 52,
-          "active": true,
-          "createdOn": "2021-12-18",
-          "isMainImage": true,
-          "name": "image_4",
+          "name": "Image draw",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
@@ -280,127 +260,161 @@
   },
   {
     "id": 2,
-    "name": "Jupe midi asymétrique en dentelle",
+    "name": "Maxi sequin mini skirt",
     "active": true,
-    "ageGroupCategory": "Child",
+    "ageGroupCategory": "Adult",
     "category": "Skirts",
-    "color": "Aquamarine",
-    "createdOn": "2021-01-28T00:00:00",
-    "modifiedOn": "2022-03-11T00:00:00",
-    "displayNew": false,
-    "genderCategory": "Man",
+    "color": "DarkGreen",
+    "createdOn": "2022-03-30T00:00:00",
+    "modifiedOn": "2024-05-04T00:00:00",
+    "displayNew": true,
+    "genderCategory": "Unisex",
     "hasSizes": true,
-    "modelHeight": 197.0,
-    "modelSize": "S",
-    "sku": "jupe-midi-asymetrique-en-dentelle-2",
-    "slug": "jupe-midi-asymetrique-en-dentelle-2",
+    "modelHeight": 169.0,
+    "modelSize": "XS",
+    "sku": "maxi-sequin-mini-skirt-2",
+    "slug": "maxi-sequin-mini-skirt-2",
     "subCategory": "Midi",
-    "price": 113.0,
+    "price": 92.0,
     "salePrice": 0.0,
     "saleValue": 0.0,
-    "unitPrice": 113.0,
+    "unitPrice": 92.0,
     "mainImage": {
-      "id": 457,
-      "active": true,
-      "createdOn": "2023-10-02",
-      "isMainImage": false,
-      "name": "image_['L', 'e', 'D', 'H', 'H']",
-      "original": "fixtures/media/1/rfQObyqDme8.jpg",
-      "thumbnail": "fixtures/media/1/rfQObyqDme8.jpg"
+      "id": 612,
+      "active": false,
+      "createdOn": "2026-07-28",
+      "isMainImage": true,
+      "name": "Image along",
+      "original": "skirts/1/rfQObyqDme8.jpg",
+      "thumbnail": "skirts/1/rfQObyqDme8.jpg"
     },
     "productImages": [
       {
-        "id": 457,
-        "active": true,
-        "createdOn": "2023-10-02",
-        "isMainImage": false,
-        "name": "image_['L', 'e', 'D', 'H', 'H']",
-        "original": "fixtures/media/1/rfQObyqDme8.jpg",
-        "thumbnail": "fixtures/media/1/rfQObyqDme8.jpg"
+        "id": 612,
+        "active": false,
+        "createdOn": "2026-07-28",
+        "isMainImage": true,
+        "name": "Image along",
+        "original": "skirts/1/rfQObyqDme8.jpg",
+        "thumbnail": "skirts/1/rfQObyqDme8.jpg"
       },
       {
-        "id": 457,
-        "active": true,
-        "createdOn": "2023-10-02",
+        "id": 612,
+        "active": false,
+        "createdOn": "2026-07-28",
         "isMainImage": false,
-        "name": "image_['L', 'e', 'D', 'H', 'H']",
-        "original": "fixtures/media/1/a9ahmUty73w.jpg",
-        "thumbnail": "fixtures/media/1/a9ahmUty73w.jpg"
+        "name": "Image along",
+        "original": "skirts/1/a9ahmUty73w.jpg",
+        "thumbnail": "skirts/1/a9ahmUty73w.jpg"
       },
       {
-        "id": 457,
-        "active": true,
-        "createdOn": "2023-10-02",
+        "id": 612,
+        "active": false,
+        "createdOn": "2026-07-28",
         "isMainImage": false,
-        "name": "image_['L', 'e', 'D', 'H', 'H']",
-        "original": "fixtures/media/1/nWo4s_x9Sys.jpg",
-        "thumbnail": "fixtures/media/1/nWo4s_x9Sys.jpg"
+        "name": "Image along",
+        "original": "skirts/1/nWo4s_x9Sys.jpg",
+        "thumbnail": "skirts/1/nWo4s_x9Sys.jpg"
       },
       {
-        "id": 457,
-        "active": true,
-        "createdOn": "2023-10-02",
+        "id": 612,
+        "active": false,
+        "createdOn": "2026-07-28",
         "isMainImage": false,
-        "name": "image_['L', 'e', 'D', 'H', 'H']",
-        "original": "fixtures/media/1/2PGRKo-jtOE.jpg",
-        "thumbnail": "fixtures/media/1/2PGRKo-jtOE.jpg"
+        "name": "Image along",
+        "original": "skirts/1/2PGRKo-jtOE.jpg",
+        "thumbnail": "skirts/1/2PGRKo-jtOE.jpg"
       },
       {
-        "id": 457,
-        "active": true,
-        "createdOn": "2023-10-02",
+        "id": 612,
+        "active": false,
+        "createdOn": "2026-07-28",
         "isMainImage": false,
-        "name": "image_['L', 'e', 'D', 'H', 'H']",
-        "original": "fixtures/media/1/UHRclyje3U4.jpg",
-        "thumbnail": "fixtures/media/1/UHRclyje3U4.jpg"
+        "name": "Image along",
+        "original": "skirts/1/UHRclyje3U4.jpg",
+        "thumbnail": "skirts/1/UHRclyje3U4.jpg"
       },
       {
-        "id": 457,
-        "active": true,
-        "createdOn": "2023-10-02",
+        "id": 612,
+        "active": false,
+        "createdOn": "2026-07-28",
         "isMainImage": false,
-        "name": "image_['L', 'e', 'D', 'H', 'H']",
-        "original": "fixtures/media/1/scYQFSXaew4.jpg",
-        "thumbnail": "fixtures/media/1/scYQFSXaew4.jpg"
+        "name": "Image along",
+        "original": "skirts/1/scYQFSXaew4.jpg",
+        "thumbnail": "skirts/1/scYQFSXaew4.jpg"
       }
     ],
-    "sizeSet": [],
+    "sizeSet": [
+      {
+        "availability": true,
+        "active": true,
+        "name": "M",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      }
+    ],
     "colorVariants": [
       {
-        "id": 699,
-        "name": "RoyalBlue",
+        "id": 879,
+        "name": "LightGreen",
         "mainImage": {
-          "id": 619,
+          "id": 585,
           "active": true,
-          "createdOn": "2021-02-03",
+          "createdOn": "2022-05-12",
           "isMainImage": true,
-          "name": "image_0",
+          "name": "Image other",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
       },
       {
-        "id": 59,
-        "name": "LightSkyBlue",
+        "id": 404,
+        "name": "DeepPink",
         "mainImage": {
-          "id": 915,
+          "id": 732,
           "active": true,
-          "createdOn": "2020-04-27",
+          "createdOn": "2025-03-14",
           "isMainImage": true,
-          "name": "image_1",
+          "name": "Image rock",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
       },
       {
-        "id": 850,
-        "name": "DarkSlateGray",
+        "id": 817,
+        "name": "PaleGreen",
         "mainImage": {
           "id": 636,
-          "active": true,
-          "createdOn": "2023-08-10",
+          "active": false,
+          "createdOn": "2025-07-12",
           "isMainImage": true,
-          "name": "image_2",
+          "name": "Image eight",
+          "original": "https://placehold.co/1090x850",
+          "thumbnail": "https://placehold.co/1090x850"
+        }
+      },
+      {
+        "id": 979,
+        "name": "Linen",
+        "mainImage": {
+          "id": 647,
+          "active": true,
+          "createdOn": "2020-06-04",
+          "isMainImage": true,
+          "name": "Image fall",
+          "original": "https://placehold.co/1090x850",
+          "thumbnail": "https://placehold.co/1090x850"
+        }
+      },
+      {
+        "id": 196,
+        "name": "YellowGreen",
+        "mainImage": {
+          "id": 692,
+          "active": true,
+          "createdOn": "2023-04-05",
+          "isMainImage": true,
+          "name": "Image left",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
@@ -409,153 +423,155 @@
   },
   {
     "id": 3,
-    "name": "Short mini boule",
-    "active": true,
+    "name": "Mini-jupe brodée à volants",
+    "active": false,
     "ageGroupCategory": "Adult",
     "category": "Skirts",
-    "color": "Silver",
-    "createdOn": "2023-01-03T00:00:00",
-    "modifiedOn": "2023-12-14T00:00:00",
+    "color": "Indigo",
+    "createdOn": "2020-02-29T00:00:00",
+    "modifiedOn": "2025-02-24T00:00:00",
     "displayNew": true,
-    "genderCategory": "Unisex",
+    "genderCategory": "Man",
     "hasSizes": true,
-    "modelHeight": 196.0,
-    "modelSize": "XL",
-    "sku": "short-mini-boule-3",
-    "slug": "short-mini-boule-3",
+    "modelHeight": 198.0,
+    "modelSize": "XS",
+    "sku": "mini-jupe-brodee-a-volants-3",
+    "slug": "mini-jupe-brodee-a-volants-3",
     "subCategory": "Maxi",
-    "price": 37.0,
-    "salePrice": 31.82,
-    "saleValue": 14.0,
-    "unitPrice": 37.0,
+    "price": 152.0,
+    "salePrice": 0.0,
+    "saleValue": 0.0,
+    "unitPrice": 152.0,
     "mainImage": {
-      "id": 815,
+      "id": 798,
       "active": true,
-      "createdOn": "2025-09-02",
-      "isMainImage": false,
-      "name": "image_['f', 'U', 'j', 'U', 'B']",
-      "original": "fixtures/media/3/9zrhB-Lo3Yk.jpg",
-      "thumbnail": "fixtures/media/3/9zrhB-Lo3Yk.jpg"
+      "createdOn": "2025-04-12",
+      "isMainImage": true,
+      "name": "Image may",
+      "original": "skirts/5/KeqDsuMFNkE.jpg",
+      "thumbnail": "skirts/5/KeqDsuMFNkE.jpg"
     },
     "productImages": [
       {
-        "id": 815,
+        "id": 798,
         "active": true,
-        "createdOn": "2025-09-02",
-        "isMainImage": false,
-        "name": "image_['f', 'U', 'j', 'U', 'B']",
-        "original": "fixtures/media/3/9zrhB-Lo3Yk.jpg",
-        "thumbnail": "fixtures/media/3/9zrhB-Lo3Yk.jpg"
+        "createdOn": "2025-04-12",
+        "isMainImage": true,
+        "name": "Image may",
+        "original": "skirts/5/KeqDsuMFNkE.jpg",
+        "thumbnail": "skirts/5/KeqDsuMFNkE.jpg"
       },
       {
-        "id": 815,
+        "id": 798,
         "active": true,
-        "createdOn": "2025-09-02",
+        "createdOn": "2025-04-12",
         "isMainImage": false,
-        "name": "image_['f', 'U', 'j', 'U', 'B']",
-        "original": "fixtures/media/3/cRfGtz8eVmY.jpg",
-        "thumbnail": "fixtures/media/3/cRfGtz8eVmY.jpg"
+        "name": "Image may",
+        "original": "skirts/5/K_y-jJ-Tnos.jpg",
+        "thumbnail": "skirts/5/K_y-jJ-Tnos.jpg"
       },
       {
-        "id": 815,
+        "id": 798,
         "active": true,
-        "createdOn": "2025-09-02",
+        "createdOn": "2025-04-12",
         "isMainImage": false,
-        "name": "image_['f', 'U', 'j', 'U', 'B']",
-        "original": "fixtures/media/3/R83FmWr0c4w.jpg",
-        "thumbnail": "fixtures/media/3/R83FmWr0c4w.jpg"
+        "name": "Image may",
+        "original": "skirts/5/CkJzu-Uy0jo.jpg",
+        "thumbnail": "skirts/5/CkJzu-Uy0jo.jpg"
       },
       {
-        "id": 815,
+        "id": 798,
         "active": true,
-        "createdOn": "2025-09-02",
+        "createdOn": "2025-04-12",
         "isMainImage": false,
-        "name": "image_['f', 'U', 'j', 'U', 'B']",
-        "original": "fixtures/media/3/XlcpvUVCuOQ.jpg",
-        "thumbnail": "fixtures/media/3/XlcpvUVCuOQ.jpg"
+        "name": "Image may",
+        "original": "skirts/5/nZRr-xCSpTQ.jpg",
+        "thumbnail": "skirts/5/nZRr-xCSpTQ.jpg"
       },
       {
-        "id": 815,
+        "id": 798,
         "active": true,
-        "createdOn": "2025-09-02",
+        "createdOn": "2025-04-12",
         "isMainImage": false,
-        "name": "image_['f', 'U', 'j', 'U', 'B']",
-        "original": "fixtures/media/3/oev2HrzKNBI.jpg",
-        "thumbnail": "fixtures/media/3/oev2HrzKNBI.jpg"
+        "name": "Image may",
+        "original": "skirts/5/UB1BZmwFPwk.jpg",
+        "thumbnail": "skirts/5/UB1BZmwFPwk.jpg"
       },
       {
-        "id": 815,
+        "id": 798,
         "active": true,
-        "createdOn": "2025-09-02",
+        "createdOn": "2025-04-12",
         "isMainImage": false,
-        "name": "image_['f', 'U', 'j', 'U', 'B']",
-        "original": "fixtures/media/3/c6njBHJ0MAo.jpg",
-        "thumbnail": "fixtures/media/3/c6njBHJ0MAo.jpg"
+        "name": "Image may",
+        "original": "skirts/5/28TEkBzNnRs.jpg",
+        "thumbnail": "skirts/5/28TEkBzNnRs.jpg"
       }
     ],
-    "sizeSet": [],
+    "sizeSet": [
+      {
+        "availability": true,
+        "active": false,
+        "name": "L",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      },
+      {
+        "availability": true,
+        "active": true,
+        "name": "M",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      }
+    ],
     "colorVariants": [
       {
-        "id": 870,
-        "name": "Green",
+        "id": 305,
+        "name": "Coral",
         "mainImage": {
-          "id": 27,
+          "id": 775,
           "active": true,
-          "createdOn": "2024-01-15",
+          "createdOn": "2022-10-22",
           "isMainImage": true,
-          "name": "image_0",
+          "name": "Image it",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
       },
       {
-        "id": 466,
-        "name": "Aquamarine",
+        "id": 116,
+        "name": "Silver",
         "mainImage": {
-          "id": 154,
-          "active": true,
-          "createdOn": "2026-01-02",
-          "isMainImage": true,
-          "name": "image_1",
-          "original": "https://placehold.co/1090x850",
-          "thumbnail": "https://placehold.co/1090x850"
-        }
-      },
-      {
-        "id": 883,
-        "name": "MistyRose",
-        "mainImage": {
-          "id": 711,
-          "active": true,
-          "createdOn": "2021-09-21",
-          "isMainImage": true,
-          "name": "image_2",
-          "original": "https://placehold.co/1090x850",
-          "thumbnail": "https://placehold.co/1090x850"
-        }
-      },
-      {
-        "id": 517,
-        "name": "Purple",
-        "mainImage": {
-          "id": 487,
-          "active": true,
-          "createdOn": "2026-01-04",
-          "isMainImage": true,
-          "name": "image_3",
-          "original": "https://placehold.co/1090x850",
-          "thumbnail": "https://placehold.co/1090x850"
-        }
-      },
-      {
-        "id": 630,
-        "name": "MidnightBlue",
-        "mainImage": {
-          "id": 310,
+          "id": 38,
           "active": false,
-          "createdOn": "2024-02-14",
+          "createdOn": "2023-02-21",
           "isMainImage": true,
-          "name": "image_4",
+          "name": "Image sure",
+          "original": "https://placehold.co/1090x850",
+          "thumbnail": "https://placehold.co/1090x850"
+        }
+      },
+      {
+        "id": 717,
+        "name": "MediumSlateBlue",
+        "mainImage": {
+          "id": 421,
+          "active": true,
+          "createdOn": "2021-08-11",
+          "isMainImage": true,
+          "name": "Image painting",
+          "original": "https://placehold.co/1090x850",
+          "thumbnail": "https://placehold.co/1090x850"
+        }
+      },
+      {
+        "id": 183,
+        "name": "DimGray",
+        "mainImage": {
+          "id": 642,
+          "active": true,
+          "createdOn": "2024-06-11",
+          "isMainImage": true,
+          "name": "Image production",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
@@ -564,135 +580,162 @@
   },
   {
     "id": 4,
-    "name": "Short mini boule",
+    "name": "Jupe paréo brodée de perles",
     "active": false,
-    "ageGroupCategory": "Child",
+    "ageGroupCategory": "Adult",
     "category": "Skirts",
-    "color": "PaleGreen",
-    "createdOn": "2024-04-28T00:00:00",
-    "modifiedOn": "2025-01-28T00:00:00",
-    "displayNew": false,
-    "genderCategory": "Woman",
+    "color": "Cyan",
+    "createdOn": "2021-09-17T00:00:00",
+    "modifiedOn": "2020-02-16T00:00:00",
+    "displayNew": true,
+    "genderCategory": "Unisex",
     "hasSizes": true,
-    "modelHeight": 173.0,
+    "modelHeight": 157.0,
     "modelSize": "M",
-    "sku": "short-mini-boule-4",
-    "slug": "short-mini-boule-4",
-    "subCategory": "Maxi",
-    "price": 133.0,
-    "salePrice": 119.7,
-    "saleValue": 10.0,
-    "unitPrice": 133.0,
+    "sku": "jupe-pareo-brodee-de-perles-4",
+    "slug": "jupe-pareo-brodee-de-perles-4",
+    "subCategory": "Midi",
+    "price": 79.0,
+    "salePrice": 0.0,
+    "saleValue": 0.0,
+    "unitPrice": 79.0,
     "mainImage": {
-      "id": 200,
+      "id": 733,
       "active": true,
-      "createdOn": "2023-08-20",
-      "isMainImage": false,
-      "name": "image_['s', 'G', 'P', 'p', 'p']",
-      "original": "fixtures/media/2/uoCFNNVdscw.jpg",
-      "thumbnail": "fixtures/media/2/uoCFNNVdscw.jpg"
+      "createdOn": "2021-01-30",
+      "isMainImage": true,
+      "name": "Image because",
+      "original": "skirts/1/rfQObyqDme8.jpg",
+      "thumbnail": "skirts/1/rfQObyqDme8.jpg"
     },
     "productImages": [
       {
-        "id": 200,
+        "id": 733,
         "active": true,
-        "createdOn": "2023-08-20",
-        "isMainImage": false,
-        "name": "image_['s', 'G', 'P', 'p', 'p']",
-        "original": "fixtures/media/2/uoCFNNVdscw.jpg",
-        "thumbnail": "fixtures/media/2/uoCFNNVdscw.jpg"
+        "createdOn": "2021-01-30",
+        "isMainImage": true,
+        "name": "Image because",
+        "original": "skirts/1/rfQObyqDme8.jpg",
+        "thumbnail": "skirts/1/rfQObyqDme8.jpg"
       },
       {
-        "id": 200,
+        "id": 733,
         "active": true,
-        "createdOn": "2023-08-20",
+        "createdOn": "2021-01-30",
         "isMainImage": false,
-        "name": "image_['s', 'G', 'P', 'p', 'p']",
-        "original": "fixtures/media/2/nMguxSiGMgc.jpg",
-        "thumbnail": "fixtures/media/2/nMguxSiGMgc.jpg"
+        "name": "Image because",
+        "original": "skirts/1/a9ahmUty73w.jpg",
+        "thumbnail": "skirts/1/a9ahmUty73w.jpg"
       },
       {
-        "id": 200,
+        "id": 733,
         "active": true,
-        "createdOn": "2023-08-20",
+        "createdOn": "2021-01-30",
         "isMainImage": false,
-        "name": "image_['s', 'G', 'P', 'p', 'p']",
-        "original": "fixtures/media/2/9S8vu0LUHkw.jpg",
-        "thumbnail": "fixtures/media/2/9S8vu0LUHkw.jpg"
+        "name": "Image because",
+        "original": "skirts/1/nWo4s_x9Sys.jpg",
+        "thumbnail": "skirts/1/nWo4s_x9Sys.jpg"
       },
       {
-        "id": 200,
+        "id": 733,
         "active": true,
-        "createdOn": "2023-08-20",
+        "createdOn": "2021-01-30",
         "isMainImage": false,
-        "name": "image_['s', 'G', 'P', 'p', 'p']",
-        "original": "fixtures/media/2/fCtu3zZLl5c.jpg",
-        "thumbnail": "fixtures/media/2/fCtu3zZLl5c.jpg"
+        "name": "Image because",
+        "original": "skirts/1/2PGRKo-jtOE.jpg",
+        "thumbnail": "skirts/1/2PGRKo-jtOE.jpg"
+      },
+      {
+        "id": 733,
+        "active": true,
+        "createdOn": "2021-01-30",
+        "isMainImage": false,
+        "name": "Image because",
+        "original": "skirts/1/UHRclyje3U4.jpg",
+        "thumbnail": "skirts/1/UHRclyje3U4.jpg"
+      },
+      {
+        "id": 733,
+        "active": true,
+        "createdOn": "2021-01-30",
+        "isMainImage": false,
+        "name": "Image because",
+        "original": "skirts/1/scYQFSXaew4.jpg",
+        "thumbnail": "skirts/1/scYQFSXaew4.jpg"
       }
     ],
-    "sizeSet": [],
+    "sizeSet": [
+      {
+        "availability": true,
+        "active": true,
+        "name": "XS",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      },
+      {
+        "availability": true,
+        "active": true,
+        "name": "M",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      },
+      {
+        "availability": true,
+        "active": true,
+        "name": "L",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      }
+    ],
     "colorVariants": [
       {
-        "id": 121,
-        "name": "Purple",
+        "id": 803,
+        "name": "DarkOrange",
+        "mainImage": {
+          "id": 710,
+          "active": true,
+          "createdOn": "2022-04-23",
+          "isMainImage": true,
+          "name": "Image alone",
+          "original": "https://placehold.co/1090x850",
+          "thumbnail": "https://placehold.co/1090x850"
+        }
+      },
+      {
+        "id": 616,
+        "name": "Yellow",
+        "mainImage": {
+          "id": 817,
+          "active": true,
+          "createdOn": "2021-05-24",
+          "isMainImage": true,
+          "name": "Image goal",
+          "original": "https://placehold.co/1090x850",
+          "thumbnail": "https://placehold.co/1090x850"
+        }
+      },
+      {
+        "id": 745,
+        "name": "PaleTurquoise",
         "mainImage": {
           "id": 961,
           "active": true,
-          "createdOn": "2024-05-18",
+          "createdOn": "2022-07-19",
           "isMainImage": true,
-          "name": "image_0",
+          "name": "Image task",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
       },
       {
-        "id": 850,
-        "name": "MidnightBlue",
+        "id": 318,
+        "name": "Orange",
         "mainImage": {
-          "id": 438,
+          "id": 984,
           "active": true,
-          "createdOn": "2024-06-26",
+          "createdOn": "2021-03-18",
           "isMainImage": true,
-          "name": "image_1",
-          "original": "https://placehold.co/1090x850",
-          "thumbnail": "https://placehold.co/1090x850"
-        }
-      },
-      {
-        "id": 859,
-        "name": "PaleGoldenRod",
-        "mainImage": {
-          "id": 195,
-          "active": true,
-          "createdOn": "2021-09-28",
-          "isMainImage": true,
-          "name": "image_2",
-          "original": "https://placehold.co/1090x850",
-          "thumbnail": "https://placehold.co/1090x850"
-        }
-      },
-      {
-        "id": 211,
-        "name": "BlanchedAlmond",
-        "mainImage": {
-          "id": 103,
-          "active": false,
-          "createdOn": "2021-07-28",
-          "isMainImage": true,
-          "name": "image_3",
-          "original": "https://placehold.co/1090x850",
-          "thumbnail": "https://placehold.co/1090x850"
-        }
-      },
-      {
-        "id": 694,
-        "name": "DeepPink",
-        "mainImage": {
-          "id": 330,
-          "active": true,
-          "createdOn": "2022-08-18",
-          "isMainImage": true,
-          "name": "image_4",
+          "name": "Image already",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
@@ -701,122 +744,136 @@
   },
   {
     "id": 5,
-    "name": "Jupe-short mini technique taille élastique",
-    "active": false,
-    "ageGroupCategory": "Child",
+    "name": "Jupe midi fluide à carreaux",
+    "active": true,
+    "ageGroupCategory": "Adult",
     "category": "Skirts",
-    "color": "Turquoise",
-    "createdOn": "2020-02-28T00:00:00",
-    "modifiedOn": "2026-05-24T00:00:00",
-    "displayNew": true,
-    "genderCategory": "Unisex",
+    "color": "LightYellow",
+    "createdOn": "2025-03-19T00:00:00",
+    "modifiedOn": "2020-09-06T00:00:00",
+    "displayNew": false,
+    "genderCategory": "Woman",
     "hasSizes": true,
     "modelHeight": 196.0,
     "modelSize": "M",
-    "sku": "jupe-short-mini-technique-taille-elastique-5",
-    "slug": "jupe-short-mini-technique-taille-elastique-5",
+    "sku": "jupe-midi-fluide-a-carreaux-5",
+    "slug": "jupe-midi-fluide-a-carreaux-5",
     "subCategory": "Mini",
-    "price": 128.0,
+    "price": 98.0,
     "salePrice": 0.0,
     "saleValue": 0.0,
-    "unitPrice": 128.0,
+    "unitPrice": 98.0,
     "mainImage": {
-      "id": 413,
+      "id": 302,
       "active": true,
-      "createdOn": "2022-05-19",
-      "isMainImage": false,
-      "name": "image_['M', 'c', 'Z', 'q', 'i']",
-      "original": "fixtures/media/2/uoCFNNVdscw.jpg",
-      "thumbnail": "fixtures/media/2/uoCFNNVdscw.jpg"
+      "createdOn": "2026-02-15",
+      "isMainImage": true,
+      "name": "Image international",
+      "original": "skirts/3/9zrhB-Lo3Yk.jpg",
+      "thumbnail": "skirts/3/9zrhB-Lo3Yk.jpg"
     },
     "productImages": [
       {
-        "id": 413,
+        "id": 302,
         "active": true,
-        "createdOn": "2022-05-19",
-        "isMainImage": false,
-        "name": "image_['M', 'c', 'Z', 'q', 'i']",
-        "original": "fixtures/media/2/uoCFNNVdscw.jpg",
-        "thumbnail": "fixtures/media/2/uoCFNNVdscw.jpg"
+        "createdOn": "2026-02-15",
+        "isMainImage": true,
+        "name": "Image international",
+        "original": "skirts/3/9zrhB-Lo3Yk.jpg",
+        "thumbnail": "skirts/3/9zrhB-Lo3Yk.jpg"
       },
       {
-        "id": 413,
+        "id": 302,
         "active": true,
-        "createdOn": "2022-05-19",
+        "createdOn": "2026-02-15",
         "isMainImage": false,
-        "name": "image_['M', 'c', 'Z', 'q', 'i']",
-        "original": "fixtures/media/2/nMguxSiGMgc.jpg",
-        "thumbnail": "fixtures/media/2/nMguxSiGMgc.jpg"
+        "name": "Image international",
+        "original": "skirts/3/cRfGtz8eVmY.jpg",
+        "thumbnail": "skirts/3/cRfGtz8eVmY.jpg"
       },
       {
-        "id": 413,
+        "id": 302,
         "active": true,
-        "createdOn": "2022-05-19",
+        "createdOn": "2026-02-15",
         "isMainImage": false,
-        "name": "image_['M', 'c', 'Z', 'q', 'i']",
-        "original": "fixtures/media/2/9S8vu0LUHkw.jpg",
-        "thumbnail": "fixtures/media/2/9S8vu0LUHkw.jpg"
+        "name": "Image international",
+        "original": "skirts/3/R83FmWr0c4w.jpg",
+        "thumbnail": "skirts/3/R83FmWr0c4w.jpg"
       },
       {
-        "id": 413,
+        "id": 302,
         "active": true,
-        "createdOn": "2022-05-19",
+        "createdOn": "2026-02-15",
         "isMainImage": false,
-        "name": "image_['M', 'c', 'Z', 'q', 'i']",
-        "original": "fixtures/media/2/fCtu3zZLl5c.jpg",
-        "thumbnail": "fixtures/media/2/fCtu3zZLl5c.jpg"
+        "name": "Image international",
+        "original": "skirts/3/XlcpvUVCuOQ.jpg",
+        "thumbnail": "skirts/3/XlcpvUVCuOQ.jpg"
+      },
+      {
+        "id": 302,
+        "active": true,
+        "createdOn": "2026-02-15",
+        "isMainImage": false,
+        "name": "Image international",
+        "original": "skirts/3/oev2HrzKNBI.jpg",
+        "thumbnail": "skirts/3/oev2HrzKNBI.jpg"
+      },
+      {
+        "id": 302,
+        "active": true,
+        "createdOn": "2026-02-15",
+        "isMainImage": false,
+        "name": "Image international",
+        "original": "skirts/3/c6njBHJ0MAo.jpg",
+        "thumbnail": "skirts/3/c6njBHJ0MAo.jpg"
       }
     ],
-    "sizeSet": [],
+    "sizeSet": [
+      {
+        "availability": true,
+        "active": true,
+        "name": "XS",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      },
+      {
+        "availability": true,
+        "active": true,
+        "name": "L",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      },
+      {
+        "availability": true,
+        "active": true,
+        "name": "M",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      }
+    ],
     "colorVariants": [
       {
-        "id": 698,
-        "name": "Peru",
+        "id": 61,
+        "name": "Yellow",
         "mainImage": {
-          "id": 272,
-          "active": false,
-          "createdOn": "2025-11-18",
+          "id": 229,
+          "active": true,
+          "createdOn": "2022-03-02",
           "isMainImage": true,
-          "name": "image_0",
+          "name": "Image beautiful",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
       },
       {
-        "id": 547,
-        "name": "Linen",
+        "id": 165,
+        "name": "Gray",
         "mainImage": {
-          "id": 601,
+          "id": 482,
           "active": true,
-          "createdOn": "2023-10-13",
+          "createdOn": "2022-07-05",
           "isMainImage": true,
-          "name": "image_1",
-          "original": "https://placehold.co/1090x850",
-          "thumbnail": "https://placehold.co/1090x850"
-        }
-      },
-      {
-        "id": 745,
-        "name": "Purple",
-        "mainImage": {
-          "id": 88,
-          "active": true,
-          "createdOn": "2023-10-26",
-          "isMainImage": true,
-          "name": "image_2",
-          "original": "https://placehold.co/1090x850",
-          "thumbnail": "https://placehold.co/1090x850"
-        }
-      },
-      {
-        "id": 564,
-        "name": "SeaGreen",
-        "mainImage": {
-          "id": 195,
-          "active": true,
-          "createdOn": "2020-12-18",
-          "isMainImage": true,
-          "name": "image_3",
+          "name": "Image bill",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
@@ -825,144 +882,130 @@
   },
   {
     "id": 6,
-    "name": "Jupe midi en couches de tulle",
+    "name": "Short mini boule",
     "active": true,
     "ageGroupCategory": "Teen",
     "category": "Skirts",
-    "color": "MediumSlateBlue",
-    "createdOn": "2026-08-10T00:00:00",
-    "modifiedOn": "2024-07-14T00:00:00",
+    "color": "BurlyWood",
+    "createdOn": "2020-03-31T00:00:00",
+    "modifiedOn": "2022-01-27T00:00:00",
     "displayNew": true,
-    "genderCategory": "Unisex",
+    "genderCategory": "Woman",
     "hasSizes": true,
-    "modelHeight": 182.0,
-    "modelSize": "XL",
-    "sku": "jupe-midi-en-couches-de-tulle-6",
-    "slug": "jupe-midi-en-couches-de-tulle-6",
-    "subCategory": "Mini",
-    "price": 16.0,
+    "modelHeight": 191.0,
+    "modelSize": "L",
+    "sku": "short-mini-boule-6",
+    "slug": "short-mini-boule-6",
+    "subCategory": "Maxi",
+    "price": 83.0,
     "salePrice": 0.0,
     "saleValue": 0.0,
-    "unitPrice": 16.0,
+    "unitPrice": 83.0,
     "mainImage": {
-      "id": 829,
+      "id": 22,
       "active": true,
-      "createdOn": "2020-03-10",
-      "isMainImage": false,
-      "name": "image_['d', 'p', 'Z', 'n', 'M']",
-      "original": "fixtures/media/4/v4pazVhxRoE.jpg",
-      "thumbnail": "fixtures/media/4/v4pazVhxRoE.jpg"
+      "createdOn": "2023-03-25",
+      "isMainImage": true,
+      "name": "Image interest",
+      "original": "skirts/2/uoCFNNVdscw.jpg",
+      "thumbnail": "skirts/2/uoCFNNVdscw.jpg"
     },
     "productImages": [
       {
-        "id": 829,
+        "id": 22,
         "active": true,
-        "createdOn": "2020-03-10",
-        "isMainImage": false,
-        "name": "image_['d', 'p', 'Z', 'n', 'M']",
-        "original": "fixtures/media/4/v4pazVhxRoE.jpg",
-        "thumbnail": "fixtures/media/4/v4pazVhxRoE.jpg"
+        "createdOn": "2023-03-25",
+        "isMainImage": true,
+        "name": "Image interest",
+        "original": "skirts/2/uoCFNNVdscw.jpg",
+        "thumbnail": "skirts/2/uoCFNNVdscw.jpg"
       },
       {
-        "id": 829,
+        "id": 22,
         "active": true,
-        "createdOn": "2020-03-10",
+        "createdOn": "2023-03-25",
         "isMainImage": false,
-        "name": "image_['d', 'p', 'Z', 'n', 'M']",
-        "original": "fixtures/media/4/O1sPrenuuuw.jpg",
-        "thumbnail": "fixtures/media/4/O1sPrenuuuw.jpg"
+        "name": "Image interest",
+        "original": "skirts/2/nMguxSiGMgc.jpg",
+        "thumbnail": "skirts/2/nMguxSiGMgc.jpg"
       },
       {
-        "id": 829,
+        "id": 22,
         "active": true,
-        "createdOn": "2020-03-10",
+        "createdOn": "2023-03-25",
         "isMainImage": false,
-        "name": "image_['d', 'p', 'Z', 'n', 'M']",
-        "original": "fixtures/media/4/k3PfA07m86I.jpg",
-        "thumbnail": "fixtures/media/4/k3PfA07m86I.jpg"
+        "name": "Image interest",
+        "original": "skirts/2/9S8vu0LUHkw.jpg",
+        "thumbnail": "skirts/2/9S8vu0LUHkw.jpg"
       },
       {
-        "id": 829,
+        "id": 22,
         "active": true,
-        "createdOn": "2020-03-10",
+        "createdOn": "2023-03-25",
         "isMainImage": false,
-        "name": "image_['d', 'p', 'Z', 'n', 'M']",
-        "original": "fixtures/media/4/TACLSwKsJRA.jpg",
-        "thumbnail": "fixtures/media/4/TACLSwKsJRA.jpg"
-      },
-      {
-        "id": 829,
-        "active": true,
-        "createdOn": "2020-03-10",
-        "isMainImage": false,
-        "name": "image_['d', 'p', 'Z', 'n', 'M']",
-        "original": "fixtures/media/4/GkeJ_7wBoEk.jpg",
-        "thumbnail": "fixtures/media/4/GkeJ_7wBoEk.jpg"
+        "name": "Image interest",
+        "original": "skirts/2/fCtu3zZLl5c.jpg",
+        "thumbnail": "skirts/2/fCtu3zZLl5c.jpg"
       }
     ],
-    "sizeSet": [],
+    "sizeSet": [
+      {
+        "availability": true,
+        "active": true,
+        "name": "M",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      }
+    ],
     "colorVariants": [
       {
-        "id": 817,
-        "name": "Lime",
+        "id": 203,
+        "name": "SeaShell",
         "mainImage": {
-          "id": 952,
+          "id": 197,
+          "active": false,
+          "createdOn": "2020-12-16",
+          "isMainImage": true,
+          "name": "Image star",
+          "original": "https://placehold.co/1090x850",
+          "thumbnail": "https://placehold.co/1090x850"
+        }
+      },
+      {
+        "id": 815,
+        "name": "LightCoral",
+        "mainImage": {
+          "id": 965,
+          "active": false,
+          "createdOn": "2024-06-30",
+          "isMainImage": true,
+          "name": "Image tend",
+          "original": "https://placehold.co/1090x850",
+          "thumbnail": "https://placehold.co/1090x850"
+        }
+      },
+      {
+        "id": 495,
+        "name": "SeaGreen",
+        "mainImage": {
+          "id": 504,
           "active": true,
-          "createdOn": "2020-01-12",
+          "createdOn": "2025-12-05",
           "isMainImage": true,
-          "name": "image_0",
+          "name": "Image state",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
       },
       {
-        "id": 343,
-        "name": "MediumSpringGreen",
+        "id": 998,
+        "name": "Cornsilk",
         "mainImage": {
-          "id": 853,
-          "active": false,
-          "createdOn": "2023-04-15",
-          "isMainImage": true,
-          "name": "image_1",
-          "original": "https://placehold.co/1090x850",
-          "thumbnail": "https://placehold.co/1090x850"
-        }
-      },
-      {
-        "id": 637,
-        "name": "MediumSlateBlue",
-        "mainImage": {
-          "id": 602,
+          "id": 639,
           "active": true,
-          "createdOn": "2024-10-25",
+          "createdOn": "2023-10-12",
           "isMainImage": true,
-          "name": "image_2",
-          "original": "https://placehold.co/1090x850",
-          "thumbnail": "https://placehold.co/1090x850"
-        }
-      },
-      {
-        "id": 134,
-        "name": "SlateBlue",
-        "mainImage": {
-          "id": 463,
-          "active": false,
-          "createdOn": "2025-08-09",
-          "isMainImage": true,
-          "name": "image_3",
-          "original": "https://placehold.co/1090x850",
-          "thumbnail": "https://placehold.co/1090x850"
-        }
-      },
-      {
-        "id": 31,
-        "name": "PaleGoldenRod",
-        "mainImage": {
-          "id": 626,
-          "active": false,
-          "createdOn": "2025-04-03",
-          "isMainImage": true,
-          "name": "image_4",
+          "name": "Image chance",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
@@ -971,96 +1014,130 @@
   },
   {
     "id": 7,
-    "name": "Jupe-short mini technique taille élastique",
-    "active": false,
+    "name": "Mini-jupe à paillettes et dentelle",
+    "active": true,
     "ageGroupCategory": "Adult",
     "category": "Skirts",
-    "color": "PaleTurquoise",
-    "createdOn": "2021-01-18T00:00:00",
-    "modifiedOn": "2024-08-26T00:00:00",
-    "displayNew": true,
-    "genderCategory": "Man",
+    "color": "Blue",
+    "createdOn": "2022-05-19T00:00:00",
+    "modifiedOn": "2024-04-29T00:00:00",
+    "displayNew": false,
+    "genderCategory": "Unisex",
     "hasSizes": true,
-    "modelHeight": 174.0,
-    "modelSize": "M",
-    "sku": "jupe-short-mini-technique-taille-elastique-7",
-    "slug": "jupe-short-mini-technique-taille-elastique-7",
-    "subCategory": "Midi",
-    "price": 128.0,
-    "salePrice": 0.0,
-    "saleValue": 0.0,
-    "unitPrice": 128.0,
+    "modelHeight": 180.0,
+    "modelSize": "XS",
+    "sku": "mini-jupe-a-paillettes-et-dentelle-7",
+    "slug": "mini-jupe-a-paillettes-et-dentelle-7",
+    "subCategory": "Maxi",
+    "price": 30.0,
+    "salePrice": 25.8,
+    "saleValue": 14.0,
+    "unitPrice": 30.0,
     "mainImage": {
-      "id": 790,
+      "id": 451,
       "active": true,
-      "createdOn": "2024-03-16",
-      "isMainImage": false,
-      "name": "image_['h', 'q', 'h', 'u', 'g']",
-      "original": "fixtures/media/2/uoCFNNVdscw.jpg",
-      "thumbnail": "fixtures/media/2/uoCFNNVdscw.jpg"
+      "createdOn": "2024-03-06",
+      "isMainImage": true,
+      "name": "Image within",
+      "original": "skirts/2/uoCFNNVdscw.jpg",
+      "thumbnail": "skirts/2/uoCFNNVdscw.jpg"
     },
     "productImages": [
       {
-        "id": 790,
+        "id": 451,
         "active": true,
-        "createdOn": "2024-03-16",
-        "isMainImage": false,
-        "name": "image_['h', 'q', 'h', 'u', 'g']",
-        "original": "fixtures/media/2/uoCFNNVdscw.jpg",
-        "thumbnail": "fixtures/media/2/uoCFNNVdscw.jpg"
+        "createdOn": "2024-03-06",
+        "isMainImage": true,
+        "name": "Image within",
+        "original": "skirts/2/uoCFNNVdscw.jpg",
+        "thumbnail": "skirts/2/uoCFNNVdscw.jpg"
       },
       {
-        "id": 790,
+        "id": 451,
         "active": true,
-        "createdOn": "2024-03-16",
+        "createdOn": "2024-03-06",
         "isMainImage": false,
-        "name": "image_['h', 'q', 'h', 'u', 'g']",
-        "original": "fixtures/media/2/nMguxSiGMgc.jpg",
-        "thumbnail": "fixtures/media/2/nMguxSiGMgc.jpg"
+        "name": "Image within",
+        "original": "skirts/2/nMguxSiGMgc.jpg",
+        "thumbnail": "skirts/2/nMguxSiGMgc.jpg"
       },
       {
-        "id": 790,
+        "id": 451,
         "active": true,
-        "createdOn": "2024-03-16",
+        "createdOn": "2024-03-06",
         "isMainImage": false,
-        "name": "image_['h', 'q', 'h', 'u', 'g']",
-        "original": "fixtures/media/2/9S8vu0LUHkw.jpg",
-        "thumbnail": "fixtures/media/2/9S8vu0LUHkw.jpg"
+        "name": "Image within",
+        "original": "skirts/2/9S8vu0LUHkw.jpg",
+        "thumbnail": "skirts/2/9S8vu0LUHkw.jpg"
       },
       {
-        "id": 790,
+        "id": 451,
         "active": true,
-        "createdOn": "2024-03-16",
+        "createdOn": "2024-03-06",
         "isMainImage": false,
-        "name": "image_['h', 'q', 'h', 'u', 'g']",
-        "original": "fixtures/media/2/fCtu3zZLl5c.jpg",
-        "thumbnail": "fixtures/media/2/fCtu3zZLl5c.jpg"
+        "name": "Image within",
+        "original": "skirts/2/fCtu3zZLl5c.jpg",
+        "thumbnail": "skirts/2/fCtu3zZLl5c.jpg"
       }
     ],
-    "sizeSet": [],
+    "sizeSet": [
+      {
+        "availability": true,
+        "active": true,
+        "name": "S",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      }
+    ],
     "colorVariants": [
       {
-        "id": 540,
-        "name": "LimeGreen",
+        "id": 114,
+        "name": "NavajoWhite",
         "mainImage": {
-          "id": 881,
+          "id": 762,
           "active": true,
-          "createdOn": "2022-08-15",
+          "createdOn": "2020-12-22",
           "isMainImage": true,
-          "name": "image_0",
+          "name": "Image car",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
       },
       {
-        "id": 839,
-        "name": "Salmon",
+        "id": 495,
+        "name": "Brown",
         "mainImage": {
-          "id": 469,
-          "active": true,
-          "createdOn": "2021-12-24",
+          "id": 49,
+          "active": false,
+          "createdOn": "2024-05-12",
           "isMainImage": true,
-          "name": "image_1",
+          "name": "Image particular",
+          "original": "https://placehold.co/1090x850",
+          "thumbnail": "https://placehold.co/1090x850"
+        }
+      },
+      {
+        "id": 227,
+        "name": "DodgerBlue",
+        "mainImage": {
+          "id": 220,
+          "active": true,
+          "createdOn": "2021-07-09",
+          "isMainImage": true,
+          "name": "Image democratic",
+          "original": "https://placehold.co/1090x850",
+          "thumbnail": "https://placehold.co/1090x850"
+        }
+      },
+      {
+        "id": 197,
+        "name": "MediumPurple",
+        "mainImage": {
+          "id": 898,
+          "active": true,
+          "createdOn": "2021-01-19",
+          "isMainImage": true,
+          "name": "Image official",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
@@ -1069,127 +1146,122 @@
   },
   {
     "id": 8,
-    "name": "Mini-jupe à volants fil métallisé",
+    "name": "Jupe midi à taille élastique",
     "active": true,
     "ageGroupCategory": "Teen",
     "category": "Skirts",
-    "color": "MediumSlateBlue",
-    "createdOn": "2024-10-14T00:00:00",
-    "modifiedOn": "2025-03-28T00:00:00",
+    "color": "MediumSpringGreen",
+    "createdOn": "2025-08-19T00:00:00",
+    "modifiedOn": "2020-10-15T00:00:00",
     "displayNew": false,
-    "genderCategory": "Man",
+    "genderCategory": "Woman",
     "hasSizes": true,
-    "modelHeight": 156.0,
-    "modelSize": "M",
-    "sku": "mini-jupe-a-volants-fil-metallise-8",
-    "slug": "mini-jupe-a-volants-fil-metallise-8",
-    "subCategory": "Mini",
-    "price": 132.0,
-    "salePrice": 104.28,
-    "saleValue": 21.0,
-    "unitPrice": 132.0,
+    "modelHeight": 151.0,
+    "modelSize": "XL",
+    "sku": "jupe-midi-a-taille-elastique-8",
+    "slug": "jupe-midi-a-taille-elastique-8",
+    "subCategory": "Midi",
+    "price": 89.0,
+    "salePrice": 0.0,
+    "saleValue": 0.0,
+    "unitPrice": 89.0,
     "mainImage": {
-      "id": 451,
+      "id": 269,
       "active": true,
-      "createdOn": "2021-10-02",
-      "isMainImage": false,
-      "name": "image_['o', 'S', 'J', 'H', 'd']",
-      "original": "fixtures/media/5/KeqDsuMFNkE.jpg",
-      "thumbnail": "fixtures/media/5/KeqDsuMFNkE.jpg"
+      "createdOn": "2023-12-15",
+      "isMainImage": true,
+      "name": "Image bring",
+      "original": "skirts/3/9zrhB-Lo3Yk.jpg",
+      "thumbnail": "skirts/3/9zrhB-Lo3Yk.jpg"
     },
     "productImages": [
       {
-        "id": 451,
+        "id": 269,
         "active": true,
-        "createdOn": "2021-10-02",
-        "isMainImage": false,
-        "name": "image_['o', 'S', 'J', 'H', 'd']",
-        "original": "fixtures/media/5/KeqDsuMFNkE.jpg",
-        "thumbnail": "fixtures/media/5/KeqDsuMFNkE.jpg"
+        "createdOn": "2023-12-15",
+        "isMainImage": true,
+        "name": "Image bring",
+        "original": "skirts/3/9zrhB-Lo3Yk.jpg",
+        "thumbnail": "skirts/3/9zrhB-Lo3Yk.jpg"
       },
       {
-        "id": 451,
+        "id": 269,
         "active": true,
-        "createdOn": "2021-10-02",
+        "createdOn": "2023-12-15",
         "isMainImage": false,
-        "name": "image_['o', 'S', 'J', 'H', 'd']",
-        "original": "fixtures/media/5/K_y-jJ-Tnos.jpg",
-        "thumbnail": "fixtures/media/5/K_y-jJ-Tnos.jpg"
+        "name": "Image bring",
+        "original": "skirts/3/cRfGtz8eVmY.jpg",
+        "thumbnail": "skirts/3/cRfGtz8eVmY.jpg"
       },
       {
-        "id": 451,
+        "id": 269,
         "active": true,
-        "createdOn": "2021-10-02",
+        "createdOn": "2023-12-15",
         "isMainImage": false,
-        "name": "image_['o', 'S', 'J', 'H', 'd']",
-        "original": "fixtures/media/5/CkJzu-Uy0jo.jpg",
-        "thumbnail": "fixtures/media/5/CkJzu-Uy0jo.jpg"
+        "name": "Image bring",
+        "original": "skirts/3/R83FmWr0c4w.jpg",
+        "thumbnail": "skirts/3/R83FmWr0c4w.jpg"
       },
       {
-        "id": 451,
+        "id": 269,
         "active": true,
-        "createdOn": "2021-10-02",
+        "createdOn": "2023-12-15",
         "isMainImage": false,
-        "name": "image_['o', 'S', 'J', 'H', 'd']",
-        "original": "fixtures/media/5/nZRr-xCSpTQ.jpg",
-        "thumbnail": "fixtures/media/5/nZRr-xCSpTQ.jpg"
+        "name": "Image bring",
+        "original": "skirts/3/XlcpvUVCuOQ.jpg",
+        "thumbnail": "skirts/3/XlcpvUVCuOQ.jpg"
       },
       {
-        "id": 451,
+        "id": 269,
         "active": true,
-        "createdOn": "2021-10-02",
+        "createdOn": "2023-12-15",
         "isMainImage": false,
-        "name": "image_['o', 'S', 'J', 'H', 'd']",
-        "original": "fixtures/media/5/UB1BZmwFPwk.jpg",
-        "thumbnail": "fixtures/media/5/UB1BZmwFPwk.jpg"
+        "name": "Image bring",
+        "original": "skirts/3/oev2HrzKNBI.jpg",
+        "thumbnail": "skirts/3/oev2HrzKNBI.jpg"
       },
       {
-        "id": 451,
+        "id": 269,
         "active": true,
-        "createdOn": "2021-10-02",
+        "createdOn": "2023-12-15",
         "isMainImage": false,
-        "name": "image_['o', 'S', 'J', 'H', 'd']",
-        "original": "fixtures/media/5/28TEkBzNnRs.jpg",
-        "thumbnail": "fixtures/media/5/28TEkBzNnRs.jpg"
+        "name": "Image bring",
+        "original": "skirts/3/c6njBHJ0MAo.jpg",
+        "thumbnail": "skirts/3/c6njBHJ0MAo.jpg"
       }
     ],
-    "sizeSet": [],
+    "sizeSet": [
+      {
+        "availability": true,
+        "active": true,
+        "name": "S",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      }
+    ],
     "colorVariants": [
       {
-        "id": 968,
-        "name": "MediumAquaMarine",
+        "id": 290,
+        "name": "Pink",
         "mainImage": {
-          "id": 791,
+          "id": 570,
           "active": true,
-          "createdOn": "2024-06-04",
+          "createdOn": "2025-08-10",
           "isMainImage": true,
-          "name": "image_0",
+          "name": "Image audience",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
       },
       {
-        "id": 97,
-        "name": "MediumVioletRed",
+        "id": 311,
+        "name": "DarkCyan",
         "mainImage": {
-          "id": 540,
+          "id": 86,
           "active": true,
-          "createdOn": "2024-02-27",
+          "createdOn": "2025-08-27",
           "isMainImage": true,
-          "name": "image_1",
-          "original": "https://placehold.co/1090x850",
-          "thumbnail": "https://placehold.co/1090x850"
-        }
-      },
-      {
-        "id": 811,
-        "name": "YellowGreen",
-        "mainImage": {
-          "id": 197,
-          "active": true,
-          "createdOn": "2021-09-24",
-          "isMainImage": true,
-          "name": "image_2",
+          "name": "Image conference",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
@@ -1198,118 +1270,104 @@
   },
   {
     "id": 9,
-    "name": "Minijupe à volants",
+    "name": "Minijupe maxi à paillettes",
     "active": true,
-    "ageGroupCategory": "Child",
+    "ageGroupCategory": "Teen",
     "category": "Skirts",
-    "color": "Sienna",
-    "createdOn": "2026-02-01T00:00:00",
-    "modifiedOn": "2022-09-10T00:00:00",
-    "displayNew": true,
-    "genderCategory": "Woman",
+    "color": "Chocolate",
+    "createdOn": "2025-09-21T00:00:00",
+    "modifiedOn": "2020-11-22T00:00:00",
+    "displayNew": false,
+    "genderCategory": "Unisex",
     "hasSizes": true,
-    "modelHeight": 196.0,
+    "modelHeight": 198.0,
     "modelSize": "M",
-    "sku": "minijupe-a-volants-9",
-    "slug": "minijupe-a-volants-9",
+    "sku": "minijupe-maxi-a-paillettes-9",
+    "slug": "minijupe-maxi-a-paillettes-9",
     "subCategory": "Mini",
-    "price": 64.0,
+    "price": 107.0,
     "salePrice": 0.0,
     "saleValue": 0.0,
-    "unitPrice": 64.0,
+    "unitPrice": 107.0,
     "mainImage": {
-      "id": 803,
+      "id": 469,
       "active": true,
-      "createdOn": "2024-06-02",
-      "isMainImage": false,
-      "name": "image_['z', 'P', 'u', 'o', 't']",
-      "original": "fixtures/media/4/v4pazVhxRoE.jpg",
-      "thumbnail": "fixtures/media/4/v4pazVhxRoE.jpg"
+      "createdOn": "2024-09-22",
+      "isMainImage": true,
+      "name": "Image under",
+      "original": "skirts/2/uoCFNNVdscw.jpg",
+      "thumbnail": "skirts/2/uoCFNNVdscw.jpg"
     },
     "productImages": [
       {
-        "id": 803,
+        "id": 469,
         "active": true,
-        "createdOn": "2024-06-02",
-        "isMainImage": false,
-        "name": "image_['z', 'P', 'u', 'o', 't']",
-        "original": "fixtures/media/4/v4pazVhxRoE.jpg",
-        "thumbnail": "fixtures/media/4/v4pazVhxRoE.jpg"
+        "createdOn": "2024-09-22",
+        "isMainImage": true,
+        "name": "Image under",
+        "original": "skirts/2/uoCFNNVdscw.jpg",
+        "thumbnail": "skirts/2/uoCFNNVdscw.jpg"
       },
       {
-        "id": 803,
+        "id": 469,
         "active": true,
-        "createdOn": "2024-06-02",
+        "createdOn": "2024-09-22",
         "isMainImage": false,
-        "name": "image_['z', 'P', 'u', 'o', 't']",
-        "original": "fixtures/media/4/O1sPrenuuuw.jpg",
-        "thumbnail": "fixtures/media/4/O1sPrenuuuw.jpg"
+        "name": "Image under",
+        "original": "skirts/2/nMguxSiGMgc.jpg",
+        "thumbnail": "skirts/2/nMguxSiGMgc.jpg"
       },
       {
-        "id": 803,
+        "id": 469,
         "active": true,
-        "createdOn": "2024-06-02",
+        "createdOn": "2024-09-22",
         "isMainImage": false,
-        "name": "image_['z', 'P', 'u', 'o', 't']",
-        "original": "fixtures/media/4/k3PfA07m86I.jpg",
-        "thumbnail": "fixtures/media/4/k3PfA07m86I.jpg"
+        "name": "Image under",
+        "original": "skirts/2/9S8vu0LUHkw.jpg",
+        "thumbnail": "skirts/2/9S8vu0LUHkw.jpg"
       },
       {
-        "id": 803,
+        "id": 469,
         "active": true,
-        "createdOn": "2024-06-02",
+        "createdOn": "2024-09-22",
         "isMainImage": false,
-        "name": "image_['z', 'P', 'u', 'o', 't']",
-        "original": "fixtures/media/4/TACLSwKsJRA.jpg",
-        "thumbnail": "fixtures/media/4/TACLSwKsJRA.jpg"
-      },
-      {
-        "id": 803,
-        "active": true,
-        "createdOn": "2024-06-02",
-        "isMainImage": false,
-        "name": "image_['z', 'P', 'u', 'o', 't']",
-        "original": "fixtures/media/4/GkeJ_7wBoEk.jpg",
-        "thumbnail": "fixtures/media/4/GkeJ_7wBoEk.jpg"
+        "name": "Image under",
+        "original": "skirts/2/fCtu3zZLl5c.jpg",
+        "thumbnail": "skirts/2/fCtu3zZLl5c.jpg"
       }
     ],
-    "sizeSet": [],
+    "sizeSet": [
+      {
+        "availability": false,
+        "active": false,
+        "name": "XS",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      }
+    ],
     "colorVariants": [
       {
-        "id": 152,
-        "name": "MediumSpringGreen",
+        "id": 339,
+        "name": "Khaki",
         "mainImage": {
-          "id": 731,
+          "id": 516,
           "active": true,
-          "createdOn": "2026-04-28",
+          "createdOn": "2023-11-10",
           "isMainImage": true,
-          "name": "image_0",
+          "name": "Image could",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
       },
       {
-        "id": 422,
-        "name": "DarkSlateGray",
+        "id": 451,
+        "name": "MediumOrchid",
         "mainImage": {
-          "id": 919,
+          "id": 997,
           "active": true,
-          "createdOn": "2023-01-23",
+          "createdOn": "2021-05-17",
           "isMainImage": true,
-          "name": "image_1",
-          "original": "https://placehold.co/1090x850",
-          "thumbnail": "https://placehold.co/1090x850"
-        }
-      },
-      {
-        "id": 848,
-        "name": "CadetBlue",
-        "mainImage": {
-          "id": 874,
-          "active": false,
-          "createdOn": "2020-03-18",
-          "isMainImage": true,
-          "name": "image_2",
+          "name": "Image key",
           "original": "https://placehold.co/1090x850",
           "thumbnail": "https://placehold.co/1090x850"
         }
