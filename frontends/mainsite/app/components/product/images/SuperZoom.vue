@@ -3,8 +3,10 @@
     <div class="relative">
       <u-button :id="createElementId('cta', 'super-zoom', 'close')" variant="solid" color="neutral" icon="i-lucide-x" class="fixed top-5 right-5 z-50" @click="$emit('close')" />
       <!-- Current Image -->
-      <div v-if="isLoading" class="w-full aspect-square">Loading....</div>
-      <nuxt-img v-else ref="imageEl" :src="props.currentImage?.original" alt="Some alt" class="w-full cursor-grab" />
+      <base-loading-nuxt-img :image="props.currentImage" />
+      
+      <!-- <div v-if="isLoading" class="w-full aspect-square">Loading....</div>
+      <nuxt-img v-else ref="imageEl" :src="props.currentImage?.original" alt="Some alt" class="w-full cursor-grab" /> -->
 
       <!-- Thumbnails -->
       <div class="flex gap-2 fixed bottom-0 left-1/2 -translate-x-1/2 p-5">
