@@ -58,6 +58,8 @@ class ProductModel(pydantic.BaseModel):
     saleValue: float
     unitPrice: float
     mainImage: MainImageModel
+    productImages: list[MainImageModel] = []
+    sizeSet: list[SizeSetModel] = []
     colorVariants: list[ColorVariantModel]
 
 class PageInfo(pydantic.BaseModel):

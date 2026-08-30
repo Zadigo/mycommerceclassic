@@ -4,6 +4,7 @@ from contextlib import asynccontextmanager
 import orjson
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 
 from models import (
     DownloadRequestBody,
@@ -15,6 +16,8 @@ from models import (
 from utils import get_redis
 
 BASE_PATH = pathlib.Path(__file__).parent.resolve()
+
+MEDIA_PATH = BASE_PATH.joinpath('fixtures', 'media')
 
 JSON_FIXTURE = BASE_PATH.joinpath('fixtures', 'products.json')
 
@@ -72,3 +75,11 @@ async def download_images(body: DownloadRequestBody) -> dict[str, str]:
 
     await main(body.urls, category=body.category, dirname=body.dirname)
     return {'status': 'Image download initiated.'}
+
+
+@app.get('/image')
+async def read_image(path: str):
+    image_path = MEDIA_PATH.joinpath(path)
+    if not image_path.exists():
+        return {'error': 'File not found.'}
+    return FileResponse(image_path)

@@ -1,5 +1,6 @@
 import argparse
 import pathlib
+import random
 from abc import ABC, abstractmethod
 from collections.abc import Generator
 
@@ -34,10 +35,28 @@ fake.add_provider(size_provider)
 
 class AbstractFactory(ABC):
     number_of_products: int = 0
+    category: str = ''
+
+    def __init__(self):
+        self.category_data: dict[str, list[str] | str] = {}
+        self.category_dirs: list[str] = []
+
+        images_map = BASE_PATH.joinpath('fixtures', 'imagesmap.json')
+        if images_map.exists():
+            with images_map.open('r') as f:
+                data = orjson.loads(f.read())
+                self.category_data = data.get(self.category, {})
+                self.category_dirs = list(self.category_data.keys())
 
     @abstractmethod
     def create_product(self, quantity: int = 10) -> Generator[ProductModel]:
         pass
+
+    def _get_images(self):
+        """Return the images path for the selected category."""
+        pick = random.choice(self.category_dirs)
+        images = self.category_data.get(pick, {}).get('images', [])
+        return [f"{self.category}/{x['path']}" for x in images]
 
 
 class AbstractSkirts(AbstractFactory):
@@ -57,13 +76,17 @@ class AbstractSkirts(AbstractFactory):
         return quantity
 
     def create_product(self, quantity: int = 10) -> Generator[ProductModel]:
-        skirt = Skirt()
+        skirt = Skirt(self)
 
         for i in range(self.get_quantity(quantity)):
             yield skirt.get_product_info(i)
 
 
 class AbstractProduct(ABC):
+    def __init__(self, parent_factory: AbstractFactory | None = None):
+        self.parent_factory = parent_factory
+        self.placeholder_image = "https://placehold.co/1090x850"
+
     @abstractmethod
     def get_product_info(self) -> ProductModel:
         pass
@@ -87,8 +110,9 @@ class AbstractProduct(ABC):
             )
         return price_data
 
-    def _create_color_variants(self) -> list[ColorVariantModel]:
+    def _create_color_variants(self, using_image: str | None = None) -> list[ColorVariantModel]:
         variants: list[ColorVariantModel] = []
+
         for i in range(fake.random_int(min=1, max=5)):
             variants.append(
                 ColorVariantModel(
@@ -100,23 +124,37 @@ class AbstractProduct(ABC):
                         createdOn=str(fake.date_this_decade()),
                         isMainImage=True,
                         name=f"image_{i}",
-                        original=f"https://example.com/images/image_{i}.jpg",
-                        thumbnail=f"https://example.com/images/image_{i}_thumb.jpg"
+                        original=using_image or self.placeholder_image,
+                        thumbnail=using_image or self.placeholder_image
                     )
                 )
             )
+
         return variants
 
-    def _create_main_image(self) -> MainImageModel:
-        return MainImageModel(
-            id=fake.random_int(min=1, max=1000),
-            active=fake.boolean(),
-            createdOn=str(fake.date_this_decade()),
-            isMainImage=True,
-            name="main_image",
-            original="https://example.com/images/main_image.jpg",
-            thumbnail="https://example.com/images/main_image_thumb.jpg"
-        )
+    def _create_images(self) -> Generator[MainImageModel]:
+        template = {
+            'id': fake.random_int(min=1, max=1000),
+            'name': f"image_{fake.random_letters(length=5)}",
+            'active': fake.boolean(chance_of_getting_true=80),
+            'createdOn': str(fake.date_this_decade()),
+            'isMainImage': False,
+        }
+
+        if self.parent_factory is not None:
+            images = self.parent_factory._get_images()
+            for str_image in images:
+                yield MainImageModel(
+                    **template,
+                    original=str_image,
+                    thumbnail=str_image
+                )
+        else:
+            yield MainImageModel(
+                **template,
+                original=self.placeholder_image,
+                thumbnail=self.placeholder_image
+            )
 
 
 class Skirt(AbstractProduct):
@@ -128,9 +166,16 @@ class Skirt(AbstractProduct):
 
         name = fake.product_name()
         slug = unidecode(name.lower().replace(' ', '-'))
+
         age_group = fake.random_element(elements=('Adult', 'Teen', 'Child'))
         gender = fake.random_element(elements=('Man', 'Woman', 'Unisex'))
         sub_category = fake.random_element(elements=('Mini', 'Midi', 'Maxi'))
+
+        images = list(self._create_images())
+        main_image = images[0] if images else None
+
+        if main_image is not None:
+            main_image.isMainImage = True
 
         return ProductModel(
             id=index,
@@ -150,7 +195,9 @@ class Skirt(AbstractProduct):
             slug=f"{slug}-{index}",
             subCategory=sub_category,
             colorVariants=self._create_color_variants(),
-            mainImage=self._create_main_image(),
+            mainImage=main_image,
+            productImages=images,
+            sizeSet=[],
             **self._create_prices()
         )
 
