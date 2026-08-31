@@ -12,7 +12,10 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@vueuse/motion',
     'nuxt-vuefire',
-    '@nuxtjs/i18n'
+    '@nuxtjs/i18n',
+    '@vercel/speed-insights',
+    'nuxt-skew-protection',
+    'nuxt-ai-ready',
   ],
 
   devtools: {
@@ -27,7 +30,10 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': { prerender: true },
+    '/:id': { prerender: true },
     '/cart/**': { ssr: false },
+    '/collection/**': { ssr: true },
+    '/accounts/**': { ssr: false },
   },
 
   compatibilityDate: '2026-06-30',
@@ -67,7 +73,7 @@ export default defineNuxtConfig({
     firebaseClientEmail: process.env.NUXT_FIREBASE_CLIENT_EMAIL,
     firebasePrivateKey: process.env.NUXT_FIREBASE_PRIVATE_KEY,
     public: {
-      
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
     }
   },
 
@@ -104,7 +110,7 @@ export default defineNuxtConfig({
       fallbackLocale: 'fr',
       redirectOn: 'root'
     },
-    pages: {},
+    // pages: {},
     locales: [
       {
         code: 'fr',
