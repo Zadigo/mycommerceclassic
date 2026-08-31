@@ -6,8 +6,8 @@ type SearchQuery = {
 
 export default defineEventHandler(async (event) => {
   const _searchParams = getQuery<SearchQuery>(event)
-
   const { search, toNodes } = useLoadFixtures()
+  
   return {
     data: {
       searchProducts: {

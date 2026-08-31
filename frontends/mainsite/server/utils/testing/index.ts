@@ -13,7 +13,7 @@ export function useLoadFixtures() {
 
   function getProduct(event: H3Event) {
     const id = getRouterParam(event, 'id')
-    
+
     if (!id) return undefined
     return fixtures.value.find((product) => product.id.toString() === id)
   }
@@ -26,8 +26,9 @@ export function useLoadFixtures() {
     return raw().at(0) as BaseProduct
   }
   
-  function search(event: H3Event, qeryParam: string = 'q') {
-    return fixtures.value.filter(filterFunc(getRouterParam(event, qeryParam)))
+  function search(event: H3Event) {
+    const query = getQuery<{ q: string }>(event)
+    return fixtures.value.filter(filterFunc(query.q))
   }
 
   function toNodes(values: BaseProduct[]): ProductNode[] {
