@@ -65,7 +65,15 @@ export default defineNuxtConfig({
   },
 
   app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: 'page', mode: 'out-in' },
+
+    head: {
+      titleTemplate: '%s %separator %siteName',
+      templateParams: {
+        separator: '-',
+        siteName: process.env.NUXT_PUBLIC_SITE_NAME
+      }
+    }
   },
 
   runtimeConfig: {
@@ -92,7 +100,7 @@ export default defineNuxtConfig({
 
   image: {
     domains: [],
-    provider: 'ipx'
+    provider: 'none'
   },
 
   i18n: {
@@ -127,5 +135,14 @@ export default defineNuxtConfig({
         name: 'English'
       }
     ]
+  },
+
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL,
+    name: 'MyCommerce Classic',
+  },
+
+  ogImage: {
+    componentDirs: ['og-image']
   },
 })
