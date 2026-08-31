@@ -21,8 +21,12 @@
           </div>
   
           <div class="flex gap-5 mt-2">
-            <u-button v-for="category in categories" :key="category" to="/collection/some-collection" variant="link" color="neutral">
-              {{ subCategories }}
+            <u-button to="/collection/TEST-COLLECTION-ID" variant="link" color="neutral">
+              Tout afficher
+            </u-button>
+            
+            <u-button v-for="category in subCategories" :key="category" variant="link" color="neutral">
+              {{ category }}
             </u-button>
           </div>
         </div>
@@ -100,13 +104,12 @@ const breadcrumbItems = computed<BreadcrumbItem[]>(() => [
 
 function useCollectionCategoriesComposable(data: MaybeRefOrGetter<CollectionProducts | undefined>) {
   const products = computed(() => toValue(data)?.data.collection?.products || [])
-  const categories = computed(() => products.value.map(p => p.category))
-  const subCategories = computed(() => products.value.map(p => p.subCategory))
+  const subCategories = computed(() => Array.from(new Set(products.value.flatMap(p => p.subCategory))))
+
   return {
-    categories,
     subCategories
   }
 }
 
-const { categories, subCategories } = useCollectionCategoriesComposable(data)
+const { subCategories } = useCollectionCategoriesComposable(data)
 </script>

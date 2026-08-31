@@ -220,7 +220,7 @@ export function usePaginationComposable<T extends MaybeRefOrGetter<Undefineable<
 
   watchEffect(async () => {
     /** TODO: COllectionProducts should be pagineable */
-    paginatedResponse.value = await getProducts()
+    // paginatedResponse.value = await getProducts()
   })
 
   async function nextPage() {
