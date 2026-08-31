@@ -40,7 +40,7 @@
 
         <motion :preset="VueUseMotions.SlideTop">
           <div class="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-1">
-            <product-card v-for="product in products" :key="product.id" :product="product" />
+            <product-card v-for="product in data?.data.collection.products || []" :key="product.id" :product="product" />
           </div>
         </motion>
       </div>
@@ -81,18 +81,20 @@ const items: BreadcrumbItem[] = [
  * Products
  */
 
-const { data } = await useAsyncData('collection', () => $fetch('/api/collection/TEST-COLLECTION-ID'))
+const { data } = await useAsyncData('productCollection', () => $fetch<CollectionProducts>('/api/collection/TEST-COLLECTION-ID'))
+  
+/**
+ * Filters
+ * @todo Ensure it works with pagination
+ */
+
+const { products, response, strSelectedFilters, remove, clearAll } = useProductFiltersProvider()
 
 /**
  * Pagination
+ * @todo Ensure pagination is correctly handled
  */
 
-const { paginatedData, nextPage } = usePaginationComposable(data)
-const products = computed(() => toValue(paginatedData)?.data.collection?.products ?? [])
-
-/**
- * Filters
- */
-
-const { strSelectedFilters, remove, clearAll } = useProductFiltersProvider()
+const { paginatedResponse, nextPage } = usePaginationComposable(response)
+// const products = computed(() => toValue(paginatedData)?.data.collection?.products ?? [])
 </script>

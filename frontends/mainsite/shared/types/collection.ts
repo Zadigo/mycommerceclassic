@@ -7,19 +7,18 @@ type _PartialBaseCollection = {
   description: string
   slug: string
   illustration: Nullable<string>
+  products: BaseProduct[]
 }
 
 export type BaseCollection = Partial<_PartialBaseCollection> & {
   name: string
 }
 
-export type BaseCollectionProducts = BaseCollection & { products: BaseProduct[] }
-
 export type Collection = GraphQlData<'collection', BaseCollection>
 
 export type AllCollections = GraphQlData<'allCollections', BaseCollection[]>
 
-export type CollectionProducts = GraphQlData<'collection', BaseCollectionProducts>
+export type CollectionProducts = GraphQlData<'collection', BaseCollection>
 
 export type SearchCollection = GraphQlData<'searchCollection', RelayEdge<BaseCollection>>
 

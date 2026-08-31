@@ -1,15 +1,15 @@
 import { toValue, type MaybeRefOrGetter } from 'vue'
+import type { Undefineable } from './types/utils'
+import type { MaybeRefOrGetterProducts } from './types/product'
 
 /**
  * Returns the underlying base product from a given product item, which can be a BaseProduct, Product, or ProductNode.
  * @param item The product item to convert to a base product.
  */
-export function toBaseProduct(item: MaybeRefOrGetter<BaseProduct | Product | ProductNode | undefined>): BaseProduct | undefined {
+export function toBaseProduct(item: Undefineable<MaybeRefOrGetterProducts>): BaseProduct | undefined {
   const _item = toValue(item)
 
-  if (!_item) {
-    return undefined
-  }
+  if (!_item) return undefined
 
   if ('node' in _item) {
     return _item.node
@@ -26,9 +26,10 @@ export function toBaseProduct(item: MaybeRefOrGetter<BaseProduct | Product | Pro
  * Converts an array of product items (BaseProduct, Product, or ProductNode) into an array of BaseProducts.
  * @param items The array of product items to convert.
  */
-export function multipleToBaseProducts(items: MaybeRefOrGetter<(BaseProduct | Product | ProductNode)[]>): (BaseProduct | undefined)[] {
+export function multipleToBaseProducts(items: Undefineable<MaybeRefOrGetterProducts[]>) {
+  if (!items) return []
   const _items = toValue(items)
-  return _items.map(toBaseProduct)
+  return _items.map(toBaseProduct).filter((product): product is BaseProduct => product !== undefined)
 }
 
 /**

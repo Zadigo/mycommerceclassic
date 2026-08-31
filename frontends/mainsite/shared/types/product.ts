@@ -1,3 +1,4 @@
+import type { MaybeRefOrGetter } from "vue"
 import type { GraphQlData, RelayEdge, RelayNode } from "./graphql"
 
 export interface MainImage {
@@ -54,3 +55,5 @@ export type Product = GraphQlData<'product', BaseProduct>
 export type SearchProducts = GraphQlData<'searchProducts', RelayEdge<BaseProduct>>
 
 export type ProductsByCategory = GraphQlData<'productsByCategory', RelayEdge<BaseProduct>>
+
+export type MaybeRefOrGetterProducts = MaybeRefOrGetter<BaseProduct | Product | ProductNode | undefined>
