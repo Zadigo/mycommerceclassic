@@ -5,6 +5,7 @@ import { filterFunc } from '#shared/products'
 import type { H3Event } from 'h3'
 import { getRouterParam } from 'h3'
 import { ProductFilterOptions } from '#server/types/filter'
+import { getQuery } from 'h3'
  
 /**
  * Utility functions for loading and manipulating product fixtures for testing purposes.
@@ -45,7 +46,8 @@ export function useLoadFixtures() {
     })
   }
 
-  function toNodes(values: BaseProduct[]): ProductNode[] {
+  function toNodes(values: BaseProduct[] | undefined): ProductNode[] {
+    if (!values) return []
     return values.map((product) => ({
       node: product
     }))
@@ -120,4 +122,19 @@ export function useLoadCollectionFixture() {
   })
 
   return result
+}
+
+export function useLoadSearchCollectionFixture() {
+  const result = useLoadCollectionFixture()
+  const { toNodes } = useLoadFixtures()
+
+  return computed(() => {
+    return {
+      data: {
+        searchCollection: {
+          edges: toNodes(result.value.data.collection.products)
+        }
+      }
+    }
+  })
 }

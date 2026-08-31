@@ -163,7 +163,6 @@ export function usePaginationComposable<T extends MaybeRefOrGetter<Undefineable<
   const _params = useUrlSearchParams() as { limit?: string, offset?: string }
 
   const paginationInfo = computed(() => {
-    const initialData = toValue(initial)
     const template = {
       hasNextPage: false,
       hasPreviousPage: false,
@@ -171,9 +170,10 @@ export function usePaginationComposable<T extends MaybeRefOrGetter<Undefineable<
       endCursor: null
     }
 
+    const initialData = toValue(initial)
     if (!initialData) return template
-    const data = initialData.data
 
+    const data = initialData.data
 
     if ('collection' in data) {
       return template
@@ -191,12 +191,15 @@ export function usePaginationComposable<T extends MaybeRefOrGetter<Undefineable<
   const paginatedResponse = ref<T>(initial)
   /** TODO: Transform to a single source of truth */
   const products = computed(() => {
-    if (toValue(paginatedResponse)) {
-      const items = toValue(paginatedResponse)?.data.searchCollection.edges[ 0 ]?.node.products
+    const responseData = toValue(paginatedResponse)
+    console.log('responseData', responseData)
+
+    if (responseData) {
+      const items = responseData?.data.searchCollection.edges[0]?.node.products
       return multipleToBaseProducts(items)
     }
 
-    return multipleToBaseProducts(toValue(paginatedResponse).data.value?.data.collection.products)
+    return multipleToBaseProducts(responseData?.data.collection.products)
   })
 
   const { id } = useRoute().params as { id: string }
@@ -213,11 +216,11 @@ export function usePaginationComposable<T extends MaybeRefOrGetter<Undefineable<
 
   watchEffect(async () => {
     /** TODO: COllectionProducts should be pagineable */
-    paginatedResponse.value = getProducts()
+    paginatedResponse.value = await getProducts()
   })
 
   async function nextPage() {
-    await getProducts()
+    paginatedResponse.value = await getProducts()
   }
 
   return {

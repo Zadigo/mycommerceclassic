@@ -4,7 +4,7 @@
     <header>
       <u-card class="ring-0">
         <div class="space-y-3">
-          <u-breadcrumb :items="items">
+          <u-breadcrumb :items="breadcrumbItems" color="neutral" separator-icon="i-lucide-chevron-right">
             <template #separator>
               <span class="mx-2 text-muted" />
             </template>
@@ -63,21 +63,6 @@
 import type { BreadcrumbItem } from '@nuxt/ui'
 
 /**
- * Breadcrumb
- */
-
-const items: BreadcrumbItem[] = [
-  {
-    label: 'Home',
-    to: '/'
-  },
-  {
-    label: 'Sous-vêtements femmes',
-    disabled: true
-  }
-]
-
-/**
  * Products
  */
 
@@ -97,4 +82,19 @@ const { products, response, strSelectedFilters, remove, clearAll } = useProductF
 
 const { paginatedResponse, nextPage } = usePaginationComposable(response)
 // const products = computed(() => toValue(paginatedData)?.data.collection?.products ?? [])
+
+/**
+ * Breadcrumb
+ */
+
+const breadcrumbItems = computed<BreadcrumbItem[]>(() => [
+  {
+    label: 'Home',
+    to: '/'
+  },
+  {
+    label: toValue(data)?.data.collection.name || 'Not defined',
+    disabled: true
+  }
+])
 </script>
