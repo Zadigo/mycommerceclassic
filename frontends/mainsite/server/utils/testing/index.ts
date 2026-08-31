@@ -138,3 +138,20 @@ export function useLoadSearchCollectionFixture() {
     }
   })
 }
+
+export function useFirebaseSessionCollectionFixture() {
+  const template = ref<SessionData>({
+    cart: {
+      items: [],
+      total: 0,
+      numberOfItems: 0,
+      paymentIntent: null,
+      status: 'active',
+      viewCount: 0
+    },
+    language: { choice: 'en', selected: false },
+    recommendations: [],
+    searchHistory: []
+  })
+  return template
+}

@@ -2,6 +2,7 @@ import argparse
 import pathlib
 import random
 from abc import ABC, abstractmethod
+from collections import namedtuple
 from collections.abc import Generator
 
 import orjson
@@ -9,7 +10,7 @@ from faker import Faker
 from faker.decode import unidecode
 from faker.providers import DynamicProvider
 
-from fixtures.names import CATEGORIES, SIZES
+from fixtures.names import PRODUCT_NAMES, PRODUCT_SUB_CATEGORIES, SIZES
 from models import ColorVariantModel, MainImageModel, ProductModel, SizeSetModel
 
 BASE_PATH = pathlib.Path(__file__).parent.resolve()
@@ -21,7 +22,12 @@ fake = Faker()
 
 skirts_provider = DynamicProvider(
     'product_name',
-    elements=CATEGORIES['skirts']
+    elements=PRODUCT_NAMES['skirts']
+)
+
+skirts_sub_category_provider = DynamicProvider(
+    'skirt_sub_category',
+    elements=PRODUCT_SUB_CATEGORIES[0]['items']
 )
 
 size_provider = DynamicProvider(
@@ -30,6 +36,7 @@ size_provider = DynamicProvider(
 )
 
 fake.add_provider(skirts_provider)
+fake.add_provider(skirts_sub_category_provider)
 fake.add_provider(size_provider)
 
 
@@ -56,7 +63,7 @@ class AbstractFactory(ABC):
         """Return the images path for the selected category."""
         pick = random.choice(self.category_dirs)
         images = self.category_data.get(pick, {}).get('images', [])
-        return [f"/{self.category}/{x['path']}" for x in images]
+        return [f"/{self.category}{x['path']}" for x in images]
 
 
 class AbstractSkirts(AbstractFactory):
@@ -65,7 +72,7 @@ class AbstractSkirts(AbstractFactory):
     category: str = 'skirts'
 
     def get_quantity(self, quantity: int) -> int:
-        items = CATEGORIES.get(self.category, [])
+        items = PRODUCT_NAMES.get(self.category, [])
 
         self.number_of_products = len(items)
         if quantity < 1:
@@ -83,12 +90,14 @@ class AbstractSkirts(AbstractFactory):
 
 
 class AbstractProduct(ABC):
+    category: str = 'Not defined'
+
     def __init__(self, parent_factory: AbstractFactory | None = None):
         self.parent_factory = parent_factory
         self.placeholder_image = "https://placehold.co/850x1090"
 
     @abstractmethod
-    def get_product_info(self) -> ProductModel:
+    def get_product_info(self, index: int | None = None) -> ProductModel:
         pass
 
     def _create_prices(self):
@@ -135,10 +144,9 @@ class AbstractProduct(ABC):
 
         return variants
 
-    def _create_images(self) -> Generator[MainImageModel]:
+    def _create_images(self, using_name: str | None = None) -> Generator[MainImageModel]:
         template = {
             'id': fake.random_int(min=1, max=1000),
-            'name': f"Image {fake.word()}",
             'active': fake.boolean(chance_of_getting_true=80),
             'createdOn': str(fake.date_this_decade()),
             'isMainImage': False,
@@ -150,12 +158,14 @@ class AbstractProduct(ABC):
             for str_image in images:
                 yield MainImageModel(
                     **template,
+                    name=using_name or f"Image {fake.word()}",
                     original=str_image,
                     thumbnail=str_image
                 )
         else:
             yield MainImageModel(
                 **template,
+                name=using_name or f"Image {fake.word()}",
                 original=self.placeholder_image,
                 thumbnail=self.placeholder_image
             )
@@ -176,47 +186,78 @@ class AbstractProduct(ABC):
             )
         return sizes_list
 
-
-class Skirt(AbstractProduct):
-    """A concrete implementation of AbstractProduct for skirts."""
-
-    def get_product_info(self, index: int | None = None) -> ProductModel:
+    def get_base_product_info(self, index: int | None = None):
         fake_index = fake.random_int(min=1, max=1000)
         index = index if index is not None else fake_index
 
-        name = fake.product_name()
+        name: str = fake.product_name()
         slug = unidecode(name.lower().replace(' ', '-'))
 
         age_group = fake.random_element(elements=('Adult', 'Teen', 'Child'))
         gender = fake.random_element(elements=('Man', 'Woman', 'Unisex'))
-        sub_category = fake.random_element(elements=('Mini', 'Midi', 'Maxi'))
+        sub_category = fake.skirt_sub_category()
 
-        images = list(self._create_images())
+        images = list(self._create_images(using_name=name))
         main_image = images[0] if images else None
 
         if main_image is not None:
             main_image.isMainImage = True
 
+        data = namedtuple(
+            'ProductInfo',
+            [
+                'index',
+                'name',
+                'slug',
+                'age_group',
+                'gender',
+                'sub_category',
+                'images',
+                'main_image'
+            ]
+        )
+
+        product_info = data(
+            index=index,
+            name=name,
+            slug=slug,
+            age_group=age_group,
+            gender=gender,
+            sub_category=sub_category,
+            images=images,
+            main_image=main_image
+        )
+
+        return product_info
+
+
+class Skirt(AbstractProduct):
+    """A concrete implementation of AbstractProduct for skirts."""
+
+    category: str = 'Skirts'
+
+    def get_product_info(self, index: int | None = None) -> ProductModel:
+        base_info = self.get_base_product_info(index)
         return ProductModel(
             id=index,
-            name=name,
+            name=base_info.name,
             active=fake.boolean(),
-            ageGroupCategory=age_group,
-            category='Skirts',
+            ageGroupCategory=base_info.age_group,
+            category=self.category,
             color=fake.color_name(),
             createdOn=fake.date_this_decade(),
             displayNew=fake.boolean(),
-            genderCategory=gender,
+            genderCategory=base_info.gender,
             hasSizes=True,
             modelHeight=fake.random_int(min=150, max=200),
             modelSize=fake.size(),
             modifiedOn=fake.date_this_decade(),
-            sku=f"{slug}-{index}",
-            slug=f"{slug}-{index}",
-            subCategory=sub_category,
+            sku=f"{base_info.slug}-{index}",
+            slug=f"{base_info.slug}-{index}",
+            subCategory=base_info.sub_category,
             colorVariants=self._create_color_variants(),
-            mainImage=main_image,
-            productImages=images,
+            mainImage=base_info.main_image,
+            productImages=base_info.images,
             sizeSet=self._create_sizes(),
             video=None,
             **self._create_prices()

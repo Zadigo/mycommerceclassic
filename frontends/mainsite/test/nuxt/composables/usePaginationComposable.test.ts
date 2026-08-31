@@ -53,7 +53,7 @@ describe('composables/usePaginationComposable', { tags: ['composables'] }, () =>
     }
   })
 
-  describe.only('$fetch', () => {
+  describe('$fetch', () => {
     it.each(
       [
         [{ testCase: 'with undefined', value: undefined }],

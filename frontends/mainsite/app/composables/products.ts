@@ -174,6 +174,7 @@ export function usePaginationComposable<T extends MaybeRefOrGetter<Undefineable<
     if (!initialData) return template
 
     const data = initialData.data
+    if (!data) return template
 
     if ('collection' in data) {
       return template
@@ -192,14 +193,17 @@ export function usePaginationComposable<T extends MaybeRefOrGetter<Undefineable<
   /** TODO: Transform to a single source of truth */
   const products = computed(() => {
     const responseData = toValue(paginatedResponse)
-    console.log('responseData', responseData)
+    
+    if (!responseData) return []
 
-    if (responseData) {
+    const data = responseData.data
+
+    if ('searchCollection' in data) {
       const items = responseData?.data.searchCollection.edges[0]?.node.products
       return multipleToBaseProducts(items)
+    } else {
+      return multipleToBaseProducts(responseData?.data.collection.products)
     }
-
-    return multipleToBaseProducts(responseData?.data.collection.products)
   })
 
   const { id } = useRoute().params as { id: string }

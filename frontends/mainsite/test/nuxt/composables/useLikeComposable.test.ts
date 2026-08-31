@@ -1,10 +1,11 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { composableStore } from '../../vitest.setup'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
-import { PRODUCT_DATA_FIXTURE } from '~~/test/__fixtures__/product'
+import { useLoadFixtures } from '#server/utils/testing'
 
 vi.mock('~/composables/session', async (original) => {
   const actual = await original<typeof import('~/composables/session')>()
+
   return {
     ...actual,
     useSessionComposable: composableStore.useSessionComposable
@@ -54,13 +55,15 @@ describe('composables/useLikeComposable', { tags: ['composables'] }, () => {
     expect(result.getIcon).toBeInstanceOf(Function)
   })
 
-  it.each(
-    [
-      [{  product: undefined, expected: 'i-lucide-heart' }],
-      [{  product: PRODUCT_DATA_FIXTURE, expected: 'i-lucide-heart' }]
-    ]
-  )('should return the correct icon when product is $product', ({ product, expected }) => {
-    expect(result.getIcon(product)).toEqual(expected)
+  describe('getIcon', () => {
+    it.each(
+      [
+        [{ testCase: 'no product',  product: undefined, expected: 'i-lucide-heart' }],
+        [{ testCase: 'product is defined', product: useLoadFixtures().singleProduct(), expected: 'i-lucide-heart' }]
+      ]
+    )('should return the correct icon when product is $testCase', ({ product, expected }) => {
+      expect(result.getIcon(product)).toEqual(expected)
+    })
   })
 })
 
