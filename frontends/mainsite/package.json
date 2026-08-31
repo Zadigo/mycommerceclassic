@@ -76,6 +76,7 @@
     "firebase-functions": "^7.3.2",
     "happy-dom": "^20.11.6",
     "nuxt-vuefire": "^1.1.2",
+    "nuxtseo-layer-devtools": "^5.3.14",
     "oxfmt": "^0.64.0",
     "oxlint": "^1.79.0",
     "oxlint-tsgolint": "^7.0.2001",
