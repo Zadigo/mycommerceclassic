@@ -170,7 +170,6 @@ PRODUCT_SUB_CATEGORIES = [
 ]
 
 
-
 @dataclass
 class ImageInstance:
     path: str
@@ -201,7 +200,7 @@ def get_product_images(category: str, write_file: bool = False) -> dict | None:
             for sub_item in item.iterdir():
                 if sub_item.is_file():
                     str_path = str(sub_item.relative_to(path))
-                    image_object = ImageInstance(path=str_path)
+                    image_object = ImageInstance(path=f'/{str_path}')
 
                     dir_images.images.append(image_object)
 
@@ -213,3 +212,35 @@ def get_product_images(category: str, write_file: bool = False) -> dict | None:
             f.write(data)
 
     return orjson.loads(data) if image_instances_list else None
+
+
+@dataclass
+class CategoryImages:
+    name: str
+
+
+def create_images_map():
+    path = pathlib.Path(__file__).parent.joinpath('media')
+
+    categories: defaultdict[str, dict[str, list[str]]] = defaultdict(dict)
+
+    if path.exists() and path.is_dir():
+        dirs = [d for d in path.iterdir() if d.is_dir()]
+        for item in dirs:
+            details = categories[item.name]
+
+            for sub_dir in item.iterdir():
+                details[sub_dir.name] = []
+
+                for image_file in sub_dir.iterdir():
+                    if image_file.is_file():
+                        str_path = str(image_file.relative_to(path))
+                        details[sub_dir.name].append(f'/{str_path}')
+
+    data = orjson.dumps(categories)
+
+    output_file = BASE_PATH.joinpath('imagesmap.json')
+    with output_file.open('wb') as f:
+        f.write(data)
+
+    return categories

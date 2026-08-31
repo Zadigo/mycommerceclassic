@@ -51,13 +51,10 @@
     </section>
 
     <!-- Pagination -->
-    <section id="pagination" class="flex justify-center items-center gap-2 my-5">
-      <u-button variant="subtle" color="neutral">
-        <icon name="i-lucide-chevron-left" />
-      </u-button>
-
-      <u-button variant="subtle" color="neutral" @click="nextPage">
-        <icon name="i-lucide-chevron-right" />
+    <section id="pagination" class="flex flex-col justify-center items-center gap-2 my-5 py-10">
+      <p class="font-light text-sm text-slate-400">Affichage de 160 sur 41125</p>
+      <u-button variant="subtle" color="neutral" size="xl" @click="nextPage">
+        Charger plus
       </u-button>
     </section>
   </section>

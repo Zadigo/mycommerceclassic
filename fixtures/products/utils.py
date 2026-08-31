@@ -1,4 +1,12 @@
+import pathlib
+
 import redis
+
+BASE_DIR = pathlib.Path(__file__).parent
+
+FIXTURES_DIR = BASE_DIR.joinpath('fixtures')
+
+MEDIA_DIR = FIXTURES_DIR.joinpath('media')
 
 
 def get_redis():
