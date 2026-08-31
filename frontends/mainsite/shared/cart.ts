@@ -100,7 +100,7 @@ export function filterCartItemsFunc(itemToFind: CartItem) {
  * @param product - The product object from which to extract the ID. It can be a Product, ProductNode, or BaseProduct.
  * @returns The product ID as a string, or undefined if the ID cannot be determined.
  */
-export function getProductId(product: MaybeRefOrGetter<Product | ProductNode | BaseProduct | undefined>): string | undefined {
+export function getProductId(product: MaybeRefOrGetter<Product | ProductNode | BaseProduct | undefined>) {
   const result = toBaseProduct(product)
   return result?.id
 }
