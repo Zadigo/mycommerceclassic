@@ -1,6 +1,8 @@
 import { z } from 'zod'
 import type { GraphQlData } from './graphql'
 
+/** TODO: Reorganize this module maybe by separating schemas and types so that it is easier to maintain */
+
 export const BaseUserSchema = z.object({
   firstName: z.string().min(1, 'Le prénom est requis'),
   lastName: z.string().min(1, 'Le nom est requis'),

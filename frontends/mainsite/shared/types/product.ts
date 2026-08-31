@@ -11,6 +11,11 @@ export interface MainImage {
   variant: string
 }
 
+export interface Video {
+  name: string
+  content: string
+}
+
 export type BaseProduct = {
   id: string | number
   name: string
@@ -36,7 +41,7 @@ export type BaseProduct = {
   slug: string
   subCategory: string
   unitPrice: number
-  video: unknown
+  video: Video | null
   colorVariants: Partial<BaseProduct>[]
 }
 

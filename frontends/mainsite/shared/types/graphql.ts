@@ -21,13 +21,24 @@ export type RelayNode<N> = {
   node: N
 }
 
+/**
+ * Type for Relay Edge structure which gets included
+ * when the items are paginated using Relay-style pagination
+ * @example
+ * ```ts
+ * const relayEdge: RelayEdge<Video> = {
+ *   edges: [{ node: Video }],
+ *   pageInfo: { hasNextPage: true }
+ * }
+ * ```
+ */
 export type RelayEdge<E> = { edges: Array<RelayNode<E>> } & Partial<GraphQlPaginationInfo>
 
 /**
- * Type for GraphQL response data
+ * General type for GraphQL data response, which can be used for 
+ * single data, array of data, or Relay-style paginated data.
  * @example
  * ```ts
- * 
  * // With relay nodes
  * const response = $fetch<GraphQlData<'allvideos', RelayEdge<Video>>>(...)
  * 

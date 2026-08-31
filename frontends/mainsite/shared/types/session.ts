@@ -40,6 +40,9 @@ export interface SessionData {
   // popularImages: PopularImages[]
 }
 
+/**
+ * TODO: Move this to a separate file (schema) and import it here
+ */
 export const SessionDataSchema = z.object({
   language: z.object({
     choice: z.enum(['fr', 'en', 'es']).default('fr').describe('Used to store the language preference of the user'),

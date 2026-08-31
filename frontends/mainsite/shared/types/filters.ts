@@ -15,6 +15,9 @@ export type ProductFilterskeys = 'sizes' | 'materials'
 
 export type ProductFilters = GraphQlData<'productFilters', BaseProductFilter[]>
 
+/**
+ * @deprecated Fnd a better name
+ */
 export type ProductFiltersSelection = {
   sizes: Size['name'][]
   materials: Material['name'][]

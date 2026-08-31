@@ -1,5 +1,7 @@
+export type ShipmentOptions = 'Standard' | 'Express' | 'Chronopost' | 'Colissimo' | 'Mondial Relay' | 'UPS' | 'DHL' | 'FedEx'
+
 export type ShipmentResponse = {
-  name: 'Standard' | 'Express' | 'Chronopost' | 'Colissimo' | 'Mondial Relay' | 'UPS' | 'DHL' | 'FedEx'
+  name: ShipmentOptions
   price: number
   description: string
 }

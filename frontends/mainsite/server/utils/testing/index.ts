@@ -4,6 +4,7 @@ import jsonFixtures from '../../../public/products.json'
 import { filterFunc } from '#shared/products'
 import type { H3Event } from 'h3'
 import { getRouterParam } from 'h3'
+import { ProductFilterOptions } from '#server/types/filter'
  
 /**
  * Utility functions for loading and manipulating product fixtures for testing purposes.
@@ -29,6 +30,19 @@ export function useLoadFixtures() {
   function search(event: H3Event) {
     const query = getQuery<{ q: string }>(event)
     return fixtures.value.filter(filterFunc(query.q))
+  }
+
+  function filter(options: ProductFilterOptions) {
+    return fixtures.value.filter((product) => {
+      const size = options.sizes || []
+      // const material = options.materials || []
+
+      const sizeMatch = size.length === 0 || product.sizeSet.some((s) => size.includes(s.name))
+      // const materialMatch = material.length === 0 || material.includes(product.material)
+
+      // return sizeMatch && materialMatch
+      return sizeMatch
+    })
   }
 
   function toNodes(values: BaseProduct[]): ProductNode[] {
@@ -78,7 +92,12 @@ export function useLoadFixtures() {
      * converting an array of products into a paginated format which
      * relies on Relay specifications.
      */
-    toPaginated
+    toPaginated,
+    /**
+     * Filters the loaded fixtures based on the provided sizes and materials.
+     * @param options - An object containing optional arrays of sizes and materials to filter by.
+     */
+    filter
   }
 }
 
