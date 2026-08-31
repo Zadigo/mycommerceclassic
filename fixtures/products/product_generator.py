@@ -1,5 +1,4 @@
 import argparse
-import pathlib
 import random
 from abc import ABC, abstractmethod
 from collections import namedtuple
@@ -12,10 +11,9 @@ from faker.providers import DynamicProvider
 
 from fixtures.names import PRODUCT_NAMES, PRODUCT_SUB_CATEGORIES, SIZES
 from models import ColorVariantModel, MainImageModel, ProductModel, SizeSetModel
+from utils import BASE_DIR
 
-BASE_PATH = pathlib.Path(__file__).parent.resolve()
-
-JSON_FIXTURE = BASE_PATH.joinpath('fixtures', 'products.json')
+JSON_FIXTURE = BASE_DIR.joinpath('fixtures', 'products.json')
 
 
 fake = Faker()
@@ -45,10 +43,10 @@ class AbstractFactory(ABC):
     category: str = ''
 
     def __init__(self):
-        self.category_data: dict[str, list[str] | str] = {}
+        self.category_data: dict[str, list[str]] = {}
         self.category_dirs: list[str] = []
 
-        images_map = BASE_PATH.joinpath('fixtures', 'imagesmap.json')
+        images_map = BASE_DIR.joinpath('fixtures', 'imagesmap.json')
         if images_map.exists():
             with images_map.open('r') as f:
                 data = orjson.loads(f.read())
@@ -62,8 +60,7 @@ class AbstractFactory(ABC):
     def _get_images(self):
         """Return the images path for the selected category."""
         pick = random.choice(self.category_dirs)
-        images = self.category_data.get(pick, {}).get('images', [])
-        return [f"/{self.category}{x['path']}" for x in images]
+        return self.category_data[pick]
 
 
 class AbstractSkirts(AbstractFactory):

@@ -1,4 +1,3 @@
-import pathlib
 from contextlib import asynccontextmanager
 
 import orjson
@@ -13,13 +12,9 @@ from models import (
     ProductNode,
     RequestBody,
 )
-from utils import get_redis
+from utils import BASE_DIR, MEDIA_DIR, get_redis
 
-BASE_PATH = pathlib.Path(__file__).parent.resolve()
-
-MEDIA_PATH = BASE_PATH.joinpath('fixtures', 'media')
-
-JSON_FIXTURE = BASE_PATH.joinpath('fixtures', 'products.json')
+JSON_FIXTURE = BASE_DIR.joinpath('fixtures', 'products.json')
 
 
 @asynccontextmanager
@@ -79,7 +74,7 @@ async def download_images(body: DownloadRequestBody) -> dict[str, str]:
 
 @app.get('/image')
 async def read_image(path: str):
-    image_path = MEDIA_PATH.joinpath(path)
+    image_path = MEDIA_DIR.joinpath(path)
     if not image_path.exists():
         return {'error': 'File not found.'}
     return FileResponse(image_path)
