@@ -2,7 +2,7 @@
   <article :id="createElementId('product', 'card', product.id)">
     <div class="relative overflow-hidden group">
       <nuxt-link :to="`/${product.id}`" class="block">
-        <base-loading-nuxt-img :image="product.mainImage" image-class="w-full md:group-hover:scale-120 transition-all ease-in-out duration-300" />
+        <base-loading-nuxt-img :image="product.mainImage" :fit="fit" :skeleton-class="skeletonClass" image-class="w-full md:group-hover:scale-120 transition-all ease-in-out duration-300" />
       </nuxt-link>
       
       <!-- Badges -->
@@ -37,14 +37,18 @@ import type { BaseProduct } from '#shared/types/product'
 
 const { 
   product, 
+  skeletonClass,
   showProductInfo = true, 
   showLikeButton = true, 
-  showBadges = true
+  showBadges = true,
+  fit = true
 } = defineProps<{
   product: BaseProduct,
   showProductInfo?: boolean,
   showLikeButton?: boolean,
-  showBadges?: boolean
+  showBadges?: boolean,
+  fit?: boolean,
+  skeletonClass?: string
 }>()
 
 const { add, getIcon } = useLikeComposable()

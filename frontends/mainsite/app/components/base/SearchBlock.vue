@@ -11,7 +11,7 @@
 
       <div v-if="searched && searched.data.searchProducts.edges.length > 0">
         <base-grids-dynamic scrollable>
-          <lazy-product-card v-for="product in searched.data.searchProducts.edges" :key="product.node.id" :product="product.node" hydrate-on-idle />
+          <lazy-product-card v-for="product in searched.data.searchProducts.edges" :key="product.node.id" :fit="false" :product="product.node" hydrate-on-idle />
         </base-grids-dynamic>
       </div>
 

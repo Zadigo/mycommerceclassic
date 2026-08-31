@@ -40,7 +40,7 @@ definePageMeta({
   layout: 'cart'
 })
 
-const shipmentOptions = computedAsync(async() => $fetch('/api/cart/shipment'))
+const shipmentOptions = computedAsync(async() => await $fetch('/api/cart/shipment'))
 const selectedShipmentOption = ref(shipmentOptions.value?.find(option => option.name === 'Standard') || null)
 
 const selectShipmentOption = (option: ShipmentResponse) => {

@@ -9,7 +9,7 @@
         </div>
   
         <motion-group :preset="VueUseMotions.Fade">
-          <product-card v-for="product in products" :key="product.id" :product="product" :show-like-button="showLikeButton" :show-product-info="showProductInfo" :show-badges="showBadges" />
+          <product-card v-for="product in products" :key="product.id" :fit="true" :product="product" :show-like-button="showLikeButton" :show-product-info="showProductInfo" :show-badges="showBadges" />
         </motion-group>
       </template>
     </base-grids-dynamic>

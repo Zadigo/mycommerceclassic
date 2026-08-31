@@ -10,7 +10,7 @@
       <slot />
     </div>
 
-    <div class="col-span-12 order-3">
+    <div v-if="route.meta.title === 'Cart'" class="col-span-12 order-3">
       <base-recommendations :grid="5" :quantity="5" class="m-10" />
     </div>
 

@@ -3,7 +3,17 @@
     <div class="grid grid-cols-12 gap-8">
       <!-- Images -->
       <client-only>
-        <lazy-product-images-grid :images="productImages" class="col-span-12 md:col-span-8" hydrate-on-idle @zoom="select" />
+        <template #default>
+          <lazy-product-images-grid :images="productImages" class="col-span-12 md:col-span-8" hydrate-on-idle @zoom="select" />
+        </template>
+
+        <template #fallback>
+          <u-skeleton v-for="i in 4" :key="i" class="h-120 md:h-180 w-full md:w-80 my-5" />
+        </template>
+
+        <template #placeholder>
+          Loading images...
+        </template>
       </client-only>
 
       <aside v-if="product" class="col-span-12 md:col-span-4 md:py-15">

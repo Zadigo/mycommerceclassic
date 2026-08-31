@@ -25,7 +25,8 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   routeRules: {
-    '/': { prerender: true }
+    '/': { prerender: true },
+    '/cart/**': { ssr: false },
   },
 
   compatibilityDate: '2026-06-30',

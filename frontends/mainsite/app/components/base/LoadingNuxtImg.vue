@@ -5,8 +5,8 @@
     </slot>
 
     <slot v-else>
-      <!-- <nuxt-img :src="_image" alt="Some alt" :class="imageClass" /> -->
-      <img :src="_image" alt="Some alt" :class="imageClass" />
+      <nuxt-img :src="_image" alt="Some alt" :class="['cursor-zoom-in', imageClass, fit ? `${skeletonClass} aspect-square object-cover` : '']" />
+      <!-- <img :src="_image" alt="Some alt" :class="imageClass" /> -->
     </slot>
   </div>
 </template>
@@ -15,13 +15,15 @@
 const { 
   image, 
   imageType = 'original', 
-  skeletonClass = 'w-full h-200',
-  imageClass = 'w-full hover:scale-120 transition-all ease-in-out duration-300 cursor-zoom-in'
+  skeletonClass = 'w-full h-120 md:h-180',
+  imageClass = 'hover:scale-120 transition-all ease-in-out duration-300',
+  fit = false
 } = defineProps<{
   image: MainImage | undefined | null
   imageType?:'original' | 'thumbnail'
   skeletonClass?: string
   imageClass?: string
+  fit?: boolean
 }>()
 
 const _image = computed(() => image?.[imageType || 'original'] || '')
