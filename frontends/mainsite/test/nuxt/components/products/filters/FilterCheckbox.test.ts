@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, assert } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import FilterCheckbox from '~/components/products/filters/FilterCheckbox.vue'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 

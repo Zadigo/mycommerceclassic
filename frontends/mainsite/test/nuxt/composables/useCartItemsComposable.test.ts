@@ -44,7 +44,7 @@ describe('composables/useCartItemsComposable', { tags: ['composables'] }, () => 
       [{ environment: 'client', cookie: undefined }, true],
       [{ environment: 'client', cookie: '1234' }, true],
     ]
-  )('test with different cookie types set as $cookie', ({ environment, cookie }, value) => {
+  )('test with different cookie types set as $cookie', ({ cookie }, _value) => {
     mockStore.useCookieMock.mockReturnValue(ref(cookie))
     mockStore.docMock.mockReturnValue(true)
 

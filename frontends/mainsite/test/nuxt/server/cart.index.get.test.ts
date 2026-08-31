@@ -44,6 +44,6 @@ describe.todo('route: /api/cart/index', () => {
     const handler = await import('~~/server/api/cart/index.get.ts')
 
     const mockEvent = {} as H3Event
-    const result = await handler.default(mockEvent)
+    const _result = await handler.default(mockEvent)
   })
 })

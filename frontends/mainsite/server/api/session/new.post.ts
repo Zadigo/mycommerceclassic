@@ -1,7 +1,4 @@
-import { SESSION_COLLECTION_NAME, SESSION_COOKIE_NAME } from '~~/shared/cart'
-import { useFirebaseAdmin } from '#shared/server_firebase'
 import { createErrorTemplate } from '#shared/errors'
-import { SessionData } from '~~/shared/types/session'
 
 type SessionResponse = {
   sessionId: string

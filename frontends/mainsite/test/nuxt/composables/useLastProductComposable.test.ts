@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { useLastProductComposable } from '~/composables/cart'
 import { PRODUCT_DATA_FIXTURE } from '~~/test/__fixtures__/product'
 

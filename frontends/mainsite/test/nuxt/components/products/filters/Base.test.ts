@@ -2,7 +2,6 @@ import { describe, it, expect, vi, beforeEach } from 'vitest'
 import Base from '~/components/products/filters/Base.vue'
 import { mountSuspended, mockNuxtImport } from '@nuxt/test-utils/runtime'
 import { PRODUCT_FILTERS_FIXTURE } from '~~/test/__fixtures__/filters'
-import type { NitroFetchRequest } from 'nitropack/types'
 
 const mockStore = vi.hoisted(() => {
   const mockedAsyncData = vi.fn(() => {

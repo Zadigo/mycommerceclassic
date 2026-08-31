@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@vueuse/motion',
     'nuxt-vuefire',
+    '@nuxtjs/i18n'
   ],
 
   devtools: {
@@ -86,5 +87,39 @@ export default defineNuxtConfig({
   image: {
     domains: [],
     provider: 'ipx'
-  }
+  },
+
+  i18n: {
+    baseUrl: process.env.NUXT_PUBLIC_SITE_URL,
+    langDir: './locales',
+    defaultLocale: 'fr',
+    vueI18n: './i18n.config.ts',
+    customRoutes: 'config',
+    experimental: { localeDetector: './local_detector.ts' },
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      alwaysRedirect: true,
+      fallbackLocale: 'fr',
+      redirectOn: 'root'
+    },
+    pages: {},
+    locales: [
+      {
+        code: 'fr',
+        language: 'fr-FR',
+        file: 'fr-FR.ts',
+        dir: 'ltr',
+        name: 'French'
+      },
+      {
+        code: 'en',
+        language: 'en-US',
+        files: ['en.ts', 'en-US.ts'],
+        dir: 'ltr',
+        name: 'English'
+      }
+    ]
+  },
 })

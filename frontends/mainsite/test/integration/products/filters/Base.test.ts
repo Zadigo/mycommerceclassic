@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import Base from '~/components/products/filters/Base.vue'
 import { useProductFiltersProvider } from '~/composables/products.ts'
@@ -33,7 +33,7 @@ describe('integrations: components/products/filters/Base.vue', { tags: ['integra
       }
     })
 
-    const component = await mountSuspended(Parent)
+    const _component = await mountSuspended(Parent)
     // console.log(component.html())
   })  
 })
