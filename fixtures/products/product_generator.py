@@ -62,12 +62,6 @@ class AbstractFactory(ABC):
         pick = random.choice(self.category_dirs)
         return self.category_data[pick]
 
-
-class AbstractSkirts(AbstractFactory):
-    """A factory for generating skirt products."""
-
-    category: str = 'skirts'
-
     def get_quantity(self, quantity: int) -> int:
         items = PRODUCT_NAMES.get(self.category, [])
 
@@ -79,11 +73,30 @@ class AbstractSkirts(AbstractFactory):
             return self.number_of_products
         return quantity
 
+
+class AbstractSkirts(AbstractFactory):
+    """A factory for generating skirt products."""
+
+    category: str = 'skirts'
+
+
     def create_product(self, quantity: int = 10) -> Generator[ProductModel]:
         skirt = Skirt(self)
 
         for i in range(self.get_quantity(quantity)):
             yield skirt.get_product_info(i)
+
+
+class AbstractTops(AbstractFactory):
+    """A factory for generating top products."""
+
+    category: str = 'tops'
+
+    def create_product(self, quantity: int = 10) -> Generator[ProductModel]:
+        top = Top(self)
+
+        for i in range(self.get_quantity(quantity)):
+            yield top.get_product_info(i)
 
 
 class AbstractProduct(ABC):
@@ -261,15 +274,51 @@ class Skirt(AbstractProduct):
         )
 
 
+class Top(AbstractProduct):
+    """A concrete implementation of AbstractProduct for tops."""
+
+    category: str = 'Tops'
+
+    def get_product_info(self, index: int | None = None) -> ProductModel:
+        base_info = self.get_base_product_info(index)
+        return ProductModel(
+            id=index,
+            name=base_info.name,
+            active=fake.boolean(),
+            ageGroupCategory=base_info.age_group,
+            category=self.category,
+            color=fake.color_name(),
+            createdOn=fake.date_this_decade(),
+            displayNew=fake.boolean(),
+            genderCategory=base_info.gender,
+            hasSizes=True,
+            modelHeight=fake.random_int(min=150, max=200),
+            modelSize=fake.size(),
+            modifiedOn=fake.date_this_decade(),
+            sku=f"{base_info.slug}-{index}",
+            slug=f"{base_info.slug}-{index}",
+            subCategory=base_info.sub_category,
+            colorVariants=self._create_color_variants(),
+            mainImage=base_info.main_image,
+            productImages=base_info.images,
+            sizeSet=self._create_sizes(),
+            video=None,
+            **self._create_prices()
+        )
+
+
+
 def factory(factory: AbstractFactory, quantity: int = 10) -> list[ProductModel]:
     return list(factory.create_product(quantity))
 
 
 def generate_products(quantity: int = 10) -> list[ProductModel]:
     skirts = AbstractSkirts()
+    tops = AbstractTops()
 
     products: list[ProductModel] = [
-        *factory(skirts, quantity)
+        *factory(skirts, quantity),
+        *factory(tops, 2)
     ]
 
     return [product.model_dump() for product in products]

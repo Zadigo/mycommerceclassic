@@ -1,161 +1,189 @@
 [
   {
     "id": 0,
-    "name": "Jupe asymétrique à volants",
-    "active": true,
-    "ageGroupCategory": "Child",
+    "name": "Jupe midi avec ceinture obi",
+    "active": false,
+    "ageGroupCategory": "Teen",
     "category": "Skirts",
-    "color": "LightSalmon",
-    "createdOn": "2024-02-28T00:00:00",
-    "modifiedOn": "2020-01-30T00:00:00",
+    "color": "MediumPurple",
+    "createdOn": "2023-07-03T00:00:00",
+    "modifiedOn": "2024-02-29T00:00:00",
     "displayNew": false,
     "genderCategory": "Woman",
     "hasSizes": true,
-    "modelHeight": 185.0,
-    "modelSize": "L",
-    "sku": "jupe-asymetrique-a-volants-0",
-    "slug": "jupe-asymetrique-a-volants-0",
-    "subCategory": "Bodycon Skirt",
-    "price": 145.0,
+    "modelHeight": 161.0,
+    "modelSize": "S",
+    "sku": "jupe-midi-avec-ceinture-obi-0",
+    "slug": "jupe-midi-avec-ceinture-obi-0",
+    "subCategory": "Cargo Skirt",
+    "price": 72.0,
     "salePrice": 0.0,
     "saleValue": 0.0,
-    "unitPrice": 145.0,
+    "unitPrice": 72.0,
     "mainImage": {
-      "id": 949,
-      "active": false,
-      "createdOn": "2022-12-01",
+      "id": 851,
+      "active": true,
+      "createdOn": "2022-10-03",
       "isMainImage": true,
-      "name": "Jupe asymétrique à volants",
-      "original": "/skirts/5/KeqDsuMFNkE.jpg",
-      "thumbnail": "/skirts/5/KeqDsuMFNkE.jpg",
-      "variant": "Orange"
+      "name": "Jupe midi avec ceinture obi",
+      "original": "/skirts/3/9zrhB-Lo3Yk.jpg",
+      "thumbnail": "/skirts/3/9zrhB-Lo3Yk.jpg",
+      "variant": "DarkOliveGreen"
     },
     "productImages": [
       {
-        "id": 949,
-        "active": false,
-        "createdOn": "2022-12-01",
+        "id": 851,
+        "active": true,
+        "createdOn": "2022-10-03",
         "isMainImage": true,
-        "name": "Jupe asymétrique à volants",
-        "original": "/skirts/5/KeqDsuMFNkE.jpg",
-        "thumbnail": "/skirts/5/KeqDsuMFNkE.jpg",
-        "variant": "Orange"
+        "name": "Jupe midi avec ceinture obi",
+        "original": "/skirts/3/9zrhB-Lo3Yk.jpg",
+        "thumbnail": "/skirts/3/9zrhB-Lo3Yk.jpg",
+        "variant": "DarkOliveGreen"
       },
       {
-        "id": 949,
-        "active": false,
-        "createdOn": "2022-12-01",
+        "id": 851,
+        "active": true,
+        "createdOn": "2022-10-03",
         "isMainImage": false,
-        "name": "Jupe asymétrique à volants",
-        "original": "/skirts/5/K_y-jJ-Tnos.jpg",
-        "thumbnail": "/skirts/5/K_y-jJ-Tnos.jpg",
-        "variant": "Orange"
+        "name": "Jupe midi avec ceinture obi",
+        "original": "/skirts/3/cRfGtz8eVmY.jpg",
+        "thumbnail": "/skirts/3/cRfGtz8eVmY.jpg",
+        "variant": "DarkOliveGreen"
       },
       {
-        "id": 949,
-        "active": false,
-        "createdOn": "2022-12-01",
+        "id": 851,
+        "active": true,
+        "createdOn": "2022-10-03",
         "isMainImage": false,
-        "name": "Jupe asymétrique à volants",
-        "original": "/skirts/5/CkJzu-Uy0jo.jpg",
-        "thumbnail": "/skirts/5/CkJzu-Uy0jo.jpg",
-        "variant": "Orange"
+        "name": "Jupe midi avec ceinture obi",
+        "original": "/skirts/3/R83FmWr0c4w.jpg",
+        "thumbnail": "/skirts/3/R83FmWr0c4w.jpg",
+        "variant": "DarkOliveGreen"
       },
       {
-        "id": 949,
-        "active": false,
-        "createdOn": "2022-12-01",
+        "id": 851,
+        "active": true,
+        "createdOn": "2022-10-03",
         "isMainImage": false,
-        "name": "Jupe asymétrique à volants",
-        "original": "/skirts/5/nZRr-xCSpTQ.jpg",
-        "thumbnail": "/skirts/5/nZRr-xCSpTQ.jpg",
-        "variant": "Orange"
+        "name": "Jupe midi avec ceinture obi",
+        "original": "/skirts/3/XlcpvUVCuOQ.jpg",
+        "thumbnail": "/skirts/3/XlcpvUVCuOQ.jpg",
+        "variant": "DarkOliveGreen"
       },
       {
-        "id": 949,
-        "active": false,
-        "createdOn": "2022-12-01",
+        "id": 851,
+        "active": true,
+        "createdOn": "2022-10-03",
         "isMainImage": false,
-        "name": "Jupe asymétrique à volants",
-        "original": "/skirts/5/UB1BZmwFPwk.jpg",
-        "thumbnail": "/skirts/5/UB1BZmwFPwk.jpg",
-        "variant": "Orange"
+        "name": "Jupe midi avec ceinture obi",
+        "original": "/skirts/3/oev2HrzKNBI.jpg",
+        "thumbnail": "/skirts/3/oev2HrzKNBI.jpg",
+        "variant": "DarkOliveGreen"
       },
       {
-        "id": 949,
-        "active": false,
-        "createdOn": "2022-12-01",
+        "id": 851,
+        "active": true,
+        "createdOn": "2022-10-03",
         "isMainImage": false,
-        "name": "Jupe asymétrique à volants",
-        "original": "/skirts/5/28TEkBzNnRs.jpg",
-        "thumbnail": "/skirts/5/28TEkBzNnRs.jpg",
-        "variant": "Orange"
+        "name": "Jupe midi avec ceinture obi",
+        "original": "/skirts/3/c6njBHJ0MAo.jpg",
+        "thumbnail": "/skirts/3/c6njBHJ0MAo.jpg",
+        "variant": "DarkOliveGreen"
       }
     ],
     "sizeSet": [
       {
         "availability": true,
         "active": true,
-        "name": "L",
+        "name": "XS",
         "metric": "clothe",
         "variantPrice": 1.0
       },
       {
         "availability": true,
         "active": true,
-        "name": "M",
+        "name": "XS",
         "metric": "clothe",
         "variantPrice": 1.0
       },
       {
-        "availability": false,
+        "availability": true,
         "active": true,
-        "name": "XS",
+        "name": "L",
         "metric": "clothe",
         "variantPrice": 1.0
       }
     ],
     "colorVariants": [
       {
-        "id": 260,
-        "name": "Indigo",
+        "id": 993,
+        "name": "MediumPurple",
         "mainImage": {
-          "id": 786,
+          "id": 427,
           "active": true,
-          "createdOn": "2023-11-23",
+          "createdOn": "2021-11-25",
           "isMainImage": true,
-          "name": "Image simply",
+          "name": "Image firm",
           "original": "https://placehold.co/850x1090",
           "thumbnail": "https://placehold.co/850x1090",
-          "variant": "Indigo"
+          "variant": "MediumPurple"
         }
       },
       {
-        "id": 294,
-        "name": "Indigo",
+        "id": 598,
+        "name": "MediumPurple",
         "mainImage": {
-          "id": 281,
+          "id": 5,
+          "active": true,
+          "createdOn": "2023-09-11",
+          "isMainImage": true,
+          "name": "Image song",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "MediumPurple"
+        }
+      },
+      {
+        "id": 480,
+        "name": "MediumPurple",
+        "mainImage": {
+          "id": 246,
           "active": false,
-          "createdOn": "2020-01-17",
+          "createdOn": "2023-09-21",
           "isMainImage": true,
-          "name": "Image whatever",
+          "name": "Image test",
           "original": "https://placehold.co/850x1090",
           "thumbnail": "https://placehold.co/850x1090",
-          "variant": "Indigo"
+          "variant": "MediumPurple"
         }
       },
       {
-        "id": 329,
-        "name": "Indigo",
+        "id": 166,
+        "name": "MediumPurple",
         "mainImage": {
-          "id": 973,
-          "active": true,
-          "createdOn": "2020-09-07",
+          "id": 388,
+          "active": false,
+          "createdOn": "2023-08-02",
           "isMainImage": true,
-          "name": "Image southern",
+          "name": "Image production",
           "original": "https://placehold.co/850x1090",
           "thumbnail": "https://placehold.co/850x1090",
-          "variant": "Indigo"
+          "variant": "MediumPurple"
+        }
+      },
+      {
+        "id": 325,
+        "name": "MediumPurple",
+        "mainImage": {
+          "id": 943,
+          "active": true,
+          "createdOn": "2025-06-05",
+          "isMainImage": true,
+          "name": "Image future",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "MediumPurple"
         }
       }
     ],
@@ -164,85 +192,574 @@
   },
   {
     "id": 1,
-    "name": "Jupe midi parachute",
+    "name": "jupe-short en jean",
     "active": false,
-    "ageGroupCategory": "Child",
+    "ageGroupCategory": "Teen",
     "category": "Skirts",
-    "color": "DarkTurquoise",
-    "createdOn": "2024-04-13T00:00:00",
-    "modifiedOn": "2020-02-06T00:00:00",
+    "color": "Orange",
+    "createdOn": "2021-02-03T00:00:00",
+    "modifiedOn": "2021-04-28T00:00:00",
     "displayNew": false,
-    "genderCategory": "Woman",
+    "genderCategory": "Man",
     "hasSizes": true,
-    "modelHeight": 158.0,
-    "modelSize": "XL",
-    "sku": "jupe-midi-parachute-1",
-    "slug": "jupe-midi-parachute-1",
+    "modelHeight": 165.0,
+    "modelSize": "S",
+    "sku": "jupe-short-en-jean-1",
+    "slug": "jupe-short-en-jean-1",
     "subCategory": "Pleated Skirt",
-    "price": 119.0,
-    "salePrice": 0.0,
-    "saleValue": 0.0,
-    "unitPrice": 119.0,
+    "price": 136.0,
+    "salePrice": 115.6,
+    "saleValue": 15.0,
+    "unitPrice": 136.0,
     "mainImage": {
-      "id": 863,
+      "id": 722,
       "active": true,
-      "createdOn": "2025-02-26",
+      "createdOn": "2025-03-22",
       "isMainImage": true,
-      "name": "Jupe midi parachute",
-      "original": "/skirts/4/v4pazVhxRoE.jpg",
-      "thumbnail": "/skirts/4/v4pazVhxRoE.jpg",
-      "variant": "Orange"
+      "name": "jupe-short en jean",
+      "original": "/skirts/1/rfQObyqDme8.jpg",
+      "thumbnail": "/skirts/1/rfQObyqDme8.jpg",
+      "variant": "CadetBlue"
     },
     "productImages": [
       {
-        "id": 863,
+        "id": 722,
         "active": true,
-        "createdOn": "2025-02-26",
+        "createdOn": "2025-03-22",
         "isMainImage": true,
-        "name": "Jupe midi parachute",
-        "original": "/skirts/4/v4pazVhxRoE.jpg",
-        "thumbnail": "/skirts/4/v4pazVhxRoE.jpg",
-        "variant": "Orange"
+        "name": "jupe-short en jean",
+        "original": "/skirts/1/rfQObyqDme8.jpg",
+        "thumbnail": "/skirts/1/rfQObyqDme8.jpg",
+        "variant": "CadetBlue"
       },
       {
-        "id": 863,
+        "id": 722,
         "active": true,
-        "createdOn": "2025-02-26",
+        "createdOn": "2025-03-22",
         "isMainImage": false,
-        "name": "Jupe midi parachute",
-        "original": "/skirts/4/O1sPrenuuuw.jpg",
-        "thumbnail": "/skirts/4/O1sPrenuuuw.jpg",
-        "variant": "Orange"
+        "name": "jupe-short en jean",
+        "original": "/skirts/1/a9ahmUty73w.jpg",
+        "thumbnail": "/skirts/1/a9ahmUty73w.jpg",
+        "variant": "CadetBlue"
       },
       {
-        "id": 863,
+        "id": 722,
         "active": true,
-        "createdOn": "2025-02-26",
+        "createdOn": "2025-03-22",
         "isMainImage": false,
-        "name": "Jupe midi parachute",
-        "original": "/skirts/4/k3PfA07m86I.jpg",
-        "thumbnail": "/skirts/4/k3PfA07m86I.jpg",
-        "variant": "Orange"
+        "name": "jupe-short en jean",
+        "original": "/skirts/1/nWo4s_x9Sys.jpg",
+        "thumbnail": "/skirts/1/nWo4s_x9Sys.jpg",
+        "variant": "CadetBlue"
       },
       {
-        "id": 863,
+        "id": 722,
         "active": true,
-        "createdOn": "2025-02-26",
+        "createdOn": "2025-03-22",
         "isMainImage": false,
-        "name": "Jupe midi parachute",
-        "original": "/skirts/4/TACLSwKsJRA.jpg",
-        "thumbnail": "/skirts/4/TACLSwKsJRA.jpg",
-        "variant": "Orange"
+        "name": "jupe-short en jean",
+        "original": "/skirts/1/2PGRKo-jtOE.jpg",
+        "thumbnail": "/skirts/1/2PGRKo-jtOE.jpg",
+        "variant": "CadetBlue"
       },
       {
-        "id": 863,
+        "id": 722,
         "active": true,
-        "createdOn": "2025-02-26",
+        "createdOn": "2025-03-22",
         "isMainImage": false,
-        "name": "Jupe midi parachute",
-        "original": "/skirts/4/GkeJ_7wBoEk.jpg",
-        "thumbnail": "/skirts/4/GkeJ_7wBoEk.jpg",
-        "variant": "Orange"
+        "name": "jupe-short en jean",
+        "original": "/skirts/1/UHRclyje3U4.jpg",
+        "thumbnail": "/skirts/1/UHRclyje3U4.jpg",
+        "variant": "CadetBlue"
+      },
+      {
+        "id": 722,
+        "active": true,
+        "createdOn": "2025-03-22",
+        "isMainImage": false,
+        "name": "jupe-short en jean",
+        "original": "/skirts/1/scYQFSXaew4.jpg",
+        "thumbnail": "/skirts/1/scYQFSXaew4.jpg",
+        "variant": "CadetBlue"
+      }
+    ],
+    "sizeSet": [
+      {
+        "availability": true,
+        "active": true,
+        "name": "XS",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      }
+    ],
+    "colorVariants": [
+      {
+        "id": 933,
+        "name": "NavajoWhite",
+        "mainImage": {
+          "id": 430,
+          "active": true,
+          "createdOn": "2022-09-27",
+          "isMainImage": true,
+          "name": "Image response",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "NavajoWhite"
+        }
+      },
+      {
+        "id": 489,
+        "name": "NavajoWhite",
+        "mainImage": {
+          "id": 722,
+          "active": true,
+          "createdOn": "2025-07-31",
+          "isMainImage": true,
+          "name": "Image stuff",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "NavajoWhite"
+        }
+      },
+      {
+        "id": 579,
+        "name": "NavajoWhite",
+        "mainImage": {
+          "id": 140,
+          "active": true,
+          "createdOn": "2026-01-01",
+          "isMainImage": true,
+          "name": "Image economy",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "NavajoWhite"
+        }
+      },
+      {
+        "id": 594,
+        "name": "NavajoWhite",
+        "mainImage": {
+          "id": 161,
+          "active": false,
+          "createdOn": "2020-05-16",
+          "isMainImage": true,
+          "name": "Image different",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "NavajoWhite"
+        }
+      }
+    ],
+    "onSale": true,
+    "video": null
+  },
+  {
+    "id": 2,
+    "name": "Jupe midi fluide à carreaux",
+    "active": false,
+    "ageGroupCategory": "Child",
+    "category": "Skirts",
+    "color": "SlateBlue",
+    "createdOn": "2021-06-28T00:00:00",
+    "modifiedOn": "2025-11-02T00:00:00",
+    "displayNew": false,
+    "genderCategory": "Woman",
+    "hasSizes": true,
+    "modelHeight": 190.0,
+    "modelSize": "M",
+    "sku": "jupe-midi-fluide-a-carreaux-2",
+    "slug": "jupe-midi-fluide-a-carreaux-2",
+    "subCategory": "Skorts",
+    "price": 113.0,
+    "salePrice": 0.0,
+    "saleValue": 0.0,
+    "unitPrice": 113.0,
+    "mainImage": {
+      "id": 883,
+      "active": true,
+      "createdOn": "2025-07-06",
+      "isMainImage": true,
+      "name": "Jupe midi fluide à carreaux",
+      "original": "/skirts/3/9zrhB-Lo3Yk.jpg",
+      "thumbnail": "/skirts/3/9zrhB-Lo3Yk.jpg",
+      "variant": "DeepSkyBlue"
+    },
+    "productImages": [
+      {
+        "id": 883,
+        "active": true,
+        "createdOn": "2025-07-06",
+        "isMainImage": true,
+        "name": "Jupe midi fluide à carreaux",
+        "original": "/skirts/3/9zrhB-Lo3Yk.jpg",
+        "thumbnail": "/skirts/3/9zrhB-Lo3Yk.jpg",
+        "variant": "DeepSkyBlue"
+      },
+      {
+        "id": 883,
+        "active": true,
+        "createdOn": "2025-07-06",
+        "isMainImage": false,
+        "name": "Jupe midi fluide à carreaux",
+        "original": "/skirts/3/cRfGtz8eVmY.jpg",
+        "thumbnail": "/skirts/3/cRfGtz8eVmY.jpg",
+        "variant": "DeepSkyBlue"
+      },
+      {
+        "id": 883,
+        "active": true,
+        "createdOn": "2025-07-06",
+        "isMainImage": false,
+        "name": "Jupe midi fluide à carreaux",
+        "original": "/skirts/3/R83FmWr0c4w.jpg",
+        "thumbnail": "/skirts/3/R83FmWr0c4w.jpg",
+        "variant": "DeepSkyBlue"
+      },
+      {
+        "id": 883,
+        "active": true,
+        "createdOn": "2025-07-06",
+        "isMainImage": false,
+        "name": "Jupe midi fluide à carreaux",
+        "original": "/skirts/3/XlcpvUVCuOQ.jpg",
+        "thumbnail": "/skirts/3/XlcpvUVCuOQ.jpg",
+        "variant": "DeepSkyBlue"
+      },
+      {
+        "id": 883,
+        "active": true,
+        "createdOn": "2025-07-06",
+        "isMainImage": false,
+        "name": "Jupe midi fluide à carreaux",
+        "original": "/skirts/3/oev2HrzKNBI.jpg",
+        "thumbnail": "/skirts/3/oev2HrzKNBI.jpg",
+        "variant": "DeepSkyBlue"
+      },
+      {
+        "id": 883,
+        "active": true,
+        "createdOn": "2025-07-06",
+        "isMainImage": false,
+        "name": "Jupe midi fluide à carreaux",
+        "original": "/skirts/3/c6njBHJ0MAo.jpg",
+        "thumbnail": "/skirts/3/c6njBHJ0MAo.jpg",
+        "variant": "DeepSkyBlue"
+      }
+    ],
+    "sizeSet": [
+      {
+        "availability": true,
+        "active": true,
+        "name": "S",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      }
+    ],
+    "colorVariants": [
+      {
+        "id": 472,
+        "name": "GreenYellow",
+        "mainImage": {
+          "id": 926,
+          "active": true,
+          "createdOn": "2025-12-26",
+          "isMainImage": true,
+          "name": "Image long",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "GreenYellow"
+        }
+      },
+      {
+        "id": 843,
+        "name": "GreenYellow",
+        "mainImage": {
+          "id": 165,
+          "active": true,
+          "createdOn": "2023-07-01",
+          "isMainImage": true,
+          "name": "Image room",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "GreenYellow"
+        }
+      },
+      {
+        "id": 958,
+        "name": "GreenYellow",
+        "mainImage": {
+          "id": 476,
+          "active": true,
+          "createdOn": "2023-12-27",
+          "isMainImage": true,
+          "name": "Image onto",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "GreenYellow"
+        }
+      },
+      {
+        "id": 606,
+        "name": "GreenYellow",
+        "mainImage": {
+          "id": 348,
+          "active": false,
+          "createdOn": "2024-05-11",
+          "isMainImage": true,
+          "name": "Image especially",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "GreenYellow"
+        }
+      }
+    ],
+    "onSale": false,
+    "video": null
+  },
+  {
+    "id": 3,
+    "name": "Jupe mini à boutons",
+    "active": true,
+    "ageGroupCategory": "Adult",
+    "category": "Skirts",
+    "color": "Silver",
+    "createdOn": "2026-08-13T00:00:00",
+    "modifiedOn": "2026-07-11T00:00:00",
+    "displayNew": false,
+    "genderCategory": "Unisex",
+    "hasSizes": true,
+    "modelHeight": 168.0,
+    "modelSize": "S",
+    "sku": "jupe-mini-a-boutons-3",
+    "slug": "jupe-mini-a-boutons-3",
+    "subCategory": "Knitted Skirt",
+    "price": 122.0,
+    "salePrice": 0.0,
+    "saleValue": 0.0,
+    "unitPrice": 122.0,
+    "mainImage": {
+      "id": 207,
+      "active": true,
+      "createdOn": "2023-03-19",
+      "isMainImage": true,
+      "name": "Jupe mini à boutons",
+      "original": "/skirts/1/rfQObyqDme8.jpg",
+      "thumbnail": "/skirts/1/rfQObyqDme8.jpg",
+      "variant": "SlateGray"
+    },
+    "productImages": [
+      {
+        "id": 207,
+        "active": true,
+        "createdOn": "2023-03-19",
+        "isMainImage": true,
+        "name": "Jupe mini à boutons",
+        "original": "/skirts/1/rfQObyqDme8.jpg",
+        "thumbnail": "/skirts/1/rfQObyqDme8.jpg",
+        "variant": "SlateGray"
+      },
+      {
+        "id": 207,
+        "active": true,
+        "createdOn": "2023-03-19",
+        "isMainImage": false,
+        "name": "Jupe mini à boutons",
+        "original": "/skirts/1/a9ahmUty73w.jpg",
+        "thumbnail": "/skirts/1/a9ahmUty73w.jpg",
+        "variant": "SlateGray"
+      },
+      {
+        "id": 207,
+        "active": true,
+        "createdOn": "2023-03-19",
+        "isMainImage": false,
+        "name": "Jupe mini à boutons",
+        "original": "/skirts/1/nWo4s_x9Sys.jpg",
+        "thumbnail": "/skirts/1/nWo4s_x9Sys.jpg",
+        "variant": "SlateGray"
+      },
+      {
+        "id": 207,
+        "active": true,
+        "createdOn": "2023-03-19",
+        "isMainImage": false,
+        "name": "Jupe mini à boutons",
+        "original": "/skirts/1/2PGRKo-jtOE.jpg",
+        "thumbnail": "/skirts/1/2PGRKo-jtOE.jpg",
+        "variant": "SlateGray"
+      },
+      {
+        "id": 207,
+        "active": true,
+        "createdOn": "2023-03-19",
+        "isMainImage": false,
+        "name": "Jupe mini à boutons",
+        "original": "/skirts/1/UHRclyje3U4.jpg",
+        "thumbnail": "/skirts/1/UHRclyje3U4.jpg",
+        "variant": "SlateGray"
+      },
+      {
+        "id": 207,
+        "active": true,
+        "createdOn": "2023-03-19",
+        "isMainImage": false,
+        "name": "Jupe mini à boutons",
+        "original": "/skirts/1/scYQFSXaew4.jpg",
+        "thumbnail": "/skirts/1/scYQFSXaew4.jpg",
+        "variant": "SlateGray"
+      }
+    ],
+    "sizeSet": [
+      {
+        "availability": true,
+        "active": true,
+        "name": "XL",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      },
+      {
+        "availability": true,
+        "active": true,
+        "name": "XS",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      },
+      {
+        "availability": true,
+        "active": true,
+        "name": "L",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      }
+    ],
+    "colorVariants": [
+      {
+        "id": 13,
+        "name": "LightYellow",
+        "mainImage": {
+          "id": 650,
+          "active": false,
+          "createdOn": "2026-07-01",
+          "isMainImage": true,
+          "name": "Image if",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "LightYellow"
+        }
+      },
+      {
+        "id": 849,
+        "name": "LightYellow",
+        "mainImage": {
+          "id": 558,
+          "active": false,
+          "createdOn": "2022-03-29",
+          "isMainImage": true,
+          "name": "Image center",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "LightYellow"
+        }
+      },
+      {
+        "id": 735,
+        "name": "LightYellow",
+        "mainImage": {
+          "id": 119,
+          "active": true,
+          "createdOn": "2024-06-25",
+          "isMainImage": true,
+          "name": "Image difficult",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "LightYellow"
+        }
+      }
+    ],
+    "onSale": false,
+    "video": null
+  },
+  {
+    "id": 4,
+    "name": "Mini-jupe à volants fil métallisé",
+    "active": true,
+    "ageGroupCategory": "Adult",
+    "category": "Skirts",
+    "color": "LightGoldenRodYellow",
+    "createdOn": "2022-11-19T00:00:00",
+    "modifiedOn": "2023-01-06T00:00:00",
+    "displayNew": true,
+    "genderCategory": "Man",
+    "hasSizes": true,
+    "modelHeight": 164.0,
+    "modelSize": "XL",
+    "sku": "mini-jupe-a-volants-fil-metallise-4",
+    "slug": "mini-jupe-a-volants-fil-metallise-4",
+    "subCategory": "A-Line Skirt",
+    "price": 109.0,
+    "salePrice": 0.0,
+    "saleValue": 0.0,
+    "unitPrice": 109.0,
+    "mainImage": {
+      "id": 698,
+      "active": true,
+      "createdOn": "2022-11-03",
+      "isMainImage": true,
+      "name": "Mini-jupe à volants fil métallisé",
+      "original": "/skirts/7/-cwZ6cJ6nto.jpg",
+      "thumbnail": "/skirts/7/-cwZ6cJ6nto.jpg",
+      "variant": "Orchid"
+    },
+    "productImages": [
+      {
+        "id": 698,
+        "active": true,
+        "createdOn": "2022-11-03",
+        "isMainImage": true,
+        "name": "Mini-jupe à volants fil métallisé",
+        "original": "/skirts/7/-cwZ6cJ6nto.jpg",
+        "thumbnail": "/skirts/7/-cwZ6cJ6nto.jpg",
+        "variant": "Orchid"
+      },
+      {
+        "id": 698,
+        "active": true,
+        "createdOn": "2022-11-03",
+        "isMainImage": false,
+        "name": "Mini-jupe à volants fil métallisé",
+        "original": "/skirts/7/xmYrrOWokQI.jpg",
+        "thumbnail": "/skirts/7/xmYrrOWokQI.jpg",
+        "variant": "Orchid"
+      },
+      {
+        "id": 698,
+        "active": true,
+        "createdOn": "2022-11-03",
+        "isMainImage": false,
+        "name": "Mini-jupe à volants fil métallisé",
+        "original": "/skirts/7/bbGDDu-imNs.jpg",
+        "thumbnail": "/skirts/7/bbGDDu-imNs.jpg",
+        "variant": "Orchid"
+      },
+      {
+        "id": 698,
+        "active": true,
+        "createdOn": "2022-11-03",
+        "isMainImage": false,
+        "name": "Mini-jupe à volants fil métallisé",
+        "original": "/skirts/7/mOnxaUdpKtU.jpg",
+        "thumbnail": "/skirts/7/mOnxaUdpKtU.jpg",
+        "variant": "Orchid"
+      },
+      {
+        "id": 698,
+        "active": true,
+        "createdOn": "2022-11-03",
+        "isMainImage": false,
+        "name": "Mini-jupe à volants fil métallisé",
+        "original": "/skirts/7/N168Tt2cAtA.jpg",
+        "thumbnail": "/skirts/7/N168Tt2cAtA.jpg",
+        "variant": "Orchid"
       }
     ],
     "sizeSet": [
@@ -252,32 +769,365 @@
         "name": "XL",
         "metric": "clothe",
         "variantPrice": 1.0
+      }
+    ],
+    "colorVariants": [
+      {
+        "id": 435,
+        "name": "Linen",
+        "mainImage": {
+          "id": 379,
+          "active": false,
+          "createdOn": "2020-03-12",
+          "isMainImage": true,
+          "name": "Image say",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "Linen"
+        }
       },
       {
-        "availability": true,
+        "id": 290,
+        "name": "Linen",
+        "mainImage": {
+          "id": 693,
+          "active": true,
+          "createdOn": "2021-08-02",
+          "isMainImage": true,
+          "name": "Image fear",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "Linen"
+        }
+      }
+    ],
+    "onSale": false,
+    "video": null
+  },
+  {
+    "id": 5,
+    "name": "Jupe midi à carreaux",
+    "active": true,
+    "ageGroupCategory": "Adult",
+    "category": "Skirts",
+    "color": "MidnightBlue",
+    "createdOn": "2024-12-23T00:00:00",
+    "modifiedOn": "2023-12-31T00:00:00",
+    "displayNew": false,
+    "genderCategory": "Woman",
+    "hasSizes": true,
+    "modelHeight": 177.0,
+    "modelSize": "S",
+    "sku": "jupe-midi-a-carreaux-5",
+    "slug": "jupe-midi-a-carreaux-5",
+    "subCategory": "Pleated Skirt",
+    "price": 191.0,
+    "salePrice": 0.0,
+    "saleValue": 0.0,
+    "unitPrice": 191.0,
+    "mainImage": {
+      "id": 298,
+      "active": false,
+      "createdOn": "2021-04-11",
+      "isMainImage": true,
+      "name": "Jupe midi à carreaux",
+      "original": "/skirts/5/KeqDsuMFNkE.jpg",
+      "thumbnail": "/skirts/5/KeqDsuMFNkE.jpg",
+      "variant": "SlateBlue"
+    },
+    "productImages": [
+      {
+        "id": 298,
         "active": false,
-        "name": "S",
-        "metric": "clothe",
-        "variantPrice": 1.0
+        "createdOn": "2021-04-11",
+        "isMainImage": true,
+        "name": "Jupe midi à carreaux",
+        "original": "/skirts/5/KeqDsuMFNkE.jpg",
+        "thumbnail": "/skirts/5/KeqDsuMFNkE.jpg",
+        "variant": "SlateBlue"
       },
+      {
+        "id": 298,
+        "active": false,
+        "createdOn": "2021-04-11",
+        "isMainImage": false,
+        "name": "Jupe midi à carreaux",
+        "original": "/skirts/5/K_y-jJ-Tnos.jpg",
+        "thumbnail": "/skirts/5/K_y-jJ-Tnos.jpg",
+        "variant": "SlateBlue"
+      },
+      {
+        "id": 298,
+        "active": false,
+        "createdOn": "2021-04-11",
+        "isMainImage": false,
+        "name": "Jupe midi à carreaux",
+        "original": "/skirts/5/CkJzu-Uy0jo.jpg",
+        "thumbnail": "/skirts/5/CkJzu-Uy0jo.jpg",
+        "variant": "SlateBlue"
+      },
+      {
+        "id": 298,
+        "active": false,
+        "createdOn": "2021-04-11",
+        "isMainImage": false,
+        "name": "Jupe midi à carreaux",
+        "original": "/skirts/5/nZRr-xCSpTQ.jpg",
+        "thumbnail": "/skirts/5/nZRr-xCSpTQ.jpg",
+        "variant": "SlateBlue"
+      },
+      {
+        "id": 298,
+        "active": false,
+        "createdOn": "2021-04-11",
+        "isMainImage": false,
+        "name": "Jupe midi à carreaux",
+        "original": "/skirts/5/UB1BZmwFPwk.jpg",
+        "thumbnail": "/skirts/5/UB1BZmwFPwk.jpg",
+        "variant": "SlateBlue"
+      },
+      {
+        "id": 298,
+        "active": false,
+        "createdOn": "2021-04-11",
+        "isMainImage": false,
+        "name": "Jupe midi à carreaux",
+        "original": "/skirts/5/28TEkBzNnRs.jpg",
+        "thumbnail": "/skirts/5/28TEkBzNnRs.jpg",
+        "variant": "SlateBlue"
+      }
+    ],
+    "sizeSet": [
       {
         "availability": true,
         "active": true,
-        "name": "XL",
+        "name": "M",
         "metric": "clothe",
         "variantPrice": 1.0
       }
     ],
     "colorVariants": [
       {
-        "id": 527,
+        "id": 963,
+        "name": "Brown",
+        "mainImage": {
+          "id": 366,
+          "active": true,
+          "createdOn": "2023-01-01",
+          "isMainImage": true,
+          "name": "Image middle",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "Brown"
+        }
+      },
+      {
+        "id": 184,
+        "name": "Brown",
+        "mainImage": {
+          "id": 712,
+          "active": true,
+          "createdOn": "2020-04-10",
+          "isMainImage": true,
+          "name": "Image almost",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "Brown"
+        }
+      },
+      {
+        "id": 813,
+        "name": "Brown",
+        "mainImage": {
+          "id": 570,
+          "active": true,
+          "createdOn": "2023-08-18",
+          "isMainImage": true,
+          "name": "Image region",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "Brown"
+        }
+      },
+      {
+        "id": 736,
+        "name": "Brown",
+        "mainImage": {
+          "id": 775,
+          "active": true,
+          "createdOn": "2026-04-03",
+          "isMainImage": true,
+          "name": "Image computer",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "Brown"
+        }
+      }
+    ],
+    "onSale": false,
+    "video": null
+  },
+  {
+    "id": 6,
+    "name": "Minijupe en jean",
+    "active": true,
+    "ageGroupCategory": "Child",
+    "category": "Skirts",
+    "color": "MediumSpringGreen",
+    "createdOn": "2022-09-25T00:00:00",
+    "modifiedOn": "2021-05-29T00:00:00",
+    "displayNew": true,
+    "genderCategory": "Unisex",
+    "hasSizes": true,
+    "modelHeight": 153.0,
+    "modelSize": "S",
+    "sku": "minijupe-en-jean-6",
+    "slug": "minijupe-en-jean-6",
+    "subCategory": "Skorts",
+    "price": 188.0,
+    "salePrice": 0.0,
+    "saleValue": 0.0,
+    "unitPrice": 188.0,
+    "mainImage": {
+      "id": 376,
+      "active": true,
+      "createdOn": "2024-01-18",
+      "isMainImage": true,
+      "name": "Minijupe en jean",
+      "original": "/skirts/1/rfQObyqDme8.jpg",
+      "thumbnail": "/skirts/1/rfQObyqDme8.jpg",
+      "variant": "LightSlateGray"
+    },
+    "productImages": [
+      {
+        "id": 376,
+        "active": true,
+        "createdOn": "2024-01-18",
+        "isMainImage": true,
+        "name": "Minijupe en jean",
+        "original": "/skirts/1/rfQObyqDme8.jpg",
+        "thumbnail": "/skirts/1/rfQObyqDme8.jpg",
+        "variant": "LightSlateGray"
+      },
+      {
+        "id": 376,
+        "active": true,
+        "createdOn": "2024-01-18",
+        "isMainImage": false,
+        "name": "Minijupe en jean",
+        "original": "/skirts/1/a9ahmUty73w.jpg",
+        "thumbnail": "/skirts/1/a9ahmUty73w.jpg",
+        "variant": "LightSlateGray"
+      },
+      {
+        "id": 376,
+        "active": true,
+        "createdOn": "2024-01-18",
+        "isMainImage": false,
+        "name": "Minijupe en jean",
+        "original": "/skirts/1/nWo4s_x9Sys.jpg",
+        "thumbnail": "/skirts/1/nWo4s_x9Sys.jpg",
+        "variant": "LightSlateGray"
+      },
+      {
+        "id": 376,
+        "active": true,
+        "createdOn": "2024-01-18",
+        "isMainImage": false,
+        "name": "Minijupe en jean",
+        "original": "/skirts/1/2PGRKo-jtOE.jpg",
+        "thumbnail": "/skirts/1/2PGRKo-jtOE.jpg",
+        "variant": "LightSlateGray"
+      },
+      {
+        "id": 376,
+        "active": true,
+        "createdOn": "2024-01-18",
+        "isMainImage": false,
+        "name": "Minijupe en jean",
+        "original": "/skirts/1/UHRclyje3U4.jpg",
+        "thumbnail": "/skirts/1/UHRclyje3U4.jpg",
+        "variant": "LightSlateGray"
+      },
+      {
+        "id": 376,
+        "active": true,
+        "createdOn": "2024-01-18",
+        "isMainImage": false,
+        "name": "Minijupe en jean",
+        "original": "/skirts/1/scYQFSXaew4.jpg",
+        "thumbnail": "/skirts/1/scYQFSXaew4.jpg",
+        "variant": "LightSlateGray"
+      }
+    ],
+    "sizeSet": [
+      {
+        "availability": true,
+        "active": true,
+        "name": "XS",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      },
+      {
+        "availability": false,
+        "active": true,
+        "name": "L",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      }
+    ],
+    "colorVariants": [
+      {
+        "id": 566,
         "name": "LightGray",
         "mainImage": {
-          "id": 447,
+          "id": 80,
           "active": false,
-          "createdOn": "2024-05-08",
+          "createdOn": "2021-02-28",
           "isMainImage": true,
-          "name": "Image sport",
+          "name": "Image firm",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "LightGray"
+        }
+      },
+      {
+        "id": 181,
+        "name": "LightGray",
+        "mainImage": {
+          "id": 297,
+          "active": true,
+          "createdOn": "2020-04-20",
+          "isMainImage": true,
+          "name": "Image parent",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "LightGray"
+        }
+      },
+      {
+        "id": 887,
+        "name": "LightGray",
+        "mainImage": {
+          "id": 566,
+          "active": true,
+          "createdOn": "2021-03-28",
+          "isMainImage": true,
+          "name": "Image network",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "LightGray"
+        }
+      },
+      {
+        "id": 35,
+        "name": "LightGray",
+        "mainImage": {
+          "id": 570,
+          "active": true,
+          "createdOn": "2020-12-18",
+          "isMainImage": true,
+          "name": "Image eat",
           "original": "https://placehold.co/850x1090",
           "thumbnail": "https://placehold.co/850x1090",
           "variant": "LightGray"
@@ -288,1364 +1138,687 @@
     "video": null
   },
   {
-    "id": 2,
-    "name": "Jupe midi à carreaux",
-    "active": false,
+    "id": 7,
+    "name": "Jupe courte à boutons",
+    "active": true,
     "ageGroupCategory": "Teen",
     "category": "Skirts",
-    "color": "LawnGreen",
-    "createdOn": "2023-01-03T00:00:00",
-    "modifiedOn": "2021-03-04T00:00:00",
+    "color": "DarkSalmon",
+    "createdOn": "2021-06-07T00:00:00",
+    "modifiedOn": "2021-06-09T00:00:00",
     "displayNew": true,
     "genderCategory": "Unisex",
     "hasSizes": true,
-    "modelHeight": 185.0,
+    "modelHeight": 178.0,
     "modelSize": "M",
-    "sku": "jupe-midi-a-carreaux-2",
-    "slug": "jupe-midi-a-carreaux-2",
-    "subCategory": "Pleated Skirt",
-    "price": 128.0,
+    "sku": "jupe-courte-a-boutons-7",
+    "slug": "jupe-courte-a-boutons-7",
+    "subCategory": "Knitted Skirt",
+    "price": 145.0,
     "salePrice": 0.0,
     "saleValue": 0.0,
-    "unitPrice": 128.0,
+    "unitPrice": 145.0,
     "mainImage": {
-      "id": 311,
+      "id": 627,
       "active": true,
-      "createdOn": "2026-06-22",
+      "createdOn": "2023-11-18",
       "isMainImage": true,
-      "name": "Jupe midi à carreaux",
-      "original": "/skirts/6/XNVFlFjjyL0.jpg",
-      "thumbnail": "/skirts/6/XNVFlFjjyL0.jpg",
-      "variant": "SlateGray"
+      "name": "Jupe courte à boutons",
+      "original": "/skirts/5/KeqDsuMFNkE.jpg",
+      "thumbnail": "/skirts/5/KeqDsuMFNkE.jpg",
+      "variant": "LightPink"
     },
     "productImages": [
       {
-        "id": 311,
+        "id": 627,
         "active": true,
-        "createdOn": "2026-06-22",
+        "createdOn": "2023-11-18",
         "isMainImage": true,
-        "name": "Jupe midi à carreaux",
-        "original": "/skirts/6/XNVFlFjjyL0.jpg",
-        "thumbnail": "/skirts/6/XNVFlFjjyL0.jpg",
-        "variant": "SlateGray"
+        "name": "Jupe courte à boutons",
+        "original": "/skirts/5/KeqDsuMFNkE.jpg",
+        "thumbnail": "/skirts/5/KeqDsuMFNkE.jpg",
+        "variant": "LightPink"
       },
       {
-        "id": 311,
+        "id": 627,
         "active": true,
-        "createdOn": "2026-06-22",
+        "createdOn": "2023-11-18",
         "isMainImage": false,
-        "name": "Jupe midi à carreaux",
-        "original": "/skirts/6/-nJFHwZChWc.jpg",
-        "thumbnail": "/skirts/6/-nJFHwZChWc.jpg",
-        "variant": "SlateGray"
+        "name": "Jupe courte à boutons",
+        "original": "/skirts/5/K_y-jJ-Tnos.jpg",
+        "thumbnail": "/skirts/5/K_y-jJ-Tnos.jpg",
+        "variant": "LightPink"
       },
       {
-        "id": 311,
+        "id": 627,
         "active": true,
-        "createdOn": "2026-06-22",
+        "createdOn": "2023-11-18",
         "isMainImage": false,
-        "name": "Jupe midi à carreaux",
-        "original": "/skirts/6/IqEn3teSreE.jpg",
-        "thumbnail": "/skirts/6/IqEn3teSreE.jpg",
-        "variant": "SlateGray"
+        "name": "Jupe courte à boutons",
+        "original": "/skirts/5/CkJzu-Uy0jo.jpg",
+        "thumbnail": "/skirts/5/CkJzu-Uy0jo.jpg",
+        "variant": "LightPink"
       },
       {
-        "id": 311,
+        "id": 627,
         "active": true,
-        "createdOn": "2026-06-22",
+        "createdOn": "2023-11-18",
         "isMainImage": false,
-        "name": "Jupe midi à carreaux",
-        "original": "/skirts/6/Yy25SEhzIO4.jpg",
-        "thumbnail": "/skirts/6/Yy25SEhzIO4.jpg",
-        "variant": "SlateGray"
+        "name": "Jupe courte à boutons",
+        "original": "/skirts/5/nZRr-xCSpTQ.jpg",
+        "thumbnail": "/skirts/5/nZRr-xCSpTQ.jpg",
+        "variant": "LightPink"
       },
       {
-        "id": 311,
+        "id": 627,
         "active": true,
-        "createdOn": "2026-06-22",
+        "createdOn": "2023-11-18",
         "isMainImage": false,
-        "name": "Jupe midi à carreaux",
-        "original": "/skirts/6/ky3aduUGbN8.jpg",
-        "thumbnail": "/skirts/6/ky3aduUGbN8.jpg",
-        "variant": "SlateGray"
+        "name": "Jupe courte à boutons",
+        "original": "/skirts/5/UB1BZmwFPwk.jpg",
+        "thumbnail": "/skirts/5/UB1BZmwFPwk.jpg",
+        "variant": "LightPink"
+      },
+      {
+        "id": 627,
+        "active": true,
+        "createdOn": "2023-11-18",
+        "isMainImage": false,
+        "name": "Jupe courte à boutons",
+        "original": "/skirts/5/28TEkBzNnRs.jpg",
+        "thumbnail": "/skirts/5/28TEkBzNnRs.jpg",
+        "variant": "LightPink"
+      }
+    ],
+    "sizeSet": [
+      {
+        "availability": true,
+        "active": true,
+        "name": "M",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      },
+      {
+        "availability": true,
+        "active": true,
+        "name": "L",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      }
+    ],
+    "colorVariants": [
+      {
+        "id": 132,
+        "name": "HotPink",
+        "mainImage": {
+          "id": 751,
+          "active": true,
+          "createdOn": "2021-07-31",
+          "isMainImage": true,
+          "name": "Image experience",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "HotPink"
+        }
+      },
+      {
+        "id": 653,
+        "name": "HotPink",
+        "mainImage": {
+          "id": 862,
+          "active": true,
+          "createdOn": "2020-12-26",
+          "isMainImage": true,
+          "name": "Image number",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "HotPink"
+        }
+      },
+      {
+        "id": 891,
+        "name": "HotPink",
+        "mainImage": {
+          "id": 352,
+          "active": true,
+          "createdOn": "2024-09-22",
+          "isMainImage": true,
+          "name": "Image foreign",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "HotPink"
+        }
+      },
+      {
+        "id": 572,
+        "name": "HotPink",
+        "mainImage": {
+          "id": 673,
+          "active": true,
+          "createdOn": "2023-07-07",
+          "isMainImage": true,
+          "name": "Image person",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "HotPink"
+        }
+      }
+    ],
+    "onSale": false,
+    "video": null
+  },
+  {
+    "id": 8,
+    "name": "Minijupe évasée",
+    "active": false,
+    "ageGroupCategory": "Adult",
+    "category": "Skirts",
+    "color": "LimeGreen",
+    "createdOn": "2022-02-03T00:00:00",
+    "modifiedOn": "2024-03-03T00:00:00",
+    "displayNew": true,
+    "genderCategory": "Woman",
+    "hasSizes": true,
+    "modelHeight": 150.0,
+    "modelSize": "L",
+    "sku": "minijupe-evasee-8",
+    "slug": "minijupe-evasee-8",
+    "subCategory": "Midi Skirt",
+    "price": 107.0,
+    "salePrice": 0.0,
+    "saleValue": 0.0,
+    "unitPrice": 107.0,
+    "mainImage": {
+      "id": 782,
+      "active": true,
+      "createdOn": "2026-02-03",
+      "isMainImage": true,
+      "name": "Minijupe évasée",
+      "original": "/skirts/4/v4pazVhxRoE.jpg",
+      "thumbnail": "/skirts/4/v4pazVhxRoE.jpg",
+      "variant": "Gold"
+    },
+    "productImages": [
+      {
+        "id": 782,
+        "active": true,
+        "createdOn": "2026-02-03",
+        "isMainImage": true,
+        "name": "Minijupe évasée",
+        "original": "/skirts/4/v4pazVhxRoE.jpg",
+        "thumbnail": "/skirts/4/v4pazVhxRoE.jpg",
+        "variant": "Gold"
+      },
+      {
+        "id": 782,
+        "active": true,
+        "createdOn": "2026-02-03",
+        "isMainImage": false,
+        "name": "Minijupe évasée",
+        "original": "/skirts/4/O1sPrenuuuw.jpg",
+        "thumbnail": "/skirts/4/O1sPrenuuuw.jpg",
+        "variant": "Gold"
+      },
+      {
+        "id": 782,
+        "active": true,
+        "createdOn": "2026-02-03",
+        "isMainImage": false,
+        "name": "Minijupe évasée",
+        "original": "/skirts/4/k3PfA07m86I.jpg",
+        "thumbnail": "/skirts/4/k3PfA07m86I.jpg",
+        "variant": "Gold"
+      },
+      {
+        "id": 782,
+        "active": true,
+        "createdOn": "2026-02-03",
+        "isMainImage": false,
+        "name": "Minijupe évasée",
+        "original": "/skirts/4/TACLSwKsJRA.jpg",
+        "thumbnail": "/skirts/4/TACLSwKsJRA.jpg",
+        "variant": "Gold"
+      },
+      {
+        "id": 782,
+        "active": true,
+        "createdOn": "2026-02-03",
+        "isMainImage": false,
+        "name": "Minijupe évasée",
+        "original": "/skirts/4/GkeJ_7wBoEk.jpg",
+        "thumbnail": "/skirts/4/GkeJ_7wBoEk.jpg",
+        "variant": "Gold"
+      }
+    ],
+    "sizeSet": [
+      {
+        "availability": true,
+        "active": true,
+        "name": "XL",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      },
+      {
+        "availability": false,
+        "active": true,
+        "name": "S",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      },
+      {
+        "availability": true,
+        "active": true,
+        "name": "L",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      }
+    ],
+    "colorVariants": [
+      {
+        "id": 40,
+        "name": "DarkCyan",
+        "mainImage": {
+          "id": 667,
+          "active": true,
+          "createdOn": "2024-03-27",
+          "isMainImage": true,
+          "name": "Image century",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "DarkCyan"
+        }
+      },
+      {
+        "id": 53,
+        "name": "DarkCyan",
+        "mainImage": {
+          "id": 691,
+          "active": true,
+          "createdOn": "2021-12-28",
+          "isMainImage": true,
+          "name": "Image knowledge",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "DarkCyan"
+        }
+      },
+      {
+        "id": 414,
+        "name": "DarkCyan",
+        "mainImage": {
+          "id": 714,
+          "active": true,
+          "createdOn": "2021-03-14",
+          "isMainImage": true,
+          "name": "Image owner",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "DarkCyan"
+        }
+      },
+      {
+        "id": 267,
+        "name": "DarkCyan",
+        "mainImage": {
+          "id": 644,
+          "active": true,
+          "createdOn": "2023-08-17",
+          "isMainImage": true,
+          "name": "Image include",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "DarkCyan"
+        }
+      },
+      {
+        "id": 443,
+        "name": "DarkCyan",
+        "mainImage": {
+          "id": 893,
+          "active": true,
+          "createdOn": "2023-06-04",
+          "isMainImage": true,
+          "name": "Image administration",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "DarkCyan"
+        }
+      }
+    ],
+    "onSale": false,
+    "video": null
+  },
+  {
+    "id": 9,
+    "name": "Jupe en jean à strass",
+    "active": true,
+    "ageGroupCategory": "Adult",
+    "category": "Skirts",
+    "color": "Cyan",
+    "createdOn": "2024-09-22T00:00:00",
+    "modifiedOn": "2025-06-29T00:00:00",
+    "displayNew": true,
+    "genderCategory": "Unisex",
+    "hasSizes": true,
+    "modelHeight": 171.0,
+    "modelSize": "XL",
+    "sku": "jupe-en-jean-a-strass-9",
+    "slug": "jupe-en-jean-a-strass-9",
+    "subCategory": "Full Skirt",
+    "price": 21.0,
+    "salePrice": 0.0,
+    "saleValue": 0.0,
+    "unitPrice": 21.0,
+    "mainImage": {
+      "id": 115,
+      "active": true,
+      "createdOn": "2025-08-15",
+      "isMainImage": true,
+      "name": "Jupe en jean à strass",
+      "original": "/skirts/1/rfQObyqDme8.jpg",
+      "thumbnail": "/skirts/1/rfQObyqDme8.jpg",
+      "variant": "LightCyan"
+    },
+    "productImages": [
+      {
+        "id": 115,
+        "active": true,
+        "createdOn": "2025-08-15",
+        "isMainImage": true,
+        "name": "Jupe en jean à strass",
+        "original": "/skirts/1/rfQObyqDme8.jpg",
+        "thumbnail": "/skirts/1/rfQObyqDme8.jpg",
+        "variant": "LightCyan"
+      },
+      {
+        "id": 115,
+        "active": true,
+        "createdOn": "2025-08-15",
+        "isMainImage": false,
+        "name": "Jupe en jean à strass",
+        "original": "/skirts/1/a9ahmUty73w.jpg",
+        "thumbnail": "/skirts/1/a9ahmUty73w.jpg",
+        "variant": "LightCyan"
+      },
+      {
+        "id": 115,
+        "active": true,
+        "createdOn": "2025-08-15",
+        "isMainImage": false,
+        "name": "Jupe en jean à strass",
+        "original": "/skirts/1/nWo4s_x9Sys.jpg",
+        "thumbnail": "/skirts/1/nWo4s_x9Sys.jpg",
+        "variant": "LightCyan"
+      },
+      {
+        "id": 115,
+        "active": true,
+        "createdOn": "2025-08-15",
+        "isMainImage": false,
+        "name": "Jupe en jean à strass",
+        "original": "/skirts/1/2PGRKo-jtOE.jpg",
+        "thumbnail": "/skirts/1/2PGRKo-jtOE.jpg",
+        "variant": "LightCyan"
+      },
+      {
+        "id": 115,
+        "active": true,
+        "createdOn": "2025-08-15",
+        "isMainImage": false,
+        "name": "Jupe en jean à strass",
+        "original": "/skirts/1/UHRclyje3U4.jpg",
+        "thumbnail": "/skirts/1/UHRclyje3U4.jpg",
+        "variant": "LightCyan"
+      },
+      {
+        "id": 115,
+        "active": true,
+        "createdOn": "2025-08-15",
+        "isMainImage": false,
+        "name": "Jupe en jean à strass",
+        "original": "/skirts/1/scYQFSXaew4.jpg",
+        "thumbnail": "/skirts/1/scYQFSXaew4.jpg",
+        "variant": "LightCyan"
+      }
+    ],
+    "sizeSet": [
+      {
+        "availability": true,
+        "active": true,
+        "name": "XS",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      },
+      {
+        "availability": true,
+        "active": false,
+        "name": "XL",
+        "metric": "clothe",
+        "variantPrice": 1.0
+      }
+    ],
+    "colorVariants": [
+      {
+        "id": 113,
+        "name": "Beige",
+        "mainImage": {
+          "id": 685,
+          "active": true,
+          "createdOn": "2023-10-14",
+          "isMainImage": true,
+          "name": "Image somebody",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "Beige"
+        }
+      },
+      {
+        "id": 679,
+        "name": "Beige",
+        "mainImage": {
+          "id": 278,
+          "active": true,
+          "createdOn": "2024-04-25",
+          "isMainImage": true,
+          "name": "Image size",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "Beige"
+        }
+      },
+      {
+        "id": 231,
+        "name": "Beige",
+        "mainImage": {
+          "id": 671,
+          "active": true,
+          "createdOn": "2020-12-24",
+          "isMainImage": true,
+          "name": "Image second",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "Beige"
+        }
+      },
+      {
+        "id": 955,
+        "name": "Beige",
+        "mainImage": {
+          "id": 501,
+          "active": true,
+          "createdOn": "2023-10-17",
+          "isMainImage": true,
+          "name": "Image drive",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "Beige"
+        }
+      },
+      {
+        "id": 268,
+        "name": "Beige",
+        "mainImage": {
+          "id": 874,
+          "active": true,
+          "createdOn": "2026-05-02",
+          "isMainImage": true,
+          "name": "Image rich",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "Beige"
+        }
+      }
+    ],
+    "onSale": false,
+    "video": null
+  },
+  {
+    "id": 10,
+    "name": "Mini-jupe à volants fil métallisé",
+    "active": false,
+    "ageGroupCategory": "Adult",
+    "category": "Skirts",
+    "color": "MediumPurple",
+    "createdOn": "2020-12-22T00:00:00",
+    "modifiedOn": "2024-06-16T00:00:00",
+    "displayNew": true,
+    "genderCategory": "Woman",
+    "hasSizes": true,
+    "modelHeight": 151.0,
+    "modelSize": "L",
+    "sku": "mini-jupe-a-volants-fil-metallise-10",
+    "slug": "mini-jupe-a-volants-fil-metallise-10",
+    "subCategory": "Skirt",
+    "price": 132.0,
+    "salePrice": 0.0,
+    "saleValue": 0.0,
+    "unitPrice": 132.0,
+    "mainImage": {
+      "id": 626,
+      "active": true,
+      "createdOn": "2024-08-29",
+      "isMainImage": true,
+      "name": "Mini-jupe à volants fil métallisé",
+      "original": "/skirts/7/-cwZ6cJ6nto.jpg",
+      "thumbnail": "/skirts/7/-cwZ6cJ6nto.jpg",
+      "variant": "MediumSlateBlue"
+    },
+    "productImages": [
+      {
+        "id": 626,
+        "active": true,
+        "createdOn": "2024-08-29",
+        "isMainImage": true,
+        "name": "Mini-jupe à volants fil métallisé",
+        "original": "/skirts/7/-cwZ6cJ6nto.jpg",
+        "thumbnail": "/skirts/7/-cwZ6cJ6nto.jpg",
+        "variant": "MediumSlateBlue"
+      },
+      {
+        "id": 626,
+        "active": true,
+        "createdOn": "2024-08-29",
+        "isMainImage": false,
+        "name": "Mini-jupe à volants fil métallisé",
+        "original": "/skirts/7/xmYrrOWokQI.jpg",
+        "thumbnail": "/skirts/7/xmYrrOWokQI.jpg",
+        "variant": "MediumSlateBlue"
+      },
+      {
+        "id": 626,
+        "active": true,
+        "createdOn": "2024-08-29",
+        "isMainImage": false,
+        "name": "Mini-jupe à volants fil métallisé",
+        "original": "/skirts/7/bbGDDu-imNs.jpg",
+        "thumbnail": "/skirts/7/bbGDDu-imNs.jpg",
+        "variant": "MediumSlateBlue"
+      },
+      {
+        "id": 626,
+        "active": true,
+        "createdOn": "2024-08-29",
+        "isMainImage": false,
+        "name": "Mini-jupe à volants fil métallisé",
+        "original": "/skirts/7/mOnxaUdpKtU.jpg",
+        "thumbnail": "/skirts/7/mOnxaUdpKtU.jpg",
+        "variant": "MediumSlateBlue"
+      },
+      {
+        "id": 626,
+        "active": true,
+        "createdOn": "2024-08-29",
+        "isMainImage": false,
+        "name": "Mini-jupe à volants fil métallisé",
+        "original": "/skirts/7/N168Tt2cAtA.jpg",
+        "thumbnail": "/skirts/7/N168Tt2cAtA.jpg",
+        "variant": "MediumSlateBlue"
       }
     ],
     "sizeSet": [
       {
         "availability": false,
         "active": true,
-        "name": "XL",
-        "metric": "clothe",
-        "variantPrice": 1.0
-      },
-      {
-        "availability": true,
-        "active": true,
-        "name": "L",
+        "name": "S",
         "metric": "clothe",
         "variantPrice": 1.0
       }
     ],
     "colorVariants": [
       {
-        "id": 560,
-        "name": "PeachPuff",
+        "id": 949,
+        "name": "Navy",
         "mainImage": {
-          "id": 710,
+          "id": 888,
           "active": true,
-          "createdOn": "2023-04-25",
+          "createdOn": "2026-08-23",
           "isMainImage": true,
-          "name": "Image often",
+          "name": "Image point",
           "original": "https://placehold.co/850x1090",
           "thumbnail": "https://placehold.co/850x1090",
-          "variant": "PeachPuff"
+          "variant": "Navy"
         }
       },
       {
-        "id": 172,
-        "name": "PeachPuff",
+        "id": 478,
+        "name": "Navy",
         "mainImage": {
-          "id": 180,
+          "id": 102,
           "active": true,
-          "createdOn": "2021-01-25",
+          "createdOn": "2024-01-05",
           "isMainImage": true,
-          "name": "Image remain",
+          "name": "Image five",
           "original": "https://placehold.co/850x1090",
           "thumbnail": "https://placehold.co/850x1090",
-          "variant": "PeachPuff"
+          "variant": "Navy"
         }
       },
       {
-        "id": 338,
-        "name": "PeachPuff",
+        "id": 113,
+        "name": "Navy",
         "mainImage": {
-          "id": 381,
+          "id": 104,
           "active": true,
-          "createdOn": "2020-02-26",
+          "createdOn": "2024-06-14",
           "isMainImage": true,
-          "name": "Image find",
+          "name": "Image talk",
           "original": "https://placehold.co/850x1090",
           "thumbnail": "https://placehold.co/850x1090",
-          "variant": "PeachPuff"
+          "variant": "Navy"
         }
       },
       {
-        "id": 182,
-        "name": "PeachPuff",
+        "id": 713,
+        "name": "Navy",
         "mainImage": {
-          "id": 136,
+          "id": 449,
           "active": true,
-          "createdOn": "2021-07-23",
+          "createdOn": "2020-06-23",
           "isMainImage": true,
-          "name": "Image term",
+          "name": "Image subject",
           "original": "https://placehold.co/850x1090",
           "thumbnail": "https://placehold.co/850x1090",
-          "variant": "PeachPuff"
-        }
-      }
-    ],
-    "onSale": false,
-    "video": null
-  },
-  {
-    "id": 3,
-    "name": "Minijupe cargo",
-    "active": true,
-    "ageGroupCategory": "Teen",
-    "category": "Skirts",
-    "color": "LightYellow",
-    "createdOn": "2021-11-13T00:00:00",
-    "modifiedOn": "2026-01-18T00:00:00",
-    "displayNew": true,
-    "genderCategory": "Man",
-    "hasSizes": true,
-    "modelHeight": 193.0,
-    "modelSize": "M",
-    "sku": "minijupe-cargo-3",
-    "slug": "minijupe-cargo-3",
-    "subCategory": "Bodycon Skirt",
-    "price": 10.0,
-    "salePrice": 0.0,
-    "saleValue": 0.0,
-    "unitPrice": 10.0,
-    "mainImage": {
-      "id": 726,
-      "active": true,
-      "createdOn": "2026-03-22",
-      "isMainImage": true,
-      "name": "Minijupe cargo",
-      "original": "/skirts/3/9zrhB-Lo3Yk.jpg",
-      "thumbnail": "/skirts/3/9zrhB-Lo3Yk.jpg",
-      "variant": "Snow"
-    },
-    "productImages": [
-      {
-        "id": 726,
-        "active": true,
-        "createdOn": "2026-03-22",
-        "isMainImage": true,
-        "name": "Minijupe cargo",
-        "original": "/skirts/3/9zrhB-Lo3Yk.jpg",
-        "thumbnail": "/skirts/3/9zrhB-Lo3Yk.jpg",
-        "variant": "Snow"
-      },
-      {
-        "id": 726,
-        "active": true,
-        "createdOn": "2026-03-22",
-        "isMainImage": false,
-        "name": "Minijupe cargo",
-        "original": "/skirts/3/cRfGtz8eVmY.jpg",
-        "thumbnail": "/skirts/3/cRfGtz8eVmY.jpg",
-        "variant": "Snow"
-      },
-      {
-        "id": 726,
-        "active": true,
-        "createdOn": "2026-03-22",
-        "isMainImage": false,
-        "name": "Minijupe cargo",
-        "original": "/skirts/3/R83FmWr0c4w.jpg",
-        "thumbnail": "/skirts/3/R83FmWr0c4w.jpg",
-        "variant": "Snow"
-      },
-      {
-        "id": 726,
-        "active": true,
-        "createdOn": "2026-03-22",
-        "isMainImage": false,
-        "name": "Minijupe cargo",
-        "original": "/skirts/3/XlcpvUVCuOQ.jpg",
-        "thumbnail": "/skirts/3/XlcpvUVCuOQ.jpg",
-        "variant": "Snow"
-      },
-      {
-        "id": 726,
-        "active": true,
-        "createdOn": "2026-03-22",
-        "isMainImage": false,
-        "name": "Minijupe cargo",
-        "original": "/skirts/3/oev2HrzKNBI.jpg",
-        "thumbnail": "/skirts/3/oev2HrzKNBI.jpg",
-        "variant": "Snow"
-      },
-      {
-        "id": 726,
-        "active": true,
-        "createdOn": "2026-03-22",
-        "isMainImage": false,
-        "name": "Minijupe cargo",
-        "original": "/skirts/3/c6njBHJ0MAo.jpg",
-        "thumbnail": "/skirts/3/c6njBHJ0MAo.jpg",
-        "variant": "Snow"
-      }
-    ],
-    "sizeSet": [
-      {
-        "availability": true,
-        "active": true,
-        "name": "L",
-        "metric": "clothe",
-        "variantPrice": 1.0
-      },
-      {
-        "availability": true,
-        "active": true,
-        "name": "XS",
-        "metric": "clothe",
-        "variantPrice": 1.0
-      }
-    ],
-    "colorVariants": [
-      {
-        "id": 270,
-        "name": "SpringGreen",
-        "mainImage": {
-          "id": 230,
-          "active": true,
-          "createdOn": "2021-08-19",
-          "isMainImage": true,
-          "name": "Image theory",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "SpringGreen"
-        }
-      },
-      {
-        "id": 984,
-        "name": "SpringGreen",
-        "mainImage": {
-          "id": 437,
-          "active": false,
-          "createdOn": "2025-11-01",
-          "isMainImage": true,
-          "name": "Image present",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "SpringGreen"
-        }
-      }
-    ],
-    "onSale": false,
-    "video": null
-  },
-  {
-    "id": 4,
-    "name": "Sur-jupe brodée",
-    "active": false,
-    "ageGroupCategory": "Child",
-    "category": "Skirts",
-    "color": "Azure",
-    "createdOn": "2023-06-14T00:00:00",
-    "modifiedOn": "2025-03-21T00:00:00",
-    "displayNew": false,
-    "genderCategory": "Man",
-    "hasSizes": true,
-    "modelHeight": 159.0,
-    "modelSize": "S",
-    "sku": "sur-jupe-brodee-4",
-    "slug": "sur-jupe-brodee-4",
-    "subCategory": "Tailored Skirt",
-    "price": 66.0,
-    "salePrice": 0.0,
-    "saleValue": 0.0,
-    "unitPrice": 66.0,
-    "mainImage": {
-      "id": 967,
-      "active": true,
-      "createdOn": "2022-01-19",
-      "isMainImage": true,
-      "name": "Sur-jupe brodée",
-      "original": "/skirts/4/v4pazVhxRoE.jpg",
-      "thumbnail": "/skirts/4/v4pazVhxRoE.jpg",
-      "variant": "MediumPurple"
-    },
-    "productImages": [
-      {
-        "id": 967,
-        "active": true,
-        "createdOn": "2022-01-19",
-        "isMainImage": true,
-        "name": "Sur-jupe brodée",
-        "original": "/skirts/4/v4pazVhxRoE.jpg",
-        "thumbnail": "/skirts/4/v4pazVhxRoE.jpg",
-        "variant": "MediumPurple"
-      },
-      {
-        "id": 967,
-        "active": true,
-        "createdOn": "2022-01-19",
-        "isMainImage": false,
-        "name": "Sur-jupe brodée",
-        "original": "/skirts/4/O1sPrenuuuw.jpg",
-        "thumbnail": "/skirts/4/O1sPrenuuuw.jpg",
-        "variant": "MediumPurple"
-      },
-      {
-        "id": 967,
-        "active": true,
-        "createdOn": "2022-01-19",
-        "isMainImage": false,
-        "name": "Sur-jupe brodée",
-        "original": "/skirts/4/k3PfA07m86I.jpg",
-        "thumbnail": "/skirts/4/k3PfA07m86I.jpg",
-        "variant": "MediumPurple"
-      },
-      {
-        "id": 967,
-        "active": true,
-        "createdOn": "2022-01-19",
-        "isMainImage": false,
-        "name": "Sur-jupe brodée",
-        "original": "/skirts/4/TACLSwKsJRA.jpg",
-        "thumbnail": "/skirts/4/TACLSwKsJRA.jpg",
-        "variant": "MediumPurple"
-      },
-      {
-        "id": 967,
-        "active": true,
-        "createdOn": "2022-01-19",
-        "isMainImage": false,
-        "name": "Sur-jupe brodée",
-        "original": "/skirts/4/GkeJ_7wBoEk.jpg",
-        "thumbnail": "/skirts/4/GkeJ_7wBoEk.jpg",
-        "variant": "MediumPurple"
-      }
-    ],
-    "sizeSet": [
-      {
-        "availability": true,
-        "active": false,
-        "name": "XS",
-        "metric": "clothe",
-        "variantPrice": 1.0
-      }
-    ],
-    "colorVariants": [
-      {
-        "id": 962,
-        "name": "SkyBlue",
-        "mainImage": {
-          "id": 523,
-          "active": true,
-          "createdOn": "2020-05-13",
-          "isMainImage": true,
-          "name": "Image else",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "SkyBlue"
-        }
-      },
-      {
-        "id": 328,
-        "name": "SkyBlue",
-        "mainImage": {
-          "id": 494,
-          "active": true,
-          "createdOn": "2024-08-27",
-          "isMainImage": true,
-          "name": "Image produce",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "SkyBlue"
-        }
-      },
-      {
-        "id": 801,
-        "name": "SkyBlue",
-        "mainImage": {
-          "id": 518,
-          "active": true,
-          "createdOn": "2024-05-01",
-          "isMainImage": true,
-          "name": "Image environment",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "SkyBlue"
-        }
-      },
-      {
-        "id": 491,
-        "name": "SkyBlue",
-        "mainImage": {
-          "id": 161,
-          "active": true,
-          "createdOn": "2024-08-03",
-          "isMainImage": true,
-          "name": "Image must",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "SkyBlue"
-        }
-      }
-    ],
-    "onSale": false,
-    "video": null
-  },
-  {
-    "id": 5,
-    "name": "Jupe-short ballon en popeline",
-    "active": false,
-    "ageGroupCategory": "Child",
-    "category": "Skirts",
-    "color": "Salmon",
-    "createdOn": "2021-04-28T00:00:00",
-    "modifiedOn": "2021-07-02T00:00:00",
-    "displayNew": false,
-    "genderCategory": "Unisex",
-    "hasSizes": true,
-    "modelHeight": 157.0,
-    "modelSize": "M",
-    "sku": "jupe-short-ballon-en-popeline-5",
-    "slug": "jupe-short-ballon-en-popeline-5",
-    "subCategory": "Midi Skirt",
-    "price": 38.0,
-    "salePrice": 19.38,
-    "saleValue": 49.0,
-    "unitPrice": 38.0,
-    "mainImage": {
-      "id": 147,
-      "active": true,
-      "createdOn": "2022-08-18",
-      "isMainImage": true,
-      "name": "Jupe-short ballon en popeline",
-      "original": "/skirts/4/v4pazVhxRoE.jpg",
-      "thumbnail": "/skirts/4/v4pazVhxRoE.jpg",
-      "variant": "PaleVioletRed"
-    },
-    "productImages": [
-      {
-        "id": 147,
-        "active": true,
-        "createdOn": "2022-08-18",
-        "isMainImage": true,
-        "name": "Jupe-short ballon en popeline",
-        "original": "/skirts/4/v4pazVhxRoE.jpg",
-        "thumbnail": "/skirts/4/v4pazVhxRoE.jpg",
-        "variant": "PaleVioletRed"
-      },
-      {
-        "id": 147,
-        "active": true,
-        "createdOn": "2022-08-18",
-        "isMainImage": false,
-        "name": "Jupe-short ballon en popeline",
-        "original": "/skirts/4/O1sPrenuuuw.jpg",
-        "thumbnail": "/skirts/4/O1sPrenuuuw.jpg",
-        "variant": "PaleVioletRed"
-      },
-      {
-        "id": 147,
-        "active": true,
-        "createdOn": "2022-08-18",
-        "isMainImage": false,
-        "name": "Jupe-short ballon en popeline",
-        "original": "/skirts/4/k3PfA07m86I.jpg",
-        "thumbnail": "/skirts/4/k3PfA07m86I.jpg",
-        "variant": "PaleVioletRed"
-      },
-      {
-        "id": 147,
-        "active": true,
-        "createdOn": "2022-08-18",
-        "isMainImage": false,
-        "name": "Jupe-short ballon en popeline",
-        "original": "/skirts/4/TACLSwKsJRA.jpg",
-        "thumbnail": "/skirts/4/TACLSwKsJRA.jpg",
-        "variant": "PaleVioletRed"
-      },
-      {
-        "id": 147,
-        "active": true,
-        "createdOn": "2022-08-18",
-        "isMainImage": false,
-        "name": "Jupe-short ballon en popeline",
-        "original": "/skirts/4/GkeJ_7wBoEk.jpg",
-        "thumbnail": "/skirts/4/GkeJ_7wBoEk.jpg",
-        "variant": "PaleVioletRed"
-      }
-    ],
-    "sizeSet": [
-      {
-        "availability": true,
-        "active": true,
-        "name": "L",
-        "metric": "clothe",
-        "variantPrice": 1.0
-      },
-      {
-        "availability": true,
-        "active": true,
-        "name": "XL",
-        "metric": "clothe",
-        "variantPrice": 1.0
-      }
-    ],
-    "colorVariants": [
-      {
-        "id": 197,
-        "name": "Gray",
-        "mainImage": {
-          "id": 291,
-          "active": false,
-          "createdOn": "2022-01-11",
-          "isMainImage": true,
-          "name": "Image produce",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "Gray"
-        }
-      },
-      {
-        "id": 742,
-        "name": "Gray",
-        "mainImage": {
-          "id": 138,
-          "active": true,
-          "createdOn": "2023-09-25",
-          "isMainImage": true,
-          "name": "Image stock",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "Gray"
-        }
-      },
-      {
-        "id": 140,
-        "name": "Gray",
-        "mainImage": {
-          "id": 538,
-          "active": true,
-          "createdOn": "2021-12-30",
-          "isMainImage": true,
-          "name": "Image as",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "Gray"
-        }
-      }
-    ],
-    "onSale": true,
-    "video": null
-  },
-  {
-    "id": 6,
-    "name": "Jupe midi en mesh à pois",
-    "active": false,
-    "ageGroupCategory": "Teen",
-    "category": "Skirts",
-    "color": "DarkSlateBlue",
-    "createdOn": "2024-09-01T00:00:00",
-    "modifiedOn": "2020-12-09T00:00:00",
-    "displayNew": true,
-    "genderCategory": "Unisex",
-    "hasSizes": true,
-    "modelHeight": 179.0,
-    "modelSize": "S",
-    "sku": "jupe-midi-en-mesh-a-pois-6",
-    "slug": "jupe-midi-en-mesh-a-pois-6",
-    "subCategory": "Pleated Skirt",
-    "price": 177.0,
-    "salePrice": 159.3,
-    "saleValue": 10.0,
-    "unitPrice": 177.0,
-    "mainImage": {
-      "id": 211,
-      "active": true,
-      "createdOn": "2022-05-28",
-      "isMainImage": true,
-      "name": "Jupe midi en mesh à pois",
-      "original": "/skirts/6/XNVFlFjjyL0.jpg",
-      "thumbnail": "/skirts/6/XNVFlFjjyL0.jpg",
-      "variant": "Chocolate"
-    },
-    "productImages": [
-      {
-        "id": 211,
-        "active": true,
-        "createdOn": "2022-05-28",
-        "isMainImage": true,
-        "name": "Jupe midi en mesh à pois",
-        "original": "/skirts/6/XNVFlFjjyL0.jpg",
-        "thumbnail": "/skirts/6/XNVFlFjjyL0.jpg",
-        "variant": "Chocolate"
-      },
-      {
-        "id": 211,
-        "active": true,
-        "createdOn": "2022-05-28",
-        "isMainImage": false,
-        "name": "Jupe midi en mesh à pois",
-        "original": "/skirts/6/-nJFHwZChWc.jpg",
-        "thumbnail": "/skirts/6/-nJFHwZChWc.jpg",
-        "variant": "Chocolate"
-      },
-      {
-        "id": 211,
-        "active": true,
-        "createdOn": "2022-05-28",
-        "isMainImage": false,
-        "name": "Jupe midi en mesh à pois",
-        "original": "/skirts/6/IqEn3teSreE.jpg",
-        "thumbnail": "/skirts/6/IqEn3teSreE.jpg",
-        "variant": "Chocolate"
-      },
-      {
-        "id": 211,
-        "active": true,
-        "createdOn": "2022-05-28",
-        "isMainImage": false,
-        "name": "Jupe midi en mesh à pois",
-        "original": "/skirts/6/Yy25SEhzIO4.jpg",
-        "thumbnail": "/skirts/6/Yy25SEhzIO4.jpg",
-        "variant": "Chocolate"
-      },
-      {
-        "id": 211,
-        "active": true,
-        "createdOn": "2022-05-28",
-        "isMainImage": false,
-        "name": "Jupe midi en mesh à pois",
-        "original": "/skirts/6/ky3aduUGbN8.jpg",
-        "thumbnail": "/skirts/6/ky3aduUGbN8.jpg",
-        "variant": "Chocolate"
-      }
-    ],
-    "sizeSet": [
-      {
-        "availability": true,
-        "active": true,
-        "name": "M",
-        "metric": "clothe",
-        "variantPrice": 1.0
-      }
-    ],
-    "colorVariants": [
-      {
-        "id": 502,
-        "name": "Teal",
-        "mainImage": {
-          "id": 829,
-          "active": true,
-          "createdOn": "2024-06-13",
-          "isMainImage": true,
-          "name": "Image million",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "Teal"
-        }
-      },
-      {
-        "id": 265,
-        "name": "Teal",
-        "mainImage": {
-          "id": 588,
-          "active": true,
-          "createdOn": "2020-11-08",
-          "isMainImage": true,
-          "name": "Image ten",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "Teal"
-        }
-      },
-      {
-        "id": 918,
-        "name": "Teal",
-        "mainImage": {
-          "id": 292,
-          "active": true,
-          "createdOn": "2022-12-31",
-          "isMainImage": true,
-          "name": "Image property",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "Teal"
-        }
-      },
-      {
-        "id": 822,
-        "name": "Teal",
-        "mainImage": {
-          "id": 139,
-          "active": true,
-          "createdOn": "2026-01-19",
-          "isMainImage": true,
-          "name": "Image world",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "Teal"
-        }
-      }
-    ],
-    "onSale": true,
-    "video": null
-  },
-  {
-    "id": 7,
-    "name": "Jupe midi parachute",
-    "active": true,
-    "ageGroupCategory": "Child",
-    "category": "Skirts",
-    "color": "Olive",
-    "createdOn": "2024-10-29T00:00:00",
-    "modifiedOn": "2023-07-21T00:00:00",
-    "displayNew": true,
-    "genderCategory": "Man",
-    "hasSizes": true,
-    "modelHeight": 154.0,
-    "modelSize": "L",
-    "sku": "jupe-midi-parachute-7",
-    "slug": "jupe-midi-parachute-7",
-    "subCategory": "Midi Skirt",
-    "price": 53.0,
-    "salePrice": 33.92,
-    "saleValue": 36.0,
-    "unitPrice": 53.0,
-    "mainImage": {
-      "id": 33,
-      "active": true,
-      "createdOn": "2026-01-15",
-      "isMainImage": true,
-      "name": "Jupe midi parachute",
-      "original": "/skirts/7/-cwZ6cJ6nto.jpg",
-      "thumbnail": "/skirts/7/-cwZ6cJ6nto.jpg",
-      "variant": "PaleVioletRed"
-    },
-    "productImages": [
-      {
-        "id": 33,
-        "active": true,
-        "createdOn": "2026-01-15",
-        "isMainImage": true,
-        "name": "Jupe midi parachute",
-        "original": "/skirts/7/-cwZ6cJ6nto.jpg",
-        "thumbnail": "/skirts/7/-cwZ6cJ6nto.jpg",
-        "variant": "PaleVioletRed"
-      },
-      {
-        "id": 33,
-        "active": true,
-        "createdOn": "2026-01-15",
-        "isMainImage": false,
-        "name": "Jupe midi parachute",
-        "original": "/skirts/7/xmYrrOWokQI.jpg",
-        "thumbnail": "/skirts/7/xmYrrOWokQI.jpg",
-        "variant": "PaleVioletRed"
-      },
-      {
-        "id": 33,
-        "active": true,
-        "createdOn": "2026-01-15",
-        "isMainImage": false,
-        "name": "Jupe midi parachute",
-        "original": "/skirts/7/bbGDDu-imNs.jpg",
-        "thumbnail": "/skirts/7/bbGDDu-imNs.jpg",
-        "variant": "PaleVioletRed"
-      },
-      {
-        "id": 33,
-        "active": true,
-        "createdOn": "2026-01-15",
-        "isMainImage": false,
-        "name": "Jupe midi parachute",
-        "original": "/skirts/7/mOnxaUdpKtU.jpg",
-        "thumbnail": "/skirts/7/mOnxaUdpKtU.jpg",
-        "variant": "PaleVioletRed"
-      },
-      {
-        "id": 33,
-        "active": true,
-        "createdOn": "2026-01-15",
-        "isMainImage": false,
-        "name": "Jupe midi parachute",
-        "original": "/skirts/7/N168Tt2cAtA.jpg",
-        "thumbnail": "/skirts/7/N168Tt2cAtA.jpg",
-        "variant": "PaleVioletRed"
-      }
-    ],
-    "sizeSet": [
-      {
-        "availability": true,
-        "active": true,
-        "name": "L",
-        "metric": "clothe",
-        "variantPrice": 1.0
-      },
-      {
-        "availability": true,
-        "active": true,
-        "name": "M",
-        "metric": "clothe",
-        "variantPrice": 1.0
-      },
-      {
-        "availability": true,
-        "active": true,
-        "name": "L",
-        "metric": "clothe",
-        "variantPrice": 1.0
-      }
-    ],
-    "colorVariants": [
-      {
-        "id": 372,
-        "name": "Magenta",
-        "mainImage": {
-          "id": 248,
-          "active": true,
-          "createdOn": "2024-05-23",
-          "isMainImage": true,
-          "name": "Image world",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "Magenta"
-        }
-      },
-      {
-        "id": 845,
-        "name": "Magenta",
-        "mainImage": {
-          "id": 679,
-          "active": true,
-          "createdOn": "2025-09-18",
-          "isMainImage": true,
-          "name": "Image success",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "Magenta"
-        }
-      },
-      {
-        "id": 939,
-        "name": "Magenta",
-        "mainImage": {
-          "id": 26,
-          "active": true,
-          "createdOn": "2026-06-04",
-          "isMainImage": true,
-          "name": "Image look",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "Magenta"
-        }
-      },
-      {
-        "id": 916,
-        "name": "Magenta",
-        "mainImage": {
-          "id": 986,
-          "active": true,
-          "createdOn": "2024-05-01",
-          "isMainImage": true,
-          "name": "Image discussion",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "Magenta"
-        }
-      }
-    ],
-    "onSale": true,
-    "video": null
-  },
-  {
-    "id": 8,
-    "name": "Minijupe jacquard à franges",
-    "active": false,
-    "ageGroupCategory": "Teen",
-    "category": "Skirts",
-    "color": "PeachPuff",
-    "createdOn": "2020-06-16T00:00:00",
-    "modifiedOn": "2026-03-18T00:00:00",
-    "displayNew": true,
-    "genderCategory": "Man",
-    "hasSizes": true,
-    "modelHeight": 188.0,
-    "modelSize": "M",
-    "sku": "minijupe-jacquard-a-franges-8",
-    "slug": "minijupe-jacquard-a-franges-8",
-    "subCategory": "Bodycon Skirt",
-    "price": 28.0,
-    "salePrice": 17.36,
-    "saleValue": 38.0,
-    "unitPrice": 28.0,
-    "mainImage": {
-      "id": 52,
-      "active": true,
-      "createdOn": "2020-08-11",
-      "isMainImage": true,
-      "name": "Minijupe jacquard à franges",
-      "original": "/skirts/6/XNVFlFjjyL0.jpg",
-      "thumbnail": "/skirts/6/XNVFlFjjyL0.jpg",
-      "variant": "LightCyan"
-    },
-    "productImages": [
-      {
-        "id": 52,
-        "active": true,
-        "createdOn": "2020-08-11",
-        "isMainImage": true,
-        "name": "Minijupe jacquard à franges",
-        "original": "/skirts/6/XNVFlFjjyL0.jpg",
-        "thumbnail": "/skirts/6/XNVFlFjjyL0.jpg",
-        "variant": "LightCyan"
-      },
-      {
-        "id": 52,
-        "active": true,
-        "createdOn": "2020-08-11",
-        "isMainImage": false,
-        "name": "Minijupe jacquard à franges",
-        "original": "/skirts/6/-nJFHwZChWc.jpg",
-        "thumbnail": "/skirts/6/-nJFHwZChWc.jpg",
-        "variant": "LightCyan"
-      },
-      {
-        "id": 52,
-        "active": true,
-        "createdOn": "2020-08-11",
-        "isMainImage": false,
-        "name": "Minijupe jacquard à franges",
-        "original": "/skirts/6/IqEn3teSreE.jpg",
-        "thumbnail": "/skirts/6/IqEn3teSreE.jpg",
-        "variant": "LightCyan"
-      },
-      {
-        "id": 52,
-        "active": true,
-        "createdOn": "2020-08-11",
-        "isMainImage": false,
-        "name": "Minijupe jacquard à franges",
-        "original": "/skirts/6/Yy25SEhzIO4.jpg",
-        "thumbnail": "/skirts/6/Yy25SEhzIO4.jpg",
-        "variant": "LightCyan"
-      },
-      {
-        "id": 52,
-        "active": true,
-        "createdOn": "2020-08-11",
-        "isMainImage": false,
-        "name": "Minijupe jacquard à franges",
-        "original": "/skirts/6/ky3aduUGbN8.jpg",
-        "thumbnail": "/skirts/6/ky3aduUGbN8.jpg",
-        "variant": "LightCyan"
-      }
-    ],
-    "sizeSet": [
-      {
-        "availability": true,
-        "active": false,
-        "name": "M",
-        "metric": "clothe",
-        "variantPrice": 1.0
-      },
-      {
-        "availability": true,
-        "active": true,
-        "name": "XS",
-        "metric": "clothe",
-        "variantPrice": 1.0
-      },
-      {
-        "availability": true,
-        "active": true,
-        "name": "XL",
-        "metric": "clothe",
-        "variantPrice": 1.0
-      }
-    ],
-    "colorVariants": [
-      {
-        "id": 25,
-        "name": "RosyBrown",
-        "mainImage": {
-          "id": 615,
-          "active": false,
-          "createdOn": "2021-04-11",
-          "isMainImage": true,
-          "name": "Image its",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "RosyBrown"
-        }
-      },
-      {
-        "id": 820,
-        "name": "RosyBrown",
-        "mainImage": {
-          "id": 292,
-          "active": true,
-          "createdOn": "2022-01-28",
-          "isMainImage": true,
-          "name": "Image image",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "RosyBrown"
-        }
-      },
-      {
-        "id": 705,
-        "name": "RosyBrown",
-        "mainImage": {
-          "id": 587,
-          "active": false,
-          "createdOn": "2021-12-09",
-          "isMainImage": true,
-          "name": "Image specific",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "RosyBrown"
-        }
-      },
-      {
-        "id": 461,
-        "name": "RosyBrown",
-        "mainImage": {
-          "id": 762,
-          "active": false,
-          "createdOn": "2025-12-21",
-          "isMainImage": true,
-          "name": "Image establish",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "RosyBrown"
-        }
-      }
-    ],
-    "onSale": true,
-    "video": null
-  },
-  {
-    "id": 9,
-    "name": "Jupe midi fluide à carreaux",
-    "active": true,
-    "ageGroupCategory": "Teen",
-    "category": "Skirts",
-    "color": "GoldenRod",
-    "createdOn": "2024-10-08T00:00:00",
-    "modifiedOn": "2023-06-04T00:00:00",
-    "displayNew": false,
-    "genderCategory": "Unisex",
-    "hasSizes": true,
-    "modelHeight": 172.0,
-    "modelSize": "S",
-    "sku": "jupe-midi-fluide-a-carreaux-9",
-    "slug": "jupe-midi-fluide-a-carreaux-9",
-    "subCategory": "Skorts",
-    "price": 15.0,
-    "salePrice": 9.3,
-    "saleValue": 38.0,
-    "unitPrice": 15.0,
-    "mainImage": {
-      "id": 159,
-      "active": false,
-      "createdOn": "2022-02-26",
-      "isMainImage": true,
-      "name": "Jupe midi fluide à carreaux",
-      "original": "/skirts/3/9zrhB-Lo3Yk.jpg",
-      "thumbnail": "/skirts/3/9zrhB-Lo3Yk.jpg",
-      "variant": "LavenderBlush"
-    },
-    "productImages": [
-      {
-        "id": 159,
-        "active": false,
-        "createdOn": "2022-02-26",
-        "isMainImage": true,
-        "name": "Jupe midi fluide à carreaux",
-        "original": "/skirts/3/9zrhB-Lo3Yk.jpg",
-        "thumbnail": "/skirts/3/9zrhB-Lo3Yk.jpg",
-        "variant": "LavenderBlush"
-      },
-      {
-        "id": 159,
-        "active": false,
-        "createdOn": "2022-02-26",
-        "isMainImage": false,
-        "name": "Jupe midi fluide à carreaux",
-        "original": "/skirts/3/cRfGtz8eVmY.jpg",
-        "thumbnail": "/skirts/3/cRfGtz8eVmY.jpg",
-        "variant": "LavenderBlush"
-      },
-      {
-        "id": 159,
-        "active": false,
-        "createdOn": "2022-02-26",
-        "isMainImage": false,
-        "name": "Jupe midi fluide à carreaux",
-        "original": "/skirts/3/R83FmWr0c4w.jpg",
-        "thumbnail": "/skirts/3/R83FmWr0c4w.jpg",
-        "variant": "LavenderBlush"
-      },
-      {
-        "id": 159,
-        "active": false,
-        "createdOn": "2022-02-26",
-        "isMainImage": false,
-        "name": "Jupe midi fluide à carreaux",
-        "original": "/skirts/3/XlcpvUVCuOQ.jpg",
-        "thumbnail": "/skirts/3/XlcpvUVCuOQ.jpg",
-        "variant": "LavenderBlush"
-      },
-      {
-        "id": 159,
-        "active": false,
-        "createdOn": "2022-02-26",
-        "isMainImage": false,
-        "name": "Jupe midi fluide à carreaux",
-        "original": "/skirts/3/oev2HrzKNBI.jpg",
-        "thumbnail": "/skirts/3/oev2HrzKNBI.jpg",
-        "variant": "LavenderBlush"
-      },
-      {
-        "id": 159,
-        "active": false,
-        "createdOn": "2022-02-26",
-        "isMainImage": false,
-        "name": "Jupe midi fluide à carreaux",
-        "original": "/skirts/3/c6njBHJ0MAo.jpg",
-        "thumbnail": "/skirts/3/c6njBHJ0MAo.jpg",
-        "variant": "LavenderBlush"
-      }
-    ],
-    "sizeSet": [
-      {
-        "availability": true,
-        "active": true,
-        "name": "L",
-        "metric": "clothe",
-        "variantPrice": 1.0
-      }
-    ],
-    "colorVariants": [
-      {
-        "id": 899,
-        "name": "GreenYellow",
-        "mainImage": {
-          "id": 636,
-          "active": true,
-          "createdOn": "2024-07-23",
-          "isMainImage": true,
-          "name": "Image office",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "GreenYellow"
-        }
-      }
-    ],
-    "onSale": true,
-    "video": null
-  },
-  {
-    "id": 10,
-    "name": "Minijupe à brandebourgs",
-    "active": false,
-    "ageGroupCategory": "Child",
-    "category": "Skirts",
-    "color": "OldLace",
-    "createdOn": "2024-07-25T00:00:00",
-    "modifiedOn": "2021-04-29T00:00:00",
-    "displayNew": true,
-    "genderCategory": "Man",
-    "hasSizes": true,
-    "modelHeight": 196.0,
-    "modelSize": "M",
-    "sku": "minijupe-a-brandebourgs-10",
-    "slug": "minijupe-a-brandebourgs-10",
-    "subCategory": "Tailored Skirt",
-    "price": 199.0,
-    "salePrice": 0.0,
-    "saleValue": 0.0,
-    "unitPrice": 199.0,
-    "mainImage": {
-      "id": 94,
-      "active": true,
-      "createdOn": "2021-07-11",
-      "isMainImage": true,
-      "name": "Minijupe à brandebourgs",
-      "original": "/skirts/3/9zrhB-Lo3Yk.jpg",
-      "thumbnail": "/skirts/3/9zrhB-Lo3Yk.jpg",
-      "variant": "RoyalBlue"
-    },
-    "productImages": [
-      {
-        "id": 94,
-        "active": true,
-        "createdOn": "2021-07-11",
-        "isMainImage": true,
-        "name": "Minijupe à brandebourgs",
-        "original": "/skirts/3/9zrhB-Lo3Yk.jpg",
-        "thumbnail": "/skirts/3/9zrhB-Lo3Yk.jpg",
-        "variant": "RoyalBlue"
-      },
-      {
-        "id": 94,
-        "active": true,
-        "createdOn": "2021-07-11",
-        "isMainImage": false,
-        "name": "Minijupe à brandebourgs",
-        "original": "/skirts/3/cRfGtz8eVmY.jpg",
-        "thumbnail": "/skirts/3/cRfGtz8eVmY.jpg",
-        "variant": "RoyalBlue"
-      },
-      {
-        "id": 94,
-        "active": true,
-        "createdOn": "2021-07-11",
-        "isMainImage": false,
-        "name": "Minijupe à brandebourgs",
-        "original": "/skirts/3/R83FmWr0c4w.jpg",
-        "thumbnail": "/skirts/3/R83FmWr0c4w.jpg",
-        "variant": "RoyalBlue"
-      },
-      {
-        "id": 94,
-        "active": true,
-        "createdOn": "2021-07-11",
-        "isMainImage": false,
-        "name": "Minijupe à brandebourgs",
-        "original": "/skirts/3/XlcpvUVCuOQ.jpg",
-        "thumbnail": "/skirts/3/XlcpvUVCuOQ.jpg",
-        "variant": "RoyalBlue"
-      },
-      {
-        "id": 94,
-        "active": true,
-        "createdOn": "2021-07-11",
-        "isMainImage": false,
-        "name": "Minijupe à brandebourgs",
-        "original": "/skirts/3/oev2HrzKNBI.jpg",
-        "thumbnail": "/skirts/3/oev2HrzKNBI.jpg",
-        "variant": "RoyalBlue"
-      },
-      {
-        "id": 94,
-        "active": true,
-        "createdOn": "2021-07-11",
-        "isMainImage": false,
-        "name": "Minijupe à brandebourgs",
-        "original": "/skirts/3/c6njBHJ0MAo.jpg",
-        "thumbnail": "/skirts/3/c6njBHJ0MAo.jpg",
-        "variant": "RoyalBlue"
-      }
-    ],
-    "sizeSet": [
-      {
-        "availability": true,
-        "active": true,
-        "name": "L",
-        "metric": "clothe",
-        "variantPrice": 1.0
-      },
-      {
-        "availability": true,
-        "active": true,
-        "name": "L",
-        "metric": "clothe",
-        "variantPrice": 1.0
-      }
-    ],
-    "colorVariants": [
-      {
-        "id": 144,
-        "name": "MediumOrchid",
-        "mainImage": {
-          "id": 221,
-          "active": true,
-          "createdOn": "2022-05-18",
-          "isMainImage": true,
-          "name": "Image him",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "MediumOrchid"
-        }
-      },
-      {
-        "id": 845,
-        "name": "MediumOrchid",
-        "mainImage": {
-          "id": 607,
-          "active": false,
-          "createdOn": "2023-05-02",
-          "isMainImage": true,
-          "name": "Image give",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "MediumOrchid"
-        }
-      },
-      {
-        "id": 544,
-        "name": "MediumOrchid",
-        "mainImage": {
-          "id": 323,
-          "active": true,
-          "createdOn": "2024-03-23",
-          "isMainImage": true,
-          "name": "Image according",
-          "original": "https://placehold.co/850x1090",
-          "thumbnail": "https://placehold.co/850x1090",
-          "variant": "MediumOrchid"
+          "variant": "Navy"
         }
       }
     ],
@@ -1654,127 +1827,169 @@
   },
   {
     "id": 11,
-    "name": "Maxi sequin mini skirt",
-    "active": false,
-    "ageGroupCategory": "Teen",
+    "name": "Jupe midi à taille repliée",
+    "active": true,
+    "ageGroupCategory": "Child",
     "category": "Skirts",
-    "color": "Lime",
-    "createdOn": "2021-10-30T00:00:00",
-    "modifiedOn": "2022-12-18T00:00:00",
+    "color": "DarkSalmon",
+    "createdOn": "2020-11-29T00:00:00",
+    "modifiedOn": "2023-02-15T00:00:00",
     "displayNew": false,
-    "genderCategory": "Man",
+    "genderCategory": "Unisex",
     "hasSizes": true,
-    "modelHeight": 169.0,
-    "modelSize": "XS",
-    "sku": "maxi-sequin-mini-skirt-11",
-    "slug": "maxi-sequin-mini-skirt-11",
-    "subCategory": "A-Line Skirt",
-    "price": 171.0,
-    "salePrice": 0.0,
-    "saleValue": 0.0,
-    "unitPrice": 171.0,
+    "modelHeight": 166.0,
+    "modelSize": "L",
+    "sku": "jupe-midi-a-taille-repliee-11",
+    "slug": "jupe-midi-a-taille-repliee-11",
+    "subCategory": "Skirt",
+    "price": 169.0,
+    "salePrice": 135.2,
+    "saleValue": 20.0,
+    "unitPrice": 169.0,
     "mainImage": {
-      "id": 743,
+      "id": 489,
       "active": true,
-      "createdOn": "2021-01-08",
+      "createdOn": "2021-12-23",
       "isMainImage": true,
-      "name": "Maxi sequin mini skirt",
-      "original": "/skirts/7/-cwZ6cJ6nto.jpg",
-      "thumbnail": "/skirts/7/-cwZ6cJ6nto.jpg",
-      "variant": "DodgerBlue"
+      "name": "Jupe midi à taille repliée",
+      "original": "/skirts/4/v4pazVhxRoE.jpg",
+      "thumbnail": "/skirts/4/v4pazVhxRoE.jpg",
+      "variant": "Silver"
     },
     "productImages": [
       {
-        "id": 743,
+        "id": 489,
         "active": true,
-        "createdOn": "2021-01-08",
+        "createdOn": "2021-12-23",
         "isMainImage": true,
-        "name": "Maxi sequin mini skirt",
-        "original": "/skirts/7/-cwZ6cJ6nto.jpg",
-        "thumbnail": "/skirts/7/-cwZ6cJ6nto.jpg",
-        "variant": "DodgerBlue"
+        "name": "Jupe midi à taille repliée",
+        "original": "/skirts/4/v4pazVhxRoE.jpg",
+        "thumbnail": "/skirts/4/v4pazVhxRoE.jpg",
+        "variant": "Silver"
       },
       {
-        "id": 743,
+        "id": 489,
         "active": true,
-        "createdOn": "2021-01-08",
+        "createdOn": "2021-12-23",
         "isMainImage": false,
-        "name": "Maxi sequin mini skirt",
-        "original": "/skirts/7/xmYrrOWokQI.jpg",
-        "thumbnail": "/skirts/7/xmYrrOWokQI.jpg",
-        "variant": "DodgerBlue"
+        "name": "Jupe midi à taille repliée",
+        "original": "/skirts/4/O1sPrenuuuw.jpg",
+        "thumbnail": "/skirts/4/O1sPrenuuuw.jpg",
+        "variant": "Silver"
       },
       {
-        "id": 743,
+        "id": 489,
         "active": true,
-        "createdOn": "2021-01-08",
+        "createdOn": "2021-12-23",
         "isMainImage": false,
-        "name": "Maxi sequin mini skirt",
-        "original": "/skirts/7/bbGDDu-imNs.jpg",
-        "thumbnail": "/skirts/7/bbGDDu-imNs.jpg",
-        "variant": "DodgerBlue"
+        "name": "Jupe midi à taille repliée",
+        "original": "/skirts/4/k3PfA07m86I.jpg",
+        "thumbnail": "/skirts/4/k3PfA07m86I.jpg",
+        "variant": "Silver"
       },
       {
-        "id": 743,
+        "id": 489,
         "active": true,
-        "createdOn": "2021-01-08",
+        "createdOn": "2021-12-23",
         "isMainImage": false,
-        "name": "Maxi sequin mini skirt",
-        "original": "/skirts/7/mOnxaUdpKtU.jpg",
-        "thumbnail": "/skirts/7/mOnxaUdpKtU.jpg",
-        "variant": "DodgerBlue"
+        "name": "Jupe midi à taille repliée",
+        "original": "/skirts/4/TACLSwKsJRA.jpg",
+        "thumbnail": "/skirts/4/TACLSwKsJRA.jpg",
+        "variant": "Silver"
       },
       {
-        "id": 743,
+        "id": 489,
         "active": true,
-        "createdOn": "2021-01-08",
+        "createdOn": "2021-12-23",
         "isMainImage": false,
-        "name": "Maxi sequin mini skirt",
-        "original": "/skirts/7/N168Tt2cAtA.jpg",
-        "thumbnail": "/skirts/7/N168Tt2cAtA.jpg",
-        "variant": "DodgerBlue"
+        "name": "Jupe midi à taille repliée",
+        "original": "/skirts/4/GkeJ_7wBoEk.jpg",
+        "thumbnail": "/skirts/4/GkeJ_7wBoEk.jpg",
+        "variant": "Silver"
       }
     ],
     "sizeSet": [
       {
         "availability": true,
         "active": true,
-        "name": "XL",
+        "name": "L",
         "metric": "clothe",
         "variantPrice": 1.0
       },
       {
         "availability": true,
         "active": true,
-        "name": "M",
+        "name": "XS",
         "metric": "clothe",
         "variantPrice": 1.0
       },
       {
         "availability": true,
-        "active": false,
-        "name": "S",
+        "active": true,
+        "name": "XL",
         "metric": "clothe",
         "variantPrice": 1.0
       }
     ],
     "colorVariants": [
       {
-        "id": 562,
-        "name": "SlateGray",
+        "id": 803,
+        "name": "LemonChiffon",
         "mainImage": {
-          "id": 84,
+          "id": 232,
           "active": true,
-          "createdOn": "2024-07-09",
+          "createdOn": "2025-12-06",
           "isMainImage": true,
-          "name": "Image about",
+          "name": "Image positive",
           "original": "https://placehold.co/850x1090",
           "thumbnail": "https://placehold.co/850x1090",
-          "variant": "SlateGray"
+          "variant": "LemonChiffon"
+        }
+      },
+      {
+        "id": 266,
+        "name": "LemonChiffon",
+        "mainImage": {
+          "id": 841,
+          "active": true,
+          "createdOn": "2022-10-24",
+          "isMainImage": true,
+          "name": "Image claim",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "LemonChiffon"
+        }
+      },
+      {
+        "id": 236,
+        "name": "LemonChiffon",
+        "mainImage": {
+          "id": 333,
+          "active": true,
+          "createdOn": "2020-07-16",
+          "isMainImage": true,
+          "name": "Image nature",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "LemonChiffon"
+        }
+      },
+      {
+        "id": 650,
+        "name": "LemonChiffon",
+        "mainImage": {
+          "id": 894,
+          "active": true,
+          "createdOn": "2025-01-25",
+          "isMainImage": true,
+          "name": "Image say",
+          "original": "https://placehold.co/850x1090",
+          "thumbnail": "https://placehold.co/850x1090",
+          "variant": "LemonChiffon"
         }
       }
     ],
-    "onSale": false,
+    "onSale": true,
     "video": null
   }
 ]
