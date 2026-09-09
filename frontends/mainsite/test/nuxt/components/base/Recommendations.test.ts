@@ -22,6 +22,8 @@ const mockStore = vi.hoisted(() => {
 
 mockNuxtImport('$fetch', () => mockStore.mockFetch)
 
+mockNuxtImport('useAsyncData', () => vi.fn(async (key: string, fn: any) => ({ data: await fn() })))
+
 vi.mock('~/components/product/Card.vue', async () => {
   return {
     default: defineComponent({
@@ -84,9 +86,12 @@ describe('components/base/Recommendations.vue', { tags: ['frontend'] }, () => {
     mockStore.mockFetch.mockResolvedValue({
       data: {
         collectionRecommendations: {
-          id: 'some-id-1',
+          category: 'some-category-1',
+          description: 'some-description-1',
           name: 'some-name-1',
-          reference: 'some-reference-1',
+          illustration: 'some-illustration-1',
+          slug: 'some-slug-1',
+          subCategory: 'some-sub-category-1',
           products: products
         }
       }
@@ -95,8 +100,9 @@ describe('components/base/Recommendations.vue', { tags: ['frontend'] }, () => {
     const component = await mountSuspended(Recommendations)
     expect(component.exists()).toBe(true)
 
-    expect(mockStore.mockFetch).toHaveBeenCalled()
+    expect(mockStore.mockFetch, "Mock fetch was not called for collection recommendations").toHaveBeenCalled()
     expect(mockStore.mockFetch).toHaveBeenCalledWith('/api/collection/recommendations', { method: 'GET', query: { quantity: 10  } })
+
   })
 })
 

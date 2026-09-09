@@ -1,9 +1,16 @@
-import { describe, it } from 'vitest'
+import { describe, it, vi, beforeEach, expect } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
 import Base from '~/components/products/filters/Base.vue'
 import { useProductFiltersProvider } from '~/composables/products.ts'
+import { defineComponent } from 'vue'
+
+mockNuxtImport('$fetch', () => vi.fn())
 
 describe('integrations: components/products/filters/Base.vue', { tags: ['integration', 'frontend'] }, () => {
+  beforeEach(() => {
+    vi.resetAllMocks()
+  })
+
   it('should render the component correctly', async () => {
     const Child = defineComponent({
       name: 'TestComponent',
@@ -33,7 +40,7 @@ describe('integrations: components/products/filters/Base.vue', { tags: ['integra
       }
     })
 
-    const _component = await mountSuspended(Parent)
-    // console.log(component.html())
+    const component = await mountSuspended(Parent)
+    expect(component.exists()).toBe(true)
   })  
 })

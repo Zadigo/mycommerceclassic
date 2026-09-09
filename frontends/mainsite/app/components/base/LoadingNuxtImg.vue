@@ -5,7 +5,7 @@
     </slot>
 
     <slot v-else>
-      <nuxt-img :src="_image" alt="Some alt" :class="['cursor-zoom-in', imageClass, fit ? `${skeletonClass} aspect-square object-cover` : '']" />
+      <nuxt-img :src="_image" :alt="image?.name" :class="['cursor-zoom-in', imageClass, fit ? `${skeletonClass} aspect-square object-cover` : '']" />
       <!-- <img :src="_image" alt="Some alt" :class="imageClass" /> -->
     </slot>
   </div>

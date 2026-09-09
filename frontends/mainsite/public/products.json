@@ -36,7 +36,7 @@
         "active": false,
         "createdOn": "2022-12-01",
         "isMainImage": true,
-        "name": "Jupe asymétrique à volants",
+        "name": "Jupe asymétrique à volants Red",
         "original": "/skirts/5/KeqDsuMFNkE.jpg",
         "thumbnail": "/skirts/5/KeqDsuMFNkE.jpg",
         "variant": "Orange"
@@ -46,7 +46,7 @@
         "active": false,
         "createdOn": "2022-12-01",
         "isMainImage": false,
-        "name": "Jupe asymétrique à volants",
+        "name": "Jupe asymétrique à volants Blue",
         "original": "/skirts/5/K_y-jJ-Tnos.jpg",
         "thumbnail": "/skirts/5/K_y-jJ-Tnos.jpg",
         "variant": "Orange"
@@ -56,7 +56,7 @@
         "active": false,
         "createdOn": "2022-12-01",
         "isMainImage": false,
-        "name": "Jupe asymétrique à volants",
+        "name": "Jupe asymétrique à volants Green",
         "original": "/skirts/5/CkJzu-Uy0jo.jpg",
         "thumbnail": "/skirts/5/CkJzu-Uy0jo.jpg",
         "variant": "Orange"
@@ -66,7 +66,7 @@
         "active": false,
         "createdOn": "2022-12-01",
         "isMainImage": false,
-        "name": "Jupe asymétrique à volants",
+        "name": "Jupe asymétrique à volants Yellow",
         "original": "/skirts/5/nZRr-xCSpTQ.jpg",
         "thumbnail": "/skirts/5/nZRr-xCSpTQ.jpg",
         "variant": "Orange"
@@ -76,7 +76,7 @@
         "active": false,
         "createdOn": "2022-12-01",
         "isMainImage": false,
-        "name": "Jupe asymétrique à volants",
+        "name": "Jupe asymétrique à volants Purple",
         "original": "/skirts/5/UB1BZmwFPwk.jpg",
         "thumbnail": "/skirts/5/UB1BZmwFPwk.jpg",
         "variant": "Orange"
@@ -86,7 +86,7 @@
         "active": false,
         "createdOn": "2022-12-01",
         "isMainImage": false,
-        "name": "Jupe asymétrique à volants",
+        "name": "Jupe asymétrique à volants Pink",
         "original": "/skirts/5/28TEkBzNnRs.jpg",
         "thumbnail": "/skirts/5/28TEkBzNnRs.jpg",
         "variant": "Orange"
@@ -209,27 +209,27 @@
         "active": true,
         "createdOn": "2025-02-26",
         "isMainImage": false,
-        "name": "Jupe midi parachute",
+        "name": "Jupe midi parachute Red",
         "original": "/skirts/4/O1sPrenuuuw.jpg",
         "thumbnail": "/skirts/4/O1sPrenuuuw.jpg",
-        "variant": "Orange"
+        "variant": "Red"
       },
       {
         "id": 863,
         "active": true,
         "createdOn": "2025-02-26",
         "isMainImage": false,
-        "name": "Jupe midi parachute",
+        "name": "Jupe midi parachute Blue",
         "original": "/skirts/4/k3PfA07m86I.jpg",
         "thumbnail": "/skirts/4/k3PfA07m86I.jpg",
-        "variant": "Orange"
+        "variant": "Blue"
       },
       {
         "id": 863,
         "active": true,
         "createdOn": "2025-02-26",
         "isMainImage": false,
-        "name": "Jupe midi parachute",
+        "name": "Jupe midi parachute Orange",
         "original": "/skirts/4/TACLSwKsJRA.jpg",
         "thumbnail": "/skirts/4/TACLSwKsJRA.jpg",
         "variant": "Orange"
@@ -239,10 +239,10 @@
         "active": true,
         "createdOn": "2025-02-26",
         "isMainImage": false,
-        "name": "Jupe midi parachute",
+        "name": "Jupe midi parachute Pink",
         "original": "/skirts/4/GkeJ_7wBoEk.jpg",
         "thumbnail": "/skirts/4/GkeJ_7wBoEk.jpg",
-        "variant": "Orange"
+        "variant": "Pink"
       }
     ],
     "sizeSet": [
@@ -324,17 +324,17 @@
         "active": true,
         "createdOn": "2026-06-22",
         "isMainImage": true,
-        "name": "Jupe midi à carreaux",
+        "name": "Jupe midi à carreaux Blue",
         "original": "/skirts/6/XNVFlFjjyL0.jpg",
         "thumbnail": "/skirts/6/XNVFlFjjyL0.jpg",
-        "variant": "SlateGray"
+        "variant": "Blue"
       },
       {
         "id": 311,
         "active": true,
         "createdOn": "2026-06-22",
         "isMainImage": false,
-        "name": "Jupe midi à carreaux",
+        "name": "Jupe midi à carreaux SlateGray",
         "original": "/skirts/6/-nJFHwZChWc.jpg",
         "thumbnail": "/skirts/6/-nJFHwZChWc.jpg",
         "variant": "SlateGray"
@@ -344,30 +344,30 @@
         "active": true,
         "createdOn": "2026-06-22",
         "isMainImage": false,
-        "name": "Jupe midi à carreaux",
+        "name": "Jupe midi à carreaux Pink",
         "original": "/skirts/6/IqEn3teSreE.jpg",
         "thumbnail": "/skirts/6/IqEn3teSreE.jpg",
-        "variant": "SlateGray"
+        "variant": "Pink"
       },
       {
         "id": 311,
         "active": true,
         "createdOn": "2026-06-22",
         "isMainImage": false,
-        "name": "Jupe midi à carreaux",
+        "name": "Jupe midi à carreaux Red",
         "original": "/skirts/6/Yy25SEhzIO4.jpg",
         "thumbnail": "/skirts/6/Yy25SEhzIO4.jpg",
-        "variant": "SlateGray"
+        "variant": "Red"
       },
       {
         "id": 311,
         "active": true,
         "createdOn": "2026-06-22",
         "isMainImage": false,
-        "name": "Jupe midi à carreaux",
+        "name": "Jupe midi à carreaux Yellow",
         "original": "/skirts/6/ky3aduUGbN8.jpg",
         "thumbnail": "/skirts/6/ky3aduUGbN8.jpg",
-        "variant": "SlateGray"
+        "variant": "Yellow"
       }
     ],
     "sizeSet": [

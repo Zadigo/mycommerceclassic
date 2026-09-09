@@ -21,6 +21,8 @@ const mockStore = vi.hoisted(() => {
 
 mockNuxtImport('useAsyncData', () => mockStore.mockedAsyncData)
 
+vi.stubGlobal('$fetch', vi.fn())
+
 vi.mock('~/composables/products', async (original) => {
   const actual = await original<typeof import('~/composables/products')>()
   return {
@@ -48,9 +50,13 @@ describe('components/products/filters/Base.vue', { tags: ['frontend'] }, () => {
     vi.resetAllMocks()
   })
 
-  it('should render the component', async () => {
+  it('should render the component correctly', async () => {
     const component = await mountSuspended(Base)
     expect(component.exists()).toBe(true)
+    
+    const paragraph = component.find('p')
+    expect(paragraph.exists()).toBe(true)
+    expect(paragraph.text()).toBe('No filters available')
   })
 
   describe.each(
