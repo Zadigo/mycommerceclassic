@@ -58,7 +58,7 @@ Some projects leverages Django Tasks instead of celery in ordr to delivery certa
 6. You might also want to create a Firebase account in order to use the Firebase features such as authentication, storage, and real-time database
 7. Finally, you can use the `nuxt.config.js` file to configure the template to your needs
 
-The Nuxt application also comes with basic fixtures that can be used to test the application out of the box. They are located in [/frontends/mainsite/test/__fixtures__](.//frontends/mainsite/test/__fixtures__/index.ts)  and can be used to simulate server API calls.
+The Nuxt application also comes with basic fixtures that can be used to test the application out of the box. They are located in [/frontends/mainsite/test/__fixtures__](./frontends/mainsite/test/__fixtures__)  and can be used to simulate server API calls.
 
 > [!NOTE]
 > The Nuxt application is designed using the BFF (Backend for Frontend) pattern, which means that the frontend communicates with the backend through a dedicated API layer. This allows for better separation of concerns and easier maintenance of the codebase.
