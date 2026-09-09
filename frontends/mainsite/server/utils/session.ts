@@ -47,7 +47,7 @@ export async function getOrCreateSession(event: H3Event) {
     httpOnly: false, // must stay readable client-side, useCookie() relies on it
     sameSite: 'strict',
     secure: process.env.NODE_ENV === 'production',
-    domain: process.env.NODE_ENV === 'production' ? config.public.siteUrl : undefined
+    domain: process.env.NODE_ENV === 'production' ? config.public.siteUrl.replace(/^https?:\/\//, '') : undefined
   })
 
   return { sessionId: docRef.id, docRef, data: DEFAULT_SESSION_DATA }
@@ -76,7 +76,7 @@ export async function getOrCreateLikeDocument(event: H3Event) {
       httpOnly: false, // must stay readable client-side, useCookie() relies on it
       sameSite: 'strict',
       secure: process.env.NODE_ENV === 'production',
-      domain: process.env.NODE_ENV === 'production' ? config.public.siteUrl : undefined
+      domain: process.env.NODE_ENV === 'production' ? config.public.siteUrl.replace(/^https?:\/\//, '') : undefined
     })
 
     return { likeCookieId: docRef.id, docRef }
