@@ -1,24 +1,15 @@
-import { SESSION_COLLECTION_NAME, SESSION_COOKIE_NAME } from '~~/shared/cart'
-import { useFirebaseAdmin } from '#shared/server_firebase'
 import { createErrorTemplate } from '#shared/errors'
 
-export default defineEventHandler(async (_event) => {
+export default defineEventHandler(async (event) => {
   try {
-    const { db } = useFirebaseAdmin()
-    const collectionRef = db.collection(SESSION_COLLECTION_NAME)
-    const sessionId = getCookie(_event, SESSION_COOKIE_NAME)
-
-    if (typeof sessionId !== 'undefined') {
-      const docRef = collectionRef.doc(sessionId)
-
-      docRef.update({
-        language: {
-          choice: 'en',
-          selected: true
-        },
-        updatedAt: new Date()
-      })
-    }
+    const { docRef } = await getOrCreateSession(event)
+    await docRef.update({
+      language: {
+        choice: 'en',
+        selected: true
+      },
+      updatedAt: new Date()
+    })
 
     return {
       state: 'Session updated successfully',
