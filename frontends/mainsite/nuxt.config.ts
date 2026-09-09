@@ -16,6 +16,8 @@ export default defineNuxtConfig({
     '@vercel/speed-insights',
     'nuxt-skew-protection',
     'nuxt-ai-ready',
+    '@vercel/analytics',
+    'nuxt-ganalytics',
   ],
 
   devtools: {
@@ -144,4 +146,15 @@ export default defineNuxtConfig({
   ogImage: {
     componentDirs: ['og-image']
   },
+
+  ganalytics: {
+    ga4: {
+      id: 'G-LX0NQF7V2E',
+      enableDebug: true,
+      enabled: true,
+    },
+    gtm: {
+      id: 'GTM-MC93PDN'
+    }
+  }
 })
