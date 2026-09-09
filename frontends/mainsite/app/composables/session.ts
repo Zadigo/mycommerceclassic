@@ -1,6 +1,4 @@
-import { SESSION_COOKIE_NAME, SESSION_COLLECTION_NAME } from '#shared/cart'
-import { doc } from 'firebase/firestore'
-import { useFirestore, useDocument } from 'vuefire'
+import { SESSION_COOKIE_NAME } from '#shared/cart'
 
 /**
  * A composable that provides a function to create a new user session.
@@ -14,15 +12,13 @@ export function useSessionCreateComposable() {
     })
   }
 
-  tryOnMounted(async () => {
-    if (!sessionId.value) {
-      callOnce('createSession', async () => {
-        await createSession()
-      }, {
-        mode: 'render'
-      })
-    }
-  })
+  if (import.meta.client && !sessionId.value) {
+    callOnce('createSession', async () => {
+      await createSession()
+    }, {
+      mode: 'render'
+    })
+  }
 }
 
 /**
@@ -31,26 +27,11 @@ export function useSessionCreateComposable() {
 export const useSessionComposable = createGlobalState(() => {
   const sessionId = useCookie(SESSION_COOKIE_NAME)
   const hasSession = computed(() => isDefined(sessionId))
+  const docRef = computedAsync(async () => await $fetch('/api/session', { method: 'GET' }), {} as SessionData)
 
-  if (isDefined(sessionId)) {
-    const firestore = useFirestore()
-    const _docRef = useDocument<SessionData>(doc(firestore, SESSION_COLLECTION_NAME, sessionId.value))
-
-    const docRef = computed(() => _docRef.value)
-    const isLoading = computed(() => _docRef.pending.value)
-
-    return {
-      isLoading,
-      docRef,
-      sessionId: readonly(sessionId),
-      hasSession
-    }
-  } else {
-    return {
-      isLoading: ref(true),
-      docRef: ref(null),
-      sessionId: readonly(sessionId),
-      hasSession
-    }
+  return {
+    sessionId: readonly(sessionId),
+    hasSession,
+    docRef
   }
 })
