@@ -4,7 +4,7 @@
       Payment block
 
       <u-button :id="createElementId('cta', 'footer', 'payment')" to="/cart/success">
-        Payer {{ docRef?.cart.total || 0 }}€
+        Payer {{ docRef?.cart?.total || 0 }}€
       </u-button>
     </u-card>
   </section>

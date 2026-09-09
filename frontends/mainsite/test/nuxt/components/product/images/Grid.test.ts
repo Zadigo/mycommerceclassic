@@ -16,7 +16,7 @@ describe('components/product/images/Grid.vue', { tags: ['frontend'] }, () => {
     expect(images.length).toEqual(0)
   })
 
-  it.only('should have alt attributes for images that are displayed', async () => {
+  it('should have alt attributes for images that are displayed', async () => {
     const { singleProduct } = useLoadFixtures()
     const product = singleProduct()
     
@@ -46,8 +46,6 @@ describe('components/product/images/Grid.vue', { tags: ['frontend'] }, () => {
       }
     })
 
-    console.log(altCount, product.productImages)
-    
     Object.entries(altCount).forEach(([_, count]) => {
       expect(count).toBe(1)
     })
