@@ -4,6 +4,8 @@
 
 My Commerce is a comprehensive e-commerce solution created for online retail, built with Django and Nuxt 4. It offers a robust backend for managing products, orders, and customers, along with a dynamic frontend for an engaging shopping experience.
 
+This project can be combined with the [e-commerce micro-services solution](https://github.com/Zadigo/mycommerce) to create a fullstack e-commerce platform with payments, reviews, orders etc.
+
 ## Technical Architecture 🏗
 
 Refer to the [technical architecture document](docs/ARCHITECTURE.md) for a detailed overview of the system's design.
