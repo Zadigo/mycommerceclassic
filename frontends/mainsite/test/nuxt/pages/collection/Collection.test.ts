@@ -37,6 +37,5 @@ describe('pages/collection/[id].vue', { tags: ['frontend'] }, () => {
   it('should render the collection page component', async () => {
     const component = await mountSuspended(ID)
     expect(component).toBeTruthy()
-    console.log(component.html())
   })
 })

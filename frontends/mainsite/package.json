@@ -1,6 +1,6 @@
 {
   "name": "mainsite",
-  "version": "0.1.0-dev1.1",
+  "version": "0.1.0-dev1.2",
   "private": true,
   "type": "module",
   "scripts": {
@@ -22,6 +22,10 @@
     "release:major": "pnpm run lint & pnpm run test && pnpm run build && changelogen --release --major && git push --follow-tags",
     "release:minor": "pnpm run lint & pnpm run test && pnpm run build && changelogen --release --minor && git push --follow-tags",
     "release:patch": "pnpm run lint & pnpm run test && pnpm run build && changelogen --release --patch && git push --follow-tags",
+    "prerelease": "pnpm run lint & pnpm run test && pnpm run build && changelogen --prerelease --bump && git push --follow-tags",
+    "prerelease:patch": "pnpm run lint & pnpm run test && pnpm run build && changelogen --prerelease --patch && git push --follow-tags",
+    "prerelease:minor": "pnpm run lint & pnpm run test && pnpm run build && changelogen --prerelease --minor && git push --follow-tags",
+    "prerelease:major": "pnpm run lint & pnpm run test && pnpm run build && changelogen --prerelease --major && git push --follow-tags",
     "playwright:install": "playwright install --with-deps",
     "cleanup": "nuxt cleanup && rm -rf .nuxt .output dist node_modules/.cache",
     "lint": "oxlint lint .",
