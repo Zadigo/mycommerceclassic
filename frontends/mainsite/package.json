@@ -1,5 +1,6 @@
 {
   "name": "mainsite",
+  "version": "0.1.0-dev1",
   "private": true,
   "type": "module",
   "scripts": {
