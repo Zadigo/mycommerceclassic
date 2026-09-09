@@ -1,7 +1,7 @@
 # Nuxt 4 - Ecommerce  Frontend Service
 
 [![Nuxt UI](<https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420>)](https://ui.nuxt.com)
-![GitHub commits since latest release (branch)](https://img.shields.io/github/commits-since/Zadigo/mycommerce/latest/main)
+![GitHub commits since latest release (branch)](https://img.shields.io/github/commits-since/Zadigo/mycommerceclassic/latest/main)
 ![GitHub License](https://img.shields.io/github/license/Zadigo/mycommerceclassic)
 ![GitHub Release](https://img.shields.io/github/v/release/Zadigo/mycommerceclassic)
 
