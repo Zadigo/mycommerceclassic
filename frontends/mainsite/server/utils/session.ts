@@ -41,11 +41,13 @@ export async function getOrCreateSession(event: H3Event) {
   const docRef = collectionRef.doc()
   await docRef.set({ ...DEFAULT_SESSION_DATA, updatedAt: new Date(), createdAt: new Date() })
 
+  const config = useRuntimeConfig(event)
+
   setCookie(event, SESSION_COOKIE_NAME, docRef.id, {
     httpOnly: false, // must stay readable client-side, useCookie() relies on it
     sameSite: 'strict',
     secure: process.env.NODE_ENV === 'production',
-    domain: process.env.NODE_ENV === 'production' ? '.yourdomain.com' : undefined
+    domain: process.env.NODE_ENV === 'production' ? config.public.siteUrl : undefined
   })
 
   return { sessionId: docRef.id, docRef, data: DEFAULT_SESSION_DATA }
@@ -68,11 +70,13 @@ export async function getOrCreateLikeDocument(event: H3Event) {
       createdAt: new Date()
     })
 
+    const config = useRuntimeConfig(event)
+
     setCookie(event, LIKE_COOKIE_NAME, docRef.id, {
       httpOnly: false, // must stay readable client-side, useCookie() relies on it
       sameSite: 'strict',
       secure: process.env.NODE_ENV === 'production',
-      domain: process.env.NODE_ENV === 'production' ? '.yourdomain.com' : undefined
+      domain: process.env.NODE_ENV === 'production' ? config.public.siteUrl : undefined
     })
 
     return { likeCookieId: docRef.id, docRef }

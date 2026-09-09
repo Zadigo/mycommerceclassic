@@ -1,6 +1,6 @@
 {
     "name": "@project/mycommerceclassic",
     "scripts": {
-        "dev": "pnpm --parallel --filter './packages/*' dev"
+        "dev": "pnpm --parallel --filter './frontends/*' dev"
     }
 }
