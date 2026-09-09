@@ -12,22 +12,17 @@ Refer to the [technical architecture document](docs/ARCHITECTURE.md) for a detai
 
 ## Configuring your project 🏠
 
-Before starting, ensure you have a valid [Stripe](https://stripe.com/en-fr), [Klarna](https://www.klarna.com/)
-and [Firebase](https://firebase.google.com/) accounts. You also will need to have valid secret and client keys
-create on [Google Cloud Console](https://console.cloud.google.com/).
+Before starting, ensure you have a valid [Stripe](https://stripe.com/en-fr), [Klarna](https://www.klarna.com/) and [Firebase](https://firebase.google.com/) accounts. You also will need to have valid secret and client keys create on [Google Cloud Console](https://console.cloud.google.com/).
 
 The secret keys need to be available either as `.env` files at the root of each project or using global system environment variables.
 
-Finally, if you plan on using [Celery](https://docs.celeryq.dev/en/stable/) ensure you have
-both [Redis](https://redis.io/) and [RabbitMQ](https://www.rabbitmq.com/) on your system.
+Finally, if you plan on using [Celery](https://docs.celeryq.dev/en/stable/) ensure you have both [Redis](https://redis.io/) and [RabbitMQ](https://www.rabbitmq.com/) on your system.
 
-You will also need a valid AWS account with [S3](https://aws.amazon.com/s3/) access and finally a
-valid [Cloudfront](https://aws.amazon.com/cloudfront/) distribution to serve your static files.
+You will also need a valid AWS account with [S3](https://aws.amazon.com/s3/) access and finally a valid [Cloudfront](https://aws.amazon.com/cloudfront/) distribution to serve your static files.
 
 The project comes with a simple fixture of 85 products in `initialize/products.csv` in order to launch the website quickly.
 
-The fastest way to test the project in a production context is to launch Docker containers with [Docker Desktop](https://www.docker.com/products/docker-desktop)
-and then integrate the fixtures by importing the CSV file.
+The fastest way to test the project in a production context is to launch Docker containers with [Docker Desktop](https://www.docker.com/products/docker-desktop) and then integrate the fixtures by importing the CSV file.
 
 ### Websocket implementation 🛜
 
