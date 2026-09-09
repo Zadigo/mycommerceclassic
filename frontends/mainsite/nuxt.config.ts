@@ -30,7 +30,6 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': { prerender: true },
-    '/:id': { prerender: true },
     '/cart/**': { ssr: false },
     '/collection/**': { ssr: true },
     '/accounts/**': { ssr: false },
